@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flowerbreeding:block/yellow_wither_rose"
+  }
+}

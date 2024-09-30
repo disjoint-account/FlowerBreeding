@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/cyan_sunflower_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/cyan_sunflower_top"
+    }
+  }
+}

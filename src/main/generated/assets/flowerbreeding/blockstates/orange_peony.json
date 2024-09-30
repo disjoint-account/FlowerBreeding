@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/orange_peony_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/orange_peony_top"
+    }
+  }
+}

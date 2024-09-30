@@ -43,6 +43,16 @@ public class FBTags {
         }
     }
     public static class Items {
+        public static final TagKey<Item> MAGENTA_FLOWERS = createTag("magenta_flowers");
+        public static final TagKey<Item> BLUE_FLOWERS = createTag("blue_flowers");
+        public static final TagKey<Item> WHITE_FLOWERS = createTag("white_flowers");
+        public static final TagKey<Item> ORANGE_FLOWERS = createTag("orange_flowers");
+        public static final TagKey<Item> RED_FLOWERS = createTag("red_flowers");
+        public static final TagKey<Item> YELLOW_FLOWERS = createTag("yellow_flowers");
+        public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
+        public static final TagKey<Item> PINK_FLOWERS = createTag("pink_flowers");
+        public static final TagKey<Item> BLACK_FLOWERS = createTag("black_flowers");
+        public static final TagKey<Item> LILAC_FLOWERS = createTag("lilac_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

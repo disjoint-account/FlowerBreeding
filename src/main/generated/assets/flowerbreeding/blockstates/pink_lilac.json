@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/pink_lilac_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/pink_lilac_top"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flowerbreeding:block/lilac_peony_bottom"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:magenta_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:white_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:orange_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:red_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:yellow_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cyan_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:pink_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:black_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lilac_flowers",
+      "required": false
+    }
+  ]
+}

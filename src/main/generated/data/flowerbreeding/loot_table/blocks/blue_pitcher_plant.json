@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "flowerbreeding:cyan_pitcher_plant",
+          "block": "flowerbreeding:blue_pitcher_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "lower"
@@ -16,7 +16,7 @@
           "offsetY": 1,
           "predicate": {
             "block": {
-              "blocks": "flowerbreeding:cyan_pitcher_plant",
+              "blocks": "flowerbreeding:blue_pitcher_plant",
               "state": {
                 "half": "upper"
               }
@@ -45,7 +45,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "flowerbreeding:cyan_pitcher_plant"
+              "name": "flowerbreeding:blue_pitcher_plant"
             },
             {
               "type": "minecraft:item",
@@ -69,7 +69,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "flowerbreeding:cyan_pitcher_plant",
+          "block": "flowerbreeding:blue_pitcher_plant",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "upper"
@@ -80,7 +80,7 @@
           "offsetY": -1,
           "predicate": {
             "block": {
-              "blocks": "flowerbreeding:cyan_pitcher_plant",
+              "blocks": "flowerbreeding:blue_pitcher_plant",
               "state": {
                 "half": "lower"
               }
@@ -109,7 +109,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "flowerbreeding:cyan_pitcher_plant"
+              "name": "flowerbreeding:blue_pitcher_plant"
             },
             {
               "type": "minecraft:item",

@@ -9,6 +9,7 @@ public class FBDataGenerator implements DataGeneratorEntrypoint {
 				FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
 		pack.addProvider(FBBlockTagProvider::new);
+		pack.addProvider(FBItemTagProvider::new);
 		pack.addProvider(FBModelProvider::new);
 		pack.addProvider(FBLootTableGenerator::new);
 

@@ -6,9 +6,10 @@
     "minecraft:torchflower",
     "flowerbreeding:red_torchflower",
     "flowerbreeding:yellow_torchflower",
-    "flowerbreeding:cyan_torchflower",
+    "flowerbreeding:light_blue_torchflower",
     "flowerbreeding:pink_torchflower",
     "flowerbreeding:black_torchflower",
-    "flowerbreeding:lilac_torchflower"
+    "flowerbreeding:lilac_torchflower",
+    "flowerbreeding:cyan_torchflower"
   ]
 }

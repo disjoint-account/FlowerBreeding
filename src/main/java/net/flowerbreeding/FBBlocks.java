@@ -115,6 +115,8 @@ public class FBBlocks {
             new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.TORCHFLOWER)));
     public static final Block POTTED_BLUE_TORCHFLOWER = registerBlock("potted_blue_torchflower", false,
             new FlowerPotBlock(BLUE_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
+    public static final Block BLUE_PITCHER_PLANT = registerBlock("blue_pitcher_plant",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
 
     // white flowers
 
@@ -304,57 +306,57 @@ public class FBBlocks {
     public static final Block YELLOW_PITCHER_PLANT = registerBlock("yellow_pitcher_plant",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
 
-    // cyan flowers
+    // light blue flowers
 
-    public static final Block CYAN_ALLIUM = registerBlock("cyan_allium",
+    public static final Block LIGHT_BLUE_ALLIUM = registerBlock("light_blue_allium",
             new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 4, AbstractBlock.Settings.copy(ALLIUM)));
-    public static final Block POTTED_CYAN_ALLIUM = registerBlock("potted_cyan_allium", false,
-            new FlowerPotBlock(CYAN_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
-    public static final Block CYAN_TULIP = registerBlock("cyan_tulip",
+    public static final Block POTTED_LIGHT_BLUE_ALLIUM = registerBlock("potted_light_blue_allium", false,
+            new FlowerPotBlock(LIGHT_BLUE_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
+    public static final Block LIGHT_BLUE_TULIP = registerBlock("light_blue_tulip",
             new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(RED_TULIP)));
-    public static final Block POTTED_CYAN_TULIP = registerBlock("potted_cyan_tulip", false,
-            new FlowerPotBlock(CYAN_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
-    public static final Block CYAN_WITHER_ROSE = registerBlock("cyan_wither_rose",
+    public static final Block POTTED_LIGHT_BLUE_TULIP = registerBlock("potted_light_blue_tulip", false,
+            new FlowerPotBlock(LIGHT_BLUE_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
+    public static final Block LIGHT_BLUE_WITHER_ROSE = registerBlock("light_blue_wither_rose",
             new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static final Block POTTED_CYAN_WITHER_ROSE = registerBlock("potted_cyan_wither_rose", false,
-            new FlowerPotBlock(CYAN_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
-    public static final Block CYAN_SUNFLOWER = registerBlock("cyan_sunflower",
+    public static final Block POTTED_LIGHT_BLUE_WITHER_ROSE = registerBlock("potted_light_blue_wither_rose", false,
+            new FlowerPotBlock(LIGHT_BLUE_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
+    public static final Block LIGHT_BLUE_SUNFLOWER = registerBlock("light_blue_sunflower",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
-    public static final Block CYAN_PEONY = registerBlock("cyan_peony",
+    public static final Block LIGHT_BLUE_PEONY = registerBlock("light_blue_peony",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PEONY)));
-    public static final Block CYAN_LILAC = registerBlock("cyan_lilac",
+    public static final Block LIGHT_BLUE_LILAC = registerBlock("light_blue_lilac",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.LILAC)));
-    public static final Block CYAN_ROSE_BUSH = registerBlock("cyan_rose_bush",
+    public static final Block LIGHT_BLUE_ROSE_BUSH = registerBlock("light_blue_rose_bush",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
-    public static final Block CYAN_POPPY = registerBlock("cyan_poppy",
+    public static final Block LIGHT_BLUE_POPPY = registerBlock("light_blue_poppy",
             new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.POPPY)));
-    public static final Block POTTED_CYAN_POPPY = registerBlock("potted_cyan_poppy", false,
-            new FlowerPotBlock(CYAN_POPPY, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)));
-    public static final Block CYAN_LILY = registerBlock("cyan_lily",
+    public static final Block POTTED_LIGHT_BLUE_POPPY = registerBlock("potted_light_blue_poppy", false,
+            new FlowerPotBlock(LIGHT_BLUE_POPPY, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)));
+    public static final Block LIGHT_BLUE_LILY = registerBlock("light_blue_lily",
             new FlowerBlock(StatusEffects.POISON, 12, AbstractBlock.Settings.copy(LILY_OF_THE_VALLEY)));
-    public static final Block POTTED_CYAN_LILY = registerBlock("potted_cyan_lily", false,
-            new FlowerPotBlock(CYAN_LILY, AbstractBlock.Settings.copy(POTTED_LILY_OF_THE_VALLEY)));
-    public static final Block CYAN_DANDELION = registerBlock("cyan_dandelion",
+    public static final Block POTTED_LIGHT_BLUE_LILY = registerBlock("potted_light_blue_lily", false,
+            new FlowerPotBlock(LIGHT_BLUE_LILY, AbstractBlock.Settings.copy(POTTED_LILY_OF_THE_VALLEY)));
+    public static final Block LIGHT_BLUE_DANDELION = registerBlock("light_blue_dandelion",
             new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(Blocks.DANDELION)));
-    public static final Block POTTED_CYAN_DANDELION = registerBlock("potted_cyan_dandelion", false,
-            new FlowerPotBlock(CYAN_DANDELION, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
-    public static final Block CYAN_DAISY = registerBlock("cyan_daisy",
+    public static final Block POTTED_LIGHT_BLUE_DANDELION = registerBlock("potted_light_blue_dandelion", false,
+            new FlowerPotBlock(LIGHT_BLUE_DANDELION, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_DAISY = registerBlock("light_blue_daisy",
             new FlowerBlock(StatusEffects.REGENERATION, 8, AbstractBlock.Settings.copy(OXEYE_DAISY)));
-    public static final Block POTTED_CYAN_DAISY = registerBlock("potted_cyan_daisy", false,
-            new FlowerPotBlock(CYAN_DAISY, AbstractBlock.Settings.copy(POTTED_OXEYE_DAISY)));
-    public static final Block CYAN_CORNFLOWER = registerBlock("cyan_cornflower",
+    public static final Block POTTED_LIGHT_BLUE_DAISY = registerBlock("potted_light_blue_daisy", false,
+            new FlowerPotBlock(LIGHT_BLUE_DAISY, AbstractBlock.Settings.copy(POTTED_OXEYE_DAISY)));
+    public static final Block LIGHT_BLUE_CORNFLOWER = registerBlock("light_blue_cornflower",
             new FlowerBlock(StatusEffects.JUMP_BOOST, 6, AbstractBlock.Settings.copy(Blocks.CORNFLOWER)));
-    public static final Block POTTED_CYAN_CORNFLOWER = registerBlock("potted_cyan_cornflower", false,
-            new FlowerPotBlock(CYAN_CORNFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_CORNFLOWER)));
-    public static final Block CYAN_AZURE_BLUET = registerBlock("cyan_azure_bluet",
+    public static final Block POTTED_LIGHT_BLUE_CORNFLOWER = registerBlock("potted_light_blue_cornflower", false,
+            new FlowerPotBlock(LIGHT_BLUE_CORNFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final Block LIGHT_BLUE_AZURE_BLUET = registerBlock("light_blue_azure_bluet",
             new FlowerBlock(StatusEffects.BLINDNESS, 8, AbstractBlock.Settings.copy(Blocks.AZURE_BLUET)));
-    public static final Block POTTED_CYAN_AZURE_BLUET = registerBlock("potted_cyan_azure_bluet", false,
-            new FlowerPotBlock(CYAN_AZURE_BLUET, AbstractBlock.Settings.copy(Blocks.POTTED_AZURE_BLUET)));
-    public static final Block CYAN_TORCHFLOWER = registerBlock("cyan_torchflower",
+    public static final Block POTTED_LIGHT_BLUE_AZURE_BLUET = registerBlock("potted_light_blue_azure_bluet", false,
+            new FlowerPotBlock(LIGHT_BLUE_AZURE_BLUET, AbstractBlock.Settings.copy(Blocks.POTTED_AZURE_BLUET)));
+    public static final Block LIGHT_BLUE_TORCHFLOWER = registerBlock("light_blue_torchflower",
             new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.TORCHFLOWER)));
-    public static final Block POTTED_CYAN_TORCHFLOWER = registerBlock("potted_cyan_torchflower", false,
-            new FlowerPotBlock(CYAN_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
-    public static final Block CYAN_PITCHER_PLANT = registerBlock("cyan_pitcher_plant",
+    public static final Block POTTED_LIGHT_BLUE_TORCHFLOWER = registerBlock("potted_light_blue_torchflower", false,
+            new FlowerPotBlock(LIGHT_BLUE_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
+    public static final Block LIGHT_BLUE_PITCHER_PLANT = registerBlock("light_blue_pitcher_plant",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
 
     // pink flowers
@@ -515,6 +517,61 @@ public class FBBlocks {
             new FlowerPotBlock(LILAC_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
     public static final Block LILAC_PITCHER_PLANT = registerBlock("lilac_pitcher_plant",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
+
+    // cyan flowers
+
+    public static final Block CYAN_ALLIUM = registerBlock("cyan_allium",
+            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 4, AbstractBlock.Settings.copy(ALLIUM)));
+    public static final Block POTTED_CYAN_ALLIUM = registerBlock("potted_cyan_allium", false,
+            new FlowerPotBlock(CYAN_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
+    public static final Block CYAN_TULIP = registerBlock("cyan_tulip",
+            new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(RED_TULIP)));
+    public static final Block POTTED_CYAN_TULIP = registerBlock("potted_cyan_tulip", false,
+            new FlowerPotBlock(CYAN_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
+    public static final Block CYAN_WITHER_ROSE = registerBlock("cyan_wither_rose",
+            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+    public static final Block POTTED_CYAN_WITHER_ROSE = registerBlock("potted_cyan_wither_rose", false,
+            new FlowerPotBlock(CYAN_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
+    public static final Block CYAN_SUNFLOWER = registerBlock("cyan_sunflower",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
+    public static final Block CYAN_PEONY = registerBlock("cyan_peony",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PEONY)));
+    public static final Block CYAN_LILAC = registerBlock("cyan_lilac",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.LILAC)));
+    public static final Block CYAN_ROSE_BUSH = registerBlock("cyan_rose_bush",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
+    public static final Block CYAN_POPPY = registerBlock("cyan_poppy",
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.POPPY)));
+    public static final Block POTTED_CYAN_POPPY = registerBlock("potted_cyan_poppy", false,
+            new FlowerPotBlock(CYAN_POPPY, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)));
+    public static final Block CYAN_ORCHID = registerBlock("cyan_orchid",
+            new FlowerBlock(StatusEffects.SATURATION, 0.35f, AbstractBlock.Settings.copy(Blocks.BLUE_ORCHID)));
+    public static final Block POTTED_CYAN_ORCHID = registerBlock("potted_cyan_orchid", false,
+            new FlowerPotBlock(CYAN_ORCHID, AbstractBlock.Settings.copy(Blocks.POTTED_BLUE_ORCHID)));
+    public static final Block CYAN_LILY = registerBlock("cyan_lily",
+            new FlowerBlock(StatusEffects.POISON, 12, AbstractBlock.Settings.copy(LILY_OF_THE_VALLEY)));
+    public static final Block POTTED_CYAN_LILY = registerBlock("potted_cyan_lily", false,
+            new FlowerPotBlock(CYAN_LILY, AbstractBlock.Settings.copy(POTTED_LILY_OF_THE_VALLEY)));
+    public static final Block CYAN_DANDELION = registerBlock("cyan_dandelion",
+            new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(Blocks.DANDELION)));
+    public static final Block POTTED_CYAN_DANDELION = registerBlock("potted_cyan_dandelion", false,
+            new FlowerPotBlock(CYAN_DANDELION, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
+    public static final Block CYAN_DAISY = registerBlock("cyan_daisy",
+            new FlowerBlock(StatusEffects.REGENERATION, 8, AbstractBlock.Settings.copy(OXEYE_DAISY)));
+    public static final Block POTTED_CYAN_DAISY = registerBlock("potted_cyan_daisy", false,
+            new FlowerPotBlock(CYAN_DAISY, AbstractBlock.Settings.copy(POTTED_OXEYE_DAISY)));
+    public static final Block CYAN_CORNFLOWER = registerBlock("cyan_cornflower",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 6, AbstractBlock.Settings.copy(Blocks.CORNFLOWER)));
+    public static final Block POTTED_CYAN_CORNFLOWER = registerBlock("potted_cyan_cornflower", false,
+            new FlowerPotBlock(CYAN_CORNFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_CORNFLOWER)));
+    public static final Block CYAN_AZURE_BLUET = registerBlock("cyan_azure_bluet",
+            new FlowerBlock(StatusEffects.BLINDNESS, 8, AbstractBlock.Settings.copy(Blocks.AZURE_BLUET)));
+    public static final Block POTTED_CYAN_AZURE_BLUET = registerBlock("potted_cyan_azure_bluet", false,
+            new FlowerPotBlock(CYAN_AZURE_BLUET, AbstractBlock.Settings.copy(Blocks.POTTED_AZURE_BLUET)));
+    public static final Block CYAN_TORCHFLOWER = registerBlock("cyan_torchflower",
+            new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.TORCHFLOWER)));
+    public static final Block POTTED_CYAN_TORCHFLOWER = registerBlock("potted_cyan_torchflower", false,
+            new FlowerPotBlock(CYAN_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
 
 
     // makin the thangz

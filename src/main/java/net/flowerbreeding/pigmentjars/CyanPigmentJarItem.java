@@ -54,7 +54,7 @@ public class CyanPigmentJarItem extends Item {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_DANDELION));
                 }
                 if (pos.isIn(FBTags.Blocks.ORCHIDS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(Blocks.BLUE_ORCHID));
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_ORCHID));
                 }
                 if (pos.isIn(FBTags.Blocks.LILIES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_LILY));
@@ -72,7 +72,7 @@ public class CyanPigmentJarItem extends Item {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_PEONY));
                 }
                 if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_PITCHER_PLANT));
+                    user.getInventory().offerOrDrop(new ItemStack(Blocks.PITCHER_PLANT));
                 }
                 if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_ROSE_BUSH));

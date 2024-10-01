@@ -10,7 +10,9 @@ public class FlowerBreeding implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		FBItemGroup.registerItemGroups();
 		FBBlocks.registerModBlocks();
 		FBItems.registerModItems();
+		Instance.init();
 	}
 }

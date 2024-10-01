@@ -72,7 +72,7 @@ public class BluePigmentJarItem extends Item {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.BLUE_PEONY));
                 }
                 if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(Blocks.PITCHER_PLANT));
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.BLUE_PITCHER_PLANT));
                 }
                 if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.BLUE_ROSE_BUSH));

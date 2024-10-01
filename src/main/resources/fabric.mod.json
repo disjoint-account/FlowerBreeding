@@ -12,11 +12,14 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/flower-breeding/icon.png",
+	"icon": "assets/flowerbreeding/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"net.flowerbreeding.FlowerBreeding"
+		],
+		"client": [
+			"net.flowerbreeding.FlowerBreedingClient"
 		],
 		"fabric-datagen": [
 			"net.flowerbreeding.datagen.FBDataGenerator"

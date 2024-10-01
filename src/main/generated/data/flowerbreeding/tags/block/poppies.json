@@ -6,9 +6,10 @@
     "flowerbreeding:orange_poppy",
     "minecraft:poppy",
     "flowerbreeding:yellow_poppy",
-    "flowerbreeding:cyan_poppy",
+    "flowerbreeding:light_blue_poppy",
     "flowerbreeding:pink_poppy",
     "flowerbreeding:black_poppy",
-    "flowerbreeding:lilac_poppy"
+    "flowerbreeding:lilac_poppy",
+    "flowerbreeding:cyan_poppy"
   ]
 }

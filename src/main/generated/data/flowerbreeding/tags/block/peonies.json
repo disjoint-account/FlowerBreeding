@@ -6,9 +6,10 @@
     "flowerbreeding:orange_peony",
     "flowerbreeding:red_peony",
     "flowerbreeding:yellow_peony",
-    "flowerbreeding:cyan_peony",
+    "flowerbreeding:light_blue_peony",
     "minecraft:peony",
     "flowerbreeding:black_peony",
-    "flowerbreeding:lilac_peony"
+    "flowerbreeding:lilac_peony",
+    "flowerbreeding:cyan_peony"
   ]
 }

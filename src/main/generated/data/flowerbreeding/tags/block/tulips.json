@@ -6,9 +6,10 @@
     "minecraft:orange_tulip",
     "minecraft:red_tulip",
     "flowerbreeding:yellow_tulip",
-    "flowerbreeding:cyan_tulip",
+    "flowerbreeding:light_blue_tulip",
     "minecraft:pink_tulip",
     "flowerbreeding:black_tulip",
-    "flowerbreeding:lilac_tulip"
+    "flowerbreeding:lilac_tulip",
+    "flowerbreeding:cyan_tulip"
   ]
 }

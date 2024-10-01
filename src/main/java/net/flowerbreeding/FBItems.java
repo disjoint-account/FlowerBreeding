@@ -22,14 +22,16 @@ public class FBItems {
             new RedPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item YELLOW_PIGMENT_JAR = registerItem("yellow_pigment_jar",
             new YellowPigmentJarItem(new Item.Settings().maxCount(1)));
-    public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar",
-            new CyanPigmentJarItem(new Item.Settings().maxCount(1)));
+    public static final Item LIGHT_BLUE_PIGMENT_JAR = registerItem("light_blue_pigment_jar",
+            new LightBluePigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item PINK_PIGMENT_JAR = registerItem("pink_pigment_jar",
             new PinkPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item BLACK_PIGMENT_JAR = registerItem("black_pigment_jar",
             new BlackPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item LILAC_PIGMENT_JAR = registerItem("lilac_pigment_jar",
             new LilacPigmentJarItem(new Item.Settings().maxCount(1)));
+    public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar",
+            new CyanPigmentJarItem(new Item.Settings().maxCount(1)));
 
     public static void registerModItems() {
         FlowerBreeding.LOGGER.info("Registering items for " + FlowerBreeding.MOD_ID);

@@ -17,10 +17,11 @@ public class FBTags {
         public static final TagKey<Block> ORANGE_FLOWERS = createTag("orange_flowers");
         public static final TagKey<Block> RED_FLOWERS = createTag("red_flowers");
         public static final TagKey<Block> YELLOW_FLOWERS = createTag("yellow_flowers");
-        public static final TagKey<Block> CYAN_FLOWERS = createTag("cyan_flowers");
+        public static final TagKey<Block> LIGHT_BLUE_FLOWERS = createTag("light_blue_flowers");
         public static final TagKey<Block> PINK_FLOWERS = createTag("pink_flowers");
         public static final TagKey<Block> BLACK_FLOWERS = createTag("black_flowers");
         public static final TagKey<Block> LILAC_FLOWERS = createTag("lilac_flowers");
+        public static final TagKey<Block> CYAN_FLOWERS = createTag("cyan_flowers");
         public static final TagKey<Block> ALLIUMS = createTag("alliums");
         public static final TagKey<Block> CORNFLOWERS = createTag("cornflowers");
         public static final TagKey<Block> DAISIES = createTag("daisies");
@@ -49,10 +50,11 @@ public class FBTags {
         public static final TagKey<Item> ORANGE_FLOWERS = createTag("orange_flowers");
         public static final TagKey<Item> RED_FLOWERS = createTag("red_flowers");
         public static final TagKey<Item> YELLOW_FLOWERS = createTag("yellow_flowers");
-        public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
+        public static final TagKey<Item> LIGHT_BLUE_FLOWERS = createTag("light_blue_flowers");
         public static final TagKey<Item> PINK_FLOWERS = createTag("pink_flowers");
         public static final TagKey<Item> BLACK_FLOWERS = createTag("black_flowers");
         public static final TagKey<Item> LILAC_FLOWERS = createTag("lilac_flowers");
+        public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

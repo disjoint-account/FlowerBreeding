@@ -25,7 +25,7 @@
       "required": false
     },
     {
-      "id": "#flowerbreeding:cyan_flowers",
+      "id": "#flowerbreeding:light_blue_flowers",
       "required": false
     },
     {
@@ -38,6 +38,10 @@
     },
     {
       "id": "#flowerbreeding:lilac_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cyan_flowers",
       "required": false
     }
   ]

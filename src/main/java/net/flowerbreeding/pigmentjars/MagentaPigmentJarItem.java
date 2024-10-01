@@ -63,7 +63,7 @@ public class MagentaPigmentJarItem extends Item {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.MAGENTA_POPPY));
                 }
                 if (pos.isIn(FBTags.Blocks.LILACS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.MAGENTA_LILAC));
+                    user.getInventory().offerOrDrop(new ItemStack(Blocks.LILAC));
                 }
                 if (pos.isIn(FBTags.Blocks.PEONIES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.MAGENTA_PEONY));

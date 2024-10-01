@@ -24,7 +24,6 @@ public class FBItemGroup {
                         entries.add(FBItems.LIGHT_BLUE_PIGMENT_JAR);
                         entries.add(FBItems.PINK_PIGMENT_JAR);
                         entries.add(FBItems.BLACK_PIGMENT_JAR);
-                        entries.add(FBItems.LILAC_PIGMENT_JAR);
                         entries.add(FBItems.CYAN_PIGMENT_JAR);
 
                         entries.add(Blocks.ALLIUM);
@@ -38,7 +37,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.MAGENTA_LILY);
                         entries.add(FBBlocks.MAGENTA_POPPY);
                         entries.add(FBBlocks.MAGENTA_WITHER_ROSE);
-                        entries.add(FBBlocks.MAGENTA_LILAC);
+                        entries.add(Blocks.LILAC);
                         entries.add(FBBlocks.MAGENTA_PEONY);
                         entries.add(FBBlocks.MAGENTA_PITCHER_PLANT);
                         entries.add(FBBlocks.MAGENTA_ROSE_BUSH);
@@ -179,23 +178,6 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_PITCHER_PLANT);
                         entries.add(FBBlocks.BLACK_ROSE_BUSH);
                         entries.add(FBBlocks.BLACK_SUNFLOWER);
-
-                        entries.add(FBBlocks.LILAC_ALLIUM);
-                        entries.add(FBBlocks.LILAC_CORNFLOWER);
-                        entries.add(FBBlocks.LILAC_DAISY);
-                        entries.add(FBBlocks.LILAC_TORCHFLOWER);
-                        entries.add(FBBlocks.LILAC_TULIP);
-                        entries.add(FBBlocks.LILAC_AZURE_BLUET);
-                        entries.add(FBBlocks.LILAC_DANDELION);
-                        entries.add(FBBlocks.LILAC_ORCHID);
-                        entries.add(FBBlocks.LILAC_LILY);
-                        entries.add(FBBlocks.LILAC_POPPY);
-                        entries.add(FBBlocks.LILAC_WITHER_ROSE);
-                        entries.add(Blocks.LILAC);
-                        entries.add(FBBlocks.LILAC_PEONY);
-                        entries.add(FBBlocks.LILAC_PITCHER_PLANT);
-                        entries.add(FBBlocks.LILAC_ROSE_BUSH);
-                        entries.add(FBBlocks.LILAC_SUNFLOWER);
 
                         entries.add(FBBlocks.CYAN_ALLIUM);
                         entries.add(FBBlocks.CYAN_CORNFLOWER);

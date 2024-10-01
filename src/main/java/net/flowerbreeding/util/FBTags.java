@@ -20,7 +20,6 @@ public class FBTags {
         public static final TagKey<Block> LIGHT_BLUE_FLOWERS = createTag("light_blue_flowers");
         public static final TagKey<Block> PINK_FLOWERS = createTag("pink_flowers");
         public static final TagKey<Block> BLACK_FLOWERS = createTag("black_flowers");
-        public static final TagKey<Block> LILAC_FLOWERS = createTag("lilac_flowers");
         public static final TagKey<Block> CYAN_FLOWERS = createTag("cyan_flowers");
         public static final TagKey<Block> ALLIUMS = createTag("alliums");
         public static final TagKey<Block> CORNFLOWERS = createTag("cornflowers");
@@ -71,9 +70,6 @@ public class FBTags {
         public static final TagKey<Item> BLACK_FLOWERS = createTag("black_flowers");
         public static final TagKey<Item> SMALL_BLACK_FLOWERS = createTag("small_black_flowers");
         public static final TagKey<Item> TALL_BLACK_FLOWERS = createTag("tall_black_flowers");
-        public static final TagKey<Item> LILAC_FLOWERS = createTag("lilac_flowers");
-        public static final TagKey<Item> SMALL_LILAC_FLOWERS = createTag("small_lilac_flowers");
-        public static final TagKey<Item> TALL_LILAC_FLOWERS = createTag("tall_lilac_flowers");
         public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
         public static final TagKey<Item> SMALL_CYAN_FLOWERS = createTag("small_cyan_flowers");
         public static final TagKey<Item> TALL_CYAN_FLOWERS = createTag("tall_cyan_flowers");

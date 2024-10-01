@@ -15,7 +15,6 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_WITHER_ROSE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PITCHER_PLANT, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_ROSE_BUSH, 0.65f);
@@ -140,22 +139,6 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_PITCHER_PLANT, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_ROSE_BUSH, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_SUNFLOWER, 0.65f);
-
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_ALLIUM, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_CORNFLOWER, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_DAISY, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_TORCHFLOWER, 0.85f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_TULIP, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_AZURE_BLUET, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_DANDELION, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_ORCHID, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_LILY, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_POPPY, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_WITHER_ROSE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_PEONY, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_PITCHER_PLANT, 0.85f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_ROSE_BUSH, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LILAC_SUNFLOWER, 0.65f);
 
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_ALLIUM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_CORNFLOWER, 0.65f);

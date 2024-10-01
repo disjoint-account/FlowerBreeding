@@ -25,7 +25,6 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_LILY, FBBlocks.POTTED_MAGENTA_LILY, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_POPPY, FBBlocks.POTTED_MAGENTA_POPPY, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_WITHER_ROSE, FBBlocks.POTTED_MAGENTA_WITHER_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_LILAC, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_PEONY, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_PITCHER_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_ROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -151,22 +150,6 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_ROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_SUNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_ALLIUM, FBBlocks.POTTED_LILAC_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_CORNFLOWER, FBBlocks.POTTED_LILAC_CORNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_DAISY, FBBlocks.POTTED_LILAC_DAISY, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_TORCHFLOWER, FBBlocks.POTTED_LILAC_TORCHFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_TULIP, FBBlocks.POTTED_LILAC_TULIP, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_AZURE_BLUET, FBBlocks.POTTED_LILAC_AZURE_BLUET, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_DANDELION, FBBlocks.POTTED_LILAC_DANDELION, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_ORCHID, FBBlocks.POTTED_LILAC_ORCHID, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_LILY, FBBlocks.POTTED_LILAC_LILY, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_POPPY, FBBlocks.POTTED_LILAC_POPPY, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LILAC_WITHER_ROSE, FBBlocks.POTTED_LILAC_WITHER_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LILAC_PEONY, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LILAC_PITCHER_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LILAC_ROSE_BUSH, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LILAC_SUNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
-
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_ALLIUM, FBBlocks.POTTED_CYAN_ALLIUM, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_CORNFLOWER, FBBlocks.POTTED_CYAN_CORNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_DAISY, FBBlocks.POTTED_CYAN_DAISY, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -196,7 +179,6 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.LIGHT_BLUE_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.PINK_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLACK_PIGMENT_JAR, Models.GENERATED);
-        itemModelGenerator.register(FBItems.LILAC_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.CYAN_PIGMENT_JAR, Models.GENERATED);
     }
 }

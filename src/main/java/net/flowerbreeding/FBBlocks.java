@@ -26,8 +26,6 @@ public class FBBlocks {
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
     public static final Block MAGENTA_PEONY = registerBlock("magenta_peony",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PEONY)));
-    public static final Block MAGENTA_LILAC = registerBlock("magenta_lilac",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.LILAC)));
     public static final Block MAGENTA_ROSE_BUSH = registerBlock("magenta_rose_bush",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
     public static final Block MAGENTA_POPPY = registerBlock("magenta_poppy",
@@ -461,61 +459,6 @@ public class FBBlocks {
     public static final Block POTTED_BLACK_TORCHFLOWER = registerBlock("potted_black_torchflower", false,
             new FlowerPotBlock(BLACK_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
     public static final Block BLACK_PITCHER_PLANT = registerBlock("black_pitcher_plant",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
-
-    // lilac flowers
-
-    public static final Block LILAC_ALLIUM = registerBlock("lilac_allium",
-            new FlowerBlock(StatusEffects.FIRE_RESISTANCE, 4, AbstractBlock.Settings.copy(ALLIUM)));
-    public static final Block POTTED_LILAC_ALLIUM = registerBlock("potted_lilac_allium", false,
-            new FlowerPotBlock(LILAC_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
-    public static final Block LILAC_TULIP = registerBlock("lilac_tulip",
-            new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(RED_TULIP)));
-    public static final Block POTTED_LILAC_TULIP = registerBlock("potted_lilac_tulip", false,
-            new FlowerPotBlock(LILAC_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
-    public static final Block LILAC_WITHER_ROSE = registerBlock("lilac_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
-    public static final Block POTTED_LILAC_WITHER_ROSE = registerBlock("potted_lilac_wither_rose", false,
-            new FlowerPotBlock(LILAC_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
-    public static final Block LILAC_SUNFLOWER = registerBlock("lilac_sunflower",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
-    public static final Block LILAC_PEONY = registerBlock("lilac_peony",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PEONY)));
-    public static final Block LILAC_ROSE_BUSH = registerBlock("lilac_rose_bush",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
-    public static final Block LILAC_POPPY = registerBlock("lilac_poppy",
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.POPPY)));
-    public static final Block POTTED_LILAC_POPPY = registerBlock("potted_lilac_poppy", false,
-            new FlowerPotBlock(LILAC_POPPY, AbstractBlock.Settings.copy(Blocks.POTTED_POPPY)));
-    public static final Block LILAC_ORCHID = registerBlock("lilac_orchid",
-            new FlowerBlock(StatusEffects.SATURATION, 0.35f, AbstractBlock.Settings.copy(Blocks.BLUE_ORCHID)));
-    public static final Block POTTED_LILAC_ORCHID = registerBlock("potted_lilac_orchid", false,
-            new FlowerPotBlock(LILAC_ORCHID, AbstractBlock.Settings.copy(Blocks.POTTED_BLUE_ORCHID)));
-    public static final Block LILAC_LILY = registerBlock("lilac_lily",
-            new FlowerBlock(StatusEffects.POISON, 12, AbstractBlock.Settings.copy(LILY_OF_THE_VALLEY)));
-    public static final Block POTTED_LILAC_LILY = registerBlock("potted_lilac_lily", false,
-            new FlowerPotBlock(LILAC_LILY, AbstractBlock.Settings.copy(POTTED_LILY_OF_THE_VALLEY)));
-    public static final Block LILAC_DANDELION = registerBlock("lilac_dandelion",
-            new FlowerBlock(StatusEffects.WEAKNESS, 9, AbstractBlock.Settings.copy(Blocks.DANDELION)));
-    public static final Block POTTED_LILAC_DANDELION = registerBlock("potted_lilac_dandelion", false,
-            new FlowerPotBlock(LILAC_DANDELION, AbstractBlock.Settings.copy(Blocks.POTTED_DANDELION)));
-    public static final Block LILAC_DAISY = registerBlock("lilac_daisy",
-            new FlowerBlock(StatusEffects.REGENERATION, 8, AbstractBlock.Settings.copy(OXEYE_DAISY)));
-    public static final Block POTTED_LILAC_DAISY = registerBlock("potted_lilac_daisy", false,
-            new FlowerPotBlock(LILAC_DAISY, AbstractBlock.Settings.copy(POTTED_OXEYE_DAISY)));
-    public static final Block LILAC_CORNFLOWER = registerBlock("lilac_cornflower",
-            new FlowerBlock(StatusEffects.JUMP_BOOST, 6, AbstractBlock.Settings.copy(Blocks.CORNFLOWER)));
-    public static final Block POTTED_LILAC_CORNFLOWER = registerBlock("potted_lilac_cornflower", false,
-            new FlowerPotBlock(LILAC_CORNFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_CORNFLOWER)));
-    public static final Block LILAC_AZURE_BLUET = registerBlock("lilac_azure_bluet",
-            new FlowerBlock(StatusEffects.BLINDNESS, 8, AbstractBlock.Settings.copy(Blocks.AZURE_BLUET)));
-    public static final Block POTTED_LILAC_AZURE_BLUET = registerBlock("potted_lilac_azure_bluet", false,
-            new FlowerPotBlock(LILAC_AZURE_BLUET, AbstractBlock.Settings.copy(Blocks.POTTED_AZURE_BLUET)));
-    public static final Block LILAC_TORCHFLOWER = registerBlock("lilac_torchflower",
-            new FlowerBlock(StatusEffects.NIGHT_VISION, 5, AbstractBlock.Settings.copy(Blocks.TORCHFLOWER)));
-    public static final Block POTTED_LILAC_TORCHFLOWER = registerBlock("potted_lilac_torchflower", false,
-            new FlowerPotBlock(LILAC_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
-    public static final Block LILAC_PITCHER_PLANT = registerBlock("lilac_pitcher_plant",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT)));
 
     // cyan flowers

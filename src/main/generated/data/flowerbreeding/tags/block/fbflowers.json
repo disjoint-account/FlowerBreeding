@@ -37,10 +37,6 @@
       "required": false
     },
     {
-      "id": "#flowerbreeding:lilac_flowers",
-      "required": false
-    },
-    {
       "id": "#flowerbreeding:cyan_flowers",
       "required": false
     }

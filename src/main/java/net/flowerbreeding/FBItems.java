@@ -28,8 +28,6 @@ public class FBItems {
             new PinkPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item BLACK_PIGMENT_JAR = registerItem("black_pigment_jar",
             new BlackPigmentJarItem(new Item.Settings().maxCount(1)));
-    public static final Item LILAC_PIGMENT_JAR = registerItem("lilac_pigment_jar",
-            new LilacPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar",
             new CyanPigmentJarItem(new Item.Settings().maxCount(1)));
 

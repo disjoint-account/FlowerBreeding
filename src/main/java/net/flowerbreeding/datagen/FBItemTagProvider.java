@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -34,7 +35,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.MAGENTA_WITHER_ROSE.asItem());
 
         getOrCreateTagBuilder(FBTags.Items.TALL_MAGENTA_FLOWERS)
-                .add(FBBlocks.MAGENTA_LILAC.asItem())
+                .add(Items.LILAC)
                 .add(FBBlocks.MAGENTA_PEONY.asItem())
                 .add(FBBlocks.MAGENTA_PITCHER_PLANT.asItem())
                 .add(FBBlocks.MAGENTA_ROSE_BUSH.asItem())
@@ -232,30 +233,6 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.BLACK_ROSE_BUSH.asItem())
                 .add(FBBlocks.BLACK_SUNFLOWER.asItem());
 
-        getOrCreateTagBuilder(FBTags.Items.LILAC_FLOWERS)
-                .addOptionalTag(FBTags.Items.SMALL_LILAC_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_LILAC_FLOWERS);
-
-        getOrCreateTagBuilder(FBTags.Items.SMALL_LILAC_FLOWERS)
-                .add(FBBlocks.LILAC_ALLIUM.asItem())
-                .add(FBBlocks.LILAC_CORNFLOWER.asItem())
-                .add(FBBlocks.LILAC_DAISY.asItem())
-                .add(FBBlocks.LILAC_TORCHFLOWER.asItem())
-                .add(FBBlocks.LILAC_TULIP.asItem())
-                .add(FBBlocks.LILAC_AZURE_BLUET.asItem())
-                .add(FBBlocks.LILAC_DANDELION.asItem())
-                .add(FBBlocks.LILAC_ORCHID.asItem())
-                .add(FBBlocks.LILAC_LILY.asItem())
-                .add(FBBlocks.LILAC_POPPY.asItem())
-                .add(FBBlocks.LILAC_WITHER_ROSE.asItem());
-
-        getOrCreateTagBuilder(FBTags.Items.TALL_LILAC_FLOWERS)
-                .add(Items.LILAC)
-                .add(FBBlocks.LILAC_PEONY.asItem())
-                .add(FBBlocks.LILAC_PITCHER_PLANT.asItem())
-                .add(FBBlocks.LILAC_ROSE_BUSH.asItem())
-                .add(FBBlocks.LILAC_SUNFLOWER.asItem());
-
         getOrCreateTagBuilder(FBTags.Items.CYAN_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_CYAN_FLOWERS)
                 .addOptionalTag(FBTags.Items.TALL_CYAN_FLOWERS);
@@ -279,13 +256,5 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.PITCHER_PLANT.asItem())
                 .add(FBBlocks.CYAN_ROSE_BUSH.asItem())
                 .add(FBBlocks.CYAN_SUNFLOWER.asItem());
-
-        getOrCreateTagBuilder(FBTags.Items.SMALL_MAGENTA_DYE_FLOWERS)
-                .addOptionalTag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
-                .addOptionalTag(FBTags.Items.SMALL_LILAC_FLOWERS);
-
-        getOrCreateTagBuilder(FBTags.Items.TALL_MAGENTA_DYE_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_MAGENTA_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_LILAC_FLOWERS);
     }
 }

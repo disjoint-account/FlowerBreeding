@@ -38,7 +38,6 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.POTTED_MAGENTA_POPPY, pottedPlantDrops(FBBlocks.MAGENTA_POPPY));
             addDrop(FBBlocks.MAGENTA_WITHER_ROSE);
             addDrop(FBBlocks.POTTED_MAGENTA_WITHER_ROSE, pottedPlantDrops(FBBlocks.MAGENTA_WITHER_ROSE));
-            addDrop(FBBlocks.MAGENTA_LILAC, tallPlantDrops(FBBlocks.MAGENTA_LILAC, FBBlocks.MAGENTA_LILAC));
             addDrop(FBBlocks.MAGENTA_PEONY, tallPlantDrops(FBBlocks.MAGENTA_PEONY, FBBlocks.MAGENTA_PEONY));
             addDrop(FBBlocks.MAGENTA_PITCHER_PLANT, tallPlantDrops(FBBlocks.MAGENTA_PITCHER_PLANT, FBBlocks.MAGENTA_PITCHER_PLANT));
             addDrop(FBBlocks.MAGENTA_ROSE_BUSH, tallPlantDrops(FBBlocks.MAGENTA_ROSE_BUSH, FBBlocks.MAGENTA_ROSE_BUSH));
@@ -238,33 +237,6 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.BLACK_PITCHER_PLANT, tallPlantDrops(FBBlocks.BLACK_PITCHER_PLANT, FBBlocks.BLACK_PITCHER_PLANT));
             addDrop(FBBlocks.BLACK_ROSE_BUSH, tallPlantDrops(FBBlocks.BLACK_ROSE_BUSH, FBBlocks.BLACK_ROSE_BUSH));
             addDrop(FBBlocks.BLACK_SUNFLOWER, tallPlantDrops(FBBlocks.BLACK_SUNFLOWER, FBBlocks.BLACK_SUNFLOWER));
-
-            addDrop(FBBlocks.LILAC_ALLIUM);
-            addDrop(FBBlocks.POTTED_LILAC_ALLIUM, pottedPlantDrops(FBBlocks.LILAC_ALLIUM));
-            addDrop(FBBlocks.LILAC_CORNFLOWER);
-            addDrop(FBBlocks.POTTED_LILAC_CORNFLOWER, pottedPlantDrops(FBBlocks.LILAC_CORNFLOWER));
-            addDrop(FBBlocks.LILAC_DAISY);
-            addDrop(FBBlocks.POTTED_LILAC_DAISY, pottedPlantDrops(FBBlocks.LILAC_DAISY));
-            addDrop(FBBlocks.LILAC_TORCHFLOWER);
-            addDrop(FBBlocks.POTTED_LILAC_TORCHFLOWER, pottedPlantDrops(FBBlocks.LILAC_TORCHFLOWER));
-            addDrop(FBBlocks.LILAC_TULIP);
-            addDrop(FBBlocks.POTTED_LILAC_TULIP, pottedPlantDrops(FBBlocks.LILAC_TULIP));
-            addDrop(FBBlocks.LILAC_AZURE_BLUET);
-            addDrop(FBBlocks.POTTED_LILAC_AZURE_BLUET, pottedPlantDrops(FBBlocks.LILAC_AZURE_BLUET));
-            addDrop(FBBlocks.LILAC_DANDELION);
-            addDrop(FBBlocks.POTTED_LILAC_DANDELION, pottedPlantDrops(FBBlocks.LILAC_DANDELION));
-            addDrop(FBBlocks.LILAC_ORCHID);
-            addDrop(FBBlocks.POTTED_LILAC_ORCHID, pottedPlantDrops(FBBlocks.LILAC_ORCHID));
-            addDrop(FBBlocks.LILAC_LILY);
-            addDrop(FBBlocks.POTTED_LILAC_LILY, pottedPlantDrops(FBBlocks.LILAC_LILY));
-            addDrop(FBBlocks.LILAC_POPPY);
-            addDrop(FBBlocks.POTTED_LILAC_POPPY, pottedPlantDrops(FBBlocks.LILAC_POPPY));
-            addDrop(FBBlocks.LILAC_WITHER_ROSE);
-            addDrop(FBBlocks.POTTED_LILAC_WITHER_ROSE, pottedPlantDrops(FBBlocks.LILAC_WITHER_ROSE));
-            addDrop(FBBlocks.LILAC_PEONY, tallPlantDrops(FBBlocks.LILAC_PEONY, FBBlocks.LILAC_PEONY));
-            addDrop(FBBlocks.LILAC_PITCHER_PLANT, tallPlantDrops(FBBlocks.LILAC_PITCHER_PLANT, FBBlocks.LILAC_PITCHER_PLANT));
-            addDrop(FBBlocks.LILAC_ROSE_BUSH, tallPlantDrops(FBBlocks.LILAC_ROSE_BUSH, FBBlocks.LILAC_ROSE_BUSH));
-            addDrop(FBBlocks.LILAC_SUNFLOWER, tallPlantDrops(FBBlocks.LILAC_SUNFLOWER, FBBlocks.LILAC_SUNFLOWER));
 
             addDrop(FBBlocks.CYAN_ALLIUM);
             addDrop(FBBlocks.POTTED_CYAN_ALLIUM, pottedPlantDrops(FBBlocks.CYAN_ALLIUM));

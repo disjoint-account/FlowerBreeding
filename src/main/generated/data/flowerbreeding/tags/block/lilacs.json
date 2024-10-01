@@ -1,6 +1,6 @@
 {
   "values": [
-    "flowerbreeding:magenta_lilac",
+    "minecraft:lilac",
     "flowerbreeding:blue_lilac",
     "flowerbreeding:white_lilac",
     "flowerbreeding:orange_lilac",
@@ -9,7 +9,6 @@
     "flowerbreeding:light_blue_lilac",
     "flowerbreeding:pink_lilac",
     "flowerbreeding:black_lilac",
-    "minecraft:lilac",
     "flowerbreeding:cyan_lilac"
   ]
 }

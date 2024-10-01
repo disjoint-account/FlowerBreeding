@@ -62,10 +62,6 @@ public class EmptyPigmentJarItem extends Item {
             ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.BLACK_PIGMENT_JAR));
             user.setStackInHand(hand, itemStack1);
         }
-        if (pos.isIn(FBTags.Blocks.LILAC_FLOWERS)) {
-            ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.LILAC_PIGMENT_JAR));
-            user.setStackInHand(hand, itemStack1);
-        }
         if (pos.isIn(FBTags.Blocks.CYAN_FLOWERS)) {
             ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.CYAN_PIGMENT_JAR));
             user.setStackInHand(hand, itemStack1);

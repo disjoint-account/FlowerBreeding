@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:small_magenta_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_lilac_flowers",
+      "required": false
+    }
+  ]
+}

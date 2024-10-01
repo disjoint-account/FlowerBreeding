@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "flowerbreeding:block/yellow_lilac_top"
-  }
-}

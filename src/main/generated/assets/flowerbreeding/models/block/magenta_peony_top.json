@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cross",
-  "textures": {
-    "cross": "flowerbreeding:block/magenta_peony_top"
-  }
-}

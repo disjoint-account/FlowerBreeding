@@ -19,7 +19,7 @@ public class FBBlocks {
     public static final Block POTTED_MAGENTA_TULIP = registerBlock("potted_magenta_tulip", false,
             new FlowerPotBlock(MAGENTA_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
     public static final Block MAGENTA_WITHER_ROSE = registerBlock("magenta_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_MAGENTA_WITHER_ROSE = registerBlock("potted_magenta_wither_rose", false,
             new FlowerPotBlock(MAGENTA_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block MAGENTA_SUNFLOWER = registerBlock("magenta_sunflower",
@@ -74,7 +74,7 @@ public class FBBlocks {
     public static final Block POTTED_BLUE_TULIP = registerBlock("potted_blue_tulip", false,
             new FlowerPotBlock(BLUE_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
     public static final Block BLUE_WITHER_ROSE = registerBlock("blue_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_BLUE_WITHER_ROSE = registerBlock("potted_blue_wither_rose", false,
             new FlowerPotBlock(BLUE_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block BLUE_SUNFLOWER = registerBlock("blue_sunflower",
@@ -123,7 +123,7 @@ public class FBBlocks {
     public static final Block POTTED_WHITE_ALLIUM = registerBlock("potted_white_allium", false,
             new FlowerPotBlock(WHITE_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
     public static final Block WHITE_WITHER_ROSE = registerBlock("white_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_WHITE_WITHER_ROSE = registerBlock("potted_white_wither_rose", false,
             new FlowerPotBlock(WHITE_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block WHITE_SUNFLOWER = registerBlock("white_sunflower",
@@ -164,7 +164,7 @@ public class FBBlocks {
     public static final Block POTTED_ORANGE_ALLIUM = registerBlock("potted_orange_allium", false,
             new FlowerPotBlock(ORANGE_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
     public static final Block ORANGE_WITHER_ROSE = registerBlock("orange_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_ORANGE_WITHER_ROSE = registerBlock("potted_orange_wither_rose", false,
             new FlowerPotBlock(ORANGE_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block ORANGE_SUNFLOWER = registerBlock("orange_sunflower",
@@ -213,7 +213,7 @@ public class FBBlocks {
     public static final Block POTTED_RED_ALLIUM = registerBlock("potted_red_allium", false,
             new FlowerPotBlock(RED_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
     public static final Block RED_WITHER_ROSE = registerBlock("red_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_RED_WITHER_ROSE = registerBlock("potted_red_wither_rose", false,
             new FlowerPotBlock(RED_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block RED_SUNFLOWER = registerBlock("red_sunflower",
@@ -264,7 +264,7 @@ public class FBBlocks {
     public static final Block POTTED_YELLOW_TULIP = registerBlock("potted_yellow_tulip", false,
             new FlowerPotBlock(YELLOW_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
     public static final Block YELLOW_WITHER_ROSE = registerBlock("yellow_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_YELLOW_WITHER_ROSE = registerBlock("potted_yellow_wither_rose", false,
             new FlowerPotBlock(YELLOW_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block YELLOW_PEONY = registerBlock("yellow_peony",
@@ -315,7 +315,7 @@ public class FBBlocks {
     public static final Block POTTED_LIGHT_BLUE_TULIP = registerBlock("potted_light_blue_tulip", false,
             new FlowerPotBlock(LIGHT_BLUE_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
     public static final Block LIGHT_BLUE_WITHER_ROSE = registerBlock("light_blue_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_LIGHT_BLUE_WITHER_ROSE = registerBlock("potted_light_blue_wither_rose", false,
             new FlowerPotBlock(LIGHT_BLUE_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block LIGHT_BLUE_SUNFLOWER = registerBlock("light_blue_sunflower",
@@ -364,7 +364,7 @@ public class FBBlocks {
     public static final Block POTTED_PINK_ALLIUM = registerBlock("potted_pink_allium", false,
             new FlowerPotBlock(PINK_ALLIUM, AbstractBlock.Settings.copy(Blocks.POTTED_ALLIUM)));
     public static final Block PINK_WITHER_ROSE = registerBlock("pink_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_PINK_WITHER_ROSE = registerBlock("potted_pink_wither_rose", false,
             new FlowerPotBlock(PINK_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block PINK_SUNFLOWER = registerBlock("pink_sunflower",
@@ -472,7 +472,7 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_TULIP = registerBlock("potted_cyan_tulip", false,
             new FlowerPotBlock(CYAN_TULIP, AbstractBlock.Settings.copy(Blocks.POTTED_RED_TULIP)));
     public static final Block CYAN_WITHER_ROSE = registerBlock("cyan_wither_rose",
-            new FlowerBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
+            new WitherRoseBlock(StatusEffects.WITHER, 8, AbstractBlock.Settings.copy(Blocks.WITHER_ROSE)));
     public static final Block POTTED_CYAN_WITHER_ROSE = registerBlock("potted_cyan_wither_rose", false,
             new FlowerPotBlock(CYAN_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block CYAN_SUNFLOWER = registerBlock("cyan_sunflower",
@@ -516,6 +516,8 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_TORCHFLOWER = registerBlock("potted_cyan_torchflower", false,
             new FlowerPotBlock(CYAN_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
 
+    public static final Block LOTUS_FLOWER = registerBlock("lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
 
     // makin the thangz
 

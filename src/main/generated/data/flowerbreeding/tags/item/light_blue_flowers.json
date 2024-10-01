@@ -1,20 +1,12 @@
 {
   "values": [
-    "flowerbreeding:light_blue_allium",
-    "flowerbreeding:light_blue_cornflower",
-    "flowerbreeding:light_blue_daisy",
-    "flowerbreeding:light_blue_torchflower",
-    "flowerbreeding:light_blue_tulip",
-    "flowerbreeding:light_blue_azure_bluet",
-    "flowerbreeding:light_blue_dandelion",
-    "minecraft:blue_orchid",
-    "flowerbreeding:light_blue_lily",
-    "flowerbreeding:light_blue_poppy",
-    "flowerbreeding:light_blue_wither_rose",
-    "flowerbreeding:light_blue_lilac",
-    "flowerbreeding:light_blue_peony",
-    "flowerbreeding:light_blue_pitcher_plant",
-    "flowerbreeding:light_blue_rose_bush",
-    "flowerbreeding:light_blue_sunflower"
+    {
+      "id": "#flowerbreeding:small_light_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_light_blue_flowers",
+      "required": false
+    }
   ]
 }

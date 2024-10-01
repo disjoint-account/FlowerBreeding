@@ -1,20 +1,12 @@
 {
   "values": [
-    "flowerbreeding:black_allium",
-    "flowerbreeding:black_cornflower",
-    "flowerbreeding:black_daisy",
-    "flowerbreeding:black_torchflower",
-    "flowerbreeding:black_tulip",
-    "flowerbreeding:black_azure_bluet",
-    "flowerbreeding:black_dandelion",
-    "flowerbreeding:black_orchid",
-    "flowerbreeding:black_lily",
-    "flowerbreeding:black_poppy",
-    "minecraft:wither_rose",
-    "flowerbreeding:black_lilac",
-    "flowerbreeding:black_peony",
-    "flowerbreeding:black_pitcher_plant",
-    "flowerbreeding:black_rose_bush",
-    "flowerbreeding:black_sunflower"
+    {
+      "id": "#flowerbreeding:small_black_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_black_flowers",
+      "required": false
+    }
   ]
 }

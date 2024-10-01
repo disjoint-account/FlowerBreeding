@@ -6,6 +6,7 @@ import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.BlockTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -28,6 +29,26 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.BLACK_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.LILAC_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.CYAN_FLOWERS);
+
+        getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.ALLIUMS)
+                .addOptionalTag(FBTags.Blocks.CORNFLOWERS)
+                .addOptionalTag(FBTags.Blocks.DAISIES)
+                .addOptionalTag(FBTags.Blocks.TORCHFLOWERS)
+                .addOptionalTag(FBTags.Blocks.TULIPS)
+                .addOptionalTag(FBTags.Blocks.AZURE_BLUETS)
+                .addOptionalTag(FBTags.Blocks.DANDELIONS)
+                .addOptionalTag(FBTags.Blocks.ORCHIDS)
+                .addOptionalTag(FBTags.Blocks.LILIES)
+                .addOptionalTag(FBTags.Blocks.POPPIES)
+                .addOptionalTag(FBTags.Blocks.WITHER_ROSES);
+
+        getOrCreateTagBuilder(BlockTags.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.LILACS)
+                .addOptionalTag(FBTags.Blocks.PEONIES)
+                .addOptionalTag(FBTags.Blocks.PITCHER_PLANTS)
+                .addOptionalTag(FBTags.Blocks.ROSE_BUSHES)
+                .addOptionalTag(FBTags.Blocks.SUNFLOWERS);
 
         getOrCreateTagBuilder(FBTags.Blocks.MAGENTA_FLOWERS)
                 .add(Blocks.ALLIUM,

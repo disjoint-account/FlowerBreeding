@@ -1,20 +1,12 @@
 {
   "values": [
-    "flowerbreeding:white_allium",
-    "flowerbreeding:white_cornflower",
-    "minecraft:lily_of_the_valley",
-    "flowerbreeding:white_torchflower",
-    "minecraft:white_tulip",
-    "minecraft:azure_bluet",
-    "flowerbreeding:white_dandelion",
-    "flowerbreeding:white_orchid",
-    "minecraft:lily_of_the_valley",
-    "flowerbreeding:white_poppy",
-    "flowerbreeding:white_wither_rose",
-    "flowerbreeding:white_lilac",
-    "flowerbreeding:white_peony",
-    "flowerbreeding:white_pitcher_plant",
-    "flowerbreeding:white_rose_bush",
-    "flowerbreeding:white_sunflower"
+    {
+      "id": "#flowerbreeding:small_white_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_white_flowers",
+      "required": false
+    }
   ]
 }

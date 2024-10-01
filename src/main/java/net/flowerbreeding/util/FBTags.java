@@ -45,16 +45,40 @@ public class FBTags {
     }
     public static class Items {
         public static final TagKey<Item> MAGENTA_FLOWERS = createTag("magenta_flowers");
+        public static final TagKey<Item> SMALL_MAGENTA_FLOWERS = createTag("small_magenta_flowers");
+        public static final TagKey<Item> TALL_MAGENTA_FLOWERS = createTag("tall_magenta_flowers");
         public static final TagKey<Item> BLUE_FLOWERS = createTag("blue_flowers");
+        public static final TagKey<Item> SMALL_BLUE_FLOWERS = createTag("small_blue_flowers");
+        public static final TagKey<Item> TALL_BLUE_FLOWERS = createTag("tall_blue_flowers");
         public static final TagKey<Item> WHITE_FLOWERS = createTag("white_flowers");
+        public static final TagKey<Item> SMALL_WHITE_FLOWERS = createTag("small_white_flowers");
+        public static final TagKey<Item> TALL_WHITE_FLOWERS = createTag("tall_white_flowers");
         public static final TagKey<Item> ORANGE_FLOWERS = createTag("orange_flowers");
+        public static final TagKey<Item> SMALL_ORANGE_FLOWERS = createTag("small_orange_flowers");
+        public static final TagKey<Item> TALL_ORANGE_FLOWERS = createTag("tall_orange_flowers");
         public static final TagKey<Item> RED_FLOWERS = createTag("red_flowers");
+        public static final TagKey<Item> SMALL_RED_FLOWERS = createTag("small_red_flowers");
+        public static final TagKey<Item> TALL_RED_FLOWERS = createTag("tall_red_flowers");
         public static final TagKey<Item> YELLOW_FLOWERS = createTag("yellow_flowers");
+        public static final TagKey<Item> SMALL_YELLOW_FLOWERS = createTag("small_yellow_flowers");
+        public static final TagKey<Item> TALL_YELLOW_FLOWERS = createTag("tall_yellow_flowers");
         public static final TagKey<Item> LIGHT_BLUE_FLOWERS = createTag("light_blue_flowers");
+        public static final TagKey<Item> SMALL_LIGHT_BLUE_FLOWERS = createTag("small_light_blue_flowers");
+        public static final TagKey<Item> TALL_LIGHT_BLUE_FLOWERS = createTag("tall_light_blue_flowers");
         public static final TagKey<Item> PINK_FLOWERS = createTag("pink_flowers");
+        public static final TagKey<Item> SMALL_PINK_FLOWERS = createTag("small_pink_flowers");
+        public static final TagKey<Item> TALL_PINK_FLOWERS = createTag("tall_pink_flowers");
         public static final TagKey<Item> BLACK_FLOWERS = createTag("black_flowers");
+        public static final TagKey<Item> SMALL_BLACK_FLOWERS = createTag("small_black_flowers");
+        public static final TagKey<Item> TALL_BLACK_FLOWERS = createTag("tall_black_flowers");
         public static final TagKey<Item> LILAC_FLOWERS = createTag("lilac_flowers");
+        public static final TagKey<Item> SMALL_LILAC_FLOWERS = createTag("small_lilac_flowers");
+        public static final TagKey<Item> TALL_LILAC_FLOWERS = createTag("tall_lilac_flowers");
         public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
+        public static final TagKey<Item> SMALL_CYAN_FLOWERS = createTag("small_cyan_flowers");
+        public static final TagKey<Item> TALL_CYAN_FLOWERS = createTag("tall_cyan_flowers");
+        public static final TagKey<Item> SMALL_MAGENTA_DYE_FLOWERS = createTag("small_magenta_dye_flowers");
+        public static final TagKey<Item> TALL_MAGENTA_DYE_FLOWERS = createTag("tall_magenta_dye_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

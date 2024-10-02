@@ -31,8 +31,8 @@ public class FBItems {
             new BlackPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar",
             new CyanPigmentJarItem(new Item.Settings().maxCount(1)));
-    public static final Item LOTUS_FLOWER = registerItem("lotus_flower", new PlaceableOnWaterItem(FBBlocks.LOTUS_FLOWER, new Item.Settings()));
-
+    public static final Item LOTUS_FLOWER = registerItem("lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.LOTUS_FLOWER, new Item.Settings()));
     public static void registerModItems() {
         FlowerBreeding.LOGGER.info("Registering items for " + FlowerBreeding.MOD_ID);
     }

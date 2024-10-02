@@ -73,8 +73,7 @@ public class FBTags {
         public static final TagKey<Item> CYAN_FLOWERS = createTag("cyan_flowers");
         public static final TagKey<Item> SMALL_CYAN_FLOWERS = createTag("small_cyan_flowers");
         public static final TagKey<Item> TALL_CYAN_FLOWERS = createTag("tall_cyan_flowers");
-        public static final TagKey<Item> SMALL_MAGENTA_DYE_FLOWERS = createTag("small_magenta_dye_flowers");
-        public static final TagKey<Item> TALL_MAGENTA_DYE_FLOWERS = createTag("tall_magenta_dye_flowers");
+        public static final TagKey<Item> LIGHT_GREY_DYE_SMALL_FLOWERS = createTag("light_grey_dye_small_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

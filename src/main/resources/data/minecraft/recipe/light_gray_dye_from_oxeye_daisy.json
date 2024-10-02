@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
-  "group": "white_dye",
+  "group": "light_gray_dye",
   "ingredients": [
     {
-      "tag": "flowerbreeding:small_white_flowers"
+      "tag": "flowerbreeding:light_grey_dye_small_flowers"
     }
   ],
   "result": {
     "count": 1,
-    "id": "minecraft:white_dye"
+    "id": "minecraft:light_gray_dye"
   }
 }

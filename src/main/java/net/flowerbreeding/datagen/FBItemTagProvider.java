@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.util.FBTags;
-import net.minecraft.block.Blocks;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 
@@ -256,5 +255,17 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(Items.PITCHER_PLANT.asItem())
                 .add(FBBlocks.CYAN_ROSE_BUSH.asItem())
                 .add(FBBlocks.CYAN_SUNFLOWER.asItem());
+
+        getOrCreateTagBuilder(FBTags.Items.LIGHT_GREY_DYE_SMALL_FLOWERS)
+                .add(FBBlocks.WHITE_ALLIUM.asItem())
+                .add(FBBlocks.WHITE_CORNFLOWER.asItem())
+                .add(FBBlocks.WHITE_TORCHFLOWER.asItem())
+                .add(Items.WHITE_TULIP)
+                .add(Items.AZURE_BLUET)
+                .add(FBBlocks.WHITE_DANDELION.asItem())
+                .add(FBBlocks.WHITE_ORCHID.asItem())
+                .add(Items.LILY_OF_THE_VALLEY)
+                .add(FBBlocks.WHITE_POPPY.asItem())
+                .add(FBBlocks.WHITE_WITHER_ROSE.asItem());
     }
 }

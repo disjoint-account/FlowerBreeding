@@ -4,7 +4,7 @@
   "group": "light_blue_dye",
   "ingredients": [
     {
-      "tag": "minecraft:small_light_blue_flowers"
+      "tag": "flowerbreeding:small_light_blue_flowers"
     }
   ],
   "result": {

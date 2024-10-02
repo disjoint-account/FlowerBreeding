@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -193,6 +194,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CYAN_LILAC);
                         entries.add(FBBlocks.CYAN_PEONY);
                         entries.add(Blocks.PITCHER_PLANT);
+                        entries.add(Items.PITCHER_POD);
                         entries.add(FBBlocks.CYAN_ROSE_BUSH);
                         entries.add(FBBlocks.CYAN_SUNFLOWER);
                     }).build());

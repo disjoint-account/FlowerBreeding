@@ -10,6 +10,8 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsage;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
@@ -80,6 +82,8 @@ public class OrangePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_SUNFLOWER));
                 }
+                world.playSound(user, blockPos, SoundEvents.BLOCK_CAVE_VINES_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;

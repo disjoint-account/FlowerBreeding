@@ -79,7 +79,7 @@ public class MagentaPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.MAGENTA_SUNFLOWER));
                 }
-                world.playSound(user, blockPos, SoundEvents.BLOCK_CAVE_VINES_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                 return ActionResult.SUCCESS;
             }
         }

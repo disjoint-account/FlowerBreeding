@@ -247,5 +247,6 @@
   "block.flowerbreeding.cyan_lilac": "Cyan Lilac",
   "block.flowerbreeding.cyan_peony": "Cyan Peony",
   "block.flowerbreeding.cyan_rose_bush": "Cyan Rose Bush",
-  "block.flowerbreeding.cyan_sunflower": "Cyan Sunflower"
+  "block.flowerbreeding.cyan_sunflower": "Cyan Sunflower",
+  "entity.minecraft.villager.botanist": "Botanist"
 }

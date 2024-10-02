@@ -69,7 +69,7 @@ public class EmptyPigmentJarItem extends Item {
                 ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.CYAN_PIGMENT_JAR));
                 user.setStackInHand(hand, itemStack1);
             }
-            world.playSound(user, blockPos, SoundEvents.BLOCK_CAVE_VINES_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+            world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS;

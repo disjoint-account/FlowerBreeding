@@ -12,6 +12,7 @@ public class FBDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FBItemTagProvider::new);
 		pack.addProvider(FBModelProvider::new);
 		pack.addProvider(FBLootTableGenerator::new);
+		pack.addProvider(FBPOITagProvider::new);
 
 	}
 }

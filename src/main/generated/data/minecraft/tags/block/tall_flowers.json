@@ -1,0 +1,24 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:lilacs",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:peonies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:pitcher_plants",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:rose_bushes",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:sunflowers",
+      "required": false
+    }
+  ]
+}

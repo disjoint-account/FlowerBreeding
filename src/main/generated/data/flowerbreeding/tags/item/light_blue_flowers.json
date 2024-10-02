@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:small_light_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_light_blue_flowers",
+      "required": false
+    }
+  ]
+}

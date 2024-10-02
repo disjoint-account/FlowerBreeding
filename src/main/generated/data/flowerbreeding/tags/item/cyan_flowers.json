@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:small_cyan_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_cyan_flowers",
+      "required": false
+    }
+  ]
+}

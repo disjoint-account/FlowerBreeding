@@ -2,12 +2,17 @@ package net.flowerbreeding;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.flowerbreeding.screen.BotanyTableScreen;
+import net.flowerbreeding.screen.FBScreenHandlers;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 
 public class FlowerBreedingClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        HandledScreens.register(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, BotanyTableScreen::new);
+
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_CORNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_CORNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_DAISY, RenderLayer.getCutout());

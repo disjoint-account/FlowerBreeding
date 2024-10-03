@@ -31,6 +31,44 @@ public class FBItems {
             new BlackPigmentJarItem(new Item.Settings().maxCount(1)));
     public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar",
             new CyanPigmentJarItem(new Item.Settings().maxCount(1)));
+
+    public static final Item EMPTY_POLLEN_VIAL = registerItem("empty_pollen_vial",
+            new EmptyPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item ALLIUM_POLLEN_VIAL = registerItem("allium_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item CORNFLOWER_POLLEN_VIAL = registerItem("cornflower_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item DAISY_POLLEN_VIAL = registerItem("daisy_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item TORCHFLOWER_POLLEN_VIAL = registerItem("torchflower_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item TULIP_POLLEN_VIAL = registerItem("tulip_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item AZURE_BLUET_POLLEN_VIAL = registerItem("azure_bluet_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item DANDELION_POLLEN_VIAL = registerItem("dandelion_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item ORCHID_POLLEN_VIAL = registerItem("orchid_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item LILY_POLLEN_VIAL = registerItem("lily_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item POPPY_POLLEN_VIAL = registerItem("poppy_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item WITHER_ROSE_POLLEN_VIAL = registerItem("wither_rose_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item LILAC_POLLEN_VIAL = registerItem("lilac_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item PEONY_POLLEN_VIAL = registerItem("peony_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item PITCHER_PLANT_POLLEN_VIAL = registerItem("pitcher_plant_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item ROSE_BUSH_POLLEN_VIAL = registerItem("rose_bush_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item SUNFLOWER_POLLEN_VIAL = registerItem("sunflower_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item LILY_PAD_POLLEN_VIAL = registerItem("lily_pad_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+
     public static final Item LOTUS_FLOWER = registerItem("lotus_flower",
             new PlaceableOnWaterItem(FBBlocks.LOTUS_FLOWER, new Item.Settings()));
     public static void registerModItems() {

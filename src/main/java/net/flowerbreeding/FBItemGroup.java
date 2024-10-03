@@ -14,7 +14,9 @@ public class FBItemGroup {
     public static ItemGroup FLOWERBREEDING = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FlowerBreeding.MOD_ID, "flowerbreeding"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.flowerbreeding"))
-                    .icon(() -> new ItemStack(FBItems.EMPTY_PIGMENT_JAR)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(FBItems.EMPTY_POLLEN_VIAL)).entries((displayContext, entries) -> {
+                        entries.add(FBBlocks.BOTANY_TABLE);
+
                         entries.add(FBItems.EMPTY_PIGMENT_JAR);
                         entries.add(FBItems.MAGENTA_PIGMENT_JAR);
                         entries.add(FBItems.BLUE_PIGMENT_JAR);
@@ -26,6 +28,24 @@ public class FBItemGroup {
                         entries.add(FBItems.PINK_PIGMENT_JAR);
                         entries.add(FBItems.BLACK_PIGMENT_JAR);
                         entries.add(FBItems.CYAN_PIGMENT_JAR);
+
+                        entries.add(FBItems.EMPTY_POLLEN_VIAL);
+                        entries.add(FBItems.CORNFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.DAISY_POLLEN_VIAL);
+                        entries.add(FBItems.TORCHFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.TULIP_POLLEN_VIAL);
+                        entries.add(FBItems.AZURE_BLUET_POLLEN_VIAL);
+                        entries.add(FBItems.DANDELION_POLLEN_VIAL);
+                        entries.add(FBItems.ORCHID_POLLEN_VIAL);
+                        entries.add(FBItems.LILY_POLLEN_VIAL);
+                        entries.add(FBItems.POPPY_POLLEN_VIAL);
+                        entries.add(FBItems.WITHER_ROSE_POLLEN_VIAL);
+                        entries.add(FBItems.LILAC_POLLEN_VIAL);
+                        entries.add(FBItems.PEONY_POLLEN_VIAL);
+                        entries.add(FBItems.PITCHER_PLANT_POLLEN_VIAL);
+                        entries.add(FBItems.ROSE_BUSH_POLLEN_VIAL);
+                        entries.add(FBItems.SUNFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.LILY_PAD_POLLEN_VIAL);
 
                         entries.add(Blocks.ALLIUM);
                         entries.add(FBBlocks.MAGENTA_CORNFLOWER);

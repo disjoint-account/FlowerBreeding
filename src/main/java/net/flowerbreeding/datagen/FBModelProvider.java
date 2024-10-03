@@ -7,12 +7,15 @@ import net.flowerbreeding.FBItems;
 import net.minecraft.data.client.*;
 
 public class FBModelProvider extends FabricModelProvider {
+
     public FBModelProvider(FabricDataOutput output) {
         super(output);
     }
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(FBBlocks.BOTANY_TABLE);
+
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_CORNFLOWER, FBBlocks.POTTED_MAGENTA_CORNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_DAISY, FBBlocks.POTTED_MAGENTA_DAISY, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_TORCHFLOWER, FBBlocks.POTTED_MAGENTA_TORCHFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -160,5 +163,24 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.PINK_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLACK_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.CYAN_PIGMENT_JAR, Models.GENERATED);
+
+        itemModelGenerator.register(FBItems.EMPTY_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.CORNFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.DAISY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.TORCHFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.TULIP_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.AZURE_BLUET_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.DANDELION_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.ORCHID_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.LILY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.POPPY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.WITHER_ROSE_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.LILAC_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.PEONY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.PITCHER_PLANT_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.ROSE_BUSH_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.SUNFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.LILY_PAD_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
     }
 }

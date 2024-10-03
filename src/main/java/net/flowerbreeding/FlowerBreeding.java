@@ -1,6 +1,7 @@
 package net.flowerbreeding;
 
 import net.fabricmc.api.ModInitializer;
+import net.flowerbreeding.screen.FBScreenHandlers;
 import net.flowerbreeding.villagers.FBVillagers;
 import net.flowerbreeding.villagers.FBVillagerTrades;
 import org.slf4j.Logger;
@@ -15,6 +16,9 @@ public class FlowerBreeding implements ModInitializer {
 		FBItemGroup.registerItemGroups();
 		FBBlocks.registerModBlocks();
 		FBItems.registerModItems();
+		FBBlockEntities.registerBlockEntities();
+		FBScreenHandlers.registerScreenHandlers();
+		FBRecipes.registerRecipes();
 		FBVillagers.registerVillagers();
 		FBVillagerTrades.registerTrades();
 		Instance.init();

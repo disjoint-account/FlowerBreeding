@@ -1,5 +1,6 @@
 package net.flowerbreeding;
 
+import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -11,6 +12,9 @@ import net.minecraft.util.Identifier;
 import static net.minecraft.block.Blocks.*;
 
 public class FBBlocks {
+
+    public static final Block BOTANY_TABLE = registerBlock("botany_table",
+            new BotanyTableBlock(AbstractBlock.Settings.copy(CRAFTING_TABLE)));
 
     // magenta flowers
 

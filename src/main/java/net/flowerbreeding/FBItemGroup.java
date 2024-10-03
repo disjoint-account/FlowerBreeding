@@ -30,6 +30,7 @@ public class FBItemGroup {
                         entries.add(FBItems.CYAN_PIGMENT_JAR);
 
                         entries.add(FBItems.EMPTY_POLLEN_VIAL);
+                        entries.add(FBItems.ALLIUM_POLLEN_VIAL);
                         entries.add(FBItems.CORNFLOWER_POLLEN_VIAL);
                         entries.add(FBItems.DAISY_POLLEN_VIAL);
                         entries.add(FBItems.TORCHFLOWER_POLLEN_VIAL);

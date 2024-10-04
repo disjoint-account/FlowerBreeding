@@ -1,0 +1,9 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:fbflowers",
+      "required": false
+    },
+    "minecraft:lily_pad"
+  ]
+}

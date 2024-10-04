@@ -2,8 +2,7 @@ package net.flowerbreeding;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
-import net.flowerbreeding.screen.BotanyTableScreen;
-import net.flowerbreeding.screen.FBScreenHandlers;
+import net.flowerbreeding.botanytable.BotanyTableScreen;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 

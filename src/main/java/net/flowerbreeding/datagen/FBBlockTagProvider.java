@@ -29,6 +29,10 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.BLACK_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.CYAN_FLOWERS);
 
+        getOrCreateTagBuilder(FBTags.Blocks.POLLEN_PLANTS)
+                .addOptionalTag(FBTags.Blocks.FBFLOWERS)
+                .add(Blocks.LILY_PAD);
+
         getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.ALLIUMS)
                 .addOptionalTag(FBTags.Blocks.CORNFLOWERS)

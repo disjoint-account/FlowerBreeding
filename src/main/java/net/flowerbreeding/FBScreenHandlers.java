@@ -1,6 +1,6 @@
-package net.flowerbreeding.screen;
+package net.flowerbreeding;
 
-import net.flowerbreeding.FlowerBreeding;
+import net.flowerbreeding.botanytable.BotanyTableScreenHandler;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.resource.featuretoggle.FeatureFlags;

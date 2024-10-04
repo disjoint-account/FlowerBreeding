@@ -1,7 +1,6 @@
 package net.flowerbreeding;
 
 import net.fabricmc.api.ModInitializer;
-import net.flowerbreeding.screen.FBScreenHandlers;
 import net.flowerbreeding.villagers.FBVillagers;
 import net.flowerbreeding.villagers.FBVillagerTrades;
 import org.slf4j.Logger;

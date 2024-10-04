@@ -1,10 +1,8 @@
-package net.flowerbreeding.screen;
+package net.flowerbreeding.botanytable;
 
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FBRecipes;
-import net.flowerbreeding.botanytable.BotanyTableBlock;
-import net.flowerbreeding.botanytable.BotanyTableRecipe;
-import net.flowerbreeding.botanytable.BotanyTableRecipeInput;
+import net.flowerbreeding.FBScreenHandlers;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.CraftingResultInventory;
@@ -206,7 +204,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             itemStack = itemStack2.copy();
             if (index == 3) {
                 // output slot
-                if (!this.insertItem(itemStack2, 4, 39, false)) {
+                if (!this.insertItem(itemStack2, 4, 40, true)) {
                     return ItemStack.EMPTY;
                 }
                 slot.onQuickTransfer(itemStack2, itemStack);

@@ -28,7 +28,7 @@ public class EmptyPollenVialItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
-        if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
+        if (pos.isIn(FBTags.Blocks.POLLEN_PLANTS)) {
             if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
                 ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.ALLIUM_POLLEN_VIAL));
                 user.setStackInHand(hand, itemStack1);

@@ -1,7 +1,5 @@
 package net.flowerbreeding.botanytable;
 
-import com.mojang.serialization.MapCodec;
-import net.flowerbreeding.screen.BotanyTableScreenHandler;
 import net.minecraft.block.*;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;

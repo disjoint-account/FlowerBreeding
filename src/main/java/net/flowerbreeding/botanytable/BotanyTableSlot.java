@@ -1,4 +1,4 @@
-package net.flowerbreeding.screen;
+package net.flowerbreeding.botanytable;
 
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.Item;

@@ -1,4 +1,4 @@
-package net.flowerbreeding.screen;
+package net.flowerbreeding.botanytable;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.flowerbreeding.FlowerBreeding;

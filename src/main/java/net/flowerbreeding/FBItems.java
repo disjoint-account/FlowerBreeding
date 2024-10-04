@@ -71,6 +71,8 @@ public class FBItems {
 
     public static final Item LOTUS_FLOWER = registerItem("lotus_flower",
             new PlaceableOnWaterItem(FBBlocks.LOTUS_FLOWER, new Item.Settings()));
+
+
     public static void registerModItems() {
         FlowerBreeding.LOGGER.info("Registering items for " + FlowerBreeding.MOD_ID);
     }

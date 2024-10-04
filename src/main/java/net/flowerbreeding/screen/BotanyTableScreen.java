@@ -27,6 +27,11 @@ public class BotanyTableScreen extends HandledScreen<BotanyTableScreenHandler> {
     }
 
     @Override
+    public void handledScreenTick() {
+        super.handledScreenTick();
+    }
+
+    @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
         RenderSystem.setShader(GameRenderer::getPositionTexProgram);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);

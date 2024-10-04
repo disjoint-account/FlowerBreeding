@@ -16,7 +16,6 @@ public class FlowerBreeding implements ModInitializer {
 		FBItemGroup.registerItemGroups();
 		FBBlocks.registerModBlocks();
 		FBItems.registerModItems();
-		FBBlockEntities.registerBlockEntities();
 		FBScreenHandlers.registerScreenHandlers();
 		FBRecipes.registerRecipes();
 		FBVillagers.registerVillagers();

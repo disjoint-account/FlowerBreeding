@@ -2,9 +2,9 @@ package net.flowerbreeding.villagers;
 
 import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
+import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FlowerBreeding;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -16,7 +16,7 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 public class FBVillagers {
     public static final RegistryKey<PointOfInterestType> BOTANIST_POI_KEY = registerPoiKey("botanist_poi");
-    public static final PointOfInterestType BOTANIST_POI = registerPOI("botanist_poi", Blocks.WHITE_STAINED_GLASS);
+    public static final PointOfInterestType BOTANIST_POI = registerPOI("botanist_poi", FBBlocks.BOTANY_TABLE);
 
     public static final VillagerProfession BOTANIST = registerProfession("botanist", BOTANIST_POI_KEY);
 

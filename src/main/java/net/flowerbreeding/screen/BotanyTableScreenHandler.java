@@ -1,23 +1,30 @@
 package net.flowerbreeding.screen;
 
 import net.flowerbreeding.FBItems;
-import net.flowerbreeding.botanytable.BotanyTableBlockEntity;
-import net.minecraft.block.entity.BlockEntity;
+import net.flowerbreeding.FBRecipes;
+import net.flowerbreeding.botanytable.BotanyTableBlock;
+import net.flowerbreeding.botanytable.BotanyTableRecipe;
+import net.flowerbreeding.botanytable.BotanyTableRecipeInput;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
+import net.minecraft.inventory.CraftingResultInventory;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.ScreenHandler;
+import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
+import net.minecraft.world.World;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class BotanyTableScreenHandler extends ScreenHandler {
-    private final Inventory inventory;
-    public final BotanyTableBlockEntity blockEntity;
     public static final List<Item> vials = Arrays.asList(
             ItemStack.EMPTY.getItem(),
             FBItems.EMPTY_POLLEN_VIAL,
@@ -53,65 +60,177 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             FBItems.BLACK_PIGMENT_JAR,
             FBItems.CYAN_PIGMENT_JAR);
 
-    public BotanyTableScreenHandler(int syncId, PlayerInventory inventory, BlockPos pos) {
-        this(syncId, inventory, inventory.player.getWorld().getBlockEntity(pos));
+    private final World world;
+
+    @Nullable
+    private RecipeEntry<BotanyTableRecipe> currentRecipe;
+
+    protected final CraftingResultInventory output = new CraftingResultInventory();
+    protected final Inventory input = new SimpleInventory(3) {
+
+        @Override
+        public void markDirty() {
+            super.markDirty();
+            BotanyTableScreenHandler.this.onContentChanged(this);
+        }
+    };
+    protected final ScreenHandlerContext context;
+    protected final PlayerEntity player;
+
+    public BotanyTableScreenHandler(int syncId, PlayerInventory playerInventory) {
+        this(syncId, playerInventory, ScreenHandlerContext.EMPTY);
     }
 
-    public BotanyTableScreenHandler(int syncId, PlayerInventory playerInventory, BlockEntity blockEntity) {
+    public BotanyTableScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
         super(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, syncId);
-        checkSize((Inventory) blockEntity, 4);
-        this.inventory = (Inventory) blockEntity;
-        this.blockEntity = ((BotanyTableBlockEntity) blockEntity);
 
-        this.addSlot(new BotanyTableSlot(inventory, 0, 28, 15, null, vials));
-        this.addSlot(new BotanyTableSlot(inventory, 1, 28, 52, null, vials));
-        this.addSlot(new BotanyTableSlot(inventory, 2, 80, 33, null, jars));
-        this.addSlot(new Slot(inventory, 3, 132, 33));
+        this.world = playerInventory.player.getWorld();
+        //this.recipes = this.world.getRecipeManager().listAllOfType(FBRecipes.BOTANY_TABLE_TYPE);
 
-        addPlayerInventory(playerInventory);
-        addPlayerHotbar(playerInventory);
+        int i;
+        this.context = context;
+        this.player = playerInventory.player;
+        this.addSlot(new BotanyTableSlot(this.input, 0, 28, 15, null, vials));
+        this.addSlot(new BotanyTableSlot(this.input, 1, 28, 52, null, vials));
+        this.addSlot(new BotanyTableSlot(this.input, 2, 80, 33, null, jars));
+        this.addSlot(new Slot(this.output, 3, 132, 33) {
+
+            @Override
+            public boolean canInsert(ItemStack stack) {
+                return false;
+            }
+
+            @Override
+            public boolean canTakeItems(PlayerEntity playerEntity) {
+                return BotanyTableScreenHandler.this.canTakeOutput(playerEntity, this.hasStack());
+            }
+
+            @Override
+            public void onTakeItem(PlayerEntity player, ItemStack stack) {
+                BotanyTableScreenHandler.this.onTakeOutput(player, stack);
+            }
+        });
+        for (i = 0; i < 3; ++i) {
+            for (int j = 0; j < 9; ++j) {
+                this.addSlot(new Slot(playerInventory, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+            }
+        }
+        for (i = 0; i < 9; ++i) {
+            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+        }
+    }
+
+    public void onContentChanged(Inventory inventory) {
+        super.onContentChanged(inventory);
+        if (inventory == this.input) {
+            this.updateResult();
+        }
+    }
+
+    private boolean canTakeOutput(PlayerEntity player, boolean present) {
+        return this.currentRecipe != null
+                && this.currentRecipe.value().matches(new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)), this.world);
+    }
+
+    private void onTakeOutput(PlayerEntity player, ItemStack stack) {
+        stack.onCraftByPlayer(world, player, stack.getCount());
+        world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_CAVE_VINES_PICK_BERRIES, SoundCategory.BLOCKS);
+
+        this.output.unlockLastRecipe(player, List.of(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)));
+        for (int i = 0; i < 3; i++) {
+            this.decrementStack(i);
+            this.emptyVial(0);
+            this.emptyVial(1);
+            this.emptyJar(2);
+        }
+        // this.context.run((world, pos) -> world.syncWorldEvent(WorldEvents.SMITHING_TABLE_USED, (BlockPos)pos, 0));
+    }
+
+    private void decrementStack(int slot) {
+        ItemStack itemStack = this.input.getStack(slot);
+        itemStack.decrement(1);
+        this.input.setStack(slot, itemStack);
+    }
+
+    private void emptyVial(int slot) {
+        ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_POLLEN_VIAL);
+        this.input.setStack(slot, itemStack1);
+    }
+
+    private void emptyJar(int slot) {
+        ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
+        this.input.setStack(slot, itemStack2);
+    }
+
+    private void updateResult() {
+        List<RecipeEntry<BotanyTableRecipe>> list = this.world.getRecipeManager().getAllMatches(FBRecipes.BOTANY_TABLE_TYPE,
+                new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)), this.world);
+
+        if (list.isEmpty()) {
+            this.output.setStack(0, ItemStack.EMPTY);
+        } else {
+            for (int i = 0; i < list.size(); i++) {
+                    this.currentRecipe = list.get(i);
+            }
+            ItemStack itemStack = this.currentRecipe.value().craft(new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)),
+                    this.world.getRegistryManager());
+
+            this.output.setLastRecipe(this.currentRecipe);
+            this.output.setStack(0, itemStack);
+}
     }
 
     @Override
-    public ItemStack quickMove(PlayerEntity player, int invSlot) {
-        ItemStack newStack = ItemStack.EMPTY;
-        Slot slot = this.slots.get(invSlot);
-        if (slot != null && slot.hasStack()) {
-            ItemStack originalStack = slot.getStack();
-            newStack = originalStack.copy();
-            if (invSlot < this.inventory.size()) {
-                if (!this.insertItem(originalStack, this.inventory.size(), this.slots.size(), true)) {
-                    return ItemStack.EMPTY;
-                }
-            } else if (!this.insertItem(originalStack, 0, this.inventory.size(), false)) {
-                return ItemStack.EMPTY;
-            }
-
-            if (originalStack.isEmpty()) {
-                slot.setStack(ItemStack.EMPTY);
-            } else {
-                slot.markDirty();
-            }
-        }
-        return newStack;
+    public void onClosed(PlayerEntity player) {
+        super.onClosed(player);
+        this.context.run((world, pos) -> this.dropInventory(player, this.input));
     }
 
     @Override
     public boolean canUse(PlayerEntity player) {
-        return this.inventory.canPlayerUse(player);
-    }
+        return this.context.get((world, pos) -> {
 
-    private void addPlayerInventory(PlayerInventory playerInventory) {
-        for (int i = 0; i < 3; ++i) {
-            for (int l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + i * 9 + 9, 8 + l * 18, 84 + i * 18));
+            if (!(this.world.getBlockState(pos).getBlock() instanceof BotanyTableBlock)) {
+                return false;
             }
-        }
+            return player.squaredDistanceTo((double) pos.getX() + 0.5, (double) pos.getY() + 0.5, (double) pos.getZ() + 0.5) <= 64.0;
+        }, true);
     }
 
-    private void addPlayerHotbar(PlayerInventory playerInventory) {
-        for (int i = 0; i < 9; ++i) {
-            this.addSlot(new Slot(playerInventory, i, 8 + i * 18, 142));
+    @Override
+    public ItemStack quickMove(PlayerEntity player, int index) {
+        ItemStack itemStack = ItemStack.EMPTY;
+        Slot slot = (Slot) this.slots.get(index);
+        if (slot != null && slot.hasStack()) {
+            ItemStack itemStack2 = slot.getStack();
+            itemStack = itemStack2.copy();
+            if (index == 3) {
+                // output slot
+                if (!this.insertItem(itemStack2, 4, 39, false)) {
+                    return ItemStack.EMPTY;
+                }
+                slot.onQuickTransfer(itemStack2, itemStack);
+            } else if (index == 0 || index == 1 || index == 2) {
+                // input slots
+                if (!this.insertItem(itemStack2, 4, 39, false)) {
+                    return ItemStack.EMPTY;
+                }
+            } else if (index >= 4 && index < 39) {
+                // player inv slots
+                if (!this.insertItem(itemStack2, 0, 3, false)) {
+                    return ItemStack.EMPTY;
+                }
+            }
+            if (itemStack2.isEmpty()) {
+                slot.setStack(ItemStack.EMPTY);
+            } else {
+                slot.markDirty();
+            }
+            if (itemStack2.getCount() == itemStack.getCount()) {
+                return ItemStack.EMPTY;
+            }
+            slot.onTakeItem(player, itemStack2);
         }
+        return itemStack;
     }
 }

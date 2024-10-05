@@ -14,7 +14,6 @@ public class FBModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-        blockStateModelGenerator.registerSimpleCubeAll(FBBlocks.BOTANY_TABLE);
 
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_CORNFLOWER, FBBlocks.POTTED_MAGENTA_CORNFLOWER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_DAISY, FBBlocks.POTTED_MAGENTA_DAISY, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -174,6 +173,7 @@ public class FBModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+
         itemModelGenerator.register(FBItems.EMPTY_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.MAGENTA_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLUE_PIGMENT_JAR, Models.GENERATED);

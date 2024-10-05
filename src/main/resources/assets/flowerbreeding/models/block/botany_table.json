@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/birch_planks",
+    "east": "flowerbreeding:block/botany_table_front",
+    "north": "flowerbreeding:block/botany_table_side",
+    "particle": "flowerbreeding:block/botany_table_front",
+    "south": "flowerbreeding:block/botany_table_side",
+    "up": "flowerbreeding:block/botany_table_top",
+    "west": "flowerbreeding:block/botany_table_front"
+  }
+}

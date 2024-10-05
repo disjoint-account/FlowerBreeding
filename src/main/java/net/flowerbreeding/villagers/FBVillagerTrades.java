@@ -1,6 +1,7 @@
 package net.flowerbreeding.villagers;
 
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
+import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -77,28 +78,32 @@ public class FBVillagerTrades {
                     new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), 12, 5, 0.2f
             ));
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 4),
-                    new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), 12, 5, 0.2f
+                    new TradedItem(Items.EMERALD, 5),
+                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 3, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 2, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
                     new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 1), 12, 5, 0.2f
             ));
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 4),
-                    new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), 12, 5, 0.2f
+                    new TradedItem(Items.EMERALD, 5),
+                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 2),
-                    new ItemStack(FBItems.MAGENTA_LOTUS_FLOWER, 1), 12, 15, 0.2f
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.YELLOW_DAFFODIL, 1), 16, 5, 0.05f
             ));
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 2),
-                    new ItemStack(FBItems.MAGENTA_LOTUS_FLOWER, 1), 12, 15, 0.2f
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.RED_FOXGLOVE, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBItems.MAGENTA_LOTUS_FLOWER, 1), 16, 5, 0.05f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 5, factories -> {

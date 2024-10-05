@@ -14,7 +14,7 @@ public class FBItemGroup {
     public static ItemGroup FLOWERBREEDING = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(FlowerBreeding.MOD_ID, "flowerbreeding"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.flowerbreeding"))
-                    .icon(() -> new ItemStack(FBItems.EMPTY_POLLEN_VIAL)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(FBBlocks.BOTANY_TABLE)).entries((displayContext, entries) -> {
                         entries.add(FBBlocks.BOTANY_TABLE);
 
                         entries.add(FBItems.EMPTY_PIGMENT_JAR);

@@ -1,7 +1,67 @@
 {
   "values": [
     {
-      "id": "#flowerbreeding:fbflowers",
+      "id": "#flowerbreeding:alliums",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cornflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:daisies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:torchflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tulips",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:azure_bluets",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:dandelions",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:orchids",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lilies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:poppies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:wither_roses",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lilacs",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:peonies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:pitcher_plants",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:rose_bushes",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:sunflowers",
       "required": false
     },
     "minecraft:lily_pad"

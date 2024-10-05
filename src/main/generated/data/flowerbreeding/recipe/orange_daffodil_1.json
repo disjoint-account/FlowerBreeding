@@ -1,0 +1,16 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": {
+    "item": "flowerbreeding:orange_pigment_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:orange_daffodil"
+  },
+  "vial1": {
+    "item": "flowerbreeding:dandelion_pollen_vial"
+  },
+  "vial2": {
+    "item": "flowerbreeding:lily_pollen_vial"
+  }
+}

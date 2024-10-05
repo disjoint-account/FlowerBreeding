@@ -523,6 +523,50 @@ public class FBBlocks {
     public static final Block LOTUS_FLOWER = registerBlock("lotus_flower", false,
             new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
 
+    //daffodils
+
+    public static final Block MAGENTA_DAFFODIL = registerBlock("magenta_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_DAFFODIL = registerBlock("potted_magenta_daffodil", false,
+            new FlowerPotBlock(MAGENTA_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_DAFFODIL = registerBlock("blue_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_DAFFODIL = registerBlock("potted_blue_daffodil", false,
+            new FlowerPotBlock(BLUE_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_DAFFODIL = registerBlock("white_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_DAFFODIL = registerBlock("potted_white_daffodil", false,
+            new FlowerPotBlock(WHITE_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_DAFFODIL = registerBlock("orange_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_DAFFODIL = registerBlock("potted_orange_daffodil", false,
+            new FlowerPotBlock(ORANGE_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_DAFFODIL = registerBlock("red_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_DAFFODIL = registerBlock("potted_red_daffodil", false,
+            new FlowerPotBlock(RED_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_DAFFODIL = registerBlock("yellow_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_DAFFODIL = registerBlock("potted_yellow_daffodil", false,
+            new FlowerPotBlock(YELLOW_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_DAFFODIL = registerBlock("light_blue_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_DAFFODIL = registerBlock("potted_light_blue_daffodil", false,
+            new FlowerPotBlock(LIGHT_BLUE_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_DAFFODIL = registerBlock("pink_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_DAFFODIL = registerBlock("potted_pink_daffodil", false,
+            new FlowerPotBlock(PINK_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_DAFFODIL = registerBlock("black_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_DAFFODIL = registerBlock("potted_black_daffodil", false,
+            new FlowerPotBlock(BLACK_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_DAFFODIL = registerBlock("cyan_daffodil",
+            new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_DAFFODIL = registerBlock("potted_cyan_daffodil", false,
+            new FlowerPotBlock(CYAN_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
+
     // makin the thangz
 
     private static Block registerBlock(String name, Block block) {

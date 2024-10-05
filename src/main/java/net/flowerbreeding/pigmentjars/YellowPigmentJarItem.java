@@ -82,6 +82,9 @@ public class YellowPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(Blocks.SUNFLOWER));
                 }
+                if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_DAFFODIL));
+                }
                 world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                 return ActionResult.SUCCESS;
             }

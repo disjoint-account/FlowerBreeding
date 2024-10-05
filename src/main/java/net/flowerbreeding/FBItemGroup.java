@@ -218,6 +218,17 @@ public class FBItemGroup {
                         entries.add(Items.PITCHER_POD);
                         entries.add(FBBlocks.CYAN_ROSE_BUSH);
                         entries.add(FBBlocks.CYAN_SUNFLOWER);
+
+                        entries.add(FBBlocks.MAGENTA_DAFFODIL);
+                        entries.add(FBBlocks.BLUE_DAFFODIL);
+                        entries.add(FBBlocks.WHITE_DAFFODIL);
+                        entries.add(FBBlocks.ORANGE_DAFFODIL);
+                        entries.add(FBBlocks.RED_DAFFODIL);
+                        entries.add(FBBlocks.YELLOW_DAFFODIL);
+                        entries.add(FBBlocks.LIGHT_BLUE_DAFFODIL);
+                        entries.add(FBBlocks.PINK_DAFFODIL);
+                        entries.add(FBBlocks.BLACK_DAFFODIL);
+                        entries.add(FBBlocks.CYAN_DAFFODIL);
                     }).build());
     public static void registerItemGroups() {
         FlowerBreeding.LOGGER.info("Registering Item Groups for " + FlowerBreeding.MOD_ID);

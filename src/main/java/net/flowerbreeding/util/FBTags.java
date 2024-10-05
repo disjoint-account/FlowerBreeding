@@ -38,6 +38,7 @@ public class FBTags {
         public static final TagKey<Block> PITCHER_PLANTS = createTag("pitcher_plants");
         public static final TagKey<Block> ROSE_BUSHES = createTag("rose_bushes");
         public static final TagKey<Block> SUNFLOWERS = createTag("sunflowers");
+        public static final TagKey<Block> DAFFODILS = createTag("daffodils");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(FlowerBreeding.MOD_ID, name));

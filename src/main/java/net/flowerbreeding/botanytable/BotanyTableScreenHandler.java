@@ -88,10 +88,10 @@ public class BotanyTableScreenHandler extends ScreenHandler {
         int i;
         this.context = context;
         this.player = playerInventory.player;
-        this.addSlot(new BotanyTableSlot(this.input, 0, 28, 15, null, vials));
-        this.addSlot(new BotanyTableSlot(this.input, 1, 28, 52, null, vials));
-        this.addSlot(new BotanyTableSlot(this.input, 2, 80, 33, null, jars));
-        this.addSlot(new Slot(this.output, 3, 132, 33) {
+        this.addSlot(new BotanyTableSlot(this.input, 0, 36, 24, null, vials));
+        this.addSlot(new BotanyTableSlot(this.input, 1, 36, 41, null, vials));
+        this.addSlot(new BotanyTableSlot(this.input, 2, 79, 33, null, jars));
+        this.addSlot(new Slot(this.output, 3, 131, 33) {
 
             @Override
             public boolean canInsert(ItemStack stack) {

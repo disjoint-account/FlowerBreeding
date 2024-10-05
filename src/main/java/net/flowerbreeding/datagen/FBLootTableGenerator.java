@@ -308,6 +308,27 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_FOXGLOVE);
             addDrop(FBBlocks.POTTED_CYAN_FOXGLOVE, pottedPlantDrops(FBBlocks.CYAN_FOXGLOVE));
 
+            addDrop(FBBlocks.MAGENTA_HYACINTH);
+            addDrop(FBBlocks.POTTED_MAGENTA_HYACINTH, pottedPlantDrops(FBBlocks.MAGENTA_HYACINTH));
+            addDrop(FBBlocks.BLUE_HYACINTH);
+            addDrop(FBBlocks.POTTED_BLUE_HYACINTH, pottedPlantDrops(FBBlocks.BLUE_HYACINTH));
+            addDrop(FBBlocks.WHITE_HYACINTH);
+            addDrop(FBBlocks.POTTED_WHITE_HYACINTH, pottedPlantDrops(FBBlocks.WHITE_HYACINTH));
+            addDrop(FBBlocks.ORANGE_HYACINTH);
+            addDrop(FBBlocks.POTTED_ORANGE_HYACINTH, pottedPlantDrops(FBBlocks.ORANGE_HYACINTH));
+            addDrop(FBBlocks.RED_HYACINTH);
+            addDrop(FBBlocks.POTTED_RED_HYACINTH, pottedPlantDrops(FBBlocks.RED_HYACINTH));
+            addDrop(FBBlocks.YELLOW_HYACINTH);
+            addDrop(FBBlocks.POTTED_YELLOW_HYACINTH, pottedPlantDrops(FBBlocks.YELLOW_HYACINTH));
+            addDrop(FBBlocks.LIGHT_BLUE_HYACINTH);
+            addDrop(FBBlocks.POTTED_LIGHT_BLUE_HYACINTH, pottedPlantDrops(FBBlocks.LIGHT_BLUE_HYACINTH));
+            addDrop(FBBlocks.PINK_HYACINTH);
+            addDrop(FBBlocks.POTTED_PINK_HYACINTH, pottedPlantDrops(FBBlocks.PINK_HYACINTH));
+            addDrop(FBBlocks.BLACK_HYACINTH);
+            addDrop(FBBlocks.POTTED_BLACK_HYACINTH, pottedPlantDrops(FBBlocks.BLACK_HYACINTH));
+            addDrop(FBBlocks.CYAN_HYACINTH);
+            addDrop(FBBlocks.POTTED_CYAN_HYACINTH, pottedPlantDrops(FBBlocks.CYAN_HYACINTH));
+
             addDrop(FBBlocks.MAGENTA_LOTUS_FLOWER, drops(FBItems.MAGENTA_LOTUS_FLOWER));
             addDrop(FBBlocks.BLUE_LOTUS_FLOWER, drops(FBItems.BLUE_LOTUS_FLOWER));
             addDrop(FBBlocks.WHITE_LOTUS_FLOWER, drops(FBItems.WHITE_LOTUS_FLOWER));

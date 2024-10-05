@@ -169,6 +169,17 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_FOXGLOVE, FBBlocks.POTTED_PINK_FOXGLOVE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_FOXGLOVE, FBBlocks.POTTED_BLACK_FOXGLOVE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_FOXGLOVE, FBBlocks.POTTED_CYAN_FOXGLOVE, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_HYACINTH, FBBlocks.POTTED_MAGENTA_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_HYACINTH, FBBlocks.POTTED_BLUE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_HYACINTH, FBBlocks.POTTED_WHITE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.ORANGE_HYACINTH, FBBlocks.POTTED_ORANGE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.RED_HYACINTH, FBBlocks.POTTED_RED_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.YELLOW_HYACINTH, FBBlocks.POTTED_YELLOW_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LIGHT_BLUE_HYACINTH, FBBlocks.POTTED_LIGHT_BLUE_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_HYACINTH, FBBlocks.POTTED_PINK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_HYACINTH, FBBlocks.POTTED_BLACK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_HYACINTH, FBBlocks.POTTED_CYAN_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override

@@ -43,6 +43,22 @@
     {
       "id": "#flowerbreeding:wither_roses",
       "required": false
+    },
+    {
+      "id": "#flowerbreeding:daffodils",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:foxgloves",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:hyacinths",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lotus_flowers",
+      "required": false
     }
   ]
 }

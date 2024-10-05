@@ -88,6 +88,9 @@ public class YellowPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_FOXGLOVE));
                 }
+                if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HYACINTH));
+                }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.YELLOW_LOTUS_FLOWER));
                 }

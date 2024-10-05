@@ -606,7 +606,50 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_FOXGLOVE = registerBlock("potted_cyan_foxglove", false,
             new FlowerPotBlock(CYAN_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
-    //foxgloves
+    //hyacinths
+
+    public static final Block MAGENTA_HYACINTH = registerBlock("magenta_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_HYACINTH = registerBlock("potted_magenta_hyacinth", false,
+            new FlowerPotBlock(MAGENTA_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_HYACINTH = registerBlock("blue_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_HYACINTH = registerBlock("potted_blue_hyacinth", false,
+            new FlowerPotBlock(BLUE_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_HYACINTH = registerBlock("white_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_HYACINTH = registerBlock("potted_white_hyacinth", false,
+            new FlowerPotBlock(WHITE_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_HYACINTH = registerBlock("orange_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_HYACINTH = registerBlock("potted_orange_hyacinth", false,
+            new FlowerPotBlock(ORANGE_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_HYACINTH = registerBlock("red_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_HYACINTH = registerBlock("potted_red_hyacinth", false,
+            new FlowerPotBlock(RED_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_HYACINTH = registerBlock("yellow_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_HYACINTH = registerBlock("potted_yellow_hyacinth", false,
+            new FlowerPotBlock(YELLOW_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_HYACINTH = registerBlock("light_blue_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_HYACINTH = registerBlock("potted_light_blue_hyacinth", false,
+            new FlowerPotBlock(LIGHT_BLUE_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_HYACINTH = registerBlock("pink_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_HYACINTH = registerBlock("potted_pink_hyacinth", false,
+            new FlowerPotBlock(PINK_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_HYACINTH = registerBlock("black_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_HYACINTH = registerBlock("potted_black_hyacinth", false,
+            new FlowerPotBlock(BLACK_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_HYACINTH = registerBlock("cyan_hyacinth",
+            new FlowerBlock(StatusEffects.JUMP_BOOST, 7, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_HYACINTH = registerBlock("potted_cyan_hyacinth", false,
+            new FlowerPotBlock(CYAN_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
+    //lotus flowers
 
     public static final Block MAGENTA_LOTUS_FLOWER = registerBlock("magenta_lotus_flower", false,
             new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));

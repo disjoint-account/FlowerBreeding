@@ -40,6 +40,7 @@ public class FBTags {
         public static final TagKey<Block> SUNFLOWERS = createTag("sunflowers");
         public static final TagKey<Block> DAFFODILS = createTag("daffodils");
         public static final TagKey<Block> FOXGLOVES = createTag("foxgloves");
+        public static final TagKey<Block> HYACINTHS = createTag("hyacinths");
         public static final TagKey<Block> LOTUS_FLOWERS = createTag("lotus_flowers");
 
         private static TagKey<Block> createTag(String name) {

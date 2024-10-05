@@ -88,6 +88,9 @@ public class LightBluePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_FOXGLOVE));
                 }
+                if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_HYACINTH));
+                }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.LIGHT_BLUE_LOTUS_FLOWER));
                 }

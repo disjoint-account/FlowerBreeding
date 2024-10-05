@@ -241,6 +241,17 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_FOXGLOVE);
                         entries.add(FBBlocks.CYAN_FOXGLOVE);
 
+                        entries.add(FBBlocks.MAGENTA_HYACINTH);
+                        entries.add(FBBlocks.BLUE_HYACINTH);
+                        entries.add(FBBlocks.WHITE_HYACINTH);
+                        entries.add(FBBlocks.ORANGE_HYACINTH);
+                        entries.add(FBBlocks.RED_HYACINTH);
+                        entries.add(FBBlocks.YELLOW_HYACINTH);
+                        entries.add(FBBlocks.LIGHT_BLUE_HYACINTH);
+                        entries.add(FBBlocks.PINK_HYACINTH);
+                        entries.add(FBBlocks.BLACK_HYACINTH);
+                        entries.add(FBBlocks.CYAN_HYACINTH);
+
                         entries.add(FBItems.MAGENTA_LOTUS_FLOWER);
                         entries.add(FBItems.BLUE_LOTUS_FLOWER);
                         entries.add(FBItems.WHITE_LOTUS_FLOWER);

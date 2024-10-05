@@ -301,6 +301,27 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_FOXGLOVE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_FOXGLOVE, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_WHITE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_ORANGE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_RED_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_YELLOW_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_LIGHT_BLUE_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_PINK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLACK_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_HYACINTH, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_HYACINTH, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_LOTUS_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_LOTUS_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_LOTUS_FLOWER, RenderLayer.getCutout());

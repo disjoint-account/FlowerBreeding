@@ -82,7 +82,7 @@ public class FBVillagerTrades {
                     new ItemStack(Items.STICK, 1), 12, 5, 0.2f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 2, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 3, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
                     new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 1), 12, 5, 0.2f

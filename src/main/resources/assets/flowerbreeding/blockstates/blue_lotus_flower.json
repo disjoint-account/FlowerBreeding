@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "flowerbreeding:block/blue_lotus_flower"
+      },
+      {
+        "model": "flowerbreeding:block/blue_lotus_flower",
+        "y": 90
+      },
+      {
+        "model": "flowerbreeding:block/blue_lotus_flower",
+        "y": 180
+      },
+      {
+        "model": "flowerbreeding:block/blue_lotus_flower",
+        "y": 270
+      }
+    ]
+  }
+}

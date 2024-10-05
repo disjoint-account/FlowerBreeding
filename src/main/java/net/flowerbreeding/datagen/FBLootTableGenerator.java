@@ -3,6 +3,7 @@ package net.flowerbreeding.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.flowerbreeding.FBBlocks;
+import net.flowerbreeding.FBItems;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -285,5 +286,37 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.POTTED_BLACK_DAFFODIL, pottedPlantDrops(FBBlocks.BLACK_DAFFODIL));
             addDrop(FBBlocks.CYAN_DAFFODIL);
             addDrop(FBBlocks.POTTED_CYAN_DAFFODIL, pottedPlantDrops(FBBlocks.CYAN_DAFFODIL));
+
+            addDrop(FBBlocks.MAGENTA_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_MAGENTA_FOXGLOVE, pottedPlantDrops(FBBlocks.MAGENTA_FOXGLOVE));
+            addDrop(FBBlocks.BLUE_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_BLUE_FOXGLOVE, pottedPlantDrops(FBBlocks.BLUE_FOXGLOVE));
+            addDrop(FBBlocks.WHITE_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_WHITE_FOXGLOVE, pottedPlantDrops(FBBlocks.WHITE_FOXGLOVE));
+            addDrop(FBBlocks.ORANGE_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_ORANGE_FOXGLOVE, pottedPlantDrops(FBBlocks.ORANGE_FOXGLOVE));
+            addDrop(FBBlocks.RED_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_RED_FOXGLOVE, pottedPlantDrops(FBBlocks.RED_FOXGLOVE));
+            addDrop(FBBlocks.YELLOW_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_YELLOW_FOXGLOVE, pottedPlantDrops(FBBlocks.YELLOW_FOXGLOVE));
+            addDrop(FBBlocks.LIGHT_BLUE_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_LIGHT_BLUE_FOXGLOVE, pottedPlantDrops(FBBlocks.LIGHT_BLUE_FOXGLOVE));
+            addDrop(FBBlocks.PINK_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_PINK_FOXGLOVE, pottedPlantDrops(FBBlocks.PINK_FOXGLOVE));
+            addDrop(FBBlocks.BLACK_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_BLACK_FOXGLOVE, pottedPlantDrops(FBBlocks.BLACK_FOXGLOVE));
+            addDrop(FBBlocks.CYAN_FOXGLOVE);
+            addDrop(FBBlocks.POTTED_CYAN_FOXGLOVE, pottedPlantDrops(FBBlocks.CYAN_FOXGLOVE));
+
+            addDrop(FBBlocks.MAGENTA_LOTUS_FLOWER, drops(FBItems.MAGENTA_LOTUS_FLOWER));
+            addDrop(FBBlocks.BLUE_LOTUS_FLOWER, drops(FBItems.BLUE_LOTUS_FLOWER));
+            addDrop(FBBlocks.WHITE_LOTUS_FLOWER, drops(FBItems.WHITE_LOTUS_FLOWER));
+            addDrop(FBBlocks.ORANGE_LOTUS_FLOWER, drops(FBItems.ORANGE_LOTUS_FLOWER));
+            addDrop(FBBlocks.RED_LOTUS_FLOWER, drops(FBItems.RED_LOTUS_FLOWER));
+            addDrop(FBBlocks.YELLOW_LOTUS_FLOWER, drops(FBItems.YELLOW_LOTUS_FLOWER));
+            addDrop(FBBlocks.LIGHT_BLUE_LOTUS_FLOWER, drops(FBItems.LIGHT_BLUE_LOTUS_FLOWER));
+            addDrop(FBBlocks.PINK_LOTUS_FLOWER, drops(FBItems.PINK_LOTUS_FLOWER));
+            addDrop(FBBlocks.BLACK_LOTUS_FLOWER, drops(FBItems.BLACK_LOTUS_FLOWER));
+            addDrop(FBBlocks.CYAN_LOTUS_FLOWER, drops(FBItems.CYAN_LOTUS_FLOWER));
         }
     }

@@ -520,9 +520,6 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_TORCHFLOWER = registerBlock("potted_cyan_torchflower", false,
             new FlowerPotBlock(CYAN_TORCHFLOWER, AbstractBlock.Settings.copy(Blocks.POTTED_TORCHFLOWER)));
 
-    public static final Block LOTUS_FLOWER = registerBlock("lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
-
     //daffodils
 
     public static final Block MAGENTA_DAFFODIL = registerBlock("magenta_daffodil",
@@ -565,6 +562,72 @@ public class FBBlocks {
             new FlowerBlock(StatusEffects.SLOW_FALLING, 6, AbstractBlock.Settings.copy(DANDELION)));
     public static final Block POTTED_CYAN_DAFFODIL = registerBlock("potted_cyan_daffodil", false,
             new FlowerPotBlock(CYAN_DAFFODIL, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
+    //foxgloves
+
+    public static final Block MAGENTA_FOXGLOVE = registerBlock("magenta_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_FOXGLOVE = registerBlock("potted_magenta_foxglove", false,
+            new FlowerPotBlock(MAGENTA_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_FOXGLOVE = registerBlock("blue_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_FOXGLOVE = registerBlock("potted_blue_foxglove", false,
+            new FlowerPotBlock(BLUE_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_FOXGLOVE = registerBlock("white_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_FOXGLOVE = registerBlock("potted_white_foxglove", false,
+            new FlowerPotBlock(WHITE_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_FOXGLOVE = registerBlock("orange_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_FOXGLOVE = registerBlock("potted_orange_foxglove", false,
+            new FlowerPotBlock(ORANGE_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_FOXGLOVE = registerBlock("red_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_FOXGLOVE = registerBlock("potted_red_foxglove", false,
+            new FlowerPotBlock(RED_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_FOXGLOVE = registerBlock("yellow_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_FOXGLOVE = registerBlock("potted_yellow_foxglove", false,
+            new FlowerPotBlock(YELLOW_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_FOXGLOVE = registerBlock("light_blue_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_FOXGLOVE = registerBlock("potted_light_blue_foxglove", false,
+            new FlowerPotBlock(LIGHT_BLUE_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_FOXGLOVE = registerBlock("pink_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_FOXGLOVE = registerBlock("potted_pink_foxglove", false,
+            new FlowerPotBlock(PINK_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_FOXGLOVE = registerBlock("black_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_FOXGLOVE = registerBlock("potted_black_foxglove", false,
+            new FlowerPotBlock(BLACK_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_FOXGLOVE = registerBlock("cyan_foxglove",
+            new FlowerBlock(StatusEffects.INVISIBILITY, 10, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_FOXGLOVE = registerBlock("potted_cyan_foxglove", false,
+            new FlowerPotBlock(CYAN_FOXGLOVE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
+    //foxgloves
+
+    public static final Block MAGENTA_LOTUS_FLOWER = registerBlock("magenta_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block BLUE_LOTUS_FLOWER = registerBlock("blue_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block WHITE_LOTUS_FLOWER = registerBlock("white_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block ORANGE_LOTUS_FLOWER = registerBlock("orange_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block RED_LOTUS_FLOWER = registerBlock("red_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block YELLOW_LOTUS_FLOWER = registerBlock("yellow_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block LIGHT_BLUE_LOTUS_FLOWER = registerBlock("light_blue_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block PINK_LOTUS_FLOWER = registerBlock("pink_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block BLACK_LOTUS_FLOWER = registerBlock("black_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+    public static final Block CYAN_LOTUS_FLOWER = registerBlock("cyan_lotus_flower", false,
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
 
 
     // makin the thangz

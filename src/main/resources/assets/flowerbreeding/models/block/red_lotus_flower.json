@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/lotus_flower_master",
+  "textures": {
+    "fan": "flowerbreeding:block/red_lotus_flower"
+  }
+}

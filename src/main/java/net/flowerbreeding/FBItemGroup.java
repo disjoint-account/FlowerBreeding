@@ -229,6 +229,28 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_DAFFODIL);
                         entries.add(FBBlocks.BLACK_DAFFODIL);
                         entries.add(FBBlocks.CYAN_DAFFODIL);
+
+                        entries.add(FBBlocks.MAGENTA_FOXGLOVE);
+                        entries.add(FBBlocks.BLUE_FOXGLOVE);
+                        entries.add(FBBlocks.WHITE_FOXGLOVE);
+                        entries.add(FBBlocks.ORANGE_FOXGLOVE);
+                        entries.add(FBBlocks.RED_FOXGLOVE);
+                        entries.add(FBBlocks.YELLOW_FOXGLOVE);
+                        entries.add(FBBlocks.LIGHT_BLUE_FOXGLOVE);
+                        entries.add(FBBlocks.PINK_FOXGLOVE);
+                        entries.add(FBBlocks.BLACK_FOXGLOVE);
+                        entries.add(FBBlocks.CYAN_FOXGLOVE);
+
+                        entries.add(FBItems.MAGENTA_LOTUS_FLOWER);
+                        entries.add(FBItems.BLUE_LOTUS_FLOWER);
+                        entries.add(FBItems.WHITE_LOTUS_FLOWER);
+                        entries.add(FBItems.ORANGE_LOTUS_FLOWER);
+                        entries.add(FBItems.RED_LOTUS_FLOWER);
+                        entries.add(FBItems.YELLOW_LOTUS_FLOWER);
+                        entries.add(FBItems.LIGHT_BLUE_LOTUS_FLOWER);
+                        entries.add(FBItems.PINK_LOTUS_FLOWER);
+                        entries.add(FBItems.BLACK_LOTUS_FLOWER);
+                        entries.add(FBItems.CYAN_LOTUS_FLOWER);
                     }).build());
     public static void registerItemGroups() {
         FlowerBreeding.LOGGER.info("Registering Item Groups for " + FlowerBreeding.MOD_ID);

@@ -94,11 +94,11 @@ public class FBVillagerTrades {
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 2),
-                    new ItemStack(FBItems.LOTUS_FLOWER, 1), 12, 15, 0.2f
+                    new ItemStack(FBItems.MAGENTA_LOTUS_FLOWER, 1), 12, 15, 0.2f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 2),
-                    new ItemStack(FBItems.LOTUS_FLOWER, 1), 12, 15, 0.2f
+                    new ItemStack(FBItems.MAGENTA_LOTUS_FLOWER, 1), 12, 15, 0.2f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 5, factories -> {

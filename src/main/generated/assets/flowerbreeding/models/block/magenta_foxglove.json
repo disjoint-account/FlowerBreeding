@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "flowerbreeding:block/magenta_foxglove"
+  }
+}

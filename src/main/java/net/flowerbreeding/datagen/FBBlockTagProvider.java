@@ -85,7 +85,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_PITCHER_PLANT,
                         FBBlocks.MAGENTA_ROSE_BUSH,
                         FBBlocks.MAGENTA_SUNFLOWER,
-                        FBBlocks.MAGENTA_DAFFODIL);
+                        FBBlocks.MAGENTA_DAFFODIL,
+                        FBBlocks.MAGENTA_FOXGLOVE,
+                        FBBlocks.MAGENTA_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.BLUE_FLOWERS)
                 .add(FBBlocks.BLUE_ALLIUM,
@@ -104,7 +106,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLUE_PITCHER_PLANT,
                         FBBlocks.BLUE_ROSE_BUSH,
                         FBBlocks.BLUE_SUNFLOWER,
-                        FBBlocks.BLUE_DAFFODIL);
+                        FBBlocks.BLUE_DAFFODIL,
+                        FBBlocks.BLUE_FOXGLOVE,
+                        FBBlocks.BLUE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.WHITE_FLOWERS)
                 .add(FBBlocks.WHITE_ALLIUM,
@@ -123,7 +127,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.WHITE_PITCHER_PLANT,
                         FBBlocks.WHITE_ROSE_BUSH,
                         FBBlocks.WHITE_SUNFLOWER,
-                        FBBlocks.WHITE_DAFFODIL);
+                        FBBlocks.WHITE_DAFFODIL,
+                        FBBlocks.WHITE_FOXGLOVE,
+                        FBBlocks.WHITE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.ORANGE_FLOWERS)
                 .add(FBBlocks.ORANGE_ALLIUM,
@@ -142,7 +148,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.ORANGE_PITCHER_PLANT,
                         FBBlocks.ORANGE_ROSE_BUSH,
                         FBBlocks.ORANGE_SUNFLOWER,
-                        FBBlocks.ORANGE_DAFFODIL);
+                        FBBlocks.ORANGE_DAFFODIL,
+                        FBBlocks.ORANGE_FOXGLOVE,
+                        FBBlocks.ORANGE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.RED_FLOWERS)
                 .add(FBBlocks.RED_ALLIUM,
@@ -161,7 +169,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.RED_PITCHER_PLANT,
                         Blocks.ROSE_BUSH,
                         FBBlocks.RED_SUNFLOWER,
-                        FBBlocks.RED_DAFFODIL);
+                        FBBlocks.RED_DAFFODIL,
+                        FBBlocks.RED_FOXGLOVE,
+                        FBBlocks.RED_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.YELLOW_FLOWERS)
                 .add(FBBlocks.YELLOW_ALLIUM,
@@ -180,7 +190,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.YELLOW_PITCHER_PLANT,
                         FBBlocks.YELLOW_ROSE_BUSH,
                         Blocks.SUNFLOWER,
-                        FBBlocks.YELLOW_DAFFODIL);
+                        FBBlocks.YELLOW_DAFFODIL,
+                        FBBlocks.YELLOW_FOXGLOVE,
+                        FBBlocks.YELLOW_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.LIGHT_BLUE_FLOWERS)
                 .add(FBBlocks.LIGHT_BLUE_ALLIUM,
@@ -199,7 +211,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_PITCHER_PLANT,
                         FBBlocks.LIGHT_BLUE_ROSE_BUSH,
                         FBBlocks.LIGHT_BLUE_SUNFLOWER,
-                        FBBlocks.LIGHT_BLUE_DAFFODIL);
+                        FBBlocks.LIGHT_BLUE_DAFFODIL,
+                        FBBlocks.LIGHT_BLUE_FOXGLOVE,
+                        FBBlocks.LIGHT_BLUE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.PINK_FLOWERS)
                 .add(FBBlocks.PINK_ALLIUM,
@@ -218,7 +232,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_PITCHER_PLANT,
                         FBBlocks.PINK_ROSE_BUSH,
                         FBBlocks.PINK_SUNFLOWER,
-                        FBBlocks.PINK_DAFFODIL);
+                        FBBlocks.PINK_DAFFODIL,
+                        FBBlocks.PINK_FOXGLOVE,
+                        FBBlocks.PINK_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.BLACK_FLOWERS)
                 .add(FBBlocks.BLACK_ALLIUM,
@@ -237,7 +253,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_PITCHER_PLANT,
                         FBBlocks.BLACK_ROSE_BUSH,
                         FBBlocks.BLACK_SUNFLOWER,
-                        FBBlocks.BLACK_DAFFODIL);
+                        FBBlocks.BLACK_DAFFODIL,
+                        FBBlocks.BLACK_FOXGLOVE,
+                        FBBlocks.BLACK_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.CYAN_FLOWERS)
                 .add(FBBlocks.CYAN_ALLIUM,
@@ -256,7 +274,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.PITCHER_PLANT,
                         FBBlocks.CYAN_ROSE_BUSH,
                         FBBlocks.CYAN_SUNFLOWER,
-                        FBBlocks.CYAN_DAFFODIL);
+                        FBBlocks.CYAN_DAFFODIL,
+                        FBBlocks.CYAN_FOXGLOVE,
+                        FBBlocks.CYAN_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.ALLIUMS)
                 .add(Blocks.ALLIUM,
@@ -461,5 +481,29 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_DAFFODIL,
                         FBBlocks.BLACK_DAFFODIL,
                         FBBlocks.CYAN_DAFFODIL);
+
+        getOrCreateTagBuilder(FBTags.Blocks.FOXGLOVES)
+                .add(FBBlocks.MAGENTA_FOXGLOVE,
+                        FBBlocks.BLUE_FOXGLOVE,
+                        FBBlocks.WHITE_FOXGLOVE,
+                        FBBlocks.ORANGE_FOXGLOVE,
+                        FBBlocks.RED_FOXGLOVE,
+                        FBBlocks.YELLOW_FOXGLOVE,
+                        FBBlocks.LIGHT_BLUE_FOXGLOVE,
+                        FBBlocks.PINK_FOXGLOVE,
+                        FBBlocks.BLACK_FOXGLOVE,
+                        FBBlocks.CYAN_FOXGLOVE);
+
+        getOrCreateTagBuilder(FBTags.Blocks.LOTUS_FLOWERS)
+                .add(FBBlocks.MAGENTA_LOTUS_FLOWER,
+                        FBBlocks.BLUE_LOTUS_FLOWER,
+                        FBBlocks.WHITE_LOTUS_FLOWER,
+                        FBBlocks.ORANGE_LOTUS_FLOWER,
+                        FBBlocks.RED_LOTUS_FLOWER,
+                        FBBlocks.YELLOW_LOTUS_FLOWER,
+                        FBBlocks.LIGHT_BLUE_LOTUS_FLOWER,
+                        FBBlocks.PINK_LOTUS_FLOWER,
+                        FBBlocks.BLACK_LOTUS_FLOWER,
+                        FBBlocks.CYAN_LOTUS_FLOWER);
     }
 }

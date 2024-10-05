@@ -280,6 +280,36 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_DAFFODIL, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_DAFFODIL, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLUE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_WHITE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_ORANGE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_RED_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_YELLOW_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_LIGHT_BLUE_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_PINK_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLACK_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_FOXGLOVE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_FOXGLOVE, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_LOTUS_FLOWER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_LOTUS_FLOWER, RenderLayer.getCutout());
     }
 }

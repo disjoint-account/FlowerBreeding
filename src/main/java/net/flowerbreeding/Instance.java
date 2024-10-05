@@ -166,5 +166,27 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_DAFFODIL, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_DAFFODIL, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_DAFFODIL, 0.65f);
+
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_FOXGLOVE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_FOXGLOVE, 0.65f);
+
+        CompostingChanceRegistry.INSTANCE.add(FBItems.MAGENTA_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.BLUE_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.WHITE_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.ORANGE_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.RED_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.YELLOW_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.LIGHT_BLUE_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.PINK_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.BLACK_LOTUS_FLOWER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBItems.CYAN_LOTUS_FLOWER, 0.65f);
         }
     }

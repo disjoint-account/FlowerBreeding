@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "flowerbreeding:allium_pollen_vial"
+            "items": "flowerbreeding:lily_pad_pollen_vial"
           }
         ]
       },
@@ -21,7 +21,7 @@
       "conditions": {
         "items": [
           {
-            "items": "flowerbreeding:lily_pad_pollen_vial"
+            "items": "flowerbreeding:tulip_pollen_vial"
           }
         ]
       },

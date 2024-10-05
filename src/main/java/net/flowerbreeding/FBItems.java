@@ -69,8 +69,26 @@ public class FBItems {
     public static final Item LILY_PAD_POLLEN_VIAL = registerItem("lily_pad_pollen_vial",
             new FullPollenVialItem(new Item.Settings().maxCount(1)));
 
-    public static final Item LOTUS_FLOWER = registerItem("lotus_flower",
-            new PlaceableOnWaterItem(FBBlocks.LOTUS_FLOWER, new Item.Settings()));
+    public static final Item MAGENTA_LOTUS_FLOWER = registerItem("magenta_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.MAGENTA_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item BLUE_LOTUS_FLOWER = registerItem("blue_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.BLUE_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item WHITE_LOTUS_FLOWER = registerItem("white_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.WHITE_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item ORANGE_LOTUS_FLOWER = registerItem("orange_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.ORANGE_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item RED_LOTUS_FLOWER = registerItem("red_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.RED_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item YELLOW_LOTUS_FLOWER = registerItem("yellow_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.YELLOW_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item LIGHT_BLUE_LOTUS_FLOWER = registerItem("light_blue_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.LIGHT_BLUE_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item PINK_LOTUS_FLOWER = registerItem("pink_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.PINK_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item BLACK_LOTUS_FLOWER = registerItem("black_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.BLACK_LOTUS_FLOWER, new Item.Settings()));
+    public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_lotus_flower",
+            new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, new Item.Settings()));
 
 
     public static void registerModItems() {

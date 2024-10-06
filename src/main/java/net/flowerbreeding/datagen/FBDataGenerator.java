@@ -2,6 +2,9 @@ package net.flowerbreeding.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.flowerbreeding.trim.FBArmourTrims;
+import net.minecraft.registry.RegistryBuilder;
+import net.minecraft.registry.RegistryKeys;
 
 public class FBDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -14,6 +17,10 @@ public class FBDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FBLootTableGenerator::new);
 		pack.addProvider(FBPOITagProvider::new);
 		pack.addProvider(FBRecipeGenerator::new);
-
+		pack.addProvider(FBRegistryDataGenerator::new);
+	}
+	@Override
+	public void buildRegistry(RegistryBuilder registryBuilder) {
+		registryBuilder.addRegistry(RegistryKeys.TRIM_PATTERN, FBArmourTrims::bootstrap);
 	}
 }

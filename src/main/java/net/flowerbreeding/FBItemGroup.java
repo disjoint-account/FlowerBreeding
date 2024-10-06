@@ -17,6 +17,8 @@ public class FBItemGroup {
                     .icon(() -> new ItemStack(FBBlocks.BOTANY_TABLE)).entries((displayContext, entries) -> {
                         entries.add(FBBlocks.BOTANY_TABLE);
 
+                        entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
+
                         entries.add(FBItems.EMPTY_PIGMENT_JAR);
                         entries.add(FBItems.MAGENTA_PIGMENT_JAR);
                         entries.add(FBItems.BLUE_PIGMENT_JAR);

@@ -226,5 +226,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.PINK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLACK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.CYAN_LOTUS_FLOWER, Models.GENERATED);
+
+        itemModelGenerator.register(FBItems.FLORAL_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }

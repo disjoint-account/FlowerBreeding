@@ -3,8 +3,10 @@ package net.flowerbreeding;
 import net.flowerbreeding.pigmentjars.*;
 import net.minecraft.item.Item;
 import net.minecraft.item.PlaceableOnWaterItem;
+import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
 
 public class FBItems {
@@ -90,6 +92,8 @@ public class FBItems {
     public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_lotus_flower",
             new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, new Item.Settings()));
 
+    public static final Item FLORAL_SMITHING_TEMPLATE = registerItem("floral_armor_trim_smithing_template",
+            SmithingTemplateItem.of(Identifier.of(FlowerBreeding.MOD_ID, "floral"), FeatureFlags.VANILLA));
 
     public static void registerModItems() {
         FlowerBreeding.LOGGER.info("Registering items for " + FlowerBreeding.MOD_ID);

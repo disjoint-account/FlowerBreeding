@@ -1,0 +1,8 @@
+{
+  "asset_id": "flowerbreeding:floral",
+  "decal": false,
+  "description": {
+    "translate": "trim_pattern.flowerbreeding.floral"
+  },
+  "template_item": "flowerbreeding:floral_armor_trim_smithing_template"
+}

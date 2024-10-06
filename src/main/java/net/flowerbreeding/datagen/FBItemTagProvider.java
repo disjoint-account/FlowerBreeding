@@ -7,6 +7,7 @@ import net.flowerbreeding.FBItems;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -312,5 +313,8 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.WHITE_FOXGLOVE.asItem())
                 .add(FBBlocks.WHITE_HYACINTH.asItem())
                 .add(FBItems.WHITE_LOTUS_FLOWER);
+
+        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
+                .add(FBItems.FLORAL_SMITHING_TEMPLATE.asItem());
     }
 }

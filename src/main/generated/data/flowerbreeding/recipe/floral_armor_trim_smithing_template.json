@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "M": {
+      "item": "minecraft:moss_block"
+    },
+    "T": {
+      "item": "flowerbreeding:floral_armor_trim_smithing_template"
+    }
+  },
+  "pattern": [
+    "#T#",
+    "#M#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "flowerbreeding:floral_armor_trim_smithing_template"
+  }
+}

@@ -4,15 +4,21 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 
 import java.util.concurrent.CompletableFuture;
+
+import static net.minecraft.recipe.book.RecipeCategory.MISC;
 
 public class FBRecipeGenerator extends FabricRecipeProvider {
     public FBRecipeGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -105,11 +111,22 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
         offerBotanyRecipe(exporter, FBItems.TULIP_POLLEN_VIAL, FBItems.LILY_PAD_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBItems.BLACK_LOTUS_FLOWER), Identifier.of("black_lotus_flower_2"));
         offerBotanyRecipe(exporter, FBItems.LILY_PAD_POLLEN_VIAL, FBItems.TULIP_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBItems.CYAN_LOTUS_FLOWER), Identifier.of("cyan_lotus_flower_1"));
         offerBotanyRecipe(exporter, FBItems.TULIP_POLLEN_VIAL, FBItems.LILY_PAD_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBItems.CYAN_LOTUS_FLOWER), Identifier.of("cyan_lotus_flower_2"));
+
+        offerSmithingTrimRecipe(exporter, FBItems.FLORAL_SMITHING_TEMPLATE, Identifier.of(FlowerBreeding.MOD_ID, "floral"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, FBItems.FLORAL_SMITHING_TEMPLATE, 2)
+                .input('#', Items.DIAMOND)
+                .input('M', Blocks.MOSS_BLOCK)
+                .input('T', FBItems.FLORAL_SMITHING_TEMPLATE)
+                .pattern("#T#")
+                .pattern("#M#")
+                .pattern("###")
+                .criterion(hasItem(FBItems.FLORAL_SMITHING_TEMPLATE), conditionsFromItem(FBItems.FLORAL_SMITHING_TEMPLATE))
+                .offerTo(exporter);
     }
 
-
     public static void offerBotanyRecipe(RecipeExporter exporter, Item vial1, Item vial2, Item jar, ItemStack result, Identifier recipeId) {
-        BotanyTableRecipeJsonBuilder.create(Ingredient.ofItems(vial1), Ingredient.ofItems(vial2), Ingredient.ofItems(jar), result, RecipeCategory.MISC)
+        BotanyTableRecipeJsonBuilder.create(Ingredient.ofItems(vial1), Ingredient.ofItems(vial2), Ingredient.ofItems(jar), result, MISC)
                 .criterion("has_vial1", conditionsFromItem(vial1))
                 .criterion("has_vial2", conditionsFromItem(vial2))
                 .offerTo(exporter, recipeId);

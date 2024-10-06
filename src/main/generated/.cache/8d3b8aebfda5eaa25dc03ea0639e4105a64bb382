@@ -1,4 +1,4 @@
-// 1.21.1	2024-10-05T22:21:27.1158129	Flower Breeding/Tags for minecraft:item
+// 1.21.1	2024-10-06T15:33:49.2407707	Flower Breeding/Tags for minecraft:item
 48ae6c18fdc0e0164a37202c761faf9e3ebcd969 data\flowerbreeding\tags\item\orange_flowers.json
 511964f211bbf8e2d1b3f69a54a24ef87fa60a62 data\flowerbreeding\tags\item\small_cyan_flowers.json
 3d607639d2496dffc62453deef8f0eb21de368de data\flowerbreeding\tags\item\small_pink_flowers.json
@@ -15,6 +15,7 @@ f362f9de8a8f5279a4fcd4ee9238e3da35c21431 data\flowerbreeding\tags\item\small_red
 31a2cdf561ae15d87d19471e5a2cc0e452a47057 data\flowerbreeding\tags\item\cyan_flowers.json
 9aad4177dc9aec67bb086fc84e7bb1831a7e642c data\flowerbreeding\tags\item\black_flowers.json
 6b929ad12adafb4c5d118024a4e5b5e2142a1848 data\flowerbreeding\tags\item\red_flowers.json
+eb6ecfb0c2965be9b224b4733821be8da7520446 data\minecraft\tags\item\trim_templates.json
 2ed9ad932263c669d40c519cc111bfc7283af607 data\flowerbreeding\tags\item\tall_orange_flowers.json
 6bc193d6bd591f018bbae1cb96e83a8f0289b0ad data\flowerbreeding\tags\item\tall_pink_flowers.json
 2241d588a0b1f97f3468bedc2843e955fc2ae2fe data\flowerbreeding\tags\item\blue_flowers.json

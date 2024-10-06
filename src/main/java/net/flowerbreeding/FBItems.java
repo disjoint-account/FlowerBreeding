@@ -1,6 +1,8 @@
 package net.flowerbreeding;
 
 import net.flowerbreeding.pigmentjars.*;
+import net.flowerbreeding.pollenvials.EmptyPollenVialItem;
+import net.flowerbreeding.pollenvials.FullPollenVialItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.PlaceableOnWaterItem;
 import net.minecraft.item.SmithingTemplateItem;

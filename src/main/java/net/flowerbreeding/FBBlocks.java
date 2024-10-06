@@ -7,6 +7,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
 import static net.minecraft.block.Blocks.*;
@@ -649,28 +650,51 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_HYACINTH = registerBlock("potted_cyan_hyacinth", false,
             new FlowerPotBlock(CYAN_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
+    //lavenders
+
+    public static final Block MAGENTA_LAVENDER = registerBlock("magenta_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block BLUE_LAVENDER = registerBlock("blue_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block WHITE_LAVENDER = registerBlock("white_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block ORANGE_LAVENDER = registerBlock("orange_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block RED_LAVENDER = registerBlock("red_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block YELLOW_LAVENDER = registerBlock("yellow_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block LIGHT_BLUE_LAVENDER = registerBlock("light_blue_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block PINK_LAVENDER = registerBlock("pink_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block BLACK_LAVENDER = registerBlock("black_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block CYAN_LAVENDER = registerBlock("cyan_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+
     //lotus flowers
 
     public static final Block MAGENTA_LOTUS_FLOWER = registerBlock("magenta_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.MAGENTA)));
     public static final Block BLUE_LOTUS_FLOWER = registerBlock("blue_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.BLUE)));
     public static final Block WHITE_LOTUS_FLOWER = registerBlock("white_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.WHITE)));
     public static final Block ORANGE_LOTUS_FLOWER = registerBlock("orange_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.ORANGE)));
     public static final Block RED_LOTUS_FLOWER = registerBlock("red_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.RED)));
     public static final Block YELLOW_LOTUS_FLOWER = registerBlock("yellow_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.YELLOW)));
     public static final Block LIGHT_BLUE_LOTUS_FLOWER = registerBlock("light_blue_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.LIGHT_BLUE)));
     public static final Block PINK_LOTUS_FLOWER = registerBlock("pink_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.PINK)));
     public static final Block BLACK_LOTUS_FLOWER = registerBlock("black_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.BLACK)));
     public static final Block CYAN_LOTUS_FLOWER = registerBlock("cyan_lotus_flower", false,
-            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD)));
+            new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.CYAN)));
 
 
     // makin the thangz

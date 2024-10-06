@@ -329,6 +329,17 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_HYACINTH);
             addDrop(FBBlocks.POTTED_CYAN_HYACINTH, pottedPlantDrops(FBBlocks.CYAN_HYACINTH));
 
+            addDrop(FBBlocks.MAGENTA_LAVENDER, tallPlantDrops(FBBlocks.MAGENTA_LAVENDER, FBBlocks.MAGENTA_LAVENDER));
+            addDrop(FBBlocks.BLUE_LAVENDER, tallPlantDrops(FBBlocks.BLUE_LAVENDER, FBBlocks.BLUE_LAVENDER));
+            addDrop(FBBlocks.WHITE_LAVENDER, tallPlantDrops(FBBlocks.WHITE_LAVENDER, FBBlocks.WHITE_LAVENDER));
+            addDrop(FBBlocks.ORANGE_LAVENDER, tallPlantDrops(FBBlocks.ORANGE_LAVENDER, FBBlocks.ORANGE_LAVENDER));
+            addDrop(FBBlocks.RED_LAVENDER, tallPlantDrops(FBBlocks.RED_LAVENDER, FBBlocks.RED_LAVENDER));
+            addDrop(FBBlocks.YELLOW_LAVENDER, tallPlantDrops(FBBlocks.YELLOW_LAVENDER, FBBlocks.YELLOW_LAVENDER));
+            addDrop(FBBlocks.LIGHT_BLUE_LAVENDER, tallPlantDrops(FBBlocks.LIGHT_BLUE_LAVENDER, FBBlocks.LIGHT_BLUE_LAVENDER));
+            addDrop(FBBlocks.PINK_LAVENDER, tallPlantDrops(FBBlocks.PINK_LAVENDER, FBBlocks.PINK_LAVENDER));
+            addDrop(FBBlocks.BLACK_LAVENDER, tallPlantDrops(FBBlocks.BLACK_LAVENDER, FBBlocks.BLACK_LAVENDER));
+            addDrop(FBBlocks.CYAN_LAVENDER, tallPlantDrops(FBBlocks.CYAN_LAVENDER, FBBlocks.CYAN_LAVENDER));
+
             addDrop(FBBlocks.MAGENTA_LOTUS_FLOWER, drops(FBItems.MAGENTA_LOTUS_FLOWER));
             addDrop(FBBlocks.BLUE_LOTUS_FLOWER, drops(FBItems.BLUE_LOTUS_FLOWER));
             addDrop(FBBlocks.WHITE_LOTUS_FLOWER, drops(FBItems.WHITE_LOTUS_FLOWER));

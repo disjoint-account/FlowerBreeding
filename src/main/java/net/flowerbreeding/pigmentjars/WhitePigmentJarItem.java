@@ -91,6 +91,9 @@ public class WhitePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.WHITE_HYACINTH));
                 }
+                if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.WHITE_LAVENDER));
+                }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.WHITE_LOTUS_FLOWER));
                 }

@@ -189,6 +189,17 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_HYACINTH, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_HYACINTH, 0.65f);
 
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_LAVENDER, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_LAVENDER, 0.65f);
+
         CompostingChanceRegistry.INSTANCE.add(FBItems.MAGENTA_LOTUS_FLOWER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBItems.BLUE_LOTUS_FLOWER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBItems.WHITE_LOTUS_FLOWER, 0.65f);

@@ -91,6 +91,9 @@ public class OrangePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_HYACINTH));
                 }
+                if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_LAVENDER));
+                }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.ORANGE_LOTUS_FLOWER));
                 }

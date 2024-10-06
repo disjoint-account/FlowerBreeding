@@ -1,11 +1,10 @@
-package net.flowerbreeding;
+package net.flowerbreeding.pollenvials;
 
 
+import net.flowerbreeding.FBItems;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
-import net.minecraft.block.BlockTypes;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,8 +16,6 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
-import java.util.List;
 
 public class EmptyPollenVialItem extends Item {
     public EmptyPollenVialItem(Settings settings) {

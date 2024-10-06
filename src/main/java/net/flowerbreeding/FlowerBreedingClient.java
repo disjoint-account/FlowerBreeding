@@ -322,6 +322,17 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_HYACINTH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_HYACINTH, RenderLayer.getCutout());
 
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_LAVENDER, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_LAVENDER, RenderLayer.getCutout());
+
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_LOTUS_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_LOTUS_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_LOTUS_FLOWER, RenderLayer.getCutout());

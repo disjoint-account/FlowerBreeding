@@ -17,8 +17,6 @@ public class FBItemGroup {
                     .icon(() -> new ItemStack(FBBlocks.BOTANY_TABLE)).entries((displayContext, entries) -> {
                         entries.add(FBBlocks.BOTANY_TABLE);
 
-                        entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
-
                         entries.add(FBItems.EMPTY_PIGMENT_JAR);
                         entries.add(FBItems.MAGENTA_PIGMENT_JAR);
                         entries.add(FBItems.BLUE_PIGMENT_JAR);
@@ -254,6 +252,17 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_HYACINTH);
                         entries.add(FBBlocks.CYAN_HYACINTH);
 
+                        entries.add(FBBlocks.MAGENTA_LAVENDER);
+                        entries.add(FBBlocks.BLUE_LAVENDER);
+                        entries.add(FBBlocks.WHITE_LAVENDER);
+                        entries.add(FBBlocks.ORANGE_LAVENDER);
+                        entries.add(FBBlocks.RED_LAVENDER);
+                        entries.add(FBBlocks.YELLOW_LAVENDER);
+                        entries.add(FBBlocks.LIGHT_BLUE_LAVENDER);
+                        entries.add(FBBlocks.PINK_LAVENDER);
+                        entries.add(FBBlocks.BLACK_LAVENDER);
+                        entries.add(FBBlocks.CYAN_LAVENDER);
+
                         entries.add(FBItems.MAGENTA_LOTUS_FLOWER);
                         entries.add(FBItems.BLUE_LOTUS_FLOWER);
                         entries.add(FBItems.WHITE_LOTUS_FLOWER);
@@ -264,6 +273,8 @@ public class FBItemGroup {
                         entries.add(FBItems.PINK_LOTUS_FLOWER);
                         entries.add(FBItems.BLACK_LOTUS_FLOWER);
                         entries.add(FBItems.CYAN_LOTUS_FLOWER);
+
+                        entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
                     }).build());
     public static void registerItemGroups() {
         FlowerBreeding.LOGGER.info("Registering Item Groups for " + FlowerBreeding.MOD_ID);

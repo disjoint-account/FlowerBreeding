@@ -103,6 +103,10 @@ public class FBVillagerTrades {
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.MAGENTA_LAVENDER, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBItems.PINK_LOTUS_FLOWER, 1), 16, 5, 0.05f
             ));
         });

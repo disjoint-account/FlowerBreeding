@@ -19,6 +19,10 @@
     {
       "id": "#flowerbreeding:sunflowers",
       "required": false
+    },
+    {
+      "id": "#flowerbreeding:lavenders",
+      "required": false
     }
   ]
 }

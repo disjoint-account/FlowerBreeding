@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/yellow_lavender_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/yellow_lavender_top"
+    }
+  }
+}

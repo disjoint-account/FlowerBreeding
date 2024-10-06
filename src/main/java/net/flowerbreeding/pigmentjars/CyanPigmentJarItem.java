@@ -14,6 +14,7 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
@@ -94,6 +95,9 @@ public class CyanPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_LAVENDER));
                 }
+                if (pos.isIn(FBTags.Blocks.PHLOXES)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_PHLOX));
+                }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.CYAN_LOTUS_FLOWER));
                 }
@@ -102,5 +106,12 @@ public class CyanPigmentJarItem extends Item {
             }
         }
         return ActionResult.PASS;
+    }
+    public TypedActionResult use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
+        BlockPos blockPos = user.getBlockPos();
+        ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
+        world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+        return TypedActionResult.success(itemStack1);
     }
 }

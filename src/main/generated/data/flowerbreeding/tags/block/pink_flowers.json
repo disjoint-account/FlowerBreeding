@@ -11,7 +11,7 @@
     "flowerbreeding:pink_lily",
     "flowerbreeding:pink_poppy",
     "flowerbreeding:pink_wither_rose",
-    "flowerbreeding:pink_lilac",
+    "minecraft:lilac",
     "minecraft:peony",
     "flowerbreeding:pink_pitcher_plant",
     "flowerbreeding:pink_rose_bush",
@@ -20,6 +20,7 @@
     "flowerbreeding:pink_foxglove",
     "flowerbreeding:pink_hyacinth",
     "flowerbreeding:pink_lavender",
+    "flowerbreeding:pink_phlox",
     "flowerbreeding:pink_lotus_flower"
   ]
 }

@@ -15,6 +15,7 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PITCHER_PLANT, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_ROSE_BUSH, 0.65f);
@@ -119,7 +120,6 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_WITHER_ROSE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_PITCHER_PLANT, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_ROSE_BUSH, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_SUNFLOWER, 0.65f);
@@ -199,6 +199,17 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_LAVENDER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_LAVENDER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_LAVENDER, 0.65f);
+
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_PHLOX, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_PHLOX, 0.65f);
 
         CompostingChanceRegistry.INSTANCE.add(FBItems.MAGENTA_LOTUS_FLOWER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBItems.BLUE_LOTUS_FLOWER, 0.65f);

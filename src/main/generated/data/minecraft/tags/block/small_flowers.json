@@ -57,6 +57,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:phloxes",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:lotus_flowers",
       "required": false
     }

@@ -11,7 +11,7 @@
     "flowerbreeding:magenta_lily",
     "flowerbreeding:magenta_poppy",
     "flowerbreeding:magenta_wither_rose",
-    "minecraft:lilac",
+    "flowerbreeding:magenta_lilac",
     "flowerbreeding:magenta_peony",
     "flowerbreeding:magenta_pitcher_plant",
     "flowerbreeding:magenta_rose_bush",
@@ -20,6 +20,7 @@
     "flowerbreeding:magenta_foxglove",
     "flowerbreeding:magenta_hyacinth",
     "flowerbreeding:magenta_lavender",
+    "flowerbreeding:magenta_phlox",
     "flowerbreeding:magenta_lotus_flower"
   ]
 }

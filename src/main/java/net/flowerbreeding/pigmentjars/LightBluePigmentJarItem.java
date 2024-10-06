@@ -2,6 +2,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -28,77 +29,80 @@ public class LightBluePigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
-        if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-            if (pos.isIn(FBTags.Blocks.LIGHT_BLUE_FLOWERS))
-                return ActionResult.PASS;
-            else {
-                ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
-                user.setStackInHand(hand, itemStack1);
-                if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_ALLIUM));
-                }
-                if (pos.isIn(FBTags.Blocks.CORNFLOWERS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_CORNFLOWER));
-                }
-                if (pos.isIn(FBTags.Blocks.DAISIES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DAISY));
-                }
-                if (pos.isIn(FBTags.Blocks.TORCHFLOWERS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_TORCHFLOWER));
-                }
-                if (pos.isIn(FBTags.Blocks.TULIPS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_TULIP));
-                }
-                if (pos.isIn(FBTags.Blocks.AZURE_BLUETS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_AZURE_BLUET));
-                }
-                if (pos.isIn(FBTags.Blocks.DANDELIONS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DANDELION));
-                }
-                if (pos.isIn(FBTags.Blocks.ORCHIDS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(Blocks.BLUE_ORCHID));
-                }
-                if (pos.isIn(FBTags.Blocks.LILIES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LILY));
-                }
-                if (pos.isIn(FBTags.Blocks.POPPIES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_POPPY));
-                }
-                if (pos.isIn(FBTags.Blocks.WITHER_ROSES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_WITHER_ROSE));
-                }
-                if (pos.isIn(FBTags.Blocks.LILACS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LILAC));
-                }
-                if (pos.isIn(FBTags.Blocks.PEONIES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_PEONY));
-                }
-                if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_PITCHER_PLANT));
-                }
-                if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_ROSE_BUSH));
-                }
-                if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_SUNFLOWER));
-                }
-                if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DAFFODIL));
-                }
-                if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_FOXGLOVE));
-                }
-                if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_HYACINTH));
-                }
-                if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LAVENDER));
-                }
-                if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBItems.LIGHT_BLUE_LOTUS_FLOWER));
-                }
-                world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
-                return ActionResult.SUCCESS;
+            if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
+                if (pos.isIn(FBTags.Blocks.LIGHT_BLUE_FLOWERS))
+                    return ActionResult.PASS;
+                else {
+                    ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
+                    user.setStackInHand(hand, itemStack1);
+                    if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_ALLIUM));
+                    }
+                    if (pos.isIn(FBTags.Blocks.CORNFLOWERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_CORNFLOWER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.DAISIES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DAISY));
+                    }
+                    if (pos.isIn(FBTags.Blocks.TORCHFLOWERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_TORCHFLOWER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.TULIPS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_TULIP));
+                    }
+                    if (pos.isIn(FBTags.Blocks.AZURE_BLUETS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_AZURE_BLUET));
+                    }
+                    if (pos.isIn(FBTags.Blocks.DANDELIONS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DANDELION));
+                    }
+                    if (pos.isIn(FBTags.Blocks.ORCHIDS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(Blocks.BLUE_ORCHID));
+                    }
+                    if (pos.isIn(FBTags.Blocks.LILIES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LILY));
+                    }
+                    if (pos.isIn(FBTags.Blocks.POPPIES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_POPPY));
+                    }
+                    if (pos.isIn(FBTags.Blocks.WITHER_ROSES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_WITHER_ROSE));
+                    }
+                    if (pos.isIn(FBTags.Blocks.LILACS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LILAC));
+                    }
+                    if (pos.isIn(FBTags.Blocks.PEONIES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_PEONY));
+                    }
+                    if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_PITCHER_PLANT));
+                    }
+                    if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_ROSE_BUSH));
+                    }
+                    if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_SUNFLOWER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_DAFFODIL));
+                    }
+                    if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_FOXGLOVE));
+                    }
+                    if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_HYACINTH));
+                    }
+                    if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_LAVENDER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.PHLOXES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.LIGHT_BLUE_PHLOX));
+                    }
+                    if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBItems.LIGHT_BLUE_LOTUS_FLOWER));
+                    }
+                    world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                    return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS;

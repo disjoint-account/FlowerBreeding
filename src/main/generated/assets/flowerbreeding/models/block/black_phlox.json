@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "flowerbreeding:block/pink_lilac_bottom"
+    "cross": "flowerbreeding:block/black_phlox"
   }
 }

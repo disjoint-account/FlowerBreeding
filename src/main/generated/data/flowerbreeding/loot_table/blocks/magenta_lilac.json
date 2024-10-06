@@ -5,7 +5,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "flowerbreeding:pink_lilac",
+          "block": "flowerbreeding:magenta_lilac",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "lower"
@@ -16,7 +16,7 @@
           "offsetY": 1,
           "predicate": {
             "block": {
-              "blocks": "flowerbreeding:pink_lilac",
+              "blocks": "flowerbreeding:magenta_lilac",
               "state": {
                 "half": "upper"
               }
@@ -45,7 +45,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "flowerbreeding:pink_lilac"
+              "name": "flowerbreeding:magenta_lilac"
             },
             {
               "type": "minecraft:item",
@@ -69,7 +69,7 @@
       "bonus_rolls": 0.0,
       "conditions": [
         {
-          "block": "flowerbreeding:pink_lilac",
+          "block": "flowerbreeding:magenta_lilac",
           "condition": "minecraft:block_state_property",
           "properties": {
             "half": "upper"
@@ -80,7 +80,7 @@
           "offsetY": -1,
           "predicate": {
             "block": {
-              "blocks": "flowerbreeding:pink_lilac",
+              "blocks": "flowerbreeding:magenta_lilac",
               "state": {
                 "half": "lower"
               }
@@ -109,7 +109,7 @@
                   "function": "minecraft:set_count"
                 }
               ],
-              "name": "flowerbreeding:pink_lilac"
+              "name": "flowerbreeding:magenta_lilac"
             },
             {
               "type": "minecraft:item",

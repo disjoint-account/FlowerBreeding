@@ -31,6 +31,8 @@ public class FBBlocks {
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
     public static final Block MAGENTA_PEONY = registerBlock("magenta_peony",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.PEONY)));
+    public static final Block MAGENTA_LILAC = registerBlock("magenta_lilac",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.LILAC)));
     public static final Block MAGENTA_ROSE_BUSH = registerBlock("magenta_rose_bush",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
     public static final Block MAGENTA_POPPY = registerBlock("magenta_poppy",
@@ -374,8 +376,6 @@ public class FBBlocks {
             new FlowerPotBlock(PINK_WITHER_ROSE, AbstractBlock.Settings.copy(Blocks.POTTED_WITHER_ROSE)));
     public static final Block PINK_SUNFLOWER = registerBlock("pink_sunflower",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.SUNFLOWER)));
-    public static final Block PINK_LILAC = registerBlock("pink_lilac",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.LILAC)));
     public static final Block PINK_ROSE_BUSH = registerBlock("pink_rose_bush",
             new TallFlowerBlock(AbstractBlock.Settings.copy(Blocks.ROSE_BUSH)));
     public static final Block PINK_POPPY = registerBlock("pink_poppy",
@@ -672,6 +672,49 @@ public class FBBlocks {
             new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
     public static final Block CYAN_LAVENDER = registerBlock("cyan_lavender",
             new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+
+    //phloxes
+
+    public static final Block MAGENTA_PHLOX = registerBlock("magenta_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_PHLOX = registerBlock("potted_magenta_phlox", false,
+            new FlowerPotBlock(MAGENTA_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_PHLOX = registerBlock("blue_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_PHLOX = registerBlock("potted_blue_phlox", false,
+            new FlowerPotBlock(BLUE_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_PHLOX = registerBlock("white_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_PHLOX = registerBlock("potted_white_phlox", false,
+            new FlowerPotBlock(WHITE_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_PHLOX = registerBlock("orange_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_PHLOX = registerBlock("potted_orange_phlox", false,
+            new FlowerPotBlock(ORANGE_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_PHLOX = registerBlock("red_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_PHLOX = registerBlock("potted_red_phlox", false,
+            new FlowerPotBlock(RED_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_PHLOX = registerBlock("yellow_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_PHLOX = registerBlock("potted_yellow_phlox", false,
+            new FlowerPotBlock(YELLOW_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_PHLOX = registerBlock("light_blue_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_PHLOX = registerBlock("potted_light_blue_phlox", false,
+            new FlowerPotBlock(LIGHT_BLUE_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_PHLOX = registerBlock("pink_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_PHLOX = registerBlock("potted_pink_phlox", false,
+            new FlowerPotBlock(PINK_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_PHLOX = registerBlock("black_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_PHLOX = registerBlock("potted_black_phlox", false,
+            new FlowerPotBlock(BLACK_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_PHLOX = registerBlock("cyan_phlox",
+            new FlowerBlock(StatusEffects.BLINDNESS, 4, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_PHLOX = registerBlock("potted_cyan_phlox", false,
+            new FlowerPotBlock(CYAN_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
     //lotus flowers
 

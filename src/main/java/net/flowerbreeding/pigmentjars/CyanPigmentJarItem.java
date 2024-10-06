@@ -2,6 +2,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -93,6 +94,9 @@ public class CyanPigmentJarItem extends Item {
                 }
                 if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_LAVENDER));
+                }
+                if (pos.isIn(FBTags.Blocks.PHLOXES)) {
+                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.CYAN_PHLOX));
                 }
                 if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                     user.getInventory().offerOrDrop(new ItemStack(FBItems.CYAN_LOTUS_FLOWER));

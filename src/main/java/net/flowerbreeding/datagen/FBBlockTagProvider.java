@@ -17,6 +17,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(BlockTags.FLOWERS)
+                .addOptionalTag(FBTags.Blocks.FBFLOWERS);
+
         getOrCreateTagBuilder(FBTags.Blocks.FBFLOWERS)
                 .addOptionalTag(FBTags.Blocks.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.BLUE_FLOWERS)
@@ -63,6 +66,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.DAFFODILS)
                 .addOptionalTag(FBTags.Blocks.FOXGLOVES)
                 .addOptionalTag(FBTags.Blocks.HYACINTHS)
+                .addOptionalTag(FBTags.Blocks.PHLOXES)
                 .addOptionalTag(FBTags.Blocks.LOTUS_FLOWERS);
 
         getOrCreateTagBuilder(BlockTags.TALL_FLOWERS)
@@ -85,7 +89,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_LILY,
                         FBBlocks.MAGENTA_POPPY,
                         FBBlocks.MAGENTA_WITHER_ROSE,
-                        Blocks.LILAC,
+                        FBBlocks.MAGENTA_LILAC,
                         FBBlocks.MAGENTA_PEONY,
                         FBBlocks.MAGENTA_PITCHER_PLANT,
                         FBBlocks.MAGENTA_ROSE_BUSH,
@@ -94,6 +98,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_FOXGLOVE,
                         FBBlocks.MAGENTA_HYACINTH,
                         FBBlocks.MAGENTA_LAVENDER,
+                        FBBlocks.MAGENTA_PHLOX,
                         FBBlocks.MAGENTA_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.BLUE_FLOWERS)
@@ -117,6 +122,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLUE_FOXGLOVE,
                         FBBlocks.BLUE_HYACINTH,
                         FBBlocks.BLUE_LAVENDER,
+                        FBBlocks.BLUE_PHLOX,
                         FBBlocks.BLUE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.WHITE_FLOWERS)
@@ -140,6 +146,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.WHITE_FOXGLOVE,
                         FBBlocks.WHITE_HYACINTH,
                         FBBlocks.WHITE_LAVENDER,
+                        FBBlocks.WHITE_PHLOX,
                         FBBlocks.WHITE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.ORANGE_FLOWERS)
@@ -163,6 +170,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.ORANGE_FOXGLOVE,
                         FBBlocks.ORANGE_HYACINTH,
                         FBBlocks.ORANGE_LAVENDER,
+                        FBBlocks.ORANGE_PHLOX,
                         FBBlocks.ORANGE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.RED_FLOWERS)
@@ -186,6 +194,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.RED_FOXGLOVE,
                         FBBlocks.RED_HYACINTH,
                         FBBlocks.RED_LAVENDER,
+                        FBBlocks.RED_PHLOX,
                         FBBlocks.RED_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.YELLOW_FLOWERS)
@@ -209,6 +218,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.YELLOW_FOXGLOVE,
                         FBBlocks.YELLOW_HYACINTH,
                         FBBlocks.YELLOW_LAVENDER,
+                        FBBlocks.YELLOW_PHLOX,
                         FBBlocks.YELLOW_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.LIGHT_BLUE_FLOWERS)
@@ -232,6 +242,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_FOXGLOVE,
                         FBBlocks.LIGHT_BLUE_HYACINTH,
                         FBBlocks.LIGHT_BLUE_LAVENDER,
+                        FBBlocks.LIGHT_BLUE_PHLOX,
                         FBBlocks.LIGHT_BLUE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.PINK_FLOWERS)
@@ -246,7 +257,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_LILY,
                         FBBlocks.PINK_POPPY,
                         FBBlocks.PINK_WITHER_ROSE,
-                        FBBlocks.PINK_LILAC,
+                        Blocks.LILAC,
                         Blocks.PEONY,
                         FBBlocks.PINK_PITCHER_PLANT,
                         FBBlocks.PINK_ROSE_BUSH,
@@ -255,6 +266,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_FOXGLOVE,
                         FBBlocks.PINK_HYACINTH,
                         FBBlocks.PINK_LAVENDER,
+                        FBBlocks.PINK_PHLOX,
                         FBBlocks.PINK_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.BLACK_FLOWERS)
@@ -278,6 +290,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_FOXGLOVE,
                         FBBlocks.BLACK_HYACINTH,
                         FBBlocks.BLACK_LAVENDER,
+                        FBBlocks.BLACK_PHLOX,
                         FBBlocks.BLACK_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.CYAN_FLOWERS)
@@ -301,6 +314,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_FOXGLOVE,
                         FBBlocks.CYAN_HYACINTH,
                         FBBlocks.CYAN_LAVENDER,
+                        FBBlocks.CYAN_PHLOX,
                         FBBlocks.CYAN_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(FBTags.Blocks.ALLIUMS)
@@ -436,14 +450,14 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_WITHER_ROSE);
 
         getOrCreateTagBuilder(FBTags.Blocks.LILACS)
-                .add(Blocks.LILAC,
+                .add(FBBlocks.MAGENTA_LILAC,
                         FBBlocks.BLUE_LILAC,
                         FBBlocks.WHITE_LILAC,
                         FBBlocks.ORANGE_LILAC,
                         FBBlocks.RED_LILAC,
                         FBBlocks.YELLOW_LILAC,
                         FBBlocks.LIGHT_BLUE_LILAC,
-                        FBBlocks.PINK_LILAC,
+                        Blocks.LILAC,
                         FBBlocks.BLACK_LILAC,
                         FBBlocks.CYAN_LILAC);
 
@@ -542,6 +556,19 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_LAVENDER,
                         FBBlocks.BLACK_LAVENDER,
                         FBBlocks.CYAN_LAVENDER);
+
+        getOrCreateTagBuilder(FBTags.Blocks.PHLOXES)
+                .add(FBBlocks.MAGENTA_PHLOX,
+                        FBBlocks.BLUE_PHLOX,
+                        FBBlocks.WHITE_PHLOX,
+                        FBBlocks.ORANGE_PHLOX,
+                        FBBlocks.RED_PHLOX,
+                        FBBlocks.YELLOW_PHLOX,
+                        FBBlocks.LIGHT_BLUE_PHLOX,
+                        FBBlocks.PINK_PHLOX,
+                        FBBlocks.BLACK_PHLOX,
+                        FBBlocks.CYAN_PHLOX);
+
 
         getOrCreateTagBuilder(FBTags.Blocks.LOTUS_FLOWERS)
                 .add(FBBlocks.MAGENTA_LOTUS_FLOWER,

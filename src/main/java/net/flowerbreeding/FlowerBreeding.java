@@ -9,6 +9,7 @@ import org.slf4j.LoggerFactory;
 public class FlowerBreeding implements ModInitializer {
 	public static final String MOD_ID = "flowerbreeding";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+	public static final net.flowerbreeding.FBConfig CONFIG = net.flowerbreeding.FBConfig.createAndLoad();
 
 	@Override
 	public void onInitialize() {

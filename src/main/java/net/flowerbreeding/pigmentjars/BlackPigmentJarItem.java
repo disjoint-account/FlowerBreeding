@@ -2,6 +2,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -29,6 +30,7 @@ public class BlackPigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
+        if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
                 if (pos.isIn(FBTags.Blocks.BLACK_FLOWERS))
                     return ActionResult.PASS;
@@ -103,6 +105,7 @@ public class BlackPigmentJarItem extends Item {
                     }
                     world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                     return ActionResult.SUCCESS;
+                }
             }
         }
         return ActionResult.PASS;

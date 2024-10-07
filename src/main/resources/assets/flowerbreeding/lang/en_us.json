@@ -370,5 +370,12 @@
   "item.flowerbreeding.floral_armor_trim_smithing_template": "Smithing Template",
   "trim_pattern.flowerbreeding.floral": "Floral Armor Trim",
   "gui.flowerbreeding.botany_table": "Botany Table",
+  "text.config.flowerbreeding-config.option.fastRecolouring": "Fast Recolouring",
+  "text.config.flowerbreeding-config.option.fastRecolouring.tooltip": "Use the Pigment Jar directly on a flower to get a recolour",
+  "text.config.flowerbreeding-config.option.craftableBotanyTable": "Craftable Botany Tables",
+  "text.config.flowerbreeding-config.option.craftableBotanyTable.tooltip": "Makes the Botany Table craftable",
+  "text.config.flowerbreeding-config.option.spawnGreenhouse": "Spawn Greenhouses",
+  "text.config.flowerbreeding-config.option.spawnGreenhouse.tooltip": "Enable spawning for the Greenhouse structure",
+
   "entity.minecraft.villager.botanist": "Botanist"
 }

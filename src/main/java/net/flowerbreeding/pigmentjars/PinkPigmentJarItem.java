@@ -30,8 +30,9 @@ public class PinkPigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
-        if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-            if (pos.isIn(FBTags.Blocks.PINK_FLOWERS))
+        if (FlowerBreeding.CONFIG.fastRecolouring()) {
+            if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
+                if (pos.isIn(FBTags.Blocks.PINK_FLOWERS))
                     return ActionResult.PASS;
                 else {
                     ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
@@ -97,7 +98,7 @@ public class PinkPigmentJarItem extends Item {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_LAVENDER));
                     }
                     if (pos.isIn(FBTags.Blocks.PHLOXES)) {
-                    user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_PHLOX));
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_PHLOX));
                     }
                     if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBItems.PINK_LOTUS_FLOWER));
@@ -106,6 +107,7 @@ public class PinkPigmentJarItem extends Item {
                     return ActionResult.SUCCESS;
                 }
             }
+        }
         return ActionResult.PASS;
     }
     public TypedActionResult use(World world, PlayerEntity user, Hand hand) {

@@ -2,6 +2,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;

@@ -1,0 +1,16 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": {
+    "item": "flowerbreeding:red_pigment_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:red_orchid"
+  },
+  "vial1": {
+    "item": "flowerbreeding:orchid_pollen_vial"
+  },
+  "vial2": {
+    "item": "flowerbreeding:orchid_pollen_vial"
+  }
+}

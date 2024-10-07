@@ -1,0 +1,16 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": {
+    "item": "flowerbreeding:cyan_pigment_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:cyan_tulip"
+  },
+  "vial1": {
+    "item": "flowerbreeding:tulip_pollen_vial"
+  },
+  "vial2": {
+    "item": "flowerbreeding:tulip_pollen_vial"
+  }
+}

@@ -94,6 +94,18 @@ public class EmptyPollenVialItem extends Item {
                     ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.SUNFLOWER_POLLEN_VIAL));
                     user.setStackInHand(hand, itemStack1);
                 }
+                if (pos.isOf(Blocks.SWEET_BERRY_BUSH)) {
+                    ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.SWEET_BERRY_POLLEN_VIAL));
+                    user.setStackInHand(hand, itemStack1);
+                }
+                if (pos.isOf(Blocks.CAVE_VINES)) {
+                    ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.GLOW_VINE_POLLEN_VIAL));
+                    user.setStackInHand(hand, itemStack1);
+                }
+                if (pos.isOf(Blocks.VINE)) {
+                    ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.VINE_POLLEN_VIAL));
+                    user.setStackInHand(hand, itemStack1);
+                }
                 if (pos.isOf(Blocks.LILY_PAD)) {
                     ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.LILY_PAD_POLLEN_VIAL));
                     user.setStackInHand(hand, itemStack1);

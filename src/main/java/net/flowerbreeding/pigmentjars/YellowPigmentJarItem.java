@@ -94,14 +94,26 @@ public class YellowPigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HYACINTH));
                     }
-                    if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LAVENDER));
-                    }
                     if (pos.isIn(FBTags.Blocks.PHLOXES)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_PHLOX));
                     }
+                    if (pos.isIn(FBTags.Blocks.SMALL_ROSES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_SMALL_ROSE));
+                    }
+                    if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LAVENDER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.HONEYSUCKLES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HONEYSUCKLE));
+                    }
                     if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBItems.YELLOW_LOTUS_FLOWER));
+                    }
+                    if (pos.isIn(FBTags.Blocks.JASMINES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_JASMINE));
+                    }
+                    if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_CYPRUS_VINE));
                     }
                     world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                     return ActionResult.SUCCESS;

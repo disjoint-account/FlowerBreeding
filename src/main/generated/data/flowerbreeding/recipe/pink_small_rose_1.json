@@ -1,0 +1,16 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": {
+    "item": "flowerbreeding:pink_pigment_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:pink_small_rose"
+  },
+  "vial1": {
+    "item": "flowerbreeding:rose_bush_pollen_vial"
+  },
+  "vial2": {
+    "item": "flowerbreeding:sweet_berry_pollen_vial"
+  }
+}

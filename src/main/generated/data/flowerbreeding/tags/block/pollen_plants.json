@@ -64,6 +64,7 @@
       "id": "#flowerbreeding:sunflowers",
       "required": false
     },
+    "minecraft:sweet_berry_bush",
     "minecraft:lily_pad"
   ]
 }

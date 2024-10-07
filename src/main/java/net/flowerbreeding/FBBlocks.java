@@ -650,29 +650,6 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_HYACINTH = registerBlock("potted_cyan_hyacinth", false,
             new FlowerPotBlock(CYAN_HYACINTH, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
-    //lavenders
-
-    public static final Block MAGENTA_LAVENDER = registerBlock("magenta_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block BLUE_LAVENDER = registerBlock("blue_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block WHITE_LAVENDER = registerBlock("white_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block ORANGE_LAVENDER = registerBlock("orange_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block RED_LAVENDER = registerBlock("red_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block YELLOW_LAVENDER = registerBlock("yellow_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block LIGHT_BLUE_LAVENDER = registerBlock("light_blue_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block PINK_LAVENDER = registerBlock("pink_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block BLACK_LAVENDER = registerBlock("black_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-    public static final Block CYAN_LAVENDER = registerBlock("cyan_lavender",
-            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
-
     //phloxes
 
     public static final Block MAGENTA_PHLOX = registerBlock("magenta_phlox",
@@ -716,6 +693,95 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_PHLOX = registerBlock("potted_cyan_phlox", false,
             new FlowerPotBlock(CYAN_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
+    //small_roses
+
+    public static final Block MAGENTA_SMALL_ROSE = registerBlock("magenta_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_SMALL_ROSE = registerBlock("potted_magenta_small_rose", false,
+            new FlowerPotBlock(MAGENTA_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_SMALL_ROSE = registerBlock("blue_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_SMALL_ROSE = registerBlock("potted_blue_small_rose", false,
+            new FlowerPotBlock(BLUE_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_SMALL_ROSE = registerBlock("white_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_SMALL_ROSE = registerBlock("potted_white_small_rose", false,
+            new FlowerPotBlock(WHITE_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_SMALL_ROSE = registerBlock("orange_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_SMALL_ROSE = registerBlock("potted_orange_small_rose", false,
+            new FlowerPotBlock(ORANGE_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_SMALL_ROSE = registerBlock("red_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_SMALL_ROSE = registerBlock("potted_red_small_rose", false,
+            new FlowerPotBlock(RED_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_SMALL_ROSE = registerBlock("yellow_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_SMALL_ROSE = registerBlock("potted_yellow_small_rose", false,
+            new FlowerPotBlock(YELLOW_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_SMALL_ROSE = registerBlock("light_blue_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_SMALL_ROSE = registerBlock("potted_light_blue_small_rose", false,
+            new FlowerPotBlock(LIGHT_BLUE_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_SMALL_ROSE = registerBlock("pink_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_SMALL_ROSE = registerBlock("potted_pink_small_rose", false,
+            new FlowerPotBlock(PINK_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_SMALL_ROSE = registerBlock("black_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_SMALL_ROSE = registerBlock("potted_black_small_rose", false,
+            new FlowerPotBlock(BLACK_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_SMALL_ROSE = registerBlock("cyan_small_rose",
+            new FlowerBlock(StatusEffects.STRENGTH, 6, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_SMALL_ROSE = registerBlock("potted_cyan_small_rose", false,
+            new FlowerPotBlock(CYAN_SMALL_ROSE, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
+    //lavenders
+
+    public static final Block MAGENTA_LAVENDER = registerBlock("magenta_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block BLUE_LAVENDER = registerBlock("blue_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block WHITE_LAVENDER = registerBlock("white_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block ORANGE_LAVENDER = registerBlock("orange_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block RED_LAVENDER = registerBlock("red_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block YELLOW_LAVENDER = registerBlock("yellow_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block LIGHT_BLUE_LAVENDER = registerBlock("light_blue_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block PINK_LAVENDER = registerBlock("pink_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block BLACK_LAVENDER = registerBlock("black_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+    public static final Block CYAN_LAVENDER = registerBlock("cyan_lavender",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
+
+    //honeysuckles
+
+    public static final Block MAGENTA_HONEYSUCKLE = registerBlock("magenta_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block BLUE_HONEYSUCKLE = registerBlock("blue_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block WHITE_HONEYSUCKLE = registerBlock("white_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block ORANGE_HONEYSUCKLE = registerBlock("orange_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block RED_HONEYSUCKLE = registerBlock("red_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block YELLOW_HONEYSUCKLE = registerBlock("yellow_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block LIGHT_BLUE_HONEYSUCKLE = registerBlock("light_blue_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block PINK_HONEYSUCKLE = registerBlock("pink_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block BLACK_HONEYSUCKLE = registerBlock("black_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+    public static final Block CYAN_HONEYSUCKLE = registerBlock("cyan_honeysuckle",
+            new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
+
     //lotus flowers
 
     public static final Block MAGENTA_LOTUS_FLOWER = registerBlock("magenta_lotus_flower", false,
@@ -739,6 +805,51 @@ public class FBBlocks {
     public static final Block CYAN_LOTUS_FLOWER = registerBlock("cyan_lotus_flower", false,
             new LilyPadBlock(AbstractBlock.Settings.copy(LILY_PAD).mapColor(DyeColor.CYAN)));
 
+    //jasmine
+
+    public static final Block MAGENTA_JASMINE = registerBlock("magenta_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block BLUE_JASMINE = registerBlock("blue_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block WHITE_JASMINE = registerBlock("white_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block ORANGE_JASMINE = registerBlock("orange_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block RED_JASMINE = registerBlock("red_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block YELLOW_JASMINE = registerBlock("yellow_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block LIGHT_BLUE_JASMINE = registerBlock("light_blue_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block PINK_JASMINE = registerBlock("pink_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block BLACK_JASMINE = registerBlock("black_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+    public static final Block CYAN_JASMINE = registerBlock("cyan_jasmine",
+            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+
+    //cyprus vines
+
+    public static final Block MAGENTA_CYPRUS_VINE = registerBlock("magenta_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block BLUE_CYPRUS_VINE = registerBlock("blue_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block WHITE_CYPRUS_VINE = registerBlock("white_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block ORANGE_CYPRUS_VINE = registerBlock("orange_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block RED_CYPRUS_VINE = registerBlock("red_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block YELLOW_CYPRUS_VINE = registerBlock("yellow_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block LIGHT_BLUE_CYPRUS_VINE = registerBlock("light_blue_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block PINK_CYPRUS_VINE = registerBlock("pink_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block BLACK_CYPRUS_VINE = registerBlock("black_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
+    public static final Block CYAN_CYPRUS_VINE = registerBlock("cyan_cyprus_vine",
+            new VineBlock(AbstractBlock.Settings.copy(VINE)));
 
     // makin the thangz
 

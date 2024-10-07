@@ -215,7 +215,6 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CYAN_LILAC);
                         entries.add(FBBlocks.CYAN_PEONY);
                         entries.add(Blocks.PITCHER_PLANT);
-                        entries.add(Items.PITCHER_POD);
                         entries.add(FBBlocks.CYAN_ROSE_BUSH);
                         entries.add(FBBlocks.CYAN_SUNFLOWER);
 
@@ -252,17 +251,6 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_HYACINTH);
                         entries.add(FBBlocks.CYAN_HYACINTH);
 
-                        entries.add(FBBlocks.MAGENTA_LAVENDER);
-                        entries.add(FBBlocks.BLUE_LAVENDER);
-                        entries.add(FBBlocks.WHITE_LAVENDER);
-                        entries.add(FBBlocks.ORANGE_LAVENDER);
-                        entries.add(FBBlocks.RED_LAVENDER);
-                        entries.add(FBBlocks.YELLOW_LAVENDER);
-                        entries.add(FBBlocks.LIGHT_BLUE_LAVENDER);
-                        entries.add(FBBlocks.PINK_LAVENDER);
-                        entries.add(FBBlocks.BLACK_LAVENDER);
-                        entries.add(FBBlocks.CYAN_LAVENDER);
-
                         entries.add(FBBlocks.MAGENTA_PHLOX);
                         entries.add(FBBlocks.BLUE_PHLOX);
                         entries.add(FBBlocks.WHITE_PHLOX);
@@ -274,6 +262,50 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_PHLOX);
                         entries.add(FBBlocks.CYAN_PHLOX);
 
+                        entries.add(FBBlocks.MAGENTA_SMALL_ROSE);
+                        entries.add(FBBlocks.BLUE_SMALL_ROSE);
+                        entries.add(FBBlocks.WHITE_SMALL_ROSE);
+                        entries.add(FBBlocks.ORANGE_SMALL_ROSE);
+                        entries.add(FBBlocks.RED_SMALL_ROSE);
+                        entries.add(FBBlocks.YELLOW_SMALL_ROSE);
+                        entries.add(FBBlocks.LIGHT_BLUE_SMALL_ROSE);
+                        entries.add(FBBlocks.PINK_SMALL_ROSE);
+                        entries.add(FBBlocks.BLACK_SMALL_ROSE);
+                        entries.add(FBBlocks.CYAN_SMALL_ROSE);
+
+                        entries.add(FBBlocks.MAGENTA_LAVENDER);
+                        entries.add(FBBlocks.BLUE_LAVENDER);
+                        entries.add(FBBlocks.WHITE_LAVENDER);
+                        entries.add(FBBlocks.ORANGE_LAVENDER);
+                        entries.add(FBBlocks.RED_LAVENDER);
+                        entries.add(FBBlocks.YELLOW_LAVENDER);
+                        entries.add(FBBlocks.LIGHT_BLUE_LAVENDER);
+                        entries.add(FBBlocks.PINK_LAVENDER);
+                        entries.add(FBBlocks.BLACK_LAVENDER);
+                        entries.add(FBBlocks.CYAN_LAVENDER);
+
+                        entries.add(FBBlocks.MAGENTA_HONEYSUCKLE);
+                        entries.add(FBBlocks.BLUE_HONEYSUCKLE);
+                        entries.add(FBBlocks.WHITE_HONEYSUCKLE);
+                        entries.add(FBBlocks.ORANGE_HONEYSUCKLE);
+                        entries.add(FBBlocks.RED_HONEYSUCKLE);
+                        entries.add(FBBlocks.YELLOW_HONEYSUCKLE);
+                        entries.add(FBBlocks.LIGHT_BLUE_HONEYSUCKLE);
+                        entries.add(FBBlocks.PINK_HONEYSUCKLE);
+                        entries.add(FBBlocks.BLACK_HONEYSUCKLE);
+                        entries.add(FBBlocks.CYAN_HONEYSUCKLE);
+
+                        entries.add(FBBlocks.MAGENTA_JASMINE);
+                        entries.add(FBBlocks.BLUE_JASMINE);
+                        entries.add(FBBlocks.WHITE_JASMINE);
+                        entries.add(FBBlocks.ORANGE_JASMINE);
+                        entries.add(FBBlocks.RED_JASMINE);
+                        entries.add(FBBlocks.YELLOW_JASMINE);
+                        entries.add(FBBlocks.LIGHT_BLUE_JASMINE);
+                        entries.add(FBBlocks.PINK_JASMINE);
+                        entries.add(FBBlocks.BLACK_JASMINE);
+                        entries.add(FBBlocks.CYAN_JASMINE);
+
                         entries.add(FBItems.MAGENTA_LOTUS_FLOWER);
                         entries.add(FBItems.BLUE_LOTUS_FLOWER);
                         entries.add(FBItems.WHITE_LOTUS_FLOWER);
@@ -284,6 +316,17 @@ public class FBItemGroup {
                         entries.add(FBItems.PINK_LOTUS_FLOWER);
                         entries.add(FBItems.BLACK_LOTUS_FLOWER);
                         entries.add(FBItems.CYAN_LOTUS_FLOWER);
+
+                        entries.add(FBBlocks.MAGENTA_CYPRUS_VINE);
+                        entries.add(FBBlocks.BLUE_CYPRUS_VINE);
+                        entries.add(FBBlocks.WHITE_CYPRUS_VINE);
+                        entries.add(FBBlocks.ORANGE_CYPRUS_VINE);
+                        entries.add(FBBlocks.RED_CYPRUS_VINE);
+                        entries.add(FBBlocks.YELLOW_CYPRUS_VINE);
+                        entries.add(FBBlocks.LIGHT_BLUE_CYPRUS_VINE);
+                        entries.add(FBBlocks.PINK_CYPRUS_VINE);
+                        entries.add(FBBlocks.BLACK_CYPRUS_VINE);
+                        entries.add(FBBlocks.CYAN_CYPRUS_VINE);
 
                         entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
                     }).build());

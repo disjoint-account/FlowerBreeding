@@ -43,6 +43,10 @@ public class FBTags {
         public static final TagKey<Block> HYACINTHS = createTag("hyacinths");
         public static final TagKey<Block> LAVENDERS = createTag("lavenders");
         public static final TagKey<Block> PHLOXES = createTag("phloxes");
+        public static final TagKey<Block> SMALL_ROSES = createTag("small_roses");
+        public static final TagKey<Block> JASMINES = createTag("jasmines");
+        public static final TagKey<Block> HONEYSUCKLES = createTag("honeysuckles");
+        public static final TagKey<Block> CYPRUS_VINES = createTag("cyprus_vines");
         public static final TagKey<Block> LOTUS_FLOWERS = createTag("lotus_flowers");
 
         private static TagKey<Block> createTag(String name) {

@@ -181,6 +181,28 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_HYACINTH, FBBlocks.POTTED_BLACK_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_HYACINTH, FBBlocks.POTTED_CYAN_HYACINTH, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_PHLOX, FBBlocks.POTTED_MAGENTA_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_PHLOX, FBBlocks.POTTED_BLUE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_PHLOX, FBBlocks.POTTED_WHITE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.ORANGE_PHLOX, FBBlocks.POTTED_ORANGE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.RED_PHLOX, FBBlocks.POTTED_RED_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.YELLOW_PHLOX, FBBlocks.POTTED_YELLOW_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LIGHT_BLUE_PHLOX, FBBlocks.POTTED_LIGHT_BLUE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_PHLOX, FBBlocks.POTTED_PINK_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_PHLOX, FBBlocks.POTTED_BLACK_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_PHLOX, FBBlocks.POTTED_CYAN_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_SMALL_ROSE, FBBlocks.POTTED_MAGENTA_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_SMALL_ROSE, FBBlocks.POTTED_BLUE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_SMALL_ROSE, FBBlocks.POTTED_WHITE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.ORANGE_SMALL_ROSE, FBBlocks.POTTED_ORANGE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.RED_SMALL_ROSE, FBBlocks.POTTED_RED_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.YELLOW_SMALL_ROSE, FBBlocks.POTTED_YELLOW_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LIGHT_BLUE_SMALL_ROSE, FBBlocks.POTTED_LIGHT_BLUE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_SMALL_ROSE, FBBlocks.POTTED_PINK_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_SMALL_ROSE, FBBlocks.POTTED_BLACK_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_SMALL_ROSE, FBBlocks.POTTED_CYAN_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLUE_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.WHITE_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
@@ -192,16 +214,16 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_PHLOX, FBBlocks.POTTED_MAGENTA_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_PHLOX, FBBlocks.POTTED_BLUE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_PHLOX, FBBlocks.POTTED_WHITE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.ORANGE_PHLOX, FBBlocks.POTTED_ORANGE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.RED_PHLOX, FBBlocks.POTTED_RED_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.YELLOW_PHLOX, FBBlocks.POTTED_YELLOW_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LIGHT_BLUE_PHLOX, FBBlocks.POTTED_LIGHT_BLUE_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_PHLOX, FBBlocks.POTTED_PINK_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_PHLOX, FBBlocks.POTTED_BLACK_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_PHLOX, FBBlocks.POTTED_CYAN_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLUE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.WHITE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.ORANGE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.RED_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.YELLOW_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.PINK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -237,6 +259,9 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.ROSE_BUSH_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.register(FBItems.SUNFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.register(FBItems.LILY_PAD_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.SWEET_BERRY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.VINE_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.register(FBItems.GLOW_VINE_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
 
         itemModelGenerator.register(FBItems.MAGENTA_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLUE_LOTUS_FLOWER, Models.GENERATED);

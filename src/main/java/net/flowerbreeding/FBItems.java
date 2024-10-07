@@ -70,6 +70,12 @@ public class FBItems {
             new FullPollenVialItem(new Item.Settings().maxCount(1)));
     public static final Item SUNFLOWER_POLLEN_VIAL = registerItem("sunflower_pollen_vial",
             new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item SWEET_BERRY_POLLEN_VIAL = registerItem("sweet_berry_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item GLOW_VINE_POLLEN_VIAL = registerItem("glow_vine_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
+    public static final Item VINE_POLLEN_VIAL = registerItem("vine_pollen_vial",
+            new FullPollenVialItem(new Item.Settings().maxCount(1)));
     public static final Item LILY_PAD_POLLEN_VIAL = registerItem("lily_pad_pollen_vial",
             new FullPollenVialItem(new Item.Settings().maxCount(1)));
 

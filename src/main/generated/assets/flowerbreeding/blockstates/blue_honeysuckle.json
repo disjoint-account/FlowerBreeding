@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/blue_honeysuckle_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/blue_honeysuckle_top"
+    }
+  }
+}

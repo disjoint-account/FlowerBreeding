@@ -1,12 +1,14 @@
 package net.flowerbreeding;
 
 import net.flowerbreeding.botanytable.BotanyTableBlock;
+import net.flowerbreeding.jasmine.*;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 
@@ -808,25 +810,45 @@ public class FBBlocks {
     //jasmine
 
     public static final Block MAGENTA_JASMINE = registerBlock("magenta_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new MagentaJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block MAGENTA_JASMINE_PLANT = registerBlock("magenta_jasmine_plant", false,
+            new MagentaJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block BLUE_JASMINE = registerBlock("blue_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new BlueJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block BLUE_JASMINE_PLANT = registerBlock("blue_jasmine_plant", false,
+            new BlueJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block WHITE_JASMINE = registerBlock("white_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new WhiteJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block WHITE_JASMINE_PLANT = registerBlock("white_jasmine_plant", false,
+            new WhiteJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block ORANGE_JASMINE = registerBlock("orange_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new OrangeJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block ORANGE_JASMINE_PLANT = registerBlock("orange_jasmine_plant", false,
+            new OrangeJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block RED_JASMINE = registerBlock("red_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new RedJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block RED_JASMINE_PLANT = registerBlock("red_jasmine_plant", false,
+            new RedJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block YELLOW_JASMINE = registerBlock("yellow_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new YellowJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block YELLOW_JASMINE_PLANT = registerBlock("yellow_jasmine_plant", false,
+            new YellowJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block LIGHT_BLUE_JASMINE = registerBlock("light_blue_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new LightBlueJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block LIGHT_BLUE_JASMINE_PLANT = registerBlock("light_blue_jasmine_plant", false,
+            new LightBlueJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block PINK_JASMINE = registerBlock("pink_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new PinkJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block PINK_JASMINE_PLANT = registerBlock("pink_jasmine_plant", false,
+            new PinkJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block BLACK_JASMINE = registerBlock("black_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new BlackJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block BLACK_JASMINE_PLANT = registerBlock("black_jasmine_plant", false,
+            new BlackJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
     public static final Block CYAN_JASMINE = registerBlock("cyan_jasmine",
-            new WeepingVinesBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT)));
+            new CyanJasmineBlock(AbstractBlock.Settings.copy(WEEPING_VINES).sounds(BlockSoundGroup.CAVE_VINES)));
+    public static final Block CYAN_JASMINE_PLANT = registerBlock("cyan_jasmine_plant", false,
+            new CyanJasminePlantBlock(AbstractBlock.Settings.copy(WEEPING_VINES_PLANT).sounds(BlockSoundGroup.CAVE_VINES)));
 
     //cyprus vines
 

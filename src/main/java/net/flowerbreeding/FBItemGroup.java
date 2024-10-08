@@ -4,7 +4,6 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -46,7 +45,10 @@ public class FBItemGroup {
                         entries.add(FBItems.PITCHER_PLANT_POLLEN_VIAL);
                         entries.add(FBItems.ROSE_BUSH_POLLEN_VIAL);
                         entries.add(FBItems.SUNFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.GLOW_VINE_POLLEN_VIAL);
+                        entries.add(FBItems.SWEET_BERRY_POLLEN_VIAL);
                         entries.add(FBItems.LILY_PAD_POLLEN_VIAL);
+                        entries.add(FBItems.VINE_POLLEN_VIAL);
 
                         entries.add(Blocks.ALLIUM);
                         entries.add(FBBlocks.MAGENTA_CORNFLOWER);

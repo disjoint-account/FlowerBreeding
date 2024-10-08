@@ -224,6 +224,27 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.PINK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLUE_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLUE_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.WHITE_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.WHITE_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.ORANGE_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.ORANGE_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.RED_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.RED_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.YELLOW_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.YELLOW_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.LIGHT_BLUE_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.LIGHT_BLUE_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.PINK_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.PINK_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLACK_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLACK_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.CYAN_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.CYAN_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);
     }
 
     @Override
@@ -273,6 +294,17 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.PINK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLACK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.CYAN_LOTUS_FLOWER, Models.GENERATED);
+
+        itemModelGenerator.register(FBBlocks.MAGENTA_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.BLUE_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.WHITE_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.ORANGE_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.RED_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.YELLOW_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.LIGHT_BLUE_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.PINK_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.BLACK_CYPRUS_VINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.CYAN_CYPRUS_VINE.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(FBItems.FLORAL_SMITHING_TEMPLATE, Models.GENERATED);
     }

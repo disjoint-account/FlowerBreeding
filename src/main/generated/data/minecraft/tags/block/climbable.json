@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:jasmines",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cyprus_vines",
+      "required": false
+    }
+  ]
+}

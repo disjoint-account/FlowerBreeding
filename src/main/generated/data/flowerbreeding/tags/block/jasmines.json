@@ -1,14 +1,24 @@
 {
   "values": [
     "flowerbreeding:magenta_jasmine",
+    "flowerbreeding:magenta_jasmine_plant",
     "flowerbreeding:blue_jasmine",
+    "flowerbreeding:blue_jasmine_plant",
     "flowerbreeding:white_jasmine",
+    "flowerbreeding:white_jasmine_plant",
     "flowerbreeding:orange_jasmine",
+    "flowerbreeding:orange_jasmine_plant",
     "flowerbreeding:red_jasmine",
+    "flowerbreeding:red_jasmine_plant",
     "flowerbreeding:yellow_jasmine",
+    "flowerbreeding:yellow_jasmine_plant",
     "flowerbreeding:light_blue_jasmine",
+    "flowerbreeding:light_blue_jasmine_plant",
     "flowerbreeding:pink_jasmine",
+    "flowerbreeding:pink_jasmine_plant",
     "flowerbreeding:black_jasmine",
-    "flowerbreeding:cyan_jasmine"
+    "flowerbreeding:black_jasmine_plant",
+    "flowerbreeding:cyan_jasmine",
+    "flowerbreeding:cyan_jasmine_plant"
   ]
 }

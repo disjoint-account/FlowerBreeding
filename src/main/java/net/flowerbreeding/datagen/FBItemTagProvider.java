@@ -18,6 +18,18 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ItemTags.FLOWERS)
+                .addOptionalTag(FBTags.Items.MAGENTA_FLOWERS)
+                .addOptionalTag(FBTags.Items.BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.WHITE_FLOWERS)
+                .addOptionalTag(FBTags.Items.ORANGE_FLOWERS)
+                .addOptionalTag(FBTags.Items.RED_FLOWERS)
+                .addOptionalTag(FBTags.Items.YELLOW_FLOWERS)
+                .addOptionalTag(FBTags.Items.LIGHT_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.PINK_FLOWERS)
+                .addOptionalTag(FBTags.Items.BLACK_FLOWERS)
+                .addOptionalTag(FBTags.Items.CYAN_FLOWERS);
+
         getOrCreateTagBuilder(FBTags.Items.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.TALL_MAGENTA_FLOWERS);
@@ -379,6 +391,6 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBItems.WHITE_LOTUS_FLOWER);
 
         getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
-                .add(FBItems.FLORAL_SMITHING_TEMPLATE.asItem());
+                .add(FBItems.FLORAL_SMITHING_TEMPLATE);
     }
 }

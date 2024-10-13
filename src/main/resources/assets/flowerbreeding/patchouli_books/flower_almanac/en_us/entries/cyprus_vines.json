@@ -1,0 +1,19 @@
+{
+  "name": "Cyprus Vines",
+  "icon": "flowerbreeding:orange_cyprus_vine",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Cyprus Vines",
+      "item": "flowerbreeding:vine_pollen_vial,flowerbreeding:daisy_pollen_vial",
+      "text": "A Cyprus Vine can be created by combining a Vine Pollen Vial, a Daisy Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_cyprus_vine,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_cyprus_vine,flowerbreeding:white_pigment_jar,flowerbreeding:white_cyprus_vine,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_cyprus_vine,flowerbreeding:red_pigment_jar,flowerbreeding:red_cyprus_vine,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_cyprus_vine,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_cyprus_vine,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_cyprus_vine,flowerbreeding:black_pigment_jar,flowerbreeding:black_cyprus_vine,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_cyprus_vine,",
+      "text": "The colour of the Cyprus Vine will be determined by the Pigment Jar used."
+    }
+  ]
+}

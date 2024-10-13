@@ -7,6 +7,4 @@ import io.wispforest.owo.config.annotation.Modmenu;
 @Config(name = "flowerbreeding-config", wrapperName = "FBConfig")
 public class FBConfigModel {
     public boolean fastRecolouring = true;
-    public boolean craftableBotanyTable = false;
-    public boolean spawnGreenhouse = true;
 }

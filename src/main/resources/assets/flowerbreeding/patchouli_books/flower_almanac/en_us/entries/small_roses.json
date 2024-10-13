@@ -1,0 +1,19 @@
+{
+  "name": "Small Roses",
+  "icon": "flowerbreeding:red_small_rose",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Small Roses",
+      "item": "flowerbreeding:rose_bush_pollen_vial,flowerbreeding:sweet_berry_pollen_vial",
+      "text": "A Small Rose can be created by combining a Rose Bush Pollen Vial, a Sweet Berry Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_small_rose,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_small_rose,flowerbreeding:white_pigment_jar,flowerbreeding:white_small_rose,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_small_rose,flowerbreeding:red_pigment_jar,flowerbreeding:red_small_rose,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_small_rose,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_small_rose,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_small_rose,flowerbreeding:black_pigment_jar,flowerbreeding:black_small_rose,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_small_rose,",
+      "text": "The colour of the Small Rose will be determined by the Pigment Jar used."
+    }
+  ]
+}

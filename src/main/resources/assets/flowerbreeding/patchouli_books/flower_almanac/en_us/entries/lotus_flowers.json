@@ -1,0 +1,19 @@
+{
+  "name": "Lotus Flowers",
+  "icon": "flowerbreeding:pink_lotus_flower",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Lotus Flowers",
+      "item": "flowerbreeding:lily_pad_pollen_vial,flowerbreeding:tulip_pollen_vial",
+      "text": "A Lotus Flower can be created by combining a Lily Pad Pollen Vial, a Tulip Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_lotus_flower,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_lotus_flower,flowerbreeding:white_pigment_jar,flowerbreeding:white_lotus_flower,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_lotus_flower,flowerbreeding:red_pigment_jar,flowerbreeding:red_lotus_flower,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_lotus_flower,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_lotus_flower,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_lotus_flower,flowerbreeding:black_pigment_jar,flowerbreeding:black_lotus_flower,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_lotus_flower,",
+      "text": "The colour of the Lotus Flower will be determined by the Pigment Jar used."
+    }
+  ]
+}

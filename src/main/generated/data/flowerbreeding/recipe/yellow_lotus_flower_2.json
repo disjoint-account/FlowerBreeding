@@ -8,9 +8,9 @@
     "id": "flowerbreeding:yellow_lotus_flower"
   },
   "vial1": {
-    "item": "flowerbreeding:lily_pollen_vial"
+    "item": "flowerbreeding:tulip_pollen_vial"
   },
   "vial2": {
-    "item": "flowerbreeding:glow_vine_pollen_vial"
+    "item": "flowerbreeding:lily_pad_pollen_vial"
   }
 }

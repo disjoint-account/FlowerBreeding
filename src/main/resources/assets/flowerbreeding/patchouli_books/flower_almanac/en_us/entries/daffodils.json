@@ -1,0 +1,19 @@
+{
+  "name": "Daffodils",
+  "icon": "flowerbreeding:yellow_daffodil",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Daffodils",
+      "item": "flowerbreeding:lily_pollen_vial,flowerbreeding:dandelion_pollen_vial",
+      "text": "A Daffodil can be created by combining a Lily Pollen Vial, a Dandelion Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_daffodil,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_daffodil,flowerbreeding:white_pigment_jar,flowerbreeding:white_daffodil,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_daffodil,flowerbreeding:red_pigment_jar,flowerbreeding:red_daffodil,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_daffodil,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_daffodil,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_daffodil,flowerbreeding:black_pigment_jar,flowerbreeding:black_daffodil,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_daffodil,",
+      "text": "The colour of the Daffodil will be determined by the Pigment Jar used."
+    }
+  ]
+}

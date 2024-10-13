@@ -1,0 +1,19 @@
+{
+  "name": "Jasmines",
+  "icon": "flowerbreeding:white_jasmine",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Jasmines",
+      "item": "flowerbreeding:glow_vine_pollen_vial,flowerbreeding:lily_pollen_vial",
+      "text": "A Jasmine can be created by combining a Glow Vine Pollen Vial, a Lily Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_jasmine,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_jasmine,flowerbreeding:white_pigment_jar,flowerbreeding:white_jasmine,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_jasmine,flowerbreeding:red_pigment_jar,flowerbreeding:red_jasmine,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_jasmine,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_jasmine,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_jasmine,flowerbreeding:black_pigment_jar,flowerbreeding:black_jasmine,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_jasmine,",
+      "text": "The colour of the Jasmine will be determined by the Pigment Jar used."
+    }
+  ]
+}

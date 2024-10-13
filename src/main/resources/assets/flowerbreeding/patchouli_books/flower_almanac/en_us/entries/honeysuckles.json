@@ -1,0 +1,19 @@
+{
+  "name": "Honeysuckles",
+  "icon": "flowerbreeding:white_honeysuckle",
+  "category": "flowerbreeding:recipes",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Honeysuckles",
+      "item": "flowerbreeding:lilac_pollen_vial,flowerbreeding:torchflower_pollen_vial",
+      "text": "A Honeysuckle can be created by combining a Lilac Pollen Vial, a Torchflower Pollen Vial, and a Pigment Jar in a Botany Table."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Colour",
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_honeysuckle,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_honeysuckle,flowerbreeding:white_pigment_jar,flowerbreeding:white_honeysuckle,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_honeysuckle,flowerbreeding:red_pigment_jar,flowerbreeding:red_honeysuckle,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_honeysuckle,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_honeysuckle,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_honeysuckle,flowerbreeding:black_pigment_jar,flowerbreeding:black_honeysuckle,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_honeysuckle,",
+      "text": "The colour of the Honeysuckle will be determined by the Pigment Jar used."
+    }
+  ]
+}

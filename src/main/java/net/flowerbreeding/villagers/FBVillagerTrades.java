@@ -103,11 +103,35 @@ public class FBVillagerTrades {
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.PINK_HYACINTH, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.MAGENTA_PHLOX, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.RED_SMALL_ROSE, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBBlocks.MAGENTA_LAVENDER, 1), 16, 5, 0.05f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.WHITE_HONEYSUCKLE, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBItems.PINK_LOTUS_FLOWER, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.WHITE_JASMINE, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.ORANGE_CYPRUS_VINE, 1), 16, 5, 0.05f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 5, factories -> {

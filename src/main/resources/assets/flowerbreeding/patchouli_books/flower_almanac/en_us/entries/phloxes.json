@@ -2,12 +2,13 @@
   "name": "Phloxes",
   "icon": "flowerbreeding:magenta_phlox",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Phloxes",
       "item": "flowerbreeding:azure_bluet_pollen_vial,flowerbreeding:orchid_pollen_vial",
-      "text": "A Phlox can be created by combining an Azure Bluet Pollen Vial, an Orchid Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)An Azure Bluet Pollen Vial$(li)An Orchid Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

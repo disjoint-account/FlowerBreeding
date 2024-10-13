@@ -2,12 +2,13 @@
   "name": "Lavenders",
   "icon": "flowerbreeding:magenta_lavender",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Lavenders",
       "item": "flowerbreeding:lilac_pollen_vial,flowerbreeding:cornflower_pollen_vial",
-      "text": "A Lavender can be created by combining a Lilac Pollen Vial, a Cornflower Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Lilac Pollen Vial$(li)A Cornflower Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

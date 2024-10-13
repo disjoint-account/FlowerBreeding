@@ -1,0 +1,20 @@
+{
+  "name": "Jars and Vials",
+  "icon": "flowerbreeding:empty_pollen_vial",
+  "category": "flowerbreeding:basics",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "title": "Pigment Jars",
+      "item": "flowerbreeding:empty_pigment_jar",
+      "text": "Empty Pigment Jars can be purchased from a Botanist Villager, and can be used to harvest pigment from various plants by right-clicking. You can right-click again at any time to empty the Jar."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Pollen Vials",
+      "item": "flowerbreeding:empty_pollen_vial",
+      "text": "Empty Pollen Vials can be purchased from a Botanist Villager, and can be used to harvest pollen from various plants by right-clicking. You can right-click again to empty the Vial."
+    }
+  ]
+}

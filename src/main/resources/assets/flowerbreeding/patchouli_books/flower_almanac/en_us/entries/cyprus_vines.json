@@ -2,12 +2,13 @@
   "name": "Cyprus Vines",
   "icon": "flowerbreeding:orange_cyprus_vine",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Cyprus Vines",
       "item": "flowerbreeding:vine_pollen_vial,flowerbreeding:daisy_pollen_vial",
-      "text": "A Cyprus Vine can be created by combining a Vine Pollen Vial, a Daisy Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Vine Pollen Vial$(li)A Daisy Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

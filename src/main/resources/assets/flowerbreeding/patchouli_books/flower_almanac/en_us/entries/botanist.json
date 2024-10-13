@@ -1,0 +1,20 @@
+{
+  "name": "Botanist Villagers",
+  "icon": "minecraft:emerald",
+  "category": "flowerbreeding:basics",
+  "read_by_default": "true",
+  "pages": [
+    {
+      "type": "patchouli:entity",
+      "title": "Botanist Villagers",
+      "entity": "minecraft:villager{VillagerData:{profession:'flowerbreeding:botanist'}}",
+      "text": "A Villager will take up the profession of Botanist if a Botany Table is placed in their vicinity."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "title": "Trades",
+      "item": "minecraft:emerald,flowerbreeding:empty_pigment_jar,flowerbreeding:empty_pollen_vial,flowerbreeding:yellow_daffodil,flowerbreeding:pink_hyacinth,flowerbreeding:magenta_phlox,flowerbreeding:red_small_rose,flowerbreeding:magenta_lavender,flowerbreeding:white_honeysuckle,flowerbreeding:pink_lotus_flower,flowerbreeding:white_jasmine,flowerbreeding:orange_cyprus_vine,flowerbreeding:botany_table",
+      "text": "Botanists can have the following trades:$(li)Novice:$(li2)Buys Vanilla flowers$(li)Apprentice:$(li2)Sells Pigment Jars$(li2)Sells Pollen Vials$(li)Journeyman:$(li2)Sells bred flowers$(li)Expert:$(li2)Sells exclusive plants$(li)Master:$(li2)Sells Botany Tables"
+    }
+  ]
+}

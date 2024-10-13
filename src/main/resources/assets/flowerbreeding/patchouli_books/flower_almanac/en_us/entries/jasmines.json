@@ -2,12 +2,13 @@
   "name": "Jasmines",
   "icon": "flowerbreeding:white_jasmine",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Jasmines",
       "item": "flowerbreeding:glow_vine_pollen_vial,flowerbreeding:lily_pollen_vial",
-      "text": "A Jasmine can be created by combining a Glow Vine Pollen Vial, a Lily Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Glow Vine Pollen Vial$(li)A Lily Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

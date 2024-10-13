@@ -2,12 +2,13 @@
   "name": "Small Roses",
   "icon": "flowerbreeding:red_small_rose",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Small Roses",
       "item": "flowerbreeding:rose_bush_pollen_vial,flowerbreeding:sweet_berry_pollen_vial",
-      "text": "A Small Rose can be created by combining a Rose Bush Pollen Vial, a Sweet Berry Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Rose Bush Pollen Vial$(li)A Sweet Berry Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

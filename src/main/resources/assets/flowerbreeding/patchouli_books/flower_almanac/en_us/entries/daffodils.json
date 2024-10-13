@@ -2,12 +2,13 @@
   "name": "Daffodils",
   "icon": "flowerbreeding:yellow_daffodil",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Daffodils",
       "item": "flowerbreeding:lily_pollen_vial,flowerbreeding:dandelion_pollen_vial",
-      "text": "A Daffodil can be created by combining a Lily Pollen Vial, a Dandelion Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Lily Pollen Vial$(li)A Dandelion Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

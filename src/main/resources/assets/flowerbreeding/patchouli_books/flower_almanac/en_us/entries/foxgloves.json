@@ -2,12 +2,13 @@
   "name": "Foxgloves",
   "icon": "flowerbreeding:red_foxglove",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Foxgloves",
       "item": "flowerbreeding:tulip_pollen_vial,flowerbreeding:rose_bush_pollen_vial",
-      "text": "A Foxglove can be created by combining a Tulip Pollen Vial, a Rose Bush Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Tulip Pollen Vial$(li)A Rose Bush Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

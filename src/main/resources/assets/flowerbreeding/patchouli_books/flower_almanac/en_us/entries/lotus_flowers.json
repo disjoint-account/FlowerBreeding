@@ -2,12 +2,13 @@
   "name": "Lotus Flowers",
   "icon": "flowerbreeding:pink_lotus_flower",
   "category": "flowerbreeding:recipes",
+  "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
       "title": "Lotus Flowers",
       "item": "flowerbreeding:lily_pad_pollen_vial,flowerbreeding:tulip_pollen_vial",
-      "text": "A Lotus Flower can be created by combining a Lily Pad Pollen Vial, a Tulip Pollen Vial, and a Pigment Jar in a Botany Table."
+      "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Lily Pad Pollen Vial$(li)A Tulip Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",

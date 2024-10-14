@@ -3,6 +3,8 @@
   "landing_text": "A guide to all the flowers of the Flower Breeding mod.",
   "book_texture": "patchouli:textures/gui/book_green.png",
   "model": "flowerbreeding:flower_almanac",
+  "open_sound": "minecraft:item.book.page_turn",
+  "flip_sound": "minecraft:item.book.page_turn",
   "use_blocky_font": true,
   "show_progress": false,
   "version": 1,

@@ -14,7 +14,7 @@
       "type": "patchouli:spotlight",
       "title": "Flower Breeding",
       "item": "flowerbreeding:botany_table",
-      "text": "The type of flower you get is determined by the Pollen, and its colour by the Pigment. Two Pollen Vials of the same type will produce that kind of flower, giving you the option to $(l:botanist)recolour$(/l) that species. Two Vials of differing types can produce $(l:recipes)totally new flowers$(/l)!"
+      "text": "The type of flower you get is determined by the Pollen, and its colour by the Pigment. Two Pollen Vials of the same type will produce that kind of flower, giving you the option to $(l:recolouring)recolour$(/l) that species. Two Vials of differing types can produce $(l:recipes)totally new flowers$(/l)!"
     }
   ]
 }

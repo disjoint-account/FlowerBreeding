@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "tag": "minecraft:planks"
+    },
+    "X": {
+      "item": "minecraft:honeycomb"
+    }
+  },
+  "pattern": [
+    "XX",
+    "##",
+    "##"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:botany_table"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "flowerbreeding:craftable_tables"
+    }
+  ]
+}

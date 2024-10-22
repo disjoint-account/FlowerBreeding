@@ -6,6 +6,7 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.structure.Structure;
 
 public class FBTags {
 
@@ -87,6 +88,12 @@ public class FBTags {
         public static final TagKey<Item> LIGHT_GREY_DYE_SMALL_FLOWERS = createTag("light_grey_dye_small_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
+        }
+    }
+    public static class Structures {
+        public static final TagKey<Structure> ON_FLORA_EXPLORER_MAPS = createTag("on_flora_explorer_maps");
+        private static TagKey<Structure> createTag(String name) {
+            return TagKey.of(RegistryKeys.STRUCTURE, Identifier.of(FlowerBreeding.MOD_ID, name));
         }
     }
 }

@@ -3,12 +3,31 @@ package net.flowerbreeding.villagers;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.minecraft.block.MapColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.item.map.MapDecorationType;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
 import net.minecraft.village.TradedItem;
 
 public class FBVillagerTrades {
+    public static final RegistryEntry<MapDecorationType> GREENHOUSE;
+    static {
+        GREENHOUSE = register("greenhouse", "greenhouse", true, MapColor.LIGHT_GRAY.color, false, true);
+    }
+
+    private static RegistryEntry<MapDecorationType> register(String id, String assetId, boolean showOnItemFrame, int mapColor, boolean trackCount, boolean explorationMapElement) {
+        RegistryKey<MapDecorationType> registryKey = RegistryKey.of(RegistryKeys.MAP_DECORATION_TYPE, Identifier.ofVanilla(id));
+        MapDecorationType mapDecorationType = new MapDecorationType(Identifier.ofVanilla(assetId), showOnItemFrame, mapColor, explorationMapElement, trackCount);
+        return Registry.registerReference(Registries.MAP_DECORATION_TYPE, registryKey, mapDecorationType);
+    }
+
     public static void registerTrades() {
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 1, factories -> {
             factories.add((entity, random) -> new TradeOffer(
@@ -140,5 +159,7 @@ public class FBVillagerTrades {
                     new ItemStack(FBBlocks.BOTANY_TABLE, 1), 3, 30, 0.2f
             ));
         });
+
+//insert map to cartographer pool
     }
 }

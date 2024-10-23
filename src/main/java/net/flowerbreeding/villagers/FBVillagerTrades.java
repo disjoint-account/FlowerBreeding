@@ -3,6 +3,7 @@ package net.flowerbreeding.villagers;
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.MapColor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -14,18 +15,22 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.village.TradeOffer;
+import net.minecraft.village.TradeOffers;
 import net.minecraft.village.TradedItem;
+import net.minecraft.village.VillagerProfession;
 
 public class FBVillagerTrades {
-    public static final RegistryEntry<MapDecorationType> GREENHOUSE;
-    static {
-        GREENHOUSE = register("greenhouse", "greenhouse", true, MapColor.LIGHT_GRAY.color, false, true);
-    }
 
+    public static final RegistryEntry<MapDecorationType> GREENHOUSE_DECORATION;
+    private static final TradeOffers.Factory SELL_GREENHOUSE_MAP_TRADE;
     private static RegistryEntry<MapDecorationType> register(String id, String assetId, boolean showOnItemFrame, int mapColor, boolean trackCount, boolean explorationMapElement) {
-        RegistryKey<MapDecorationType> registryKey = RegistryKey.of(RegistryKeys.MAP_DECORATION_TYPE, Identifier.ofVanilla(id));
-        MapDecorationType mapDecorationType = new MapDecorationType(Identifier.ofVanilla(assetId), showOnItemFrame, mapColor, explorationMapElement, trackCount);
+        RegistryKey<MapDecorationType> registryKey = RegistryKey.of(RegistryKeys.MAP_DECORATION_TYPE, Identifier.of(id));
+        MapDecorationType mapDecorationType = new MapDecorationType(Identifier.of(assetId), showOnItemFrame, mapColor, explorationMapElement, trackCount);
         return Registry.registerReference(Registries.MAP_DECORATION_TYPE, registryKey, mapDecorationType);
+    }
+    static {
+        GREENHOUSE_DECORATION = register("flowerbreeding:greenhouse", "flowerbreeding:greenhouse", true, MapColor.GREEN.color, false, true);
+        SELL_GREENHOUSE_MAP_TRADE = new SellCustomMapTradeFactory(12, FBTags.Structures.ON_FLORA_EXPLORER_MAPS, "filled_map.greenhouse", GREENHOUSE_DECORATION, 12, 5);
     }
 
     public static void registerTrades() {
@@ -161,5 +166,8 @@ public class FBVillagerTrades {
         });
 
 //insert map to cartographer pool
+        TradeOfferHelper.registerVillagerOffers(VillagerProfession.CARTOGRAPHER, 2, (trades) -> {
+                        trades.add(SELL_GREENHOUSE_MAP_TRADE);
+        });
     }
 }

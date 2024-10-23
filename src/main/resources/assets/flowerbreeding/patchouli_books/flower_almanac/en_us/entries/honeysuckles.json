@@ -1,20 +1,20 @@
 {
-  "name": "Honeysuckles",
-  "icon": "flowerbreeding:white_honeysuckle",
+  "name": "Hydrangeas",
+  "icon": "flowerbreeding:light_blue_hydrangea",
   "category": "flowerbreeding:recipes",
   "read_by_default": "true",
   "pages": [
     {
       "type": "patchouli:spotlight",
-      "title": "Honeysuckles",
+      "title": "Hydrangeas",
       "item": "flowerbreeding:lilac_pollen_vial,flowerbreeding:torchflower_pollen_vial",
       "text": "A Small Rose can be created by using a Botany Table to combine:$(li)A Lilac Pollen Vial$(li)A Torchflower Pollen Vial$(li)Any Pigment Jar"
     },
     {
       "type": "patchouli:spotlight",
       "title": "Colour",
-      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_honeysuckle,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_honeysuckle,flowerbreeding:white_pigment_jar,flowerbreeding:white_honeysuckle,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_honeysuckle,flowerbreeding:red_pigment_jar,flowerbreeding:red_honeysuckle,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_honeysuckle,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_honeysuckle,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_honeysuckle,flowerbreeding:black_pigment_jar,flowerbreeding:black_honeysuckle,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_honeysuckle,",
-      "text": "The colour of the Honeysuckle will be determined by the Pigment Jar used."
+      "item": "flowerbreeding:magenta_pigment_jar,flowerbreeding:magenta_hydrangea,flowerbreeding:blue_pigment_jar,flowerbreeding:blue_hydrangea,flowerbreeding:white_pigment_jar,flowerbreeding:white_hydrangea,flowerbreeding:orange_pigment_jar,flowerbreeding:orange_hydrangea,flowerbreeding:red_pigment_jar,flowerbreeding:red_hydrangea,flowerbreeding:yellow_pigment_jar,flowerbreeding:yellow_hydrangea,flowerbreeding:light_blue_pigment_jar,flowerbreeding:light_blue_hydrangea,flowerbreeding:pink_pigment_jar,flowerbreeding:pink_hydrangea,flowerbreeding:black_pigment_jar,flowerbreeding:black_hydrangea,flowerbreeding:cyan_pigment_jar,flowerbreeding:cyan_hydrangea,",
+      "text": "The colour of the Hydrangea will be determined by the Pigment Jar used."
     }
   ]
 }

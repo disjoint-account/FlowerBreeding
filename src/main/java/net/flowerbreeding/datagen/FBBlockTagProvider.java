@@ -633,27 +633,33 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_SMALL_ROSE,
                         FBBlocks.CYAN_SMALL_ROSE);
 
-        getOrCreateTagBuilder(FBTags.Blocks.JASMINES)
+        getOrCreateTagBuilder(FBTags.Blocks.BASE_JASMINES)
                 .add(FBBlocks.MAGENTA_JASMINE,
-                        FBBlocks.MAGENTA_JASMINE_PLANT,
                         FBBlocks.BLUE_JASMINE,
-                        FBBlocks.BLUE_JASMINE_PLANT,
                         FBBlocks.WHITE_JASMINE,
-                        FBBlocks.WHITE_JASMINE_PLANT,
                         FBBlocks.ORANGE_JASMINE,
-                        FBBlocks.ORANGE_JASMINE_PLANT,
                         FBBlocks.RED_JASMINE,
-                        FBBlocks.RED_JASMINE_PLANT,
                         FBBlocks.YELLOW_JASMINE,
-                        FBBlocks.YELLOW_JASMINE_PLANT,
                         FBBlocks.LIGHT_BLUE_JASMINE,
-                        FBBlocks.LIGHT_BLUE_JASMINE_PLANT,
                         FBBlocks.PINK_JASMINE,
-                        FBBlocks.PINK_JASMINE_PLANT,
                         FBBlocks.BLACK_JASMINE,
+                        FBBlocks.CYAN_JASMINE);
+
+        getOrCreateTagBuilder(FBTags.Blocks.JASMINE_PLANTS)
+                .add(FBBlocks.MAGENTA_JASMINE_PLANT,
+                        FBBlocks.BLUE_JASMINE_PLANT,
+                        FBBlocks.WHITE_JASMINE_PLANT,
+                        FBBlocks.ORANGE_JASMINE_PLANT,
+                        FBBlocks.RED_JASMINE_PLANT,
+                        FBBlocks.YELLOW_JASMINE_PLANT,
+                        FBBlocks.LIGHT_BLUE_JASMINE_PLANT,
+                        FBBlocks.PINK_JASMINE_PLANT,
                         FBBlocks.BLACK_JASMINE_PLANT,
-                        FBBlocks.CYAN_JASMINE,
                         FBBlocks.CYAN_JASMINE_PLANT);
+
+        getOrCreateTagBuilder(FBTags.Blocks.JASMINES)
+                .addOptionalTag(FBTags.Blocks.BASE_JASMINES)
+                .addOptionalTag(FBTags.Blocks.JASMINE_PLANTS);
 
         getOrCreateTagBuilder(FBTags.Blocks.HYDRANGEAS)
                 .add(FBBlocks.MAGENTA_HYDRANGEA,

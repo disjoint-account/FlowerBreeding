@@ -20,7 +20,10 @@
   },
   "fabric:load_conditions": [
     {
-      "condition": "flowerbreeding:craftable_tables"
+      "condition": "flowerbreeding:craftable_tables",
+      "values": [
+        "true"
+      ]
     }
   ]
 }

@@ -222,16 +222,16 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_LAVENDER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_LAVENDER, 0.65f);
 
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_HONEYSUCKLE, 0.65f);
-        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_HONEYSUCKLE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_HYDRANGEA, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_HYDRANGEA, 0.65f);
 
         CompostingChanceRegistry.INSTANCE.add(FBItems.MAGENTA_LOTUS_FLOWER, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBItems.BLUE_LOTUS_FLOWER, 0.65f);

@@ -375,16 +375,16 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_LAVENDER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_LAVENDER, RenderLayer.getCutout());
 
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_HONEYSUCKLE, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_HONEYSUCKLE, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.YELLOW_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_HYDRANGEA, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_HYDRANGEA, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_LOTUS_FLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_LOTUS_FLOWER, RenderLayer.getCutout());

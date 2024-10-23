@@ -104,7 +104,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_SMALL_ROSE,
                         FBBlocks.MAGENTA_JASMINE,
                         FBBlocks.MAGENTA_JASMINE_PLANT,
-                        FBBlocks.MAGENTA_HONEYSUCKLE,
+                        FBBlocks.MAGENTA_HYDRANGEA,
                         FBBlocks.MAGENTA_CYPRUS_VINE,
                         FBBlocks.MAGENTA_LOTUS_FLOWER);
 
@@ -133,7 +133,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLUE_SMALL_ROSE,
                         FBBlocks.BLUE_JASMINE,
                         FBBlocks.BLUE_JASMINE_PLANT,
-                        FBBlocks.BLUE_HONEYSUCKLE,
+                        FBBlocks.BLUE_HYDRANGEA,
                         FBBlocks.BLUE_CYPRUS_VINE,
                         FBBlocks.BLUE_LOTUS_FLOWER);
 
@@ -162,7 +162,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.WHITE_SMALL_ROSE,
                         FBBlocks.WHITE_JASMINE,
                         FBBlocks.WHITE_JASMINE_PLANT,
-                        FBBlocks.WHITE_HONEYSUCKLE,
+                        FBBlocks.WHITE_HYDRANGEA,
                         FBBlocks.WHITE_CYPRUS_VINE,
                         FBBlocks.WHITE_LOTUS_FLOWER);
 
@@ -191,7 +191,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.ORANGE_SMALL_ROSE,
                         FBBlocks.ORANGE_JASMINE,
                         FBBlocks.ORANGE_JASMINE_PLANT,
-                        FBBlocks.ORANGE_HONEYSUCKLE,
+                        FBBlocks.ORANGE_HYDRANGEA,
                         FBBlocks.ORANGE_CYPRUS_VINE,
                         FBBlocks.ORANGE_LOTUS_FLOWER);
 
@@ -220,7 +220,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.RED_SMALL_ROSE,
                         FBBlocks.RED_JASMINE,
                         FBBlocks.RED_JASMINE_PLANT,
-                        FBBlocks.RED_HONEYSUCKLE,
+                        FBBlocks.RED_HYDRANGEA,
                         FBBlocks.RED_CYPRUS_VINE,
                         FBBlocks.RED_LOTUS_FLOWER);
 
@@ -249,7 +249,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.YELLOW_SMALL_ROSE,
                         FBBlocks.YELLOW_JASMINE,
                         FBBlocks.YELLOW_JASMINE_PLANT,
-                        FBBlocks.YELLOW_HONEYSUCKLE,
+                        FBBlocks.YELLOW_HYDRANGEA,
                         FBBlocks.YELLOW_CYPRUS_VINE,
                         FBBlocks.YELLOW_LOTUS_FLOWER);
 
@@ -278,7 +278,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_SMALL_ROSE,
                         FBBlocks.LIGHT_BLUE_JASMINE,
                         FBBlocks.LIGHT_BLUE_JASMINE_PLANT,
-                        FBBlocks.LIGHT_BLUE_HONEYSUCKLE,
+                        FBBlocks.LIGHT_BLUE_HYDRANGEA,
                         FBBlocks.LIGHT_BLUE_CYPRUS_VINE,
                         FBBlocks.LIGHT_BLUE_LOTUS_FLOWER);
 
@@ -307,7 +307,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_SMALL_ROSE,
                         FBBlocks.PINK_JASMINE,
                         FBBlocks.PINK_JASMINE_PLANT,
-                        FBBlocks.PINK_HONEYSUCKLE,
+                        FBBlocks.PINK_HYDRANGEA,
                         FBBlocks.PINK_CYPRUS_VINE,
                         FBBlocks.PINK_LOTUS_FLOWER);
 
@@ -336,7 +336,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_SMALL_ROSE,
                         FBBlocks.BLACK_JASMINE,
                         FBBlocks.BLACK_JASMINE_PLANT,
-                        FBBlocks.BLACK_HONEYSUCKLE,
+                        FBBlocks.BLACK_HYDRANGEA,
                         FBBlocks.BLACK_CYPRUS_VINE,
                         FBBlocks.BLACK_LOTUS_FLOWER);
 
@@ -365,7 +365,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_SMALL_ROSE,
                         FBBlocks.CYAN_JASMINE,
                         FBBlocks.CYAN_JASMINE_PLANT,
-                        FBBlocks.CYAN_HONEYSUCKLE,
+                        FBBlocks.CYAN_HYDRANGEA,
                         FBBlocks.CYAN_CYPRUS_VINE,
                         FBBlocks.CYAN_LOTUS_FLOWER);
 
@@ -655,17 +655,17 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_JASMINE,
                         FBBlocks.CYAN_JASMINE_PLANT);
 
-        getOrCreateTagBuilder(FBTags.Blocks.HONEYSUCKLES)
-                .add(FBBlocks.MAGENTA_HONEYSUCKLE,
-                        FBBlocks.BLUE_HONEYSUCKLE,
-                        FBBlocks.WHITE_HONEYSUCKLE,
-                        FBBlocks.ORANGE_HONEYSUCKLE,
-                        FBBlocks.RED_HONEYSUCKLE,
-                        FBBlocks.YELLOW_HONEYSUCKLE,
-                        FBBlocks.LIGHT_BLUE_HONEYSUCKLE,
-                        FBBlocks.PINK_HONEYSUCKLE,
-                        FBBlocks.BLACK_HONEYSUCKLE,
-                        FBBlocks.CYAN_HONEYSUCKLE);
+        getOrCreateTagBuilder(FBTags.Blocks.HYDRANGEAS)
+                .add(FBBlocks.MAGENTA_HYDRANGEA,
+                        FBBlocks.BLUE_HYDRANGEA,
+                        FBBlocks.WHITE_HYDRANGEA,
+                        FBBlocks.ORANGE_HYDRANGEA,
+                        FBBlocks.RED_HYDRANGEA,
+                        FBBlocks.YELLOW_HYDRANGEA,
+                        FBBlocks.LIGHT_BLUE_HYDRANGEA,
+                        FBBlocks.PINK_HYDRANGEA,
+                        FBBlocks.BLACK_HYDRANGEA,
+                        FBBlocks.CYAN_HYDRANGEA);
 
         getOrCreateTagBuilder(FBTags.Blocks.CYPRUS_VINES)
                 .add(FBBlocks.MAGENTA_CYPRUS_VINE,

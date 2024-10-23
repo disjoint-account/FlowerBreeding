@@ -214,16 +214,16 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_LAVENDER, BlockStateModelGenerator.TintType.NOT_TINTED);
 
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLUE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.WHITE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.ORANGE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.RED_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.YELLOW_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.PINK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_HONEYSUCKLE, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.MAGENTA_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLUE_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.WHITE_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.ORANGE_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.RED_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.YELLOW_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.LIGHT_BLUE_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.PINK_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.BLACK_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerDoubleBlock(FBBlocks.CYAN_HYDRANGEA, BlockStateModelGenerator.TintType.NOT_TINTED);
 
         blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_JASMINE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_JASMINE_PLANT, BlockStateModelGenerator.TintType.NOT_TINTED);

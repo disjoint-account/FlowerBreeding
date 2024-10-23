@@ -32,9 +32,6 @@ public class YellowPigmentJarItem extends Item {
         BlockState pos = world.getBlockState(blockPos);
         if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-                if (pos.isIn(FBTags.Blocks.YELLOW_FLOWERS))
-                    return ActionResult.PASS;
-                else {
                     ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
                     user.setStackInHand(hand, itemStack1);
                     if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
@@ -103,8 +100,8 @@ public class YellowPigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LAVENDER));
                     }
-                    if (pos.isIn(FBTags.Blocks.HONEYSUCKLES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HONEYSUCKLE));
+                    if (pos.isIn(FBTags.Blocks.HYDRANGEAS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HYDRANGEA));
                     }
                     if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBItems.YELLOW_LOTUS_FLOWER));
@@ -119,7 +116,6 @@ public class YellowPigmentJarItem extends Item {
                     return ActionResult.SUCCESS;
                 }
             }
-        }
         return ActionResult.PASS;
     }
     public TypedActionResult use(World world, PlayerEntity user, Hand hand) {

@@ -382,16 +382,16 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.BLACK_LAVENDER, tallPlantDrops(FBBlocks.BLACK_LAVENDER, FBBlocks.BLACK_LAVENDER));
             addDrop(FBBlocks.CYAN_LAVENDER, tallPlantDrops(FBBlocks.CYAN_LAVENDER, FBBlocks.CYAN_LAVENDER));
 
-            addDrop(FBBlocks.MAGENTA_HONEYSUCKLE, tallPlantDrops(FBBlocks.MAGENTA_HONEYSUCKLE, FBBlocks.MAGENTA_HONEYSUCKLE));
-            addDrop(FBBlocks.BLUE_HONEYSUCKLE, tallPlantDrops(FBBlocks.BLUE_HONEYSUCKLE, FBBlocks.BLUE_HONEYSUCKLE));
-            addDrop(FBBlocks.WHITE_HONEYSUCKLE, tallPlantDrops(FBBlocks.WHITE_HONEYSUCKLE, FBBlocks.WHITE_HONEYSUCKLE));
-            addDrop(FBBlocks.ORANGE_HONEYSUCKLE, tallPlantDrops(FBBlocks.ORANGE_HONEYSUCKLE, FBBlocks.ORANGE_HONEYSUCKLE));
-            addDrop(FBBlocks.RED_HONEYSUCKLE, tallPlantDrops(FBBlocks.RED_HONEYSUCKLE, FBBlocks.RED_HONEYSUCKLE));
-            addDrop(FBBlocks.YELLOW_HONEYSUCKLE, tallPlantDrops(FBBlocks.YELLOW_HONEYSUCKLE, FBBlocks.YELLOW_HONEYSUCKLE));
-            addDrop(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, tallPlantDrops(FBBlocks.LIGHT_BLUE_HONEYSUCKLE, FBBlocks.LIGHT_BLUE_HONEYSUCKLE));
-            addDrop(FBBlocks.PINK_HONEYSUCKLE, tallPlantDrops(FBBlocks.PINK_HONEYSUCKLE, FBBlocks.PINK_HONEYSUCKLE));
-            addDrop(FBBlocks.BLACK_HONEYSUCKLE, tallPlantDrops(FBBlocks.BLACK_HONEYSUCKLE, FBBlocks.BLACK_HONEYSUCKLE));
-            addDrop(FBBlocks.CYAN_HONEYSUCKLE, tallPlantDrops(FBBlocks.CYAN_HONEYSUCKLE, FBBlocks.CYAN_HONEYSUCKLE));
+            addDrop(FBBlocks.MAGENTA_HYDRANGEA, tallPlantDrops(FBBlocks.MAGENTA_HYDRANGEA, FBBlocks.MAGENTA_HYDRANGEA));
+            addDrop(FBBlocks.BLUE_HYDRANGEA, tallPlantDrops(FBBlocks.BLUE_HYDRANGEA, FBBlocks.BLUE_HYDRANGEA));
+            addDrop(FBBlocks.WHITE_HYDRANGEA, tallPlantDrops(FBBlocks.WHITE_HYDRANGEA, FBBlocks.WHITE_HYDRANGEA));
+            addDrop(FBBlocks.ORANGE_HYDRANGEA, tallPlantDrops(FBBlocks.ORANGE_HYDRANGEA, FBBlocks.ORANGE_HYDRANGEA));
+            addDrop(FBBlocks.RED_HYDRANGEA, tallPlantDrops(FBBlocks.RED_HYDRANGEA, FBBlocks.RED_HYDRANGEA));
+            addDrop(FBBlocks.YELLOW_HYDRANGEA, tallPlantDrops(FBBlocks.YELLOW_HYDRANGEA, FBBlocks.YELLOW_HYDRANGEA));
+            addDrop(FBBlocks.LIGHT_BLUE_HYDRANGEA, tallPlantDrops(FBBlocks.LIGHT_BLUE_HYDRANGEA, FBBlocks.LIGHT_BLUE_HYDRANGEA));
+            addDrop(FBBlocks.PINK_HYDRANGEA, tallPlantDrops(FBBlocks.PINK_HYDRANGEA, FBBlocks.PINK_HYDRANGEA));
+            addDrop(FBBlocks.BLACK_HYDRANGEA, tallPlantDrops(FBBlocks.BLACK_HYDRANGEA, FBBlocks.BLACK_HYDRANGEA));
+            addDrop(FBBlocks.CYAN_HYDRANGEA, tallPlantDrops(FBBlocks.CYAN_HYDRANGEA, FBBlocks.CYAN_HYDRANGEA));
 
             addDrop(FBBlocks.MAGENTA_LOTUS_FLOWER, drops(FBItems.MAGENTA_LOTUS_FLOWER));
             addDrop(FBBlocks.BLUE_LOTUS_FLOWER, drops(FBItems.BLUE_LOTUS_FLOWER));

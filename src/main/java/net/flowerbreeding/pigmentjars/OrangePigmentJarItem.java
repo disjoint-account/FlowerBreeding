@@ -32,9 +32,6 @@ public class OrangePigmentJarItem extends Item {
         BlockState pos = world.getBlockState(blockPos);
         if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-                if (pos.isIn(FBTags.Blocks.ORANGE_FLOWERS))
-                    return ActionResult.PASS;
-                else {
                     ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
                     user.setStackInHand(hand, itemStack1);
                     if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
@@ -103,8 +100,8 @@ public class OrangePigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_LAVENDER));
                     }
-                    if (pos.isIn(FBTags.Blocks.HONEYSUCKLES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_HONEYSUCKLE));
+                    if (pos.isIn(FBTags.Blocks.HYDRANGEAS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.ORANGE_HYDRANGEA));
                     }
                     if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBItems.ORANGE_LOTUS_FLOWER));
@@ -117,7 +114,6 @@ public class OrangePigmentJarItem extends Item {
                     }
                     world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                     return ActionResult.SUCCESS;
-                }
             }
         }
         return ActionResult.PASS;

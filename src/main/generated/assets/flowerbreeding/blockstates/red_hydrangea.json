@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=lower": {
+      "model": "flowerbreeding:block/red_hydrangea_bottom"
+    },
+    "half=upper": {
+      "model": "flowerbreeding:block/red_hydrangea_top"
+    }
+  }
+}

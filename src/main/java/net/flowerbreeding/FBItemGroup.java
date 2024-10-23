@@ -286,16 +286,16 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_LAVENDER);
                         entries.add(FBBlocks.CYAN_LAVENDER);
 
-                        entries.add(FBBlocks.MAGENTA_HONEYSUCKLE);
-                        entries.add(FBBlocks.BLUE_HONEYSUCKLE);
-                        entries.add(FBBlocks.WHITE_HONEYSUCKLE);
-                        entries.add(FBBlocks.ORANGE_HONEYSUCKLE);
-                        entries.add(FBBlocks.RED_HONEYSUCKLE);
-                        entries.add(FBBlocks.YELLOW_HONEYSUCKLE);
-                        entries.add(FBBlocks.LIGHT_BLUE_HONEYSUCKLE);
-                        entries.add(FBBlocks.PINK_HONEYSUCKLE);
-                        entries.add(FBBlocks.BLACK_HONEYSUCKLE);
-                        entries.add(FBBlocks.CYAN_HONEYSUCKLE);
+                        entries.add(FBBlocks.MAGENTA_HYDRANGEA);
+                        entries.add(FBBlocks.BLUE_HYDRANGEA);
+                        entries.add(FBBlocks.WHITE_HYDRANGEA);
+                        entries.add(FBBlocks.ORANGE_HYDRANGEA);
+                        entries.add(FBBlocks.RED_HYDRANGEA);
+                        entries.add(FBBlocks.YELLOW_HYDRANGEA);
+                        entries.add(FBBlocks.LIGHT_BLUE_HYDRANGEA);
+                        entries.add(FBBlocks.PINK_HYDRANGEA);
+                        entries.add(FBBlocks.BLACK_HYDRANGEA);
+                        entries.add(FBBlocks.CYAN_HYDRANGEA);
 
                         entries.add(FBItems.MAGENTA_LOTUS_FLOWER);
                         entries.add(FBItems.BLUE_LOTUS_FLOWER);

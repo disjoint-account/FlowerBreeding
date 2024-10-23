@@ -143,7 +143,7 @@ public class FBVillagerTrades {
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
-                    new ItemStack(FBBlocks.WHITE_HONEYSUCKLE, 1), 16, 5, 0.05f
+                    new ItemStack(FBBlocks.WHITE_HYDRANGEA, 1), 16, 5, 0.05f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),

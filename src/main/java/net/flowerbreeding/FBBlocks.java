@@ -761,27 +761,27 @@ public class FBBlocks {
     public static final Block CYAN_LAVENDER = registerBlock("cyan_lavender",
             new TallFlowerBlock(AbstractBlock.Settings.copy(ROSE_BUSH)));
 
-    //honeysuckles
+    //hydrangeas
 
-    public static final Block MAGENTA_HONEYSUCKLE = registerBlock("magenta_honeysuckle",
+    public static final Block MAGENTA_HYDRANGEA = registerBlock("magenta_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block BLUE_HONEYSUCKLE = registerBlock("blue_honeysuckle",
+    public static final Block BLUE_HYDRANGEA = registerBlock("blue_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block WHITE_HONEYSUCKLE = registerBlock("white_honeysuckle",
+    public static final Block WHITE_HYDRANGEA = registerBlock("white_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block ORANGE_HONEYSUCKLE = registerBlock("orange_honeysuckle",
+    public static final Block ORANGE_HYDRANGEA = registerBlock("orange_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block RED_HONEYSUCKLE = registerBlock("red_honeysuckle",
+    public static final Block RED_HYDRANGEA = registerBlock("red_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block YELLOW_HONEYSUCKLE = registerBlock("yellow_honeysuckle",
+    public static final Block YELLOW_HYDRANGEA = registerBlock("yellow_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block LIGHT_BLUE_HONEYSUCKLE = registerBlock("light_blue_honeysuckle",
+    public static final Block LIGHT_BLUE_HYDRANGEA = registerBlock("light_blue_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block PINK_HONEYSUCKLE = registerBlock("pink_honeysuckle",
+    public static final Block PINK_HYDRANGEA = registerBlock("pink_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block BLACK_HONEYSUCKLE = registerBlock("black_honeysuckle",
+    public static final Block BLACK_HYDRANGEA = registerBlock("black_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
-    public static final Block CYAN_HONEYSUCKLE = registerBlock("cyan_honeysuckle",
+    public static final Block CYAN_HYDRANGEA = registerBlock("cyan_hydrangea",
             new TallFlowerBlock(AbstractBlock.Settings.copy(LILAC)));
 
     //lotus flowers

@@ -192,6 +192,17 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_PHLOX, FBBlocks.POTTED_BLACK_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_PHLOX, FBBlocks.POTTED_CYAN_PHLOX, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_LUPIN, FBBlocks.POTTED_MAGENTA_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_LUPIN, FBBlocks.POTTED_BLUE_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_LUPIN, FBBlocks.POTTED_WHITE_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.ORANGE_LUPIN, FBBlocks.POTTED_ORANGE_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.RED_LUPIN, FBBlocks.POTTED_RED_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.YELLOW_LUPIN, FBBlocks.POTTED_YELLOW_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.LIGHT_BLUE_LUPIN, FBBlocks.POTTED_LIGHT_BLUE_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.PINK_LUPIN, FBBlocks.POTTED_PINK_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLACK_LUPIN, FBBlocks.POTTED_BLACK_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.CYAN_LUPIN, FBBlocks.POTTED_CYAN_LUPIN, BlockStateModelGenerator.TintType.NOT_TINTED);
+
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.MAGENTA_SMALL_ROSE, FBBlocks.POTTED_MAGENTA_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.BLUE_SMALL_ROSE, FBBlocks.POTTED_BLUE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlant(FBBlocks.WHITE_SMALL_ROSE, FBBlocks.POTTED_WHITE_SMALL_ROSE, BlockStateModelGenerator.TintType.NOT_TINTED);

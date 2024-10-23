@@ -102,14 +102,14 @@ public class FBVillagerTrades {
                     new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), 12, 5, 0.2f
             ));
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
+                    new TradedItem(Items.EMERALD, 4),
+                    new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 1), 12, 5, 0.2f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 3, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 1), 12, 5, 0.2f
+                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 5),
@@ -132,6 +132,10 @@ public class FBVillagerTrades {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBBlocks.MAGENTA_PHLOX, 1), 16, 5, 0.05f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(FBBlocks.BLUE_LUPIN, 1), 16, 5, 0.05f
             ));
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),

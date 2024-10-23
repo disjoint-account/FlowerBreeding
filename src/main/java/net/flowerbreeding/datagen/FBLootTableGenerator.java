@@ -350,6 +350,27 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_PHLOX);
             addDrop(FBBlocks.POTTED_CYAN_PHLOX, pottedPlantDrops(FBBlocks.CYAN_PHLOX));
 
+            addDrop(FBBlocks.MAGENTA_LUPIN);
+            addDrop(FBBlocks.POTTED_MAGENTA_LUPIN, pottedPlantDrops(FBBlocks.MAGENTA_LUPIN));
+            addDrop(FBBlocks.BLUE_LUPIN);
+            addDrop(FBBlocks.POTTED_BLUE_LUPIN, pottedPlantDrops(FBBlocks.BLUE_LUPIN));
+            addDrop(FBBlocks.WHITE_LUPIN);
+            addDrop(FBBlocks.POTTED_WHITE_LUPIN, pottedPlantDrops(FBBlocks.WHITE_LUPIN));
+            addDrop(FBBlocks.ORANGE_LUPIN);
+            addDrop(FBBlocks.POTTED_ORANGE_LUPIN, pottedPlantDrops(FBBlocks.ORANGE_LUPIN));
+            addDrop(FBBlocks.RED_LUPIN);
+            addDrop(FBBlocks.POTTED_RED_LUPIN, pottedPlantDrops(FBBlocks.RED_LUPIN));
+            addDrop(FBBlocks.YELLOW_LUPIN);
+            addDrop(FBBlocks.POTTED_YELLOW_LUPIN, pottedPlantDrops(FBBlocks.YELLOW_LUPIN));
+            addDrop(FBBlocks.LIGHT_BLUE_LUPIN);
+            addDrop(FBBlocks.POTTED_LIGHT_BLUE_LUPIN, pottedPlantDrops(FBBlocks.LIGHT_BLUE_LUPIN));
+            addDrop(FBBlocks.PINK_LUPIN);
+            addDrop(FBBlocks.POTTED_PINK_LUPIN, pottedPlantDrops(FBBlocks.PINK_LUPIN));
+            addDrop(FBBlocks.BLACK_LUPIN);
+            addDrop(FBBlocks.POTTED_BLACK_LUPIN, pottedPlantDrops(FBBlocks.BLACK_LUPIN));
+            addDrop(FBBlocks.CYAN_LUPIN);
+            addDrop(FBBlocks.POTTED_CYAN_LUPIN, pottedPlantDrops(FBBlocks.CYAN_LUPIN));
+
             addDrop(FBBlocks.MAGENTA_SMALL_ROSE);
             addDrop(FBBlocks.POTTED_MAGENTA_SMALL_ROSE, pottedPlantDrops(FBBlocks.MAGENTA_SMALL_ROSE));
             addDrop(FBBlocks.BLUE_SMALL_ROSE);

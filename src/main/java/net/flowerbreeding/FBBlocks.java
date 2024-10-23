@@ -695,6 +695,51 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_PHLOX = registerBlock("potted_cyan_phlox", false,
             new FlowerPotBlock(CYAN_PHLOX, AbstractBlock.Settings.copy(POTTED_DANDELION)));
 
+
+
+    //lupins
+
+    public static final Block MAGENTA_LUPIN = registerBlock("magenta_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_MAGENTA_LUPIN = registerBlock("potted_magenta_lupin", false,
+            new FlowerPotBlock(MAGENTA_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLUE_LUPIN = registerBlock("blue_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLUE_LUPIN = registerBlock("potted_blue_lupin", false,
+            new FlowerPotBlock(BLUE_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block WHITE_LUPIN = registerBlock("white_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_WHITE_LUPIN = registerBlock("potted_white_lupin", false,
+            new FlowerPotBlock(WHITE_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block ORANGE_LUPIN = registerBlock("orange_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_ORANGE_LUPIN = registerBlock("potted_orange_lupin", false,
+            new FlowerPotBlock(ORANGE_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block RED_LUPIN = registerBlock("red_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_RED_LUPIN = registerBlock("potted_red_lupin", false,
+            new FlowerPotBlock(RED_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block YELLOW_LUPIN = registerBlock("yellow_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_YELLOW_LUPIN = registerBlock("potted_yellow_lupin", false,
+            new FlowerPotBlock(YELLOW_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block LIGHT_BLUE_LUPIN = registerBlock("light_blue_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_LIGHT_BLUE_LUPIN = registerBlock("potted_light_blue_lupin", false,
+            new FlowerPotBlock(LIGHT_BLUE_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block PINK_LUPIN = registerBlock("pink_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_PINK_LUPIN = registerBlock("potted_pink_lupin", false,
+            new FlowerPotBlock(PINK_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block BLACK_LUPIN = registerBlock("black_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_BLACK_LUPIN = registerBlock("potted_black_lupin", false,
+            new FlowerPotBlock(BLACK_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+    public static final Block CYAN_LUPIN = registerBlock("cyan_lupin",
+            new FlowerBlock(StatusEffects.SPEED, 11, AbstractBlock.Settings.copy(DANDELION)));
+    public static final Block POTTED_CYAN_LUPIN = registerBlock("potted_cyan_lupin", false,
+            new FlowerPotBlock(CYAN_LUPIN, AbstractBlock.Settings.copy(POTTED_DANDELION)));
+
     //small_roses
 
     public static final Block MAGENTA_SMALL_ROSE = registerBlock("magenta_small_rose",

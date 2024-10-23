@@ -61,6 +61,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:lupins",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:small_roses",
       "required": false
     },

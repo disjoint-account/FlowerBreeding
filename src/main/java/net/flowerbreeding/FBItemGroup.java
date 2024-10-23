@@ -264,6 +264,17 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_PHLOX);
                         entries.add(FBBlocks.CYAN_PHLOX);
 
+                        entries.add(FBBlocks.MAGENTA_LUPIN);
+                        entries.add(FBBlocks.BLUE_LUPIN);
+                        entries.add(FBBlocks.WHITE_LUPIN);
+                        entries.add(FBBlocks.ORANGE_LUPIN);
+                        entries.add(FBBlocks.RED_LUPIN);
+                        entries.add(FBBlocks.YELLOW_LUPIN);
+                        entries.add(FBBlocks.LIGHT_BLUE_LUPIN);
+                        entries.add(FBBlocks.PINK_LUPIN);
+                        entries.add(FBBlocks.BLACK_LUPIN);
+                        entries.add(FBBlocks.CYAN_LUPIN);
+
                         entries.add(FBBlocks.MAGENTA_SMALL_ROSE);
                         entries.add(FBBlocks.BLUE_SMALL_ROSE);
                         entries.add(FBBlocks.WHITE_SMALL_ROSE);

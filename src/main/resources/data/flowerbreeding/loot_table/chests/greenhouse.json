@@ -199,6 +199,22 @@
               "function": "minecraft:set_count"
             }
           ],
+          "name": "flowerbreeding:blue_lupin",
+          "weight": 4
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
+                "max": 6.0,
+                "min": 1.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
           "name": "flowerbreeding:red_small_rose",
           "weight": 4
         },

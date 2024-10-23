@@ -94,6 +94,9 @@ public class PinkPigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.PHLOXES)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_PHLOX));
                     }
+                    if (pos.isIn(FBTags.Blocks.LUPINS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_LUPIN));
+                    }
                     if (pos.isIn(FBTags.Blocks.SMALL_ROSES)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.PINK_SMALL_ROSE));
                     }

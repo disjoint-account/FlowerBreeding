@@ -94,6 +94,9 @@ public class WhitePigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.PHLOXES)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.WHITE_PHLOX));
                     }
+                    if (pos.isIn(FBTags.Blocks.LUPINS)) {
+                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.WHITE_LUPIN));
+                    }
                     if (pos.isIn(FBTags.Blocks.SMALL_ROSES)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.WHITE_SMALL_ROSE));
                     }

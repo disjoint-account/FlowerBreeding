@@ -89,6 +89,24 @@ public class FBTags {
         public static final TagKey<Item> SMALL_CYAN_FLOWERS = createTag("small_cyan_flowers");
         public static final TagKey<Item> TALL_CYAN_FLOWERS = createTag("tall_cyan_flowers");
         public static final TagKey<Item> LIGHT_GREY_DYE_SMALL_FLOWERS = createTag("light_grey_dye_small_flowers");
+        public static final TagKey<Item> ALLIUMS = createTag("alliums");
+        public static final TagKey<Item> CORNFLOWERS = createTag("cornflowers");
+        public static final TagKey<Item> DAISIES = createTag("daisies");
+        public static final TagKey<Item> TORCHFLOWERS = createTag("torchflowers");
+        public static final TagKey<Item> TULIPS = createTag("tulips");
+        public static final TagKey<Item> AZURE_BLUETS = createTag("azure_bluets");
+        public static final TagKey<Item> DANDELIONS = createTag("dandelions");
+        public static final TagKey<Item> ORCHIDS = createTag("orchids");
+        public static final TagKey<Item> LILIES = createTag("lilies");
+        public static final TagKey<Item> POPPIES = createTag("poppies");
+        public static final TagKey<Item> WITHER_ROSES = createTag("wither_roses");
+        public static final TagKey<Item> DAFFODILS = createTag("daffodils");
+        public static final TagKey<Item> FOXGLOVES = createTag("foxgloves");
+        public static final TagKey<Item> HYACINTHS = createTag("hyacinths");
+        public static final TagKey<Item> PHLOXES = createTag("phloxes");
+        public static final TagKey<Item> LUPINS = createTag("lupins");
+        public static final TagKey<Item> SMALL_ROSES = createTag("small_roses");
+        public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

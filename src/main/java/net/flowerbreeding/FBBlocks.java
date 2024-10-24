@@ -1,5 +1,6 @@
 package net.flowerbreeding;
 
+import net.flowerbreeding.blockentities.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.flowerbreeding.jasmine.*;
 import net.minecraft.block.*;
@@ -917,6 +918,10 @@ public class FBBlocks {
             new VineBlock(AbstractBlock.Settings.copy(VINE)));
     public static final Block CYAN_CYPRUS_VINE = registerBlock("cyan_cyprus_vine",
             new VineBlock(AbstractBlock.Settings.copy(VINE)));
+
+    //other stuff
+    public static final Block VASE = registerBlock("vase",
+            new VaseBlock(AbstractBlock.Settings.copy(FLOWER_POT)));
 
     // makin the thangz
 

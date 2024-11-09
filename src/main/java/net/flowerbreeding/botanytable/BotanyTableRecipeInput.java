@@ -16,7 +16,7 @@ public record BotanyTableRecipeInput(ItemStack vial1, ItemStack vial2, ItemStack
     }
 
     @Override
-    public int getSize() {
+    public int size() {
         return 3;
     }
 

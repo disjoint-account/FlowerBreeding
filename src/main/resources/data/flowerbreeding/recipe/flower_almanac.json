@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:book"
-    },
-    {
-      "tag": "minecraft:flowers"
-    }
+    "minecraft:book",
+    "#minecraft:flowers"
   ],
   "result": {
     "components": {

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "minecraft:planks"
-    },
-    "X": {
-      "item": "minecraft:honeycomb"
-    }
+    "#": "#minecraft:planks",
+    "X": "minecraft:honeycomb"
   },
   "pattern": [
     "XX",

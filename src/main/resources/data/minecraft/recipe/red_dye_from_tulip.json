@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "red_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:small_red_flowers"
-    }
+    "#flowerbreeding:small_red_flowers"
   ],
   "result": {
     "count": 1,

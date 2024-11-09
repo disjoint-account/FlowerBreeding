@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "orange_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:tall_orange_flowers"
-    }
+    "#flowerbreeding:tall_orange_flowers"
   ],
   "result": {
     "count": 2,

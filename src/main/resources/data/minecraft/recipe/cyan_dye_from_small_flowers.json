@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "cyan_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:small_cyan_flowers"
-    }
+    "#flowerbreeding:small_cyan_flowers"
   ],
   "result": {
     "count": 1,

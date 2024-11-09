@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "light_gray_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:light_grey_dye_small_flowers"
-    }
+    "#flowerbreeding:light_grey_dye_small_flowers"
   ],
   "result": {
     "count": 1,

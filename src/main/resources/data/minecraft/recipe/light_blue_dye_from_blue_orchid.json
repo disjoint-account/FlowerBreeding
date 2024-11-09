@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "light_blue_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:small_light_blue_flowers"
-    }
+    "#flowerbreeding:small_light_blue_flowers"
   ],
   "result": {
     "count": 1,

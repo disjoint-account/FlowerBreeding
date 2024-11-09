@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "pink_dye",
   "ingredients": [
-    {
-      "tag": "flowerbreeding:tall_pink_flowers"
-    }
+    "#flowerbreeding:tall_pink_flowers"
   ],
   "result": {
     "count": 2,

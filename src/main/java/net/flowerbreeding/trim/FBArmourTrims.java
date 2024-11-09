@@ -3,7 +3,7 @@ package net.flowerbreeding.trim;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
 import net.minecraft.item.Item;
-import net.minecraft.item.trim.ArmorTrimPattern;
+import net.minecraft.item.equipment.trim.ArmorTrimPattern;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;

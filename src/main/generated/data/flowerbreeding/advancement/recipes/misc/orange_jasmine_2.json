@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_jasmine_2"
+        "recipe": "flowerbreedingminecraft:orange_jasmine_2recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_jasmine_2"
+      "flowerbreedingminecraft:orange_jasmine_2recipe"
     ]
   }
 }

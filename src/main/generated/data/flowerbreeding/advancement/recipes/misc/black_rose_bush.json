@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:black_rose_bush"
+        "recipe": "flowerbreedingminecraft:black_rose_bushrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:black_rose_bush"
+      "flowerbreedingminecraft:black_rose_bushrecipe"
     ]
   }
 }

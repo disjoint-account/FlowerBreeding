@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:yellow_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:yellow_pitcher_plant"
+  },
+  "vial1": "flowerbreeding:pitcher_plant_pollen_vial",
+  "vial2": "flowerbreeding:pitcher_plant_pollen_vial"
+}

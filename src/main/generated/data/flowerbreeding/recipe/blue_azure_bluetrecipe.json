@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:blue_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:blue_azure_bluet"
+  },
+  "vial1": "flowerbreeding:azure_bluet_pollen_vial",
+  "vial2": "flowerbreeding:azure_bluet_pollen_vial"
+}

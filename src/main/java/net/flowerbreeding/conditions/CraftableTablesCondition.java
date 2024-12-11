@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition;
 import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditionType;
 import net.flowerbreeding.FlowerBreeding;
 import net.minecraft.registry.RegistryOps;
-import net.minecraft.registry.RegistryWrapper;
 import org.jetbrains.annotations.Nullable;
 
 public class CraftableTablesCondition implements ResourceCondition {

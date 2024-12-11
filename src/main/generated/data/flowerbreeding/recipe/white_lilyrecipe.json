@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:white_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "minecraft:lily_of_the_valley"
+  },
+  "vial1": "flowerbreeding:lily_pollen_vial",
+  "vial2": "flowerbreeding:lily_pollen_vial"
+}

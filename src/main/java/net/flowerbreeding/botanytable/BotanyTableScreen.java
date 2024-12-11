@@ -1,10 +1,9 @@
 package net.flowerbreeding.botanytable;
 
-import com.mojang.blaze3d.systems.RenderSystem;
 import net.flowerbreeding.FlowerBreeding;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.client.render.GameRenderer;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
@@ -20,7 +19,6 @@ public class BotanyTableScreen extends HandledScreen<BotanyTableScreenHandler> {
     @Override
     protected void init() {
         super.init();
-
         titleX = 56;
         titleY = 6;
         playerInventoryTitleY = 72;
@@ -33,15 +31,10 @@ public class BotanyTableScreen extends HandledScreen<BotanyTableScreenHandler> {
 
     @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
-        RenderSystem.setShaderTexture(0, GUI_TEXTURE);
-        RenderSystem.setShader(GameRenderer::getPositionTexProgram);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
-
-        context.drawTexture(GUI_TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
+        context.drawTexture(RenderLayer::getGuiTextured, GUI_TEXTURE, x, y, 0f, 0f, backgroundWidth, backgroundHeight, 256, 256);
     }
-
     @Override
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         renderBackground(context, mouseX, mouseY, delta);

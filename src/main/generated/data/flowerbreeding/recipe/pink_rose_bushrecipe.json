@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:pink_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:pink_rose_bush"
+  },
+  "vial1": "flowerbreeding:rose_bush_pollen_vial",
+  "vial2": "flowerbreeding:rose_bush_pollen_vial"
+}

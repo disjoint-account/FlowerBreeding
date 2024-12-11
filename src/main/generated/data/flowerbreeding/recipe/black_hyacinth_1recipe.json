@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:black_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:black_hyacinth"
+  },
+  "vial1": "flowerbreeding:lily_pollen_vial",
+  "vial2": "flowerbreeding:tulip_pollen_vial"
+}

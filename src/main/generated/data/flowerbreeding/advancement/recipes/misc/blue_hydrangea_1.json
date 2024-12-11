@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blue_hydrangea_1"
+        "recipe": "flowerbreedingminecraft:blue_hydrangea_1recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blue_hydrangea_1"
+      "flowerbreedingminecraft:blue_hydrangea_1recipe"
     ]
   }
 }

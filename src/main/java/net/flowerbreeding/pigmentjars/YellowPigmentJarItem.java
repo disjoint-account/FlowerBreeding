@@ -9,7 +9,6 @@ import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsage;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -25,13 +24,12 @@ public class YellowPigmentJarItem extends Item {
     public ActionResult useOnBlock(ItemUsageContext context) {
         PlayerEntity user = context.getPlayer();
         Hand hand = context.getHand();
-        ItemStack itemStack = user.getStackInHand(hand);
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
         if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-                    ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
+                    ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
                     user.setStackInHand(hand, itemStack1);
                     if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
                         user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_ALLIUM));
@@ -121,10 +119,10 @@ public class YellowPigmentJarItem extends Item {
         return ActionResult.PASS;
     }
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
-        ItemStack itemStack = user.getStackInHand(hand);
         BlockPos blockPos = user.getBlockPos();
-        ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_PIGMENT_JAR));
+        ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
         world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+        user.setStackInHand(hand, itemStack1);
         return ActionResult.SUCCESS;
     }
 }

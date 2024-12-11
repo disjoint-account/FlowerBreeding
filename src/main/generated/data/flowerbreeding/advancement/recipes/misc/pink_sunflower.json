@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pink_sunflower"
+        "recipe": "flowerbreedingminecraft:pink_sunflowerrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:pink_sunflower"
+      "flowerbreedingminecraft:pink_sunflowerrecipe"
     ]
   }
 }

@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:black_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:black_cyprus_vine"
+  },
+  "vial1": "flowerbreeding:vine_pollen_vial",
+  "vial2": "flowerbreeding:daisy_pollen_vial"
+}

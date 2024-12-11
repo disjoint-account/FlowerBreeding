@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:yellow_hyacinth_1"
+        "recipe": "flowerbreedingminecraft:yellow_hyacinth_1recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:yellow_hyacinth_1"
+      "flowerbreedingminecraft:yellow_hyacinth_1recipe"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blue_peony"
+        "recipe": "flowerbreedingminecraft:blue_peonyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blue_peony"
+      "flowerbreedingminecraft:blue_peonyrecipe"
     ]
   }
 }

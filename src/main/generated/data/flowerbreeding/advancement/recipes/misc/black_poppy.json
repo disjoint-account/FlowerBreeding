@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:black_poppy"
+        "recipe": "flowerbreedingminecraft:black_poppyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:black_poppy"
+      "flowerbreedingminecraft:black_poppyrecipe"
     ]
   }
 }

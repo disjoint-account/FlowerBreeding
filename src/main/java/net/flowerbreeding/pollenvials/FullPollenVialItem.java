@@ -4,7 +4,6 @@ import net.flowerbreeding.FBItems;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemUsage;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
@@ -20,8 +19,9 @@ public class FullPollenVialItem extends Item {
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         BlockPos blockPos = user.getBlockPos();
-        ItemStack itemStack1 = ItemUsage.exchangeStack(itemStack, user, new ItemStack(FBItems.EMPTY_POLLEN_VIAL));
+        ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_POLLEN_VIAL);
             world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+            user.setStackInHand(hand, itemStack1);
             return ActionResult.SUCCESS;
         }
 }

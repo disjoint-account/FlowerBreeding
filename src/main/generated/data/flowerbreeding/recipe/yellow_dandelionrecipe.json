@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:yellow_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "minecraft:dandelion"
+  },
+  "vial1": "flowerbreeding:dandelion_pollen_vial",
+  "vial2": "flowerbreeding:dandelion_pollen_vial"
+}

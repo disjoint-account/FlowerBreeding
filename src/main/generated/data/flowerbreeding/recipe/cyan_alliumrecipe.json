@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:cyan_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:cyan_allium"
+  },
+  "vial1": "flowerbreeding:allium_pollen_vial",
+  "vial2": "flowerbreeding:allium_pollen_vial"
+}

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:red_pitcher_plant"
+        "recipe": "flowerbreedingminecraft:red_pitcher_plantrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:red_pitcher_plant"
+      "flowerbreedingminecraft:red_pitcher_plantrecipe"
     ]
   }
 }

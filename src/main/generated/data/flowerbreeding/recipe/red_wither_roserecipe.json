@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:red_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:red_wither_rose"
+  },
+  "vial1": "flowerbreeding:wither_rose_pollen_vial",
+  "vial2": "flowerbreeding:wither_rose_pollen_vial"
+}

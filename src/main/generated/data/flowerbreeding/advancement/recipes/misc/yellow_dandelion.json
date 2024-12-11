@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:yellow_dandelion"
+        "recipe": "flowerbreedingminecraft:yellow_dandelionrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:yellow_dandelion"
+      "flowerbreedingminecraft:yellow_dandelionrecipe"
     ]
   }
 }

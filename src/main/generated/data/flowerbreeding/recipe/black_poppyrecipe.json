@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:black_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:black_poppy"
+  },
+  "vial1": "flowerbreeding:poppy_pollen_vial",
+  "vial2": "flowerbreeding:poppy_pollen_vial"
+}

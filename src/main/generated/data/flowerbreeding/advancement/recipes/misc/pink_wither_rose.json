@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pink_wither_rose"
+        "recipe": "flowerbreedingminecraft:pink_wither_roserecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:pink_wither_rose"
+      "flowerbreedingminecraft:pink_wither_roserecipe"
     ]
   }
 }

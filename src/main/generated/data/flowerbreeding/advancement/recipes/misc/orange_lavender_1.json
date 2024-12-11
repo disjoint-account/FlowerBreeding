@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_lavender_1"
+        "recipe": "flowerbreedingminecraft:orange_lavender_1recipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_lavender_1"
+      "flowerbreedingminecraft:orange_lavender_1recipe"
     ]
   }
 }

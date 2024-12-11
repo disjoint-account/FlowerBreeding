@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:magenta_daisy"
+        "recipe": "flowerbreedingminecraft:magenta_daisyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:magenta_daisy"
+      "flowerbreedingminecraft:magenta_daisyrecipe"
     ]
   }
 }

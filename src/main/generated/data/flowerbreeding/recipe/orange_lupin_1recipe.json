@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:orange_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:orange_lupin"
+  },
+  "vial1": "flowerbreeding:poppy_pollen_vial",
+  "vial2": "flowerbreeding:orchid_pollen_vial"
+}

@@ -14,6 +14,7 @@ import net.minecraft.recipe.RecipeEntry;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.screen.ScreenHandlerContext;
 import net.minecraft.screen.slot.Slot;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
@@ -21,6 +22,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
 public class BotanyTableScreenHandler extends ScreenHandler {
     public static final List<Item> vials = Arrays.asList(
@@ -102,11 +104,6 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             }
 
             @Override
-            public boolean canTakeItems(PlayerEntity playerEntity) {
-                return BotanyTableScreenHandler.this.canTakeOutput(playerEntity, this.hasStack());
-            }
-
-            @Override
             public void onTakeItem(PlayerEntity player, ItemStack stack) {
                 BotanyTableScreenHandler.this.onTakeOutput(player, stack);
             }
@@ -126,11 +123,6 @@ public class BotanyTableScreenHandler extends ScreenHandler {
         if (inventory == this.input) {
             this.updateResult();
         }
-    }
-
-    private boolean canTakeOutput(PlayerEntity player, boolean present) {
-        return this.currentRecipe != null
-                && this.currentRecipe.value().matches(new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)), this.world);
     }
 
     private void onTakeOutput(PlayerEntity player, ItemStack stack) {
@@ -163,22 +155,27 @@ public class BotanyTableScreenHandler extends ScreenHandler {
         this.input.setStack(slot, itemStack2);
     }
 
-    private void updateResult() {
-        List<RecipeEntry<BotanyTableRecipe>> list = this.world.getRecipeManager().getAllMatches(FBRecipes.BOTANY_TABLE_TYPE,
-                new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)), this.world);
+    private BotanyTableRecipeInput createRecipeInput() {
+        return new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2));
+    }
 
-        if (list.isEmpty()) {
-            this.output.setStack(0, ItemStack.EMPTY);
+    public void updateResult() {
+        BotanyTableRecipeInput botanyRecipeInput = this.createRecipeInput();
+        World var4 = this.world;
+        Optional<RecipeEntry<BotanyTableRecipe>> optional;
+        if (var4 instanceof ServerWorld serverWorld) {
+            optional = serverWorld.getRecipeManager().getFirstMatch(FBRecipes.BOTANY_TABLE_TYPE, botanyRecipeInput, serverWorld);
         } else {
-            for (int i = 0; i < list.size(); i++) {
-                    this.currentRecipe = list.get(i);
-            }
-            ItemStack itemStack = this.currentRecipe.value().craft(new BotanyTableRecipeInput(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)),
-                    this.world.getRegistryManager());
-
-            this.output.setLastRecipe(this.currentRecipe);
+            optional = Optional.empty();
+        }
+        optional.ifPresentOrElse((recipe) -> {
+            ItemStack itemStack = ((BotanyTableRecipe)recipe.value()).craft(botanyRecipeInput, this.world.getRegistryManager());
+            this.output.setLastRecipe(recipe);
             this.output.setStack(0, itemStack);
-}
+        }, () -> {
+            this.output.setLastRecipe((RecipeEntry)null);
+            this.output.setStack(0, ItemStack.EMPTY);
+        });
     }
 
     @Override
@@ -202,7 +199,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
     public ItemStack quickMove(PlayerEntity player, int index) {
         ItemStack itemStack = ItemStack.EMPTY;
         Slot slot = (Slot) this.slots.get(index);
-        if (slot != null && slot.hasStack()) {
+        if (slot.hasStack()) {
             ItemStack itemStack2 = slot.getStack();
             itemStack = itemStack2.copy();
             if (index == 3) {

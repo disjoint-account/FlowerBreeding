@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:blue_lily"
+        "recipe": "flowerbreedingminecraft:blue_lilyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:blue_lily"
+      "flowerbreedingminecraft:blue_lilyrecipe"
     ]
   }
 }

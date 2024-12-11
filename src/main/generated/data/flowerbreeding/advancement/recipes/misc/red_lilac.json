@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:red_lilac"
+        "recipe": "flowerbreedingminecraft:red_lilacrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:red_lilac"
+      "flowerbreedingminecraft:red_lilacrecipe"
     ]
   }
 }

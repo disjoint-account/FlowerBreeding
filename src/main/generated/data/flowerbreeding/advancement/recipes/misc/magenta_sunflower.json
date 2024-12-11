@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:magenta_sunflower"
+        "recipe": "flowerbreedingminecraft:magenta_sunflowerrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:magenta_sunflower"
+      "flowerbreedingminecraft:magenta_sunflowerrecipe"
     ]
   }
 }

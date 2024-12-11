@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pink_lily"
+        "recipe": "flowerbreedingminecraft:pink_lilyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:pink_lily"
+      "flowerbreedingminecraft:pink_lilyrecipe"
     ]
   }
 }

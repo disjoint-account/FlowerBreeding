@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:yellow_tulip"
+        "recipe": "flowerbreedingminecraft:yellow_tuliprecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:yellow_tulip"
+      "flowerbreedingminecraft:yellow_tuliprecipe"
     ]
   }
 }

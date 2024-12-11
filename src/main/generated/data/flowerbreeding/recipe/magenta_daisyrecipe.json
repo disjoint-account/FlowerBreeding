@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:magenta_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:magenta_daisy"
+  },
+  "vial1": "flowerbreeding:daisy_pollen_vial",
+  "vial2": "flowerbreeding:daisy_pollen_vial"
+}

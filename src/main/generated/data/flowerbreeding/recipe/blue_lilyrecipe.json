@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:blue_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:blue_lily"
+  },
+  "vial1": "flowerbreeding:lily_pollen_vial",
+  "vial2": "flowerbreeding:lily_pollen_vial"
+}

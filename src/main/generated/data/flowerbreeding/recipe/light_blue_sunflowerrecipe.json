@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:light_blue_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:light_blue_sunflower"
+  },
+  "vial1": "flowerbreeding:sunflower_pollen_vial",
+  "vial2": "flowerbreeding:sunflower_pollen_vial"
+}

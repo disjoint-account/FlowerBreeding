@@ -10,7 +10,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.resource.featuretoggle.FeatureFlags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
@@ -26,7 +25,7 @@ public class FBItems {
     public static final Item RED_PIGMENT_JAR = registerItem("red_pigment_jar", settings ->  new RedPigmentJarItem(settings.maxCount(1)));
     public static final Item YELLOW_PIGMENT_JAR = registerItem("yellow_pigment_jar", settings ->  new YellowPigmentJarItem(settings.maxCount(1)));
     public static final Item LIGHT_BLUE_PIGMENT_JAR = registerItem("light_blue_pigment_jar", settings ->  new LightBluePigmentJarItem(settings.maxCount(1)));
-    public static final Item PINK_PIGMENT_JAR = registerItem("pink_pigment_jar", settings ->  new PinkPigmentJarItem(new Item.Settings().maxCount(1)));
+    public static final Item PINK_PIGMENT_JAR = registerItem("pink_pigment_jar", settings ->  new PinkPigmentJarItem(settings.maxCount(1)));
     public static final Item BLACK_PIGMENT_JAR = registerItem("black_pigment_jar", settings ->  new BlackPigmentJarItem(settings.maxCount(1)));
     public static final Item CYAN_PIGMENT_JAR = registerItem("cyan_pigment_jar", settings ->  new CyanPigmentJarItem(settings.maxCount(1)));
 
@@ -54,17 +53,16 @@ public class FBItems {
 
     public static final Item MAGENTA_LOTUS_FLOWER = registerItem("magenta_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.MAGENTA_LOTUS_FLOWER, settings));
     public static final Item BLUE_LOTUS_FLOWER = registerItem("blue_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLUE_LOTUS_FLOWER, settings));
-    public static final Item WHITE_LOTUS_FLOWER = registerItem("white_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.WHITE_LOTUS_FLOWER, settings));
-    public static final Item ORANGE_LOTUS_FLOWER = registerItem("orange_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.ORANGE_LOTUS_FLOWER, settings));
-    public static final Item RED_LOTUS_FLOWER = registerItem("red_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.RED_LOTUS_FLOWER, settings));
-    public static final Item YELLOW_LOTUS_FLOWER = registerItem("yellow_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.YELLOW_LOTUS_FLOWER, settings));
-    public static final Item LIGHT_BLUE_LOTUS_FLOWER = registerItem("light_blue_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.LIGHT_BLUE_LOTUS_FLOWER, settings));
-    public static final Item PINK_LOTUS_FLOWER = registerItem("pink_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.PINK_LOTUS_FLOWER, settings));
-    public static final Item BLACK_LOTUS_FLOWER = registerItem("black_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLACK_LOTUS_FLOWER, settings));
-    public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_ lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, settings));
+    public static final Item WHITE_LOTUS_FLOWER = registerItem("white_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.WHITE_LOTUS_FLOWER, settings));
+    public static final Item ORANGE_LOTUS_FLOWER = registerItem("orange_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.ORANGE_LOTUS_FLOWER, settings));
+    public static final Item RED_LOTUS_FLOWER = registerItem("red_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.RED_LOTUS_FLOWER, settings));
+    public static final Item YELLOW_LOTUS_FLOWER = registerItem("yellow_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.YELLOW_LOTUS_FLOWER, settings));
+    public static final Item LIGHT_BLUE_LOTUS_FLOWER = registerItem("light_blue_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.LIGHT_BLUE_LOTUS_FLOWER, settings));
+    public static final Item PINK_LOTUS_FLOWER = registerItem("pink_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.PINK_LOTUS_FLOWER, settings));
+    public static final Item BLACK_LOTUS_FLOWER = registerItem("black_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLACK_LOTUS_FLOWER, settings));
+    public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, settings));
 
-    public static final Item FLORAL_SMITHING_TEMPLATE = registerItem("floral_armor_trim_smithing_template", settings ->
-            SmithingTemplateItem.of(new Item.Settings().rarity(Rarity.UNCOMMON)));
+    public static final Item FLORAL_SMITHING_TEMPLATE = registerSmithingTemplate("floral_armor_trim_smithing_template", SmithingTemplateItem.of(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, "floral_armor_trim_smithing_template"))).rarity(Rarity.UNCOMMON)));
 
     public static void registerModItems() {
         FlowerBreeding.LOGGER.info("Registering items for " + FlowerBreeding.MOD_ID);
@@ -72,8 +70,10 @@ public class FBItems {
     private static Item registerItem(String name, Function<Item.Settings, Item> function) {
         return Registry.register(Registries.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name), function.apply(new Item.Settings().registryKey(keyOfItem(name))));
     }
-
     private static RegistryKey<Item> keyOfItem(String name) {
         return RegistryKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
+    }
+    private static Item registerSmithingTemplate(String name, Item item) {
+        return Registry.register(Registries.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name), item);
     }
 }

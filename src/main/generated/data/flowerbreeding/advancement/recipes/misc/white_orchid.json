@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:white_orchid"
+        "recipe": "flowerbreedingminecraft:white_orchidrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:white_orchid"
+      "flowerbreedingminecraft:white_orchidrecipe"
     ]
   }
 }

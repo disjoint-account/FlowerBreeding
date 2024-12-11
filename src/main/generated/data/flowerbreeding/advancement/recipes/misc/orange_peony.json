@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_peony"
+        "recipe": "flowerbreedingminecraft:orange_peonyrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_peony"
+      "flowerbreedingminecraft:orange_peonyrecipe"
     ]
   }
 }

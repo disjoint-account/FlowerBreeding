@@ -7,10 +7,8 @@ import net.flowerbreeding.FBRecipes;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.RegistryByteBuf;
 import net.minecraft.network.codec.PacketCodec;
-import net.minecraft.recipe.Ingredient;
-import net.minecraft.recipe.Recipe;
-import net.minecraft.recipe.RecipeSerializer;
-import net.minecraft.recipe.RecipeType;
+import net.minecraft.recipe.*;
+import net.minecraft.recipe.book.RecipeBookCategory;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.world.World;
@@ -31,12 +29,10 @@ public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
         this.result = result;
     }
 
-    @Override
     public boolean fits(int width, int height) {
         return width * height >= 2;
     }
 
-    @Override
     public DefaultedList<Ingredient> getIngredients() {
         DefaultedList<Ingredient> ingredients = DefaultedList.ofSize(4);
         ingredients.add(vial1);
@@ -45,12 +41,10 @@ public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
         return ingredients;
     }
 
-    @Override
     public ItemStack getResult(RegistryWrapper.WrapperLookup wrapperLookup) {
         return this.result;
     }
 
-    @Override
     public ItemStack createIcon() {
         return new ItemStack(FBBlocks.BOTANY_TABLE);
     }
@@ -61,27 +55,36 @@ public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<? extends Recipe<BotanyTableRecipeInput>> getSerializer() {
         return FBRecipes.BOTANY_TABLE_SERIALIZER;
     }
 
     @Override
-    public RecipeType<?> getType() {
+    public RecipeType<? extends Recipe<BotanyTableRecipeInput>> getType() {
         return FBRecipes.BOTANY_TABLE_TYPE;
     }
 
-    // Used by ClientRecipeBook
     @Override
+    public IngredientPlacement getIngredientPlacement() {
+        return null;
+    }
+
+    @Override
+    public RecipeBookCategory getRecipeBookCategory() {
+        return null;
+    }
+
+    // Used by ClientRecipeBook
     public boolean isEmpty() {
-        return Stream.of(this.vial1, this.vial2, this.jar).anyMatch(ingredient -> ingredient.getMatchingStacks().length == 0);
+        return Stream.of(this.vial1, this.vial2, this.jar).anyMatch(ingredient -> ingredient.getMatchingItems().isEmpty());
     }
 
     public static class Serializer implements RecipeSerializer<BotanyTableRecipe> {
 
         public static final MapCodec<BotanyTableRecipe> CODEC = RecordCodecBuilder
-                .mapCodec(instance -> instance.group((Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("vial1")).forGetter(recipe -> recipe.vial1),
-                                (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("vial2")).forGetter(recipe -> recipe.vial2),
-                                (Ingredient.DISALLOW_EMPTY_CODEC.fieldOf("jar")).forGetter(recipe -> recipe.jar),
+                .mapCodec(instance -> instance.group((Ingredient.CODEC.fieldOf("vial1")).forGetter(recipe -> recipe.vial1),
+                                (Ingredient.CODEC.fieldOf("vial2")).forGetter(recipe -> recipe.vial2),
+                                (Ingredient.CODEC.fieldOf("jar")).forGetter(recipe -> recipe.jar),
                                 (ItemStack.VALIDATED_CODEC.fieldOf("result")).forGetter(recipe -> recipe.result))
                                 .apply(instance, BotanyTableRecipe::new));
 
@@ -111,7 +114,6 @@ public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
             Ingredient.PACKET_CODEC.encode(buf, botanyTableRecipe.jar);
             ItemStack.PACKET_CODEC.encode(buf, botanyTableRecipe.result);
         }
-
     }
 
     @Override

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_pitcher_plant"
+        "recipe": "flowerbreedingminecraft:orange_pitcher_plantrecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_pitcher_plant"
+      "flowerbreedingminecraft:orange_pitcher_plantrecipe"
     ]
   }
 }

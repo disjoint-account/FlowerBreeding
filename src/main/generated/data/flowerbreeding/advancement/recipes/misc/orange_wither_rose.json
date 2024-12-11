@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_wither_rose"
+        "recipe": "flowerbreedingminecraft:orange_wither_roserecipe"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_wither_rose"
+      "flowerbreedingminecraft:orange_wither_roserecipe"
     ]
   }
 }

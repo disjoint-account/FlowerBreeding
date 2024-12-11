@@ -76,7 +76,7 @@ public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
 
     // Used by ClientRecipeBook
     public boolean isEmpty() {
-        return Stream.of(this.vial1, this.vial2, this.jar).anyMatch(ingredient -> ingredient.getMatchingItems().isEmpty());
+        return Stream.of(this.vial1, this.vial2, this.jar).noneMatch(Ingredient::isEmpty);
     }
 
     public static class Serializer implements RecipeSerializer<BotanyTableRecipe> {

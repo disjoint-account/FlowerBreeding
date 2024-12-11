@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.8-SNAPSHOT'
+	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -15,10 +15,6 @@ repositories {
 	maven { url = 'https://maven.blamejared.com' }
 }
 
-fabricApi {
-	configureDataGeneration()
-}
-
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -29,8 +25,8 @@ dependencies {
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	//owo-lib
-	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
-	include "io.wispforest:owo-sentinel:${project.owo_version}"
+	//annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
+	//include "io.wispforest:owo-sentinel:${project.owo_version}"
 
 	//patchouli
 	
@@ -46,6 +42,12 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.release = 21
+}
+
+fabricApi {
+	configureDataGeneration {
+		client = true;
+	}
 }
 
 java {

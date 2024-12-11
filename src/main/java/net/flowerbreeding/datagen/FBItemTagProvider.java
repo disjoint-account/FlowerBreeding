@@ -18,7 +18,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-        getOrCreateTagBuilder(ItemTags.FLOWERS)
+        getOrCreateTagBuilder(ItemTags.BEE_FOOD)
                 .addOptionalTag(FBTags.Items.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.BLUE_FLOWERS)
                 .addOptionalTag(FBTags.Items.WHITE_FLOWERS)
@@ -400,9 +400,6 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.WHITE_JASMINE.asItem())
                 .add(FBBlocks.WHITE_CYPRUS_VINE.asItem())
                 .add(FBItems.WHITE_LOTUS_FLOWER);
-
-        getOrCreateTagBuilder(ItemTags.TRIM_TEMPLATES)
-                .add(FBItems.FLORAL_SMITHING_TEMPLATE);
 
         getOrCreateTagBuilder(FBTags.Items.ALLIUMS)
                 .add(Items.ALLIUM)

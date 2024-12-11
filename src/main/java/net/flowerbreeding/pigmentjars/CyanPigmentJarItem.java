@@ -27,7 +27,7 @@ public class CyanPigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
-        if (FlowerBreeding.CONFIG.fastRecolouring()) {
+        //if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
                     ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
                     user.setStackInHand(hand, itemStack1);
@@ -115,7 +115,7 @@ public class CyanPigmentJarItem extends Item {
                     world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
                     return ActionResult.SUCCESS;
             }
-        }
+        //}
         return ActionResult.PASS;
     }
     public ActionResult use(World world, PlayerEntity user, Hand hand) {

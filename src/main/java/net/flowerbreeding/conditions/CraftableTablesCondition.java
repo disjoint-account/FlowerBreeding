@@ -7,16 +7,16 @@ import net.flowerbreeding.FlowerBreeding;
 import net.minecraft.registry.RegistryOps;
 import org.jetbrains.annotations.Nullable;
 
-//public class CraftableTablesCondition implements ResourceCondition {
-    //public static final MapCodec<CraftableTablesCondition> CODEC = MapCodec.unit(CraftableTablesCondition::new);
+public class CraftableTablesCondition implements ResourceCondition {
+    public static final MapCodec<CraftableTablesCondition> CODEC = MapCodec.unit(CraftableTablesCondition::new);
 
-   // @Override
-    //public ResourceConditionType<?> getType() {
-        //return FBResourceConditions.TABLES;
-   // }
+    @Override
+    public ResourceConditionType<?> getType() {
+        return FBResourceConditions.TABLES;
+    }
 
-   // @Override
-    //public boolean test(RegistryOps.@Nullable RegistryInfoGetter registryInfoGetter) {
-        //return FlowerBreeding.CONFIG.craftableBotanyTables();
-   // }
-//}
+    @Override
+    public boolean test(RegistryOps.@Nullable RegistryInfoGetter registryInfoGetter) {
+        return FlowerBreeding.CONFIG.craftableBotanyTables();
+    }
+}

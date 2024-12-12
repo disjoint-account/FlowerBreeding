@@ -15,6 +15,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_PITCHER_PLANT, 0.85f);
@@ -31,6 +33,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_BLUE_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_BLUE_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_ROSE_BUSH, 0.65f);
@@ -44,6 +48,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_ORCHID, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_WHITE_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_WHITE_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_PITCHER_PLANT, 0.85f);
@@ -74,6 +80,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_ORCHID, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_RED_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_RED_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_PITCHER_PLANT, 0.85f);
@@ -89,6 +97,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_YELLOW_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_YELLOW_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_PITCHER_PLANT, 0.85f);
@@ -104,6 +114,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_LIGHT_BLUE_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_PITCHER_PLANT, 0.85f);
@@ -120,6 +132,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_PINK_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_PINK_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_PITCHER_PLANT, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_ROSE_BUSH, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_SUNFLOWER, 0.65f);
@@ -134,6 +148,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_ORCHID, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_POPPY, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_BLACK_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_BLACK_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_PITCHER_PLANT, 0.85f);
@@ -151,6 +167,8 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_LILY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_POPPY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_WITHER_ROSE, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.OPEN_CYAN_EYEBLOSSOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLOSED_CYAN_EYEBLOSSOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_LILAC, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_PEONY, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_ROSE_BUSH, 0.65f);

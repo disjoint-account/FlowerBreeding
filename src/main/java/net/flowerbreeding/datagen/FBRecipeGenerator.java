@@ -151,6 +151,17 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(exporter, FBItems.WITHER_ROSE_POLLEN_VIAL, FBItems.WITHER_ROSE_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(Blocks.WITHER_ROSE), Identifier.of("black_wither_rose"));
                 offerBotanyRecipe(exporter, FBItems.WITHER_ROSE_POLLEN_VIAL, FBItems.WITHER_ROSE_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_WITHER_ROSE), Identifier.of("cyan_wither_rose"));
 
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM), Identifier.of("magenta_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_BLUE_EYEBLOSSOM), Identifier.of("blue_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_WHITE_EYEBLOSSOM), Identifier.of("white_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.ORANGE_PIGMENT_JAR, new ItemStack(Blocks.OPEN_EYEBLOSSOM), Identifier.of("orange_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.RED_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_RED_EYEBLOSSOM), Identifier.of("red_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.YELLOW_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_YELLOW_EYEBLOSSOM), Identifier.of("yellow_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.LIGHT_BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM), Identifier.of("light_blue_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_PINK_EYEBLOSSOM), Identifier.of("pink_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_BLACK_EYEBLOSSOM), Identifier.of("black_eyeblossom"));
+                offerBotanyRecipe(exporter, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.EYEBLOSSOM_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.OPEN_CYAN_EYEBLOSSOM), Identifier.of("cyan_eyeblossom"));
+
                 offerBotanyRecipe(exporter, FBItems.LILAC_POLLEN_VIAL, FBItems.LILAC_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.MAGENTA_LILAC), Identifier.of("magenta_lilac"));
                 offerBotanyRecipe(exporter, FBItems.LILAC_POLLEN_VIAL, FBItems.LILAC_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_LILAC), Identifier.of("blue_lilac"));
                 offerBotanyRecipe(exporter, FBItems.LILAC_POLLEN_VIAL, FBItems.LILAC_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_LILAC), Identifier.of("white_lilac"));

@@ -40,6 +40,7 @@ public class FBItemGroup {
                         entries.add(FBItems.LILY_POLLEN_VIAL);
                         entries.add(FBItems.POPPY_POLLEN_VIAL);
                         entries.add(FBItems.WITHER_ROSE_POLLEN_VIAL);
+                        entries.add(FBItems.EYEBLOSSOM_POLLEN_VIAL);
                         entries.add(FBItems.LILAC_POLLEN_VIAL);
                         entries.add(FBItems.PEONY_POLLEN_VIAL);
                         entries.add(FBItems.PITCHER_PLANT_POLLEN_VIAL);
@@ -61,6 +62,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.MAGENTA_LILY);
                         entries.add(FBBlocks.MAGENTA_POPPY);
                         entries.add(FBBlocks.MAGENTA_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM);
                         entries.add(FBBlocks.MAGENTA_LILAC);
                         entries.add(FBBlocks.MAGENTA_PEONY);
                         entries.add(FBBlocks.MAGENTA_PITCHER_PLANT);
@@ -78,6 +81,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLUE_LILY);
                         entries.add(FBBlocks.BLUE_POPPY);
                         entries.add(FBBlocks.BLUE_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_BLUE_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_BLUE_EYEBLOSSOM);
                         entries.add(FBBlocks.BLUE_LILAC);
                         entries.add(FBBlocks.BLUE_PEONY);
                         entries.add(FBBlocks.BLUE_PITCHER_PLANT);
@@ -95,6 +100,8 @@ public class FBItemGroup {
                         entries.add(Blocks.LILY_OF_THE_VALLEY);
                         entries.add(FBBlocks.WHITE_POPPY);
                         entries.add(FBBlocks.WHITE_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_WHITE_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_WHITE_EYEBLOSSOM);
                         entries.add(FBBlocks.WHITE_LILAC);
                         entries.add(FBBlocks.WHITE_PEONY);
                         entries.add(FBBlocks.WHITE_PITCHER_PLANT);
@@ -112,6 +119,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.ORANGE_LILY);
                         entries.add(FBBlocks.ORANGE_POPPY);
                         entries.add(FBBlocks.ORANGE_WITHER_ROSE);
+                        entries.add(Blocks.OPEN_EYEBLOSSOM);
+                        entries.add(Blocks.CLOSED_EYEBLOSSOM);
                         entries.add(FBBlocks.ORANGE_LILAC);
                         entries.add(FBBlocks.ORANGE_PEONY);
                         entries.add(FBBlocks.ORANGE_PITCHER_PLANT);
@@ -129,6 +138,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.RED_LILY);
                         entries.add(Blocks.POPPY);
                         entries.add(FBBlocks.RED_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_RED_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_RED_EYEBLOSSOM);
                         entries.add(FBBlocks.RED_LILAC);
                         entries.add(FBBlocks.RED_PEONY);
                         entries.add(FBBlocks.RED_PITCHER_PLANT);
@@ -146,6 +157,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.YELLOW_LILY);
                         entries.add(FBBlocks.YELLOW_POPPY);
                         entries.add(FBBlocks.YELLOW_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_YELLOW_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_YELLOW_EYEBLOSSOM);
                         entries.add(FBBlocks.YELLOW_LILAC);
                         entries.add(FBBlocks.YELLOW_PEONY);
                         entries.add(FBBlocks.YELLOW_PITCHER_PLANT);
@@ -163,6 +176,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.LIGHT_BLUE_LILY);
                         entries.add(FBBlocks.LIGHT_BLUE_POPPY);
                         entries.add(FBBlocks.LIGHT_BLUE_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_LIGHT_BLUE_EYEBLOSSOM);
                         entries.add(FBBlocks.LIGHT_BLUE_LILAC);
                         entries.add(FBBlocks.LIGHT_BLUE_PEONY);
                         entries.add(FBBlocks.LIGHT_BLUE_PITCHER_PLANT);
@@ -180,6 +195,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_LILY);
                         entries.add(FBBlocks.PINK_POPPY);
                         entries.add(FBBlocks.PINK_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_PINK_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_PINK_EYEBLOSSOM);
                         entries.add(Blocks.LILAC);
                         entries.add(Blocks.PEONY);
                         entries.add(FBBlocks.PINK_PITCHER_PLANT);
@@ -197,6 +214,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_LILY);
                         entries.add(FBBlocks.BLACK_POPPY);
                         entries.add(Blocks.WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_BLACK_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_BLACK_EYEBLOSSOM);
                         entries.add(FBBlocks.BLACK_LILAC);
                         entries.add(FBBlocks.BLACK_PEONY);
                         entries.add(FBBlocks.BLACK_PITCHER_PLANT);
@@ -214,6 +233,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CYAN_LILY);
                         entries.add(FBBlocks.CYAN_POPPY);
                         entries.add(FBBlocks.CYAN_WITHER_ROSE);
+                        entries.add(FBBlocks.OPEN_CYAN_EYEBLOSSOM);
+                        entries.add(FBBlocks.CLOSED_CYAN_EYEBLOSSOM);
                         entries.add(FBBlocks.CYAN_LILAC);
                         entries.add(FBBlocks.CYAN_PEONY);
                         entries.add(Blocks.PITCHER_PLANT);

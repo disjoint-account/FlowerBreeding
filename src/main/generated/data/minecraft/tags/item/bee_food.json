@@ -39,6 +39,10 @@
     {
       "id": "#flowerbreeding:cyan_flowers",
       "required": false
+    },
+    {
+      "id": "#flowerbreeding:closed_eyeblossoms",
+      "required": false
     }
   ]
 }

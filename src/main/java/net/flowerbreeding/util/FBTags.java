@@ -34,6 +34,8 @@ public class FBTags {
         public static final TagKey<Block> LILIES = createTag("lilies");
         public static final TagKey<Block> POPPIES = createTag("poppies");
         public static final TagKey<Block> WITHER_ROSES = createTag("wither_roses");
+        public static final TagKey<Block> OPEN_EYEBLOSSOMS = createTag("open_eyeblossoms");
+        public static final TagKey<Block> CLOSED_EYEBLOSSOMS = createTag("closed_eyeblossoms");
         public static final TagKey<Block> LILACS = createTag("lilacs");
         public static final TagKey<Block> PEONIES = createTag("peonies");
         public static final TagKey<Block> PITCHER_PLANTS = createTag("pitcher_plants");
@@ -89,6 +91,9 @@ public class FBTags {
         public static final TagKey<Item> SMALL_CYAN_FLOWERS = createTag("small_cyan_flowers");
         public static final TagKey<Item> TALL_CYAN_FLOWERS = createTag("tall_cyan_flowers");
         public static final TagKey<Item> LIGHT_GREY_DYE_SMALL_FLOWERS = createTag("light_grey_dye_small_flowers");
+        public static final TagKey<Item> ORANGE_DYE_SMALL_FLOWERS = createTag("orange_dye_small_flowers");
+        public static final TagKey<Item> RED_DYE_SMALL_FLOWERS = createTag("red_dye_small_flowers");
+        public static final TagKey<Item> STEW_TULIPS = createTag("stew_tulips");
         public static final TagKey<Item> ALLIUMS = createTag("alliums");
         public static final TagKey<Item> CORNFLOWERS = createTag("cornflowers");
         public static final TagKey<Item> DAISIES = createTag("daisies");
@@ -100,6 +105,8 @@ public class FBTags {
         public static final TagKey<Item> LILIES = createTag("lilies");
         public static final TagKey<Item> POPPIES = createTag("poppies");
         public static final TagKey<Item> WITHER_ROSES = createTag("wither_roses");
+        public static final TagKey<Item> OPEN_EYEBLOSSOMS = createTag("open_eyeblossoms");
+        public static final TagKey<Item> CLOSED_EYEBLOSSOMS = createTag("closed_eyeblossoms");
         public static final TagKey<Item> DAFFODILS = createTag("daffodils");
         public static final TagKey<Item> FOXGLOVES = createTag("foxgloves");
         public static final TagKey<Item> HYACINTHS = createTag("hyacinths");

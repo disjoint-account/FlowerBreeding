@@ -41,6 +41,7 @@ public class FBItems {
     public static final Item LILY_POLLEN_VIAL = registerItem("lily_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
     public static final Item POPPY_POLLEN_VIAL = registerItem("poppy_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
     public static final Item WITHER_ROSE_POLLEN_VIAL = registerItem("wither_rose_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
+    public static final Item EYEBLOSSOM_POLLEN_VIAL = registerItem("eyeblossom_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
     public static final Item LILAC_POLLEN_VIAL = registerItem("lilac_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
     public static final Item PEONY_POLLEN_VIAL = registerItem("peony_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));
     public static final Item PITCHER_PLANT_POLLEN_VIAL = registerItem("pitcher_plant_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(1)));

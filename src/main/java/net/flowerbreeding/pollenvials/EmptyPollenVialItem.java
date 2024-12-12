@@ -72,6 +72,10 @@ public class EmptyPollenVialItem extends Item {
                     ItemStack itemStack1 = new ItemStack(FBItems.WITHER_ROSE_POLLEN_VIAL);
                     user.setStackInHand(hand, itemStack1);
                 }
+                if (pos.isIn(FBTags.Blocks.OPEN_EYEBLOSSOMS)) {
+                    ItemStack itemStack1 = new ItemStack(FBItems.EYEBLOSSOM_POLLEN_VIAL);
+                    user.setStackInHand(hand, itemStack1);
+                }
                 if (pos.isIn(FBTags.Blocks.LILACS)) {
                     ItemStack itemStack1 = new ItemStack(FBItems.LILAC_POLLEN_VIAL);
                     user.setStackInHand(hand, itemStack1);

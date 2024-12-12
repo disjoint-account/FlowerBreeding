@@ -44,6 +44,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.LILIES)
                 .addOptionalTag(FBTags.Blocks.POPPIES)
                 .addOptionalTag(FBTags.Blocks.WITHER_ROSES)
+                .addOptionalTag(FBTags.Blocks.OPEN_EYEBLOSSOMS)
                 .addOptionalTag(FBTags.Blocks.LILACS)
                 .addOptionalTag(FBTags.Blocks.PEONIES)
                 .addOptionalTag(FBTags.Blocks.PITCHER_PLANTS)
@@ -64,6 +65,8 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.LILIES)
                 .addOptionalTag(FBTags.Blocks.POPPIES)
                 .addOptionalTag(FBTags.Blocks.WITHER_ROSES)
+                .addOptionalTag(FBTags.Blocks.OPEN_EYEBLOSSOMS)
+                .addOptionalTag(FBTags.Blocks.CLOSED_EYEBLOSSOMS)
                 .addOptionalTag(FBTags.Blocks.DAFFODILS)
                 .addOptionalTag(FBTags.Blocks.FOXGLOVES)
                 .addOptionalTag(FBTags.Blocks.HYACINTHS)
@@ -84,6 +87,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_LILY,
                         FBBlocks.MAGENTA_POPPY,
                         FBBlocks.MAGENTA_WITHER_ROSE,
+                        FBBlocks.OPEN_MAGENTA_EYEBLOSSOM,
                         FBBlocks.MAGENTA_LILAC,
                         FBBlocks.MAGENTA_PEONY,
                         FBBlocks.MAGENTA_PITCHER_PLANT,
@@ -114,6 +118,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLUE_LILY,
                         FBBlocks.BLUE_POPPY,
                         FBBlocks.BLUE_WITHER_ROSE,
+                        FBBlocks.OPEN_BLUE_EYEBLOSSOM,
                         FBBlocks.BLUE_LILAC,
                         FBBlocks.BLUE_PEONY,
                         FBBlocks.BLUE_PITCHER_PLANT,
@@ -144,6 +149,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.LILY_OF_THE_VALLEY,
                         FBBlocks.WHITE_POPPY,
                         FBBlocks.WHITE_WITHER_ROSE,
+                        FBBlocks.OPEN_WHITE_EYEBLOSSOM,
                         FBBlocks.WHITE_LILAC,
                         FBBlocks.WHITE_PEONY,
                         FBBlocks.WHITE_PITCHER_PLANT,
@@ -174,6 +180,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.ORANGE_LILY,
                         FBBlocks.ORANGE_POPPY,
                         FBBlocks.ORANGE_WITHER_ROSE,
+                        Blocks.OPEN_EYEBLOSSOM,
                         FBBlocks.ORANGE_LILAC,
                         FBBlocks.ORANGE_PEONY,
                         FBBlocks.ORANGE_PITCHER_PLANT,
@@ -204,6 +211,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.RED_LILY,
                         Blocks.POPPY,
                         FBBlocks.RED_WITHER_ROSE,
+                        FBBlocks.OPEN_RED_EYEBLOSSOM,
                         FBBlocks.RED_LILAC,
                         FBBlocks.RED_PEONY,
                         FBBlocks.RED_PITCHER_PLANT,
@@ -234,6 +242,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.YELLOW_LILY,
                         FBBlocks.YELLOW_POPPY,
                         FBBlocks.YELLOW_WITHER_ROSE,
+                        FBBlocks.OPEN_YELLOW_EYEBLOSSOM,
                         FBBlocks.YELLOW_LILAC,
                         FBBlocks.YELLOW_PEONY,
                         FBBlocks.YELLOW_PITCHER_PLANT,
@@ -264,6 +273,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_LILY,
                         FBBlocks.LIGHT_BLUE_POPPY,
                         FBBlocks.LIGHT_BLUE_WITHER_ROSE,
+                        FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM,
                         FBBlocks.LIGHT_BLUE_LILAC,
                         FBBlocks.LIGHT_BLUE_PEONY,
                         FBBlocks.LIGHT_BLUE_PITCHER_PLANT,
@@ -294,6 +304,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_LILY,
                         FBBlocks.PINK_POPPY,
                         FBBlocks.PINK_WITHER_ROSE,
+                        FBBlocks.OPEN_PINK_EYEBLOSSOM,
                         Blocks.LILAC,
                         Blocks.PEONY,
                         FBBlocks.PINK_PITCHER_PLANT,
@@ -324,6 +335,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_LILY,
                         FBBlocks.BLACK_POPPY,
                         Blocks.WITHER_ROSE,
+                        FBBlocks.OPEN_BLACK_EYEBLOSSOM,
                         FBBlocks.BLACK_LILAC,
                         FBBlocks.BLACK_PEONY,
                         FBBlocks.BLACK_PITCHER_PLANT,
@@ -354,6 +366,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_LILY,
                         FBBlocks.CYAN_POPPY,
                         FBBlocks.CYAN_WITHER_ROSE,
+                        FBBlocks.OPEN_CYAN_EYEBLOSSOM,
                         FBBlocks.CYAN_LILAC,
                         FBBlocks.CYAN_PEONY,
                         Blocks.PITCHER_PLANT,
@@ -503,6 +516,30 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_WITHER_ROSE,
                         Blocks.WITHER_ROSE,
                         FBBlocks.CYAN_WITHER_ROSE);
+
+        getOrCreateTagBuilder(FBTags.Blocks.OPEN_EYEBLOSSOMS)
+                .add(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM,
+                        FBBlocks.OPEN_BLUE_EYEBLOSSOM,
+                        FBBlocks.OPEN_WHITE_EYEBLOSSOM,
+                        Blocks.OPEN_EYEBLOSSOM,
+                        FBBlocks.OPEN_RED_EYEBLOSSOM,
+                        FBBlocks.OPEN_YELLOW_EYEBLOSSOM,
+                        FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM,
+                        FBBlocks.OPEN_PINK_EYEBLOSSOM,
+                        FBBlocks.OPEN_BLACK_EYEBLOSSOM,
+                        FBBlocks.OPEN_CYAN_EYEBLOSSOM);
+
+        getOrCreateTagBuilder(FBTags.Blocks.CLOSED_EYEBLOSSOMS)
+                .add(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM,
+                        FBBlocks.CLOSED_BLUE_EYEBLOSSOM,
+                        FBBlocks.CLOSED_WHITE_EYEBLOSSOM,
+                        Blocks.CLOSED_EYEBLOSSOM,
+                        FBBlocks.CLOSED_RED_EYEBLOSSOM,
+                        FBBlocks.CLOSED_YELLOW_EYEBLOSSOM,
+                        FBBlocks.CLOSED_LIGHT_BLUE_EYEBLOSSOM,
+                        FBBlocks.CLOSED_PINK_EYEBLOSSOM,
+                        FBBlocks.CLOSED_BLACK_EYEBLOSSOM,
+                        FBBlocks.CLOSED_CYAN_EYEBLOSSOM);
 
         getOrCreateTagBuilder(FBTags.Blocks.LILACS)
                 .add(FBBlocks.MAGENTA_LILAC,

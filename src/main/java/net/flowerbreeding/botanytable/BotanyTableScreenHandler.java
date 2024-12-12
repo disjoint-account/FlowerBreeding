@@ -39,6 +39,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             FBItems.LILY_POLLEN_VIAL,
             FBItems.POPPY_POLLEN_VIAL,
             FBItems.WITHER_ROSE_POLLEN_VIAL,
+            FBItems.EYEBLOSSOM_POLLEN_VIAL,
             FBItems.LILAC_POLLEN_VIAL,
             FBItems.PEONY_POLLEN_VIAL,
             FBItems.PITCHER_PLANT_POLLEN_VIAL,

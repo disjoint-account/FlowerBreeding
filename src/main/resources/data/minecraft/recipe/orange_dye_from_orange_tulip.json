@@ -3,7 +3,7 @@
   "category": "misc",
   "group": "orange_dye",
   "ingredients": [
-    "#flowerbreeding:small_orange_flowers"
+    "#flowerbreeding:orange_dye_small_flowers"
   ],
   "result": {
     "count": 1,

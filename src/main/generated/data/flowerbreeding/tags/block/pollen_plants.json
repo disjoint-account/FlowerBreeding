@@ -45,6 +45,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:open_eyeblossoms",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:lilacs",
       "required": false
     },

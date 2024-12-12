@@ -2,6 +2,7 @@ package net.flowerbreeding;
 
 import net.flowerbreeding.blockentities.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
+import net.flowerbreeding.eyeblossoms.*;
 import net.flowerbreeding.jasmine.*;
 import net.minecraft.block.*;
 import net.minecraft.entity.effect.StatusEffect;
@@ -27,7 +28,7 @@ public class FBBlocks {
 
     // magenta flowers
 
-    public static final Block MAGENTA_TULIP = registerFlowerBlock("magenta_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block MAGENTA_TULIP = registerFlowerBlock("magenta_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_MAGENTA_TULIP = registerFlowerPotBlock("potted_magenta_tulip", MAGENTA_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block MAGENTA_WITHER_ROSE = registerWitherRoseBlock("magenta_wither_rose");
     public static final Block POTTED_MAGENTA_WITHER_ROSE = registerFlowerPotBlock("potted_magenta_wither_rose", MAGENTA_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -39,15 +40,19 @@ public class FBBlocks {
     public static final Block POTTED_MAGENTA_POPPY = registerFlowerPotBlock("potted_magenta_poppy", MAGENTA_POPPY, Blocks.POTTED_POPPY);
     public static final Block MAGENTA_ORCHID = registerFlowerBlock("magenta_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_MAGENTA_ORCHID = registerFlowerPotBlock("potted_magenta_orchid", MAGENTA_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block MAGENTA_LILY = registerFlowerBlock("magenta_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block MAGENTA_LILY = registerFlowerBlock("magenta_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_MAGENTA_LILY = registerFlowerPotBlock("potted_magenta_lily", MAGENTA_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block MAGENTA_DANDELION = registerFlowerBlock("magenta_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block MAGENTA_DANDELION = registerFlowerBlock("magenta_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_MAGENTA_DANDELION = registerFlowerPotBlock("potted_magenta_dandelion", MAGENTA_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block MAGENTA_DAISY = registerFlowerBlock("magenta_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block MAGENTA_DAISY = registerFlowerBlock("magenta_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_MAGENTA_DAISY = registerFlowerPotBlock("potted_magenta_daisy", MAGENTA_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block MAGENTA_CORNFLOWER = registerFlowerBlock("magenta_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block MAGENTA_CORNFLOWER = registerFlowerBlock("magenta_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_MAGENTA_CORNFLOWER = registerFlowerPotBlock("potted_magenta_cornflower", MAGENTA_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block MAGENTA_AZURE_BLUET = registerFlowerBlock("magenta_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_MAGENTA_EYEBLOSSOM = registerEyeblossom("open_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.MAGENTA));
+    public static final Block CLOSED_MAGENTA_EYEBLOSSOM = registerEyeblossom("closed_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_MAGENTA_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_magenta_eyeblossom", OPEN_MAGENTA_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_MAGENTA_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_magenta_eyeblossom", CLOSED_MAGENTA_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block MAGENTA_AZURE_BLUET = registerFlowerBlock("magenta_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_MAGENTA_AZURE_BLUET = registerFlowerPotBlock("potted_magenta_azure_bluet", MAGENTA_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block MAGENTA_TORCHFLOWER = registerFlowerBlock("magenta_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_MAGENTA_TORCHFLOWER = registerFlowerPotBlock("potted_magenta_torchflower", MAGENTA_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -55,9 +60,9 @@ public class FBBlocks {
 
     // blue flowers
 
-    public static final Block BLUE_ALLIUM = registerFlowerBlock("blue_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block BLUE_ALLIUM = registerFlowerBlock("blue_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_BLUE_ALLIUM = registerFlowerPotBlock("potted_blue_allium", BLUE_ALLIUM, Blocks.POTTED_ALLIUM);
-    public static final Block BLUE_TULIP = registerFlowerBlock("blue_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block BLUE_TULIP = registerFlowerBlock("blue_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_BLUE_TULIP = registerFlowerPotBlock("potted_blue_tulip", BLUE_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block BLUE_WITHER_ROSE = registerWitherRoseBlock("blue_wither_rose");
     public static final Block POTTED_BLUE_WITHER_ROSE = registerFlowerPotBlock("potted_blue_wither_rose", BLUE_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -69,13 +74,17 @@ public class FBBlocks {
     public static final Block POTTED_BLUE_POPPY = registerFlowerPotBlock("potted_blue_poppy", BLUE_POPPY, Blocks.POTTED_POPPY);
     public static final Block BLUE_ORCHID = registerFlowerBlock("blue_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_BLUE_ORCHID = registerFlowerPotBlock("potted_blue_orchid", BLUE_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block BLUE_LILY = registerFlowerBlock("blue_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block BLUE_LILY = registerFlowerBlock("blue_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_BLUE_LILY = registerFlowerPotBlock("potted_blue_lily", BLUE_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block BLUE_DANDELION = registerFlowerBlock("blue_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block BLUE_DANDELION = registerFlowerBlock("blue_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_BLUE_DANDELION = registerFlowerPotBlock("potted_blue_dandelion", BLUE_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block BLUE_DAISY = registerFlowerBlock("blue_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block BLUE_DAISY = registerFlowerBlock("blue_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_BLUE_DAISY = registerFlowerPotBlock("potted_blue_daisy", BLUE_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block BLUE_AZURE_BLUET = registerFlowerBlock("blue_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_BLUE_EYEBLOSSOM = registerEyeblossom("open_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLUE));
+    public static final Block CLOSED_BLUE_EYEBLOSSOM = registerEyeblossom("closed_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_BLUE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_blue_eyeblossom", OPEN_BLUE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_BLUE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_blue_eyeblossom", CLOSED_BLUE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block BLUE_AZURE_BLUET = registerFlowerBlock("blue_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_BLUE_AZURE_BLUET = registerFlowerPotBlock("potted_blue_azure_bluet", BLUE_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block BLUE_TORCHFLOWER = registerFlowerBlock("blue_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_blue_torchflower", BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -83,7 +92,7 @@ public class FBBlocks {
 
     // white flowers
 
-    public static final Block WHITE_ALLIUM = registerFlowerBlock("white_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block WHITE_ALLIUM = registerFlowerBlock("white_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_WHITE_ALLIUM = registerFlowerPotBlock("potted_white_allium", WHITE_ALLIUM, Blocks.POTTED_ALLIUM);
     public static final Block WHITE_WITHER_ROSE = registerWitherRoseBlock("white_wither_rose");
     public static final Block POTTED_WHITE_WITHER_ROSE = registerFlowerPotBlock("potted_white_wither_rose", WHITE_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -95,9 +104,13 @@ public class FBBlocks {
     public static final Block POTTED_WHITE_POPPY = registerFlowerPotBlock("potted_white_poppy", WHITE_POPPY, Blocks.POTTED_POPPY);
     public static final Block WHITE_ORCHID = registerFlowerBlock("white_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_WHITE_ORCHID = registerFlowerPotBlock("potted_white_orchid", WHITE_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block WHITE_DANDELION = registerFlowerBlock("white_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block WHITE_DANDELION = registerFlowerBlock("white_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_WHITE_DANDELION = registerFlowerPotBlock("potted_white_dandelion", WHITE_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block WHITE_CORNFLOWER = registerFlowerBlock("white_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block WHITE_CORNFLOWER = registerFlowerBlock("white_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
+    public static final Block OPEN_WHITE_EYEBLOSSOM = registerEyeblossom("open_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.WHITE));
+    public static final Block CLOSED_WHITE_EYEBLOSSOM = registerEyeblossom("closed_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_WHITE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_white_eyeblossom", OPEN_WHITE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_WHITE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_white_eyeblossom", CLOSED_WHITE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block POTTED_WHITE_CORNFLOWER = registerFlowerPotBlock("potted_white_cornflower", WHITE_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
     public static final Block WHITE_TORCHFLOWER = registerFlowerBlock("white_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_WHITE_TORCHFLOWER = registerFlowerPotBlock("potted_white_torchflower", WHITE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -105,7 +118,7 @@ public class FBBlocks {
 
     // orange flowers
 
-    public static final Block ORANGE_ALLIUM = registerFlowerBlock("orange_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block ORANGE_ALLIUM = registerFlowerBlock("orange_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_ORANGE_ALLIUM = registerFlowerPotBlock("potted_orange_allium", ORANGE_ALLIUM, Blocks.POTTED_ALLIUM);
     public static final Block ORANGE_WITHER_ROSE = registerWitherRoseBlock("orange_wither_rose");
     public static final Block POTTED_ORANGE_WITHER_ROSE = registerFlowerPotBlock("potted_orange_wither_rose", ORANGE_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -117,21 +130,21 @@ public class FBBlocks {
     public static final Block POTTED_ORANGE_POPPY = registerFlowerPotBlock("potted_orange_poppy", ORANGE_POPPY, Blocks.POTTED_POPPY);
     public static final Block ORANGE_ORCHID = registerFlowerBlock("orange_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_ORANGE_ORCHID = registerFlowerPotBlock("potted_orange_orchid", ORANGE_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block ORANGE_LILY = registerFlowerBlock("orange_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block ORANGE_LILY = registerFlowerBlock("orange_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_ORANGE_LILY = registerFlowerPotBlock("potted_orange_lily", ORANGE_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block ORANGE_DANDELION = registerFlowerBlock("orange_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block ORANGE_DANDELION = registerFlowerBlock("orange_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_ORANGE_DANDELION = registerFlowerPotBlock("potted_orange_dandelion", ORANGE_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block ORANGE_DAISY = registerFlowerBlock("orange_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block ORANGE_DAISY = registerFlowerBlock("orange_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_ORANGE_DAISY = registerFlowerPotBlock("potted_orange_daisy", ORANGE_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block ORANGE_CORNFLOWER = registerFlowerBlock("orange_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block ORANGE_CORNFLOWER = registerFlowerBlock("orange_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_ORANGE_CORNFLOWER = registerFlowerPotBlock("potted_orange_cornflower", ORANGE_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block ORANGE_AZURE_BLUET = registerFlowerBlock("orange_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block ORANGE_AZURE_BLUET = registerFlowerBlock("orange_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_ORANGE_AZURE_BLUET = registerFlowerPotBlock("potted_orange_azure_bluet", ORANGE_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block ORANGE_PITCHER_PLANT = registerBlock("orange_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
 
     // red flowers
 
-    public static final Block RED_ALLIUM = registerFlowerBlock("red_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block RED_ALLIUM = registerFlowerBlock("red_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_RED_ALLIUM = registerFlowerPotBlock("potted_red_allium", RED_ALLIUM, Blocks.POTTED_ALLIUM);
     public static final Block RED_WITHER_ROSE = registerWitherRoseBlock("red_wither_rose");
     public static final Block POTTED_RED_WITHER_ROSE = registerFlowerPotBlock("potted_red_wither_rose", RED_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -140,15 +153,19 @@ public class FBBlocks {
     public static final Block RED_LILAC = registerBlock("red_lilac", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.LILAC));
     public static final Block RED_ORCHID = registerFlowerBlock("red_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_RED_ORCHID = registerFlowerPotBlock("potted_red_orchid", RED_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block RED_LILY = registerFlowerBlock("red_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block RED_LILY = registerFlowerBlock("red_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_RED_LILY = registerFlowerPotBlock("potted_red_lily", RED_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block RED_DANDELION = registerFlowerBlock("red_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block RED_DANDELION = registerFlowerBlock("red_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_RED_DANDELION = registerFlowerPotBlock("potted_red_dandelion", RED_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block RED_DAISY = registerFlowerBlock("red_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block RED_DAISY = registerFlowerBlock("red_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_RED_DAISY = registerFlowerPotBlock("potted_red_daisy", RED_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block RED_CORNFLOWER = registerFlowerBlock("red_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block RED_CORNFLOWER = registerFlowerBlock("red_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_RED_CORNFLOWER = registerFlowerPotBlock("potted_red_cornflower", RED_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block RED_AZURE_BLUET = registerFlowerBlock("red_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_RED_EYEBLOSSOM = registerEyeblossom("open_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.RED));
+    public static final Block CLOSED_RED_EYEBLOSSOM = registerEyeblossom("closed_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_RED_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_red_eyeblossom", OPEN_RED_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_RED_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_red_eyeblossom", CLOSED_RED_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block RED_AZURE_BLUET = registerFlowerBlock("red_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_RED_AZURE_BLUET = registerFlowerPotBlock("potted_red_azure_bluet", RED_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block RED_TORCHFLOWER = registerFlowerBlock("red_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_RED_TORCHFLOWER = registerFlowerPotBlock("potted_red_torchflower", RED_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -156,9 +173,9 @@ public class FBBlocks {
 
     // yellow flowers
 
-    public static final Block YELLOW_ALLIUM = registerFlowerBlock("yellow_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block YELLOW_ALLIUM = registerFlowerBlock("yellow_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_YELLOW_ALLIUM = registerFlowerPotBlock("potted_yellow_allium", YELLOW_ALLIUM, Blocks.POTTED_ALLIUM);
-    public static final Block YELLOW_TULIP = registerFlowerBlock("yellow_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block YELLOW_TULIP = registerFlowerBlock("yellow_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_YELLOW_TULIP = registerFlowerPotBlock("potted_yellow_tulip", YELLOW_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block YELLOW_WITHER_ROSE = registerWitherRoseBlock("yellow_wither_rose");
     public static final Block POTTED_YELLOW_WITHER_ROSE = registerFlowerPotBlock("potted_yellow_wither_rose", YELLOW_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -169,13 +186,17 @@ public class FBBlocks {
     public static final Block POTTED_YELLOW_POPPY = registerFlowerPotBlock("potted_yellow_poppy", YELLOW_POPPY, Blocks.POTTED_POPPY);
     public static final Block YELLOW_ORCHID = registerFlowerBlock("yellow_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_YELLOW_ORCHID = registerFlowerPotBlock("potted_yellow_orchid", YELLOW_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block YELLOW_LILY = registerFlowerBlock("yellow_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block YELLOW_LILY = registerFlowerBlock("yellow_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_YELLOW_LILY = registerFlowerPotBlock("potted_yellow_lily", YELLOW_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block YELLOW_DAISY = registerFlowerBlock("yellow_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block YELLOW_DAISY = registerFlowerBlock("yellow_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_YELLOW_DAISY = registerFlowerPotBlock("potted_yellow_daisy", YELLOW_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block YELLOW_CORNFLOWER = registerFlowerBlock("yellow_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block YELLOW_CORNFLOWER = registerFlowerBlock("yellow_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_YELLOW_CORNFLOWER = registerFlowerPotBlock("potted_yellow_cornflower", YELLOW_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block YELLOW_AZURE_BLUET = registerFlowerBlock("yellow_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_YELLOW_EYEBLOSSOM = registerEyeblossom("open_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.YELLOW));
+    public static final Block CLOSED_YELLOW_EYEBLOSSOM = registerEyeblossom("closed_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_YELLOW_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_yellow_eyeblossom", OPEN_YELLOW_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_YELLOW_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_yellow_eyeblossom", CLOSED_YELLOW_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block YELLOW_AZURE_BLUET = registerFlowerBlock("yellow_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_YELLOW_AZURE_BLUET = registerFlowerPotBlock("potted_yellow_azure_bluet", YELLOW_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block YELLOW_TORCHFLOWER = registerFlowerBlock("yellow_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_YELLOW_TORCHFLOWER = registerFlowerPotBlock("potted_yellow_torchflower", YELLOW_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -183,9 +204,9 @@ public class FBBlocks {
 
     // light blue flowers
 
-    public static final Block LIGHT_BLUE_ALLIUM = registerFlowerBlock("light_blue_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block LIGHT_BLUE_ALLIUM = registerFlowerBlock("light_blue_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_LIGHT_BLUE_ALLIUM = registerFlowerPotBlock("potted_light_blue_allium", LIGHT_BLUE_ALLIUM, Blocks.POTTED_ALLIUM);
-    public static final Block LIGHT_BLUE_TULIP = registerFlowerBlock("light_blue_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block LIGHT_BLUE_TULIP = registerFlowerBlock("light_blue_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_LIGHT_BLUE_TULIP = registerFlowerPotBlock("potted_light_blue_tulip", LIGHT_BLUE_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block LIGHT_BLUE_WITHER_ROSE = registerWitherRoseBlock("light_blue_wither_rose");
     public static final Block POTTED_LIGHT_BLUE_WITHER_ROSE = registerFlowerPotBlock("potted_light_blue_wither_rose", LIGHT_BLUE_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -195,15 +216,19 @@ public class FBBlocks {
     public static final Block LIGHT_BLUE_ROSE_BUSH = registerBlock("light_blue_rose_bush", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.ROSE_BUSH));
     public static final Block LIGHT_BLUE_POPPY = registerFlowerBlock("light_blue_poppy", StatusEffects.NIGHT_VISION, 5, Blocks.POPPY);
     public static final Block POTTED_LIGHT_BLUE_POPPY = registerFlowerPotBlock("potted_light_blue_poppy", LIGHT_BLUE_POPPY, Blocks.POTTED_POPPY);
-    public static final Block LIGHT_BLUE_LILY = registerFlowerBlock("light_blue_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block LIGHT_BLUE_LILY = registerFlowerBlock("light_blue_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_LIGHT_BLUE_LILY = registerFlowerPotBlock("potted_light_blue_lily", LIGHT_BLUE_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block LIGHT_BLUE_DANDELION = registerFlowerBlock("light_blue_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block LIGHT_BLUE_DANDELION = registerFlowerBlock("light_blue_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_LIGHT_BLUE_DANDELION = registerFlowerPotBlock("potted_light_blue_dandelion", LIGHT_BLUE_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block LIGHT_BLUE_DAISY = registerFlowerBlock("light_blue_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block LIGHT_BLUE_DAISY = registerFlowerBlock("light_blue_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_LIGHT_BLUE_DAISY = registerFlowerPotBlock("potted_light_blue_daisy", LIGHT_BLUE_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block LIGHT_BLUE_CORNFLOWER = registerFlowerBlock("light_blue_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block LIGHT_BLUE_CORNFLOWER = registerFlowerBlock("light_blue_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_LIGHT_BLUE_CORNFLOWER = registerFlowerPotBlock("potted_light_blue_cornflower", LIGHT_BLUE_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block LIGHT_BLUE_AZURE_BLUET = registerFlowerBlock("light_blue_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossom("open_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.LIGHT_BLUE));
+    public static final Block CLOSED_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossom("closed_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_light_blue_eyeblossom", OPEN_LIGHT_BLUE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_light_blue_eyeblossom", CLOSED_LIGHT_BLUE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block LIGHT_BLUE_AZURE_BLUET = registerFlowerBlock("light_blue_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_LIGHT_BLUE_AZURE_BLUET = registerFlowerPotBlock("potted_light_blue_azure_bluet", LIGHT_BLUE_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block LIGHT_BLUE_TORCHFLOWER = registerFlowerBlock("light_blue_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_LIGHT_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_light_blue_torchflower", LIGHT_BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -211,7 +236,7 @@ public class FBBlocks {
 
     // pink flowers
 
-    public static final Block PINK_ALLIUM = registerFlowerBlock("pink_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block PINK_ALLIUM = registerFlowerBlock("pink_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_PINK_ALLIUM = registerFlowerPotBlock("potted_pink_allium", PINK_ALLIUM, Blocks.POTTED_ALLIUM);
     public static final Block PINK_WITHER_ROSE = registerWitherRoseBlock("pink_wither_rose");
     public static final Block POTTED_PINK_WITHER_ROSE = registerFlowerPotBlock("potted_pink_wither_rose", PINK_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -221,15 +246,19 @@ public class FBBlocks {
     public static final Block POTTED_PINK_POPPY = registerFlowerPotBlock("potted_pink_poppy", PINK_POPPY, Blocks.POTTED_POPPY);
     public static final Block PINK_ORCHID = registerFlowerBlock("pink_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_PINK_ORCHID = registerFlowerPotBlock("potted_pink_orchid", PINK_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block PINK_LILY = registerFlowerBlock("pink_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block PINK_LILY = registerFlowerBlock("pink_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_PINK_LILY = registerFlowerPotBlock("potted_pink_lily", PINK_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block PINK_DANDELION = registerFlowerBlock("pink_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block PINK_DANDELION = registerFlowerBlock("pink_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_PINK_DANDELION = registerFlowerPotBlock("potted_pink_dandelion", PINK_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block PINK_DAISY = registerFlowerBlock("pink_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block PINK_DAISY = registerFlowerBlock("pink_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_PINK_DAISY = registerFlowerPotBlock("potted_pink_daisy", PINK_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block PINK_CORNFLOWER = registerFlowerBlock("pink_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block PINK_CORNFLOWER = registerFlowerBlock("pink_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_PINK_CORNFLOWER = registerFlowerPotBlock("potted_pink_cornflower", PINK_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block PINK_AZURE_BLUET = registerFlowerBlock("pink_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_PINK_EYEBLOSSOM = registerEyeblossom("open_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.PINK));
+    public static final Block CLOSED_PINK_EYEBLOSSOM = registerEyeblossom("closed_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_PINK_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_pink_eyeblossom", OPEN_PINK_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_PINK_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_pink_eyeblossom", CLOSED_PINK_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block PINK_AZURE_BLUET = registerFlowerBlock("pink_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_PINK_AZURE_BLUET = registerFlowerPotBlock("potted_pink_azure_bluet", PINK_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block PINK_TORCHFLOWER = registerFlowerBlock("pink_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_PINK_TORCHFLOWER = registerFlowerPotBlock("potted_pink_torchflower", PINK_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -237,9 +266,9 @@ public class FBBlocks {
 
     // black flowers
 
-    public static final Block BLACK_ALLIUM = registerFlowerBlock("black_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block BLACK_ALLIUM = registerFlowerBlock("black_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_BLACK_ALLIUM = registerFlowerPotBlock("potted_black_allium", BLACK_ALLIUM, Blocks.POTTED_ALLIUM);
-    public static final Block BLACK_TULIP = registerFlowerBlock("black_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block BLACK_TULIP = registerFlowerBlock("black_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_BLACK_TULIP = registerFlowerPotBlock("potted_black_tulip", BLACK_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block BLACK_SUNFLOWER = registerBlock("black_sunflower", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.SUNFLOWER));
     public static final Block BLACK_PEONY = registerBlock("black_peony", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PEONY));
@@ -249,15 +278,19 @@ public class FBBlocks {
     public static final Block POTTED_BLACK_POPPY = registerFlowerPotBlock("potted_black_poppy", BLACK_POPPY, Blocks.POTTED_POPPY);
     public static final Block BLACK_ORCHID = registerFlowerBlock("black_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_BLACK_ORCHID = registerFlowerPotBlock("potted_black_orchid", BLACK_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block BLACK_LILY = registerFlowerBlock("black_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block BLACK_LILY = registerFlowerBlock("black_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_BLACK_LILY = registerFlowerPotBlock("potted_black_lily", BLACK_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block BLACK_DANDELION = registerFlowerBlock("black_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block BLACK_DANDELION = registerFlowerBlock("black_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_BLACK_DANDELION = registerFlowerPotBlock("potted_black_dandelion", BLACK_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block BLACK_DAISY = registerFlowerBlock("black_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block BLACK_DAISY = registerFlowerBlock("black_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_BLACK_DAISY = registerFlowerPotBlock("potted_black_daisy", BLACK_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block BLACK_CORNFLOWER = registerFlowerBlock("black_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block BLACK_CORNFLOWER = registerFlowerBlock("black_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_BLACK_CORNFLOWER = registerFlowerPotBlock("potted_black_cornflower", BLACK_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block BLACK_AZURE_BLUET = registerFlowerBlock("black_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_BLACK_EYEBLOSSOM = registerEyeblossom("open_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLACK));
+    public static final Block CLOSED_BLACK_EYEBLOSSOM = registerEyeblossom("closed_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_BLACK_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_black_eyeblossom", OPEN_BLACK_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_BLACK_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_black_eyeblossom", CLOSED_BLACK_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block BLACK_AZURE_BLUET = registerFlowerBlock("black_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_BLACK_AZURE_BLUET = registerFlowerPotBlock("potted_black_azure_bluet", BLACK_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block BLACK_TORCHFLOWER = registerFlowerBlock("black_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_BLACK_TORCHFLOWER = registerFlowerPotBlock("potted_black_torchflower", BLACK_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -265,9 +298,9 @@ public class FBBlocks {
 
     // cyan flowers
 
-    public static final Block CYAN_ALLIUM = registerFlowerBlock("cyan_allium", StatusEffects.FIRE_RESISTANCE, 4, ALLIUM);
+    public static final Block CYAN_ALLIUM = registerFlowerBlock("cyan_allium", StatusEffects.FIRE_RESISTANCE, 3, ALLIUM);
     public static final Block POTTED_CYAN_ALLIUM = registerFlowerPotBlock("potted_cyan_allium", CYAN_ALLIUM, Blocks.POTTED_ALLIUM);
-    public static final Block CYAN_TULIP = registerFlowerBlock("cyan_tulip", StatusEffects.WEAKNESS, 9, RED_TULIP);
+    public static final Block CYAN_TULIP = registerFlowerBlock("cyan_tulip", StatusEffects.WEAKNESS, 7, RED_TULIP);
     public static final Block POTTED_CYAN_TULIP = registerFlowerPotBlock("potted_cyan_tulip", CYAN_TULIP, Blocks.POTTED_RED_TULIP);
     public static final Block CYAN_WITHER_ROSE = registerWitherRoseBlock("cyan_wither_rose");
     public static final Block POTTED_CYAN_WITHER_ROSE = registerFlowerPotBlock("potted_cyan_wither_rose", CYAN_WITHER_ROSE, Blocks.POTTED_WITHER_ROSE);
@@ -279,15 +312,19 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_POPPY = registerFlowerPotBlock("potted_cyan_poppy", CYAN_POPPY, Blocks.POTTED_POPPY);
     public static final Block CYAN_ORCHID = registerFlowerBlock("cyan_orchid", StatusEffects.SATURATION, 0.35f, Blocks.BLUE_ORCHID);
     public static final Block POTTED_CYAN_ORCHID = registerFlowerPotBlock("potted_cyan_orchid", CYAN_ORCHID, Blocks.POTTED_BLUE_ORCHID);
-    public static final Block CYAN_LILY = registerFlowerBlock("cyan_lily", StatusEffects.POISON, 12, LILY_OF_THE_VALLEY);
+    public static final Block CYAN_LILY = registerFlowerBlock("cyan_lily", StatusEffects.POISON, 11, LILY_OF_THE_VALLEY);
     public static final Block POTTED_CYAN_LILY = registerFlowerPotBlock("potted_cyan_lily", CYAN_LILY, POTTED_LILY_OF_THE_VALLEY);
-    public static final Block CYAN_DANDELION = registerFlowerBlock("cyan_dandelion", StatusEffects.WEAKNESS, 9, Blocks.DANDELION);
+    public static final Block CYAN_DANDELION = registerFlowerBlock("cyan_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_CYAN_DANDELION = registerFlowerPotBlock("potted_cyan_dandelion", CYAN_DANDELION, Blocks.POTTED_DANDELION);
-    public static final Block CYAN_DAISY = registerFlowerBlock("cyan_daisy", StatusEffects.REGENERATION, 8, OXEYE_DAISY);
+    public static final Block CYAN_DAISY = registerFlowerBlock("cyan_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_CYAN_DAISY = registerFlowerPotBlock("potted_cyan_daisy", CYAN_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block CYAN_CORNFLOWER = registerFlowerBlock("cyan_cornflower", StatusEffects.JUMP_BOOST, 6, Blocks.CORNFLOWER);
+    public static final Block CYAN_CORNFLOWER = registerFlowerBlock("cyan_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_CYAN_CORNFLOWER = registerFlowerPotBlock("potted_cyan_cornflower", CYAN_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block CYAN_AZURE_BLUET = registerFlowerBlock("cyan_azure_bluet", StatusEffects.BLINDNESS, 8, Blocks.AZURE_BLUET);
+    public static final Block OPEN_CYAN_EYEBLOSSOM = registerEyeblossom("open_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.CYAN));
+    public static final Block CLOSED_CYAN_EYEBLOSSOM = registerEyeblossom("closed_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block POTTED_OPEN_CYAN_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_open_cyan_eyeblossom", OPEN_CYAN_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
+    public static final Block POTTED_CLOSED_CYAN_EYEBLOSSOM = registerEyeblossomFlowerPotBlock("potted_closed_cyan_eyeblossom", CLOSED_CYAN_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
+    public static final Block CYAN_AZURE_BLUET = registerFlowerBlock("cyan_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_CYAN_AZURE_BLUET = registerFlowerPotBlock("potted_cyan_azure_bluet", CYAN_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block CYAN_TORCHFLOWER = registerFlowerBlock("cyan_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_CYAN_TORCHFLOWER = registerFlowerPotBlock("potted_cyan_torchflower", CYAN_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
@@ -525,8 +562,20 @@ public class FBBlocks {
     private static Block registerFlowerBlock(String name, RegistryEntry<StatusEffect> effect, float length, Block base) {
         return registerBlock(name, true, settings -> new FlowerBlock(effect, length, settings), AbstractBlock.Settings.copy(base));
     }
+    private static Block registerEyeblossomFlowerPotBlock(String name, Block content, Block base) {
+        return registerBlock(name, false, settings -> new FlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base).ticksRandomly());
+    }
     private static Block registerWitherRoseBlock(String name) {
-        return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 8, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
+        return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 7, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
+    }
+    private static Block registerEyeblossom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = Blocks.register(keyOf(name), factory, settings);
+        registerBlockItem(name, block);
+        return block;
+    }
+    public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = (Block)factory.apply(settings.registryKey(key));
+        return (Block)Registry.register(Registries.BLOCK, key, block);
     }
     private static Block registerFlowerPotBlock(String name, Block content, Block base) {
         return registerBlock(name, false, settings -> new FlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base));

@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/open_eyeblossom_master",
+  "textures": {
+    "emissive": "flowerbreeding:block/open_blue_eyeblossom_emissive"
+  }
+}

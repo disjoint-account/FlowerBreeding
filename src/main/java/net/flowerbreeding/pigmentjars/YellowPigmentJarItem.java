@@ -8,6 +8,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.sound.SoundCategory;
@@ -21,111 +22,155 @@ public class YellowPigmentJarItem extends Item {
     public YellowPigmentJarItem(Settings settings) {
         super(settings);
     }
+
     public ActionResult useOnBlock(ItemUsageContext context) {
         PlayerEntity user = context.getPlayer();
         Hand hand = context.getHand();
+        BlockPos pos = context.getBlockPos();
+        World world = context.getWorld();
+        BlockState state = world.getBlockState(pos);
+        assert user != null;
+        ItemStack itemStack = user.getStackInHand(hand);
+        int qty = JarCounter.countJars(user);
+        if ((state.isIn(FBTags.Blocks.FBFLOWERS)) && FlowerBreeding.CONFIG.fastRecolouring()) {
+            ItemStack itemStack1 = new ItemStack(getFlower(context));
+            ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
+            if ((qty > 1) && (!user.isInCreativeMode())) {
+                itemStack.decrement(1);
+                user.getInventory().offerOrDrop(itemStack1);
+                user.getInventory().offerOrDrop(itemStack2);
+                world.playSound(user, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                return ActionResult.SUCCESS;
+            } else if (user.isInCreativeMode()) {
+                user.getInventory().offerOrDrop(itemStack1);
+                world.playSound(user, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                return ActionResult.SUCCESS;
+            } else if (qty == 1) {
+                user.getInventory().offerOrDrop(itemStack1);
+                user.setStackInHand(hand, itemStack2);
+                world.playSound(user, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
+                return ActionResult.SUCCESS;
+            }
+        }
+        return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
+    }
+
+    public ItemConvertible getFlower(ItemUsageContext context) {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
         if (FlowerBreeding.CONFIG.fastRecolouring()) {
             if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
-                    ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
-                    user.setStackInHand(hand, itemStack1);
-                    if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_ALLIUM));
-                    }
-                    if (pos.isIn(FBTags.Blocks.CORNFLOWERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_CORNFLOWER));
-                    }
-                    if (pos.isIn(FBTags.Blocks.DAISIES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_DAISY));
-                    }
-                    if (pos.isIn(FBTags.Blocks.TORCHFLOWERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_TORCHFLOWER));
-                    }
-                    if (pos.isIn(FBTags.Blocks.TULIPS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_TULIP));
-                    }
-                    if (pos.isIn(FBTags.Blocks.AZURE_BLUETS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_AZURE_BLUET));
-                    }
-                    if (pos.isIn(FBTags.Blocks.DANDELIONS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(Blocks.DANDELION));
-                    }
-                    if (pos.isIn(FBTags.Blocks.ORCHIDS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_ORCHID));
-                    }
-                    if (pos.isIn(FBTags.Blocks.LILIES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LILY));
-                    }
-                    if (pos.isIn(FBTags.Blocks.POPPIES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_POPPY));
-                    }
-                    if (pos.isIn(FBTags.Blocks.WITHER_ROSES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_WITHER_ROSE));
-                    }
-                    if (pos.isIn(FBTags.Blocks.OPEN_EYEBLOSSOMS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.OPEN_WHITE_EYEBLOSSOM));
-                    }
-                    if (pos.isIn(FBTags.Blocks.LILACS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LILAC));
-                    }
-                    if (pos.isIn(FBTags.Blocks.PEONIES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_PEONY));
-                    }
-                    if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_PITCHER_PLANT));
-                    }
-                    if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_ROSE_BUSH));
-                    }
-                    if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(Blocks.SUNFLOWER));
-                    }
-                    if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_DAFFODIL));
-                    }
-                    if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_FOXGLOVE));
-                    }
-                    if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HYACINTH));
-                    }
-                    if (pos.isIn(FBTags.Blocks.PHLOXES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_PHLOX));
-                    }
-                    if (pos.isIn(FBTags.Blocks.LUPINS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LUPIN));
-                    }
-                    if (pos.isIn(FBTags.Blocks.SMALL_ROSES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_SMALL_ROSE));
-                    }
-                    if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_LAVENDER));
-                    }
-                    if (pos.isIn(FBTags.Blocks.HYDRANGEAS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_HYDRANGEA));
-                    }
-                    if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBItems.YELLOW_LOTUS_FLOWER));
-                    }
-                    if (pos.isIn(FBTags.Blocks.JASMINES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_JASMINE));
-                    }
-                    if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
-                        user.getInventory().offerOrDrop(new ItemStack(FBBlocks.YELLOW_CYPRUS_VINE));
-                    }
-                    world.playSound(user, blockPos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1f, 1f);
-                    return ActionResult.SUCCESS;
+                if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
+                    return FBBlocks.YELLOW_ALLIUM;
+                }
+                if (pos.isIn(FBTags.Blocks.CORNFLOWERS)) {
+                    return FBBlocks.YELLOW_CORNFLOWER;
+                }
+                if (pos.isIn(FBTags.Blocks.DAISIES)) {
+                    return FBBlocks.YELLOW_DAISY;
+                }
+                if (pos.isIn(FBTags.Blocks.TORCHFLOWERS)) {
+                    return FBBlocks.YELLOW_TORCHFLOWER;
+                }
+                if (pos.isIn(FBTags.Blocks.TULIPS)) {
+                    return FBBlocks.YELLOW_TULIP;
+                }
+                if (pos.isIn(FBTags.Blocks.AZURE_BLUETS)) {
+                    return FBBlocks.YELLOW_AZURE_BLUET;
+                }
+                if (pos.isIn(FBTags.Blocks.DANDELIONS)) {
+                    return Blocks.DANDELION;
+                }
+                if (pos.isIn(FBTags.Blocks.ORCHIDS)) {
+                    return FBBlocks.YELLOW_ORCHID;
+                }
+                if (pos.isIn(FBTags.Blocks.LILIES)) {
+                    return FBBlocks.YELLOW_LILY;
+                }
+                if (pos.isIn(FBTags.Blocks.POPPIES)) {
+                    return FBBlocks.YELLOW_POPPY;
+                }
+                if (pos.isIn(FBTags.Blocks.WITHER_ROSES)) {
+                    return FBBlocks.YELLOW_WITHER_ROSE;
+                }
+                if (pos.isIn(FBTags.Blocks.OPEN_EYEBLOSSOMS)) {
+                    return FBBlocks.OPEN_YELLOW_EYEBLOSSOM;
+                }
+                if (pos.isIn(FBTags.Blocks.LILACS)) {
+                    return FBBlocks.YELLOW_LILAC;
+                }
+                if (pos.isIn(FBTags.Blocks.PEONIES)) {
+                    return FBBlocks.YELLOW_PEONY;
+                }
+                if (pos.isIn(FBTags.Blocks.PITCHER_PLANTS)) {
+                    return FBBlocks.YELLOW_PITCHER_PLANT;
+                }
+                if (pos.isIn(FBTags.Blocks.ROSE_BUSHES)) {
+                    return FBBlocks.YELLOW_ROSE_BUSH;
+                }
+                if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
+                    return Blocks.SUNFLOWER;
+                }
+                if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
+                    return FBBlocks.YELLOW_DAFFODIL;
+                }
+                if (pos.isIn(FBTags.Blocks.FOXGLOVES)) {
+                    return FBBlocks.YELLOW_FOXGLOVE;
+                }
+                if (pos.isIn(FBTags.Blocks.HYACINTHS)) {
+                    return FBBlocks.YELLOW_HYACINTH;
+                }
+                if (pos.isIn(FBTags.Blocks.PHLOXES)) {
+                    return FBBlocks.YELLOW_PHLOX;
+                }
+                if (pos.isIn(FBTags.Blocks.LUPINS)) {
+                    return FBBlocks.YELLOW_LUPIN;
+                }
+                if (pos.isIn(FBTags.Blocks.SMALL_ROSES)) {
+                    return FBBlocks.YELLOW_SMALL_ROSE;
+                }
+                if (pos.isIn(FBTags.Blocks.LAVENDERS)) {
+                    return FBBlocks.YELLOW_LAVENDER;
+                }
+                if (pos.isIn(FBTags.Blocks.HYDRANGEAS)) {
+                    return FBBlocks.YELLOW_HYDRANGEA;
+                }
+                if (pos.isIn(FBTags.Blocks.LOTUS_FLOWERS)) {
+                    return FBItems.YELLOW_LOTUS_FLOWER;
+                }
+                if (pos.isIn(FBTags.Blocks.JASMINES)) {
+                    return FBBlocks.YELLOW_JASMINE;
+                }
+                if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
+                    return FBBlocks.YELLOW_CYPRUS_VINE;
                 }
             }
-        return ActionResult.PASS;
+        }
+        return null;
     }
+
     public ActionResult use(World world, PlayerEntity user, Hand hand) {
+        ItemStack itemStack = user.getStackInHand(hand);
         BlockPos blockPos = user.getBlockPos();
         ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
-        world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
-        user.setStackInHand(hand, itemStack1);
-        return ActionResult.SUCCESS;
+        int qty = itemStack.getCount();
+        if ((qty > 1) && (!user.isInCreativeMode())) {
+            itemStack.decrement(1);
+            user.getInventory().offerOrDrop(itemStack1);
+            world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+            return ActionResult.SUCCESS;
+        }
+        else if (user.isInCreativeMode()) {
+            user.getInventory().offerOrDrop(itemStack1);
+            world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+            return ActionResult.SUCCESS;
+        }
+        else if (qty == 1) {
+            user.setStackInHand(hand, itemStack1);
+            world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+            return ActionResult.SUCCESS;
+        }
+        return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
     }
 }

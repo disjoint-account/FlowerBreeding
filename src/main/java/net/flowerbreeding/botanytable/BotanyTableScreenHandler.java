@@ -133,10 +133,9 @@ public class BotanyTableScreenHandler extends ScreenHandler {
         this.output.unlockLastRecipe(player, List.of(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)));
         for (int i = 0; i < 3; i++) {
             this.decrementStack(i);
-            this.emptyVial(0);
-            this.emptyVial(1);
-            this.emptyJar(2);
         }
+        player.getInventory().offerOrDrop(new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 2));
+        player.getInventory().offerOrDrop(new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1));
         // this.context.run((world, pos) -> world.syncWorldEvent(WorldEvents.SMITHING_TABLE_USED, (BlockPos)pos, 0));
     }
 
@@ -144,16 +143,6 @@ public class BotanyTableScreenHandler extends ScreenHandler {
         ItemStack itemStack = this.input.getStack(slot);
         itemStack.decrement(1);
         this.input.setStack(slot, itemStack);
-    }
-
-    private void emptyVial(int slot) {
-        ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_POLLEN_VIAL);
-        this.input.setStack(slot, itemStack1);
-    }
-
-    private void emptyJar(int slot) {
-        ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
-        this.input.setStack(slot, itemStack2);
     }
 
     private BotanyTableRecipeInput createRecipeInput() {

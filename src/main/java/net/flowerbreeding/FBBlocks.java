@@ -542,7 +542,12 @@ public class FBBlocks {
     public static final Block BLACK_CYPRUS_VINE = registerBlock("black_cyprus_vine", VineBlock::new, AbstractBlock.Settings.copy(VINE));
     public static final Block CYAN_CYPRUS_VINE = registerBlock("cyan_cyprus_vine", VineBlock::new, AbstractBlock.Settings.copy(VINE));
 
+    //other plants
+
+    public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
+
     //other stuff
+
     public static final Block VASE = registerBlock("vase",
             VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
 

@@ -20,8 +20,17 @@ public class FullPollenVialItem extends Item {
         ItemStack itemStack = user.getStackInHand(hand);
         BlockPos blockPos = user.getBlockPos();
         ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_POLLEN_VIAL);
+        if (!user.isInCreativeMode()) {
+            itemStack.decrement(1);
+            user.getInventory().offerOrDrop(itemStack1);
             world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
-            user.setStackInHand(hand, itemStack1);
             return ActionResult.SUCCESS;
+        }
+        else if (user.isInCreativeMode()) {
+            user.getInventory().offerOrDrop(itemStack1);
+            world.playSound(user, blockPos, SoundEvents.ITEM_BOTTLE_FILL, SoundCategory.BLOCKS, 1f, 1f);
+            return ActionResult.SUCCESS;
+        }
+        return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
         }
 }

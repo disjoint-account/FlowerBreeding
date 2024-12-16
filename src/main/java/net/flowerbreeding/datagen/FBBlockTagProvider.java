@@ -53,6 +53,18 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.SWEET_BERRY_BUSH)
                 .add(Blocks.LILY_PAD);
 
+        getOrCreateTagBuilder(FBTags.Blocks.COLOUR_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.MAGENTA_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.WHITE_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.ORANGE_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.RED_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.YELLOW_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.LIGHT_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.PINK_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.BLACK_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.CYAN_FLOWERS);
+
         getOrCreateTagBuilder(BlockTags.SMALL_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.ALLIUMS)
                 .addOptionalTag(FBTags.Blocks.CORNFLOWERS)

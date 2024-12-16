@@ -362,6 +362,8 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_CYPRUS_VINE);
                         entries.add(FBBlocks.CYAN_CYPRUS_VINE);
 
+                        entries.add(FBBlocks.CLIMBING_IVY);
+
                         entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
                     }).build());
     public static void registerItemGroups() {

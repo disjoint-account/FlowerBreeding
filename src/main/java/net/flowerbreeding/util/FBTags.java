@@ -13,6 +13,7 @@ public class FBTags {
     public static class Blocks {
         public static final TagKey<Block> FBFLOWERS = createTag("fbflowers");
         public static final TagKey<Block> POLLEN_PLANTS = createTag("pollen_plants");
+        public static final TagKey<Block> COLOUR_FLOWERS = createTag("colour_flowers");
         public static final TagKey<Block> MAGENTA_FLOWERS = createTag("magenta_flowers");
         public static final TagKey<Block> BLUE_FLOWERS = createTag("blue_flowers");
         public static final TagKey<Block> WHITE_FLOWERS = createTag("white_flowers");

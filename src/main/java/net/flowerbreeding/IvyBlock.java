@@ -34,9 +34,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import static net.flowerbreeding.util.properties.IvyConfiguration.*;
 import static net.minecraft.util.math.Direction.DOWN;
+import static net.minecraft.util.math.Direction.UP;
 
 public class IvyBlock extends Block implements Fertilizable {
-    public static final BooleanProperty IVY_TIP;
+    public static final BooleanProperty IVY_TIP_NORTH;
+    public static final BooleanProperty IVY_TIP_EAST;
+    public static final BooleanProperty IVY_TIP_SOUTH;
+    public static final BooleanProperty IVY_TIP_WEST;
     public static final BooleanProperty IVY_FERTILE;
     public static final EnumProperty<IvyConfiguration> IVY_CONFIGURATION;
     public static final MapCodec<IvyBlock> CODEC = createCodec(IvyBlock::new);
@@ -66,7 +70,7 @@ public class IvyBlock extends Block implements Fertilizable {
 
     public IvyBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(((BlockState)(BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(NORTH, false)).with(EAST, false)).with(SOUTH, false)).with(WEST, false)).with(IVY_TIP, true)).with(IVY_FERTILE, true)).with(IVY_CONFIGURATION, NORTH_SINGLE));
+        this.setDefaultState(((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(NORTH, false)).with(EAST, false)).with(SOUTH, false)).with(WEST, false)).with(IVY_TIP_NORTH, true)).with(IVY_TIP_EAST, true)).with(IVY_TIP_SOUTH, true)).with(IVY_TIP_WEST, true)).with(IVY_FERTILE, true)).with(IVY_CONFIGURATION, NORTH_SINGLE)));
         this.shapesByState = ImmutableMap.copyOf((Map)this.stateManager.getStates().stream().collect(Collectors.toMap(Function.identity(), IvyBlock::getShapeForState)));
     }
 
@@ -192,21 +196,31 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
-        boolean bl = state.get(IVY_TIP);
+        boolean tipNorth = state.get(IVY_TIP_NORTH);
+        boolean tipEast = state.get(IVY_TIP_EAST);
+        boolean tipSouth = state.get(IVY_TIP_SOUTH);
+        boolean tipWest = state.get(IVY_TIP_WEST);
         int i = countIvyAbove(world, pos);
         BlockPos pos1 = pos.offset(Direction.UP, i);
         BlockPos pos2 = pos.offset(Direction.DOWN);
+        BlockPos pos3 = pos.offset(Direction.UP);
         BlockState state1 = world.getBlockState(pos1);
         BlockState state2 = world.getBlockState(pos2);
+        BlockState state3 = world.getBlockState(pos3);
         boolean bl1 = state.get(IVY_FERTILE);
         boolean bl2 = state1.get(IVY_FERTILE);
         IvyConfiguration ivyConfig = state.get(IVY_CONFIGURATION);
-        if (((i == 0) && (!bl)) || ((i > 0) && (bl)))
-            tickView.scheduleBlockTick(pos, this, 1);
         if (bl1 != bl2) {
             tickView.scheduleBlockTick(pos, this, 1);
         }
         if (!state.canPlaceAt(world, pos)) {
+            tickView.scheduleBlockTick(pos, this, 1);
+        }
+        if (!state3.isOf(FBBlocks.CLIMBING_IVY) ||
+                ((state3.get(IVY_CONFIGURATION).hasNorth() == tipNorth) ||
+                        (state3.get(IVY_CONFIGURATION).hasEast() == tipEast) ||
+                        (state3.get(IVY_CONFIGURATION).hasSouth() == tipSouth) ||
+                        (state3.get(IVY_CONFIGURATION).hasWest() == tipWest))) {
             tickView.scheduleBlockTick(pos, this, 1);
         }
         if ((ivyConfig.hasNorth() && !faceCheck(Direction.NORTH, world, pos)) ||
@@ -232,47 +246,57 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        boolean bl = state.get(IVY_TIP);
+        boolean tipNorth = state.get(IVY_TIP_NORTH);
+        boolean tipEast = state.get(IVY_TIP_EAST);
+        boolean tipSouth = state.get(IVY_TIP_SOUTH);
+        boolean tipWest = state.get(IVY_TIP_WEST);
         int i = countIvyAbove(world, pos);
         BlockPos pos1 = pos.offset(Direction.UP, i);
         BlockPos pos2 = pos.offset(Direction.DOWN);
+        BlockPos pos3 = pos.offset(Direction.UP);
         BlockState state1 = world.getBlockState(pos1);
         BlockState state2 = world.getBlockState(pos2);
+        BlockState state3 = world.getBlockState(pos3);
         boolean bl1 = state.get(IVY_FERTILE);
         boolean bl2 = state1.get(IVY_FERTILE);
         IvyConfiguration ivyConfig = state.get(IVY_CONFIGURATION);
         if (!state.canPlaceAt(world, pos)) {
             world.breakBlock(pos, true);
         }
-        if (((i == 0) && (!bl)) || ((i > 0) && (bl))) {
-            getType(state, world, pos);
-        }
-        if (bl1 != bl2) {
-            getFertility(state, world, pos);
-        }
-        if ((ivyConfig.hasNorth() && !faceCheck(Direction.NORTH, world, pos)) ||
-                (ivyConfig.hasEast() && !faceCheck(Direction.EAST, world, pos)) ||
-                (ivyConfig.hasSouth() && !faceCheck(Direction.SOUTH, world, pos)) ||
-                (ivyConfig.hasWest() && !faceCheck(Direction.WEST, world, pos))) {
-            if (!faceCheck(Direction.NORTH, world, pos) &&
-                    !faceCheck(Direction.EAST, world, pos) &&
-                    !faceCheck(Direction.SOUTH, world, pos) &&
-                    !faceCheck(Direction.WEST, world, pos)) {
-                world.breakBlock(pos, true);
+        else {
+            if (!state3.isOf(FBBlocks.CLIMBING_IVY) ||
+                    ((state3.get(IVY_CONFIGURATION).hasNorth() == tipNorth) ||
+                            (state3.get(IVY_CONFIGURATION).hasEast() == tipEast) ||
+                            (state3.get(IVY_CONFIGURATION).hasSouth() == tipSouth) ||
+                            (state3.get(IVY_CONFIGURATION).hasWest() == tipWest))) {
+                getType(state, world, pos);
             }
-            else {
-                world.setBlockState(pos, getNewFromConfig(state, world, pos));
-                world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            if (bl1 != bl2) {
+                getFertility(state, world, pos);
             }
-        }
-        if (state2.isOf(FBBlocks.CLIMBING_IVY)) {
-            IvyConfiguration ivyConfig1 = state2.get(IVY_CONFIGURATION);
-            if ((ivyConfig.hasNorth() && !ivyConfig1.hasNorth()) ||
-                    (ivyConfig.hasEast() && !ivyConfig1.hasEast()) ||
-                    (ivyConfig.hasSouth() && !ivyConfig1.hasSouth()) ||
-                    (ivyConfig.hasWest() && !ivyConfig1.hasWest())) {
+            if ((ivyConfig.hasNorth() && !faceCheck(Direction.NORTH, world, pos)) ||
+                    (ivyConfig.hasEast() && !faceCheck(Direction.EAST, world, pos)) ||
+                    (ivyConfig.hasSouth() && !faceCheck(Direction.SOUTH, world, pos)) ||
+                    (ivyConfig.hasWest() && !faceCheck(Direction.WEST, world, pos))) {
+                if (!faceCheck(Direction.NORTH, world, pos) &&
+                        !faceCheck(Direction.EAST, world, pos) &&
+                        !faceCheck(Direction.SOUTH, world, pos) &&
+                        !faceCheck(Direction.WEST, world, pos)) {
+                    world.breakBlock(pos, true);
+                } else {
+                    world.setBlockState(pos, getNewFromConfig(state, world, pos));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                }
+            }
+            if (state2.isOf(FBBlocks.CLIMBING_IVY)) {
+                IvyConfiguration ivyConfig1 = state2.get(IVY_CONFIGURATION);
+                if ((ivyConfig.hasNorth() && !ivyConfig1.hasNorth()) ||
+                        (ivyConfig.hasEast() && !ivyConfig1.hasEast()) ||
+                        (ivyConfig.hasSouth() && !ivyConfig1.hasSouth()) ||
+                        (ivyConfig.hasWest() && !ivyConfig1.hasWest())) {
                     world.setBlockState(pos, getNewFromConfig(state2, world, pos));
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                }
             }
         }
     }
@@ -326,13 +350,19 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     public void getType(BlockState state, ServerWorld world, BlockPos pos) {
-        int i = countIvyAbove(world, pos);
-        if (i == 0) {
-            world.setBlockState(pos, state.with(IVY_TIP, true));
-        }
-        else {
-            world.setBlockState(pos, state.with(IVY_TIP, false));
-        }
+        BlockState aboveState = world.getBlockState(pos.offset(UP));
+            if (aboveState.isOf(FBBlocks.CLIMBING_IVY)) {
+                IvyConfiguration aboveConfig = aboveState.get(IVY_CONFIGURATION);
+                boolean aboveNorth = aboveConfig.hasNorth();
+                boolean aboveEast = aboveConfig.hasEast();
+                boolean aboveSouth = aboveConfig.hasSouth();
+                boolean aboveWest = aboveConfig.hasWest();
+
+                world.setBlockState(pos, state.with(IVY_TIP_NORTH, !aboveNorth).with(IVY_TIP_EAST, !aboveEast).with(IVY_TIP_SOUTH, !aboveSouth).with(IVY_TIP_WEST, !aboveWest));
+            }
+            else {
+                world.setBlockState(pos, state.with(IVY_TIP_NORTH, true).with(IVY_TIP_EAST, true).with(IVY_TIP_SOUTH, true).with(IVY_TIP_WEST, true));
+            }
     }
 
     public void getFertility(BlockState state, ServerWorld world, BlockPos pos) {
@@ -354,12 +384,12 @@ public class IvyBlock extends Block implements Fertilizable {
 
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if ((itemStack.isOf(Items.SHEARS)) && (state.get(IVY_TIP))) {
+        if ((itemStack.isOf(Items.SHEARS)) && (countIvyAbove(world, pos) == 0)) {
             world.setBlockState(pos, state.with(IVY_FERTILE, false));
             world.playSound(null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }
-        if ((itemStack.isOf(Items.HONEY_BOTTLE)) && (state.get(IVY_TIP))) {
+        if ((itemStack.isOf(Items.HONEY_BOTTLE)) && (countIvyAbove(world, pos) == 0)) {
             int qty = itemStack.getCount();
             world.setBlockState(pos, state.with(IVY_FERTILE, true));
             if ((qty > 1) && (!player.isInCreativeMode())) {
@@ -512,7 +542,7 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{NORTH, EAST, SOUTH, WEST, IVY_TIP, IVY_FERTILE, IVY_CONFIGURATION});
+        builder.add(new Property[]{NORTH, EAST, SOUTH, WEST, IVY_TIP_NORTH, IVY_TIP_EAST, IVY_TIP_SOUTH, IVY_TIP_WEST, IVY_FERTILE, IVY_CONFIGURATION});
     }
 
     protected BlockState rotate(BlockState state, BlockRotation rotation) {
@@ -615,7 +645,10 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     static {
-        IVY_TIP = FBProperties.IVY_TIP;
+        IVY_TIP_NORTH = FBProperties.IVY_TIP_NORTH;
+        IVY_TIP_EAST = FBProperties.IVY_TIP_EAST;
+        IVY_TIP_SOUTH = FBProperties.IVY_TIP_SOUTH;
+        IVY_TIP_WEST = FBProperties.IVY_TIP_WEST;
         IVY_FERTILE = FBProperties.IVY_FERTILE;
         IVY_CONFIGURATION = FBProperties.IVY_CONFIGURATION;
         NORTH = ConnectingBlock.NORTH;

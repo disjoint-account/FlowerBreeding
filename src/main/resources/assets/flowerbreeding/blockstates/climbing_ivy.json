@@ -1,0 +1,336 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_tip"
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_north": "true"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "north_single"
+              },
+              {
+                "ivy_configuration": "north_east"
+              },
+              {
+                "ivy_configuration": "west_north"
+              },
+              {
+                "ivy_configuration": "north_south"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_regular"
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_north": "false"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "north_single"
+              },
+              {
+                "ivy_configuration": "north_east"
+              },
+              {
+                "ivy_configuration": "west_north"
+              },
+              {
+                "ivy_configuration": "north_south"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_tip",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_east": "true"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "east_single"
+              },
+              {
+                "ivy_configuration": "east_south"
+              },
+              {
+                "ivy_configuration": "north_east"
+              },
+              {
+                "ivy_configuration": "east_west"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_regular",
+        "uvlock": true,
+        "y": 90
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_east": "false"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "east_single"
+              },
+              {
+                "ivy_configuration": "east_south"
+              },
+              {
+                "ivy_configuration": "north_east"
+              },
+              {
+                "ivy_configuration": "east_west"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_tip",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_south": "true"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "south_single"
+              },
+              {
+                "ivy_configuration": "south_west"
+              },
+              {
+                "ivy_configuration": "east_south"
+              },
+              {
+                "ivy_configuration": "north_south"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_regular",
+        "uvlock": true,
+        "y": 180
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_south": "false"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "south_single"
+              },
+              {
+                "ivy_configuration": "south_west"
+              },
+              {
+                "ivy_configuration": "east_south"
+              },
+              {
+                "ivy_configuration": "north_south"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "north_east_south"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_tip",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_west": "true"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "west_single"
+              },
+              {
+                "ivy_configuration": "west_north"
+              },
+              {
+                "ivy_configuration": "south_west"
+              },
+              {
+                "ivy_configuration": "east_west"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "apply": {
+        "model": "flowerbreeding:block/ivy_regular",
+        "uvlock": true,
+        "y": 270
+      },
+      "when": {
+        "AND": [
+          {
+            "ivy_tip_west": "false"
+          },
+          {
+            "OR": [
+              {
+                "ivy_configuration": "west_single"
+              },
+              {
+                "ivy_configuration": "west_north"
+              },
+              {
+                "ivy_configuration": "south_west"
+              },
+              {
+                "ivy_configuration": "east_west"
+              },
+              {
+                "ivy_configuration": "west_north_east"
+              },
+              {
+                "ivy_configuration": "east_south_west"
+              },
+              {
+                "ivy_configuration": "south_west_north"
+              },
+              {
+                "ivy_configuration": "all"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

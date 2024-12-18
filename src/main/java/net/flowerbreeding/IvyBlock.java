@@ -57,6 +57,8 @@ public class IvyBlock extends Block implements Fertilizable {
     private static final VoxelShape EAST_SOUTH_SHAPE;
     private static final VoxelShape SOUTH_WEST_SHAPE;
     private static final VoxelShape WEST_NORTH_SHAPE;
+    private static final VoxelShape NORTH_SOUTH_SHAPE;
+    private static final VoxelShape EAST_WEST_SHAPE;
     private static final VoxelShape NORTH_EAST_SOUTH_SHAPE;
     private static final VoxelShape EAST_SOUTH_WEST_SHAPE;
     private static final VoxelShape SOUTH_WEST_NORTH_SHAPE;
@@ -83,6 +85,9 @@ public class IvyBlock extends Block implements Fertilizable {
         if (ivyConfig == NORTH_EAST) {
             voxelShape = VoxelShapes.union(voxelShape, SOUTH_WEST_SHAPE);
         }
+        if (ivyConfig == NORTH_SOUTH) {
+            voxelShape = VoxelShapes.union(voxelShape, NORTH_SOUTH_SHAPE);
+        }
         if (ivyConfig == WEST_NORTH_EAST) {
             voxelShape = VoxelShapes.union(voxelShape, EAST_SOUTH_WEST_SHAPE);
         }
@@ -91,6 +96,9 @@ public class IvyBlock extends Block implements Fertilizable {
         }
         if (ivyConfig == EAST_SOUTH) {
             voxelShape = VoxelShapes.union(voxelShape, WEST_NORTH_SHAPE);
+        }
+        if (ivyConfig == EAST_WEST) {
+            voxelShape = VoxelShapes.union(voxelShape, EAST_WEST_SHAPE);
         }
         if (ivyConfig == NORTH_EAST_SOUTH) {
             voxelShape = VoxelShapes.union(voxelShape, SOUTH_WEST_NORTH_SHAPE);
@@ -429,6 +437,11 @@ public class IvyBlock extends Block implements Fertilizable {
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return ActionResult.SUCCESS;
                 }
+                else if (southAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, NORTH_SOUTH));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
             }
             if (ivyConfig == EAST_SINGLE) {
                 if (southAvailable) {
@@ -438,6 +451,11 @@ public class IvyBlock extends Block implements Fertilizable {
                 }
                 else if (northAvailable) {
                     world.setBlockState(pos, state.with(IVY_CONFIGURATION, NORTH_EAST));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+                else if (westAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, EAST_WEST));
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return ActionResult.SUCCESS;
                 }
@@ -453,6 +471,11 @@ public class IvyBlock extends Block implements Fertilizable {
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return ActionResult.SUCCESS;
                 }
+                else if (northAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, NORTH_SOUTH));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
             }
             if (ivyConfig == WEST_SINGLE) {
                 if (northAvailable) {
@@ -462,6 +485,11 @@ public class IvyBlock extends Block implements Fertilizable {
                 }
                 else if (southAvailable) {
                     world.setBlockState(pos, state.with(IVY_CONFIGURATION, SOUTH_WEST));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+                else if (eastAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, EAST_WEST));
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return ActionResult.SUCCESS;
                 }
@@ -510,6 +538,30 @@ public class IvyBlock extends Block implements Fertilizable {
                 }
                 else if (southAvailable) {
                     world.setBlockState(pos, state.with(IVY_CONFIGURATION, SOUTH_WEST_NORTH));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+            }
+            if (ivyConfig == NORTH_SOUTH) {
+                if (eastAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, NORTH_EAST_SOUTH));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+                else if (westAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, SOUTH_WEST_NORTH));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+            }
+            if (ivyConfig == EAST_WEST) {
+                if (southAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, EAST_SOUTH_WEST));
+                    world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    return ActionResult.SUCCESS;
+                }
+                else if (northAvailable) {
+                    world.setBlockState(pos, state.with(IVY_CONFIGURATION, WEST_NORTH_EAST));
                     world.playSound((PlayerEntity) null, pos, SoundEvents.BLOCK_VINE_PLACE, SoundCategory.BLOCKS, 1.0F, 1.0F);
                     return ActionResult.SUCCESS;
                 }
@@ -629,16 +681,22 @@ public class IvyBlock extends Block implements Fertilizable {
         if (northFlag && !southFlag && westFlag) {
             return state.with(IVY_CONFIGURATION, WEST_NORTH);
         }
-        if (northFlag && !southFlag) {
+        if (northFlag && southFlag ) {
+            return state.with(IVY_CONFIGURATION, NORTH_SOUTH);
+        }
+        if (!northFlag && eastFlag && westFlag) {
+            return state.with(IVY_CONFIGURATION, EAST_WEST);
+        }
+        if (northFlag) {
             return state.with(IVY_CONFIGURATION, NORTH_SINGLE);
         }
-        if (!northFlag && eastFlag && !westFlag) {
+        if (eastFlag) {
             return state.with(IVY_CONFIGURATION, EAST_SINGLE);
         }
-        if (!northFlag && !eastFlag && southFlag) {
+        if (southFlag) {
             return state.with(IVY_CONFIGURATION, SOUTH_SINGLE);
         }
-        if (!northFlag && !eastFlag && westFlag) {
+        if (westFlag) {
             return state.with(IVY_CONFIGURATION, WEST_SINGLE);
         }
         else return Blocks.AIR.getDefaultState();
@@ -664,6 +722,8 @@ public class IvyBlock extends Block implements Fertilizable {
         EAST_SOUTH_SHAPE = VoxelShapes.union(EAST_SHAPE, SOUTH_SHAPE);
         SOUTH_WEST_SHAPE = VoxelShapes.union(SOUTH_SHAPE, WEST_SHAPE);
         WEST_NORTH_SHAPE = VoxelShapes.union(WEST_SHAPE, NORTH_SHAPE);
+        NORTH_SOUTH_SHAPE = VoxelShapes.union(NORTH_SHAPE, SOUTH_SHAPE);
+        EAST_WEST_SHAPE = VoxelShapes.union(EAST_SHAPE, WEST_SHAPE);
         NORTH_EAST_SOUTH_SHAPE = VoxelShapes.union(NORTH_SHAPE, EAST_SHAPE, SOUTH_SHAPE);
         EAST_SOUTH_WEST_SHAPE = VoxelShapes.union(EAST_SHAPE, SOUTH_SHAPE, WEST_SHAPE);
         SOUTH_WEST_NORTH_SHAPE = VoxelShapes.union(SOUTH_SHAPE, WEST_SHAPE, NORTH_SHAPE);

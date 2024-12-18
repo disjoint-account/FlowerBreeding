@@ -360,6 +360,8 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBBlocks.BLACK_CYPRUS_VINE.asItem(), Models.GENERATED);
         itemModelGenerator.register(FBBlocks.CYAN_CYPRUS_VINE.asItem(), Models.GENERATED);
 
+        itemModelGenerator.register(FBBlocks.CLIMBING_IVY.asItem(), Models.GENERATED);
+
         itemModelGenerator.register(FBItems.FLORAL_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }

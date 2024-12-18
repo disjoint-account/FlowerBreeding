@@ -485,5 +485,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_CYPRUS_VINE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_CYPRUS_VINE, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_CYPRUS_VINE, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CLIMBING_IVY, RenderLayer.getCutout());
     }
 }

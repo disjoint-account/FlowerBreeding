@@ -763,6 +763,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.CLIMBABLE)
                 .addOptionalTag(FBTags.Blocks.JASMINES)
-                .addOptionalTag(FBTags.Blocks.CYPRUS_VINES);
+                .addOptionalTag(FBTags.Blocks.CYPRUS_VINES)
+                .add(FBBlocks.CLIMBING_IVY);
     }
 }

@@ -1,4 +1,4 @@
-package net.flowerbreeding.blockentities;
+package net.flowerbreeding.blockentities.vase;
 
 import net.flowerbreeding.FBBlockEntities;
 import net.minecraft.block.BlockState;
@@ -18,7 +18,6 @@ import org.jetbrains.annotations.Nullable;
 
 public class VaseBlockEntity extends BlockEntity implements Inventory {
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
-    private float rotation = 0;
 
     public VaseBlockEntity(BlockPos pos, BlockState state) {
         super(FBBlockEntities.VASE_BE, pos, state);

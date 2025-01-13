@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vase",
+  "key": {
+    "#": "minecraft:light_blue_terracotta",
+    "X": "minecraft:dirt"
+  },
+  "pattern": [
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:light_blue_vase"
+  }
+}

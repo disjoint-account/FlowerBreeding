@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "vase",
+  "key": {
+    "#": "minecraft:cyan_terracotta",
+    "X": "minecraft:dirt"
+  },
+  "pattern": [
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:cyan_vase"
+  }
+}

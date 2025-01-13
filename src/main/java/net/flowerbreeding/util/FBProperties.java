@@ -1,6 +1,6 @@
 package net.flowerbreeding.util;
 
-import net.flowerbreeding.util.properties.IvyConfiguration;
+import net.flowerbreeding.util.properties.*;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
 

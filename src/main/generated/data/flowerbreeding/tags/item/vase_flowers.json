@@ -63,6 +63,14 @@
     {
       "id": "#flowerbreeding:lupins",
       "required": false
+    },
+    {
+      "id": "#flowerbreeding:open_eyeblossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:closed_eyeblossoms",
+      "required": false
     }
   ]
 }

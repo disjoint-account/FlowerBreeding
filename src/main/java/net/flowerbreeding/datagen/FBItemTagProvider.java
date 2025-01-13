@@ -707,6 +707,8 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.FOXGLOVES)
                 .addOptionalTag(FBTags.Items.HYACINTHS)
                 .addOptionalTag(FBTags.Items.PHLOXES)
-                .addOptionalTag(FBTags.Items.LUPINS);
+                .addOptionalTag(FBTags.Items.LUPINS)
+                .addOptionalTag(FBTags.Items.OPEN_EYEBLOSSOMS)
+                .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
     }
 }

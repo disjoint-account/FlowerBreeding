@@ -364,6 +364,23 @@ public class FBItemGroup {
 
                         entries.add(FBBlocks.CLIMBING_IVY);
 
+                        entries.add(FBBlocks.WHITE_VASE);
+                        entries.add(FBBlocks.LIGHT_GRAY_VASE);
+                        entries.add(FBBlocks.GRAY_VASE);
+                        entries.add(FBBlocks.BLACK_VASE);
+                        entries.add(FBBlocks.BROWN_VASE);
+                        entries.add(FBBlocks.RED_VASE);
+                        entries.add(FBBlocks.ORANGE_VASE);
+                        entries.add(FBBlocks.YELLOW_VASE);
+                        entries.add(FBBlocks.LIME_VASE);
+                        entries.add(FBBlocks.GREEN_VASE);
+                        entries.add(FBBlocks.CYAN_VASE);
+                        entries.add(FBBlocks.LIGHT_BLUE_VASE);
+                        entries.add(FBBlocks.BLUE_VASE);
+                        entries.add(FBBlocks.PURPLE_VASE);
+                        entries.add(FBBlocks.MAGENTA_VASE);
+                        entries.add(FBBlocks.PINK_VASE);
+
                         entries.add(FBItems.FLORAL_SMITHING_TEMPLATE);
                     }).build());
     public static void registerItemGroups() {

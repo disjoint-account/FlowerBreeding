@@ -9,8 +9,11 @@ import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
@@ -448,6 +451,23 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(exporter, FBItems.VINE_POLLEN_VIAL, FBItems.DAISY_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_1"));
                 offerBotanyRecipe(exporter, FBItems.DAISY_POLLEN_VIAL, FBItems.VINE_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_2"));
 
+                offerVaseRecipe(FBBlocks.WHITE_VASE, Items.WHITE_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.LIGHT_GRAY_VASE, Items.LIGHT_GRAY_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.GRAY_VASE, Items.GRAY_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.BLACK_VASE, Items.BLACK_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.BROWN_VASE, Items.BROWN_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.RED_VASE, Items.RED_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.ORANGE_VASE, Items.ORANGE_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.YELLOW_VASE, Items.YELLOW_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.LIME_VASE, Items.LIME_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.GREEN_VASE, Items.GREEN_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.CYAN_VASE, Items.CYAN_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.LIGHT_BLUE_VASE, Items.LIGHT_BLUE_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.BLUE_VASE, Items.BLUE_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.PURPLE_VASE, Items.PURPLE_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.MAGENTA_VASE, Items.MAGENTA_TERRACOTTA);
+                offerVaseRecipe(FBBlocks.PINK_VASE, Items.PINK_TERRACOTTA);
+
                 offerSmithingTrimRecipe(FBItems.FLORAL_SMITHING_TEMPLATE, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID + "floral_smithing_trim")));
 
                 offerSmithingTemplateCopyingRecipe(FBItems.FLORAL_SMITHING_TEMPLATE, Blocks.MOSS_BLOCK);
@@ -458,6 +478,17 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                         .criterion("has_vial1", conditionsFromItem(vial1))
                         .criterion("has_vial2", conditionsFromItem(vial2))
                         .offerTo(exporter, recipeId, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID + recipeId + "recipe")));
+            }
+
+            private void offerVaseRecipe(ItemConvertible output, ItemConvertible input) {
+                createShaped(RecipeCategory.DECORATIONS, output, 1)
+                        .group("vase")
+                        .input('#', input)
+                        .input('X', Items.DIRT)
+                        .pattern("#X#")
+                        .pattern("###")
+                        .criterion(hasItem(input), conditionsFromItem(input))
+                        .offerTo(exporter);
             }
         };
     }

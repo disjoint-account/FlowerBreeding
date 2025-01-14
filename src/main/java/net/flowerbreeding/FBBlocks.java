@@ -549,37 +549,37 @@ public class FBBlocks {
     //other stuff
 
     public static final Block WHITE_VASE = registerBlock("white_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block LIGHT_GRAY_VASE = registerBlock("light_gray_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block GRAY_VASE = registerBlock("gray_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block BLACK_VASE = registerBlock("black_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block BROWN_VASE = registerBlock("brown_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block RED_VASE = registerBlock("red_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block ORANGE_VASE = registerBlock("orange_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block YELLOW_VASE = registerBlock("yellow_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block LIME_VASE = registerBlock("lime_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block GREEN_VASE = registerBlock("green_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block CYAN_VASE = registerBlock("cyan_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block LIGHT_BLUE_VASE = registerBlock("light_blue_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block BLUE_VASE = registerBlock("blue_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block PURPLE_VASE = registerBlock("purple_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block MAGENTA_VASE = registerBlock("magenta_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
     public static final Block PINK_VASE = registerBlock("pink_vase",
-            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));
 
     // makin the thangz
 

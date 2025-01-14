@@ -65,11 +65,6 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
     }
 
     @Override
-    protected BlockRenderType getRenderType(BlockState state) {
-        return BlockRenderType.MODEL;
-    }
-
-    @Override
     protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if(state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -168,123 +163,143 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
         boolean isDay = !CreakingHeartBlock.isNightAndNatural(world);
         if (stack.isOf(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             MagentaEyeblossomBlock.MagentaEyeblossomState magentaEyeblossomState = MagentaEyeblossomBlock.MagentaEyeblossomState.of(true).getOpposite();
             magentaEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             MagentaEyeblossomBlock.MagentaEyeblossomState magentaEyeblossomState = MagentaEyeblossomBlock.MagentaEyeblossomState.of(false).getOpposite();
             magentaEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_BLUE_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_BLUE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             BlueEyeblossomBlock.BlueEyeblossomState blueEyeblossomState = BlueEyeblossomBlock.BlueEyeblossomState.of(true).getOpposite();
             blueEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, blueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, blueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_BLUE_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_BLUE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             BlueEyeblossomBlock.BlueEyeblossomState blueEyeblossomState = BlueEyeblossomBlock.BlueEyeblossomState.of(false).getOpposite();
             blueEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, blueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, blueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_WHITE_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_WHITE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             WhiteEyeblossomBlock.WhiteEyeblossomState whiteEyeblossomState = WhiteEyeblossomBlock.WhiteEyeblossomState.of(true).getOpposite();
             whiteEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, whiteEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, whiteEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_WHITE_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_WHITE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             WhiteEyeblossomBlock.WhiteEyeblossomState whiteEyeblossomState = WhiteEyeblossomBlock.WhiteEyeblossomState.of(false).getOpposite();
             whiteEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, whiteEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, whiteEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(Items.OPEN_EYEBLOSSOM) && isDay) {
             entity.setStack(slot, new ItemStack(Items.CLOSED_EYEBLOSSOM));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             EyeblossomBlock.EyeblossomState eyeblossomState = EyeblossomBlock.EyeblossomState.of(true).getOpposite();
             eyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, eyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, eyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(Items.CLOSED_EYEBLOSSOM) && !isDay) {
             entity.setStack(slot, new ItemStack(Items.OPEN_EYEBLOSSOM));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             EyeblossomBlock.EyeblossomState eyeblossomState = EyeblossomBlock.EyeblossomState.of(false).getOpposite();
             eyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, eyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, eyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_RED_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_RED_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             RedEyeblossomBlock.RedEyeblossomState redEyeblossomState = RedEyeblossomBlock.RedEyeblossomState.of(true).getOpposite();
             redEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, redEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, redEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_RED_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_RED_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             RedEyeblossomBlock.RedEyeblossomState redEyeblossomState = RedEyeblossomBlock.RedEyeblossomState.of(false).getOpposite();
             redEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, redEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, redEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_YELLOW_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_YELLOW_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             YellowEyeblossomBlock.YellowEyeblossomState yellowEyeblossomState = YellowEyeblossomBlock.YellowEyeblossomState.of(true).getOpposite();
             yellowEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, yellowEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, yellowEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_YELLOW_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_YELLOW_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             YellowEyeblossomBlock.YellowEyeblossomState yellowEyeblossomState = YellowEyeblossomBlock.YellowEyeblossomState.of(false).getOpposite();
             yellowEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, yellowEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, yellowEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_LIGHT_BLUE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             LightBlueEyeblossomBlock.LightBlueEyeblossomState lightBlueEyeblossomState = LightBlueEyeblossomBlock.LightBlueEyeblossomState.of(true).getOpposite();
             lightBlueEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_LIGHT_BLUE_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_LIGHT_BLUE_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             LightBlueEyeblossomBlock.LightBlueEyeblossomState lightBlueEyeblossomState = LightBlueEyeblossomBlock.LightBlueEyeblossomState.of(false).getOpposite();
             lightBlueEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_PINK_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_PINK_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             PinkEyeblossomBlock.PinkEyeblossomState pinkEyeblossomState = PinkEyeblossomBlock.PinkEyeblossomState.of(true).getOpposite();
             pinkEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, pinkEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, pinkEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_PINK_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_PINK_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             PinkEyeblossomBlock.PinkEyeblossomState pinkEyeblossomState = PinkEyeblossomBlock.PinkEyeblossomState.of(false).getOpposite();
             pinkEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, pinkEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, pinkEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_BLACK_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_BLACK_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             BlackEyeblossomBlock.BlackEyeblossomState blackEyeblossomState = BlackEyeblossomBlock.BlackEyeblossomState.of(true).getOpposite();
             blackEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, blackEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, blackEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_BLACK_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_BLACK_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             BlackEyeblossomBlock.BlackEyeblossomState blackEyeblossomState = BlackEyeblossomBlock.BlackEyeblossomState.of(false).getOpposite();
             blackEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, blackEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, blackEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.OPEN_CYAN_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_CYAN_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             CyanEyeblossomBlock.CyanEyeblossomState cyanEyeblossomState = CyanEyeblossomBlock.CyanEyeblossomState.of(true).getOpposite();
             cyanEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, cyanEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, cyanEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
         if (stack.isOf(FBBlocks.CLOSED_CYAN_EYEBLOSSOM.asItem()) && !isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.OPEN_CYAN_EYEBLOSSOM.asItem()));
+            world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);
             CyanEyeblossomBlock.CyanEyeblossomState cyanEyeblossomState = CyanEyeblossomBlock.CyanEyeblossomState.of(false).getOpposite();
             cyanEyeblossomState.spawnTrailParticle(world, pos, random);
-            world.playSound((PlayerEntity)null, pos, cyanEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, cyanEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
     }
 

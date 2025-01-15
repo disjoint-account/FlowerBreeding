@@ -34,10 +34,10 @@ public class VaseBlockEntityRenderer implements BlockEntityRenderer<VaseBlockEnt
         if (!entity.getStack(slot).isEmpty()) {
             ItemStack itemStack = entity.getStack(slot);
             Block block = Block.getBlockFromItem(itemStack.getItem());
-            matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
-            matrixStack.translate(x, y, z);
             matrixStack.multiply(RotationAxis.POSITIVE_X.rotationDegrees(degX));
             matrixStack.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(degZ));
+            matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
+            matrixStack.translate(x, y, z);
             blockRenderManager.renderBlock(block.getDefaultState(), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, Random.create());
         }
     }

@@ -364,6 +364,8 @@ public class FBItemGroup {
 
                         entries.add(FBBlocks.CLIMBING_IVY);
 
+                        entries.add(FBItems.TROWEL);
+
                         entries.add(FBBlocks.GRASS_FLOWERBED);
                         entries.add(FBBlocks.DIRT_FLOWERBED);
                         entries.add(FBBlocks.FARMLAND_FLOWERBED);

@@ -18,6 +18,9 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(ItemTags.DURABILITY_ENCHANTABLE)
+                .add(FBItems.TROWEL);
+
         getOrCreateTagBuilder(ItemTags.BEE_FOOD)
                 .addOptionalTag(FBTags.Items.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.BLUE_FLOWERS)

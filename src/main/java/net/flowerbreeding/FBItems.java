@@ -63,6 +63,8 @@ public class FBItems {
     public static final Item BLACK_LOTUS_FLOWER = registerItem("black_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLACK_LOTUS_FLOWER, settings));
     public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, settings));
 
+    public static final Item TROWEL = registerItem("trowel", settings -> new TrowelItem(settings.maxDamage(238)));
+
     public static final Item FLORAL_SMITHING_TEMPLATE = registerSmithingTemplate("floral_armor_trim_smithing_template", SmithingTemplateItem.of(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, "floral_armor_trim_smithing_template"))).rarity(Rarity.UNCOMMON)));
 
     public static void registerModItems() {

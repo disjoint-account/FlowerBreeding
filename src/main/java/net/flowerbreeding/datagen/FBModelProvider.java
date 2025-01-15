@@ -363,6 +363,8 @@ public class FBModelProvider extends FabricModelProvider {
 
         itemModelGenerator.register(FBBlocks.CLIMBING_IVY.asItem(), Models.GENERATED);
 
+        itemModelGenerator.register(FBItems.TROWEL, Models.GENERATED);
+
         itemModelGenerator.register(FBItems.FLORAL_SMITHING_TEMPLATE, Models.GENERATED);
     }
 }

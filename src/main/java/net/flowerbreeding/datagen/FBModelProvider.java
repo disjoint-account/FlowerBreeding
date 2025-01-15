@@ -248,17 +248,6 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
-        blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.BLUE_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.WHITE_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.ORANGE_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.RED_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.YELLOW_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.LIGHT_BLUE_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.PINK_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.BLACK_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerTintableCross(FBBlocks.CYAN_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
-
         blockStateModelGenerator.registerTintedItemModel(FBBlocks.GRASS_FLOWERBED, Identifier.of(FlowerBreeding.MOD_ID, "block/grass_flowerbed"), new GrassTintSource());
     }
 
@@ -349,6 +338,17 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBItems.PINK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.BLACK_LOTUS_FLOWER, Models.GENERATED);
         itemModelGenerator.register(FBItems.CYAN_LOTUS_FLOWER, Models.GENERATED);
+
+        itemModelGenerator.register(FBBlocks.MAGENTA_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.BLUE_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.WHITE_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.ORANGE_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.RED_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.YELLOW_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.LIGHT_BLUE_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.PINK_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.BLACK_JASMINE.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.CYAN_JASMINE.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(FBBlocks.MAGENTA_CYPRUS_VINE.asItem(), Models.GENERATED);
         itemModelGenerator.register(FBBlocks.BLUE_CYPRUS_VINE.asItem(), Models.GENERATED);

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "flowerbreeding:block/black_jasmine"
+    "layer0": "flowerbreeding:item/black_jasmine"
   }
 }

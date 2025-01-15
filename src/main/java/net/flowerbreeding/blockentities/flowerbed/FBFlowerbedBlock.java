@@ -48,7 +48,7 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
     @Override
     protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockState blockState = world.getBlockState(pos.up());
-        return !blockState.isSolid();
+        return !blockState.isSolidBlock(world, pos.up());
     }
 
     @Override

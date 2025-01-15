@@ -72,7 +72,7 @@ public class IvyBlock extends Block implements Fertilizable {
 
     public IvyBlock(AbstractBlock.Settings settings) {
         super(settings);
-        this.setDefaultState(((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(NORTH, false)).with(EAST, false)).with(SOUTH, false)).with(WEST, false)).with(IVY_TIP_NORTH, true)).with(IVY_TIP_EAST, true)).with(IVY_TIP_SOUTH, true)).with(IVY_TIP_WEST, true)).with(IVY_FERTILE, true)).with(IVY_CONFIGURATION, NORTH_SINGLE)));
+        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)this.stateManager.getDefaultState()).with(NORTH, false)).with(EAST, false)).with(SOUTH, false)).with(WEST, false)).with(IVY_TIP_NORTH, true)).with(IVY_TIP_EAST, true)).with(IVY_TIP_SOUTH, true)).with(IVY_TIP_WEST, true)).with(IVY_FERTILE, true)).with(IVY_CONFIGURATION, NORTH_SINGLE));
         this.shapesByState = ImmutableMap.copyOf((Map)this.stateManager.getStates().stream().collect(Collectors.toMap(Function.identity(), IvyBlock::getShapeForState)));
     }
 
@@ -392,12 +392,13 @@ public class IvyBlock extends Block implements Fertilizable {
 
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if ((itemStack.isOf(Items.SHEARS)) && (countIvyAbove(world, pos) == 0)) {
+        if ((state.get(IVY_FERTILE)) && (itemStack.isOf(Items.SHEARS)) && (countIvyAbove(world, pos) == 0)) {
             world.setBlockState(pos, state.with(IVY_FERTILE, false));
             world.playSound(null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            itemStack.damage(1, player);
             return ActionResult.SUCCESS;
         }
-        if ((itemStack.isOf(Items.HONEY_BOTTLE)) && (countIvyAbove(world, pos) == 0)) {
+        if ((!state.get(IVY_FERTILE)) && (itemStack.isOf(Items.HONEY_BOTTLE)) && (countIvyAbove(world, pos) == 0)) {
             int qty = itemStack.getCount();
             world.setBlockState(pos, state.with(IVY_FERTILE, true));
             if ((qty > 1) && (!player.isInCreativeMode())) {

@@ -463,25 +463,15 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_LOTUS_FLOWER, drops(FBItems.CYAN_LOTUS_FLOWER));
 
             addDrop(FBBlocks.MAGENTA_JASMINE);
-            addDrop(FBBlocks.MAGENTA_JASMINE_PLANT, drops(FBBlocks.MAGENTA_JASMINE));
             addDrop(FBBlocks.BLUE_JASMINE);
-            addDrop(FBBlocks.BLUE_JASMINE_PLANT, drops(FBBlocks.BLUE_JASMINE));
             addDrop(FBBlocks.WHITE_JASMINE);
-            addDrop(FBBlocks.WHITE_JASMINE_PLANT, drops(FBBlocks.WHITE_JASMINE));
             addDrop(FBBlocks.ORANGE_JASMINE);
-            addDrop(FBBlocks.ORANGE_JASMINE_PLANT, drops(FBBlocks.ORANGE_JASMINE));
             addDrop(FBBlocks.RED_JASMINE);
-            addDrop(FBBlocks.RED_JASMINE_PLANT, drops(FBBlocks.RED_JASMINE));
             addDrop(FBBlocks.YELLOW_JASMINE);
-            addDrop(FBBlocks.YELLOW_JASMINE_PLANT, drops(FBBlocks.YELLOW_JASMINE));
             addDrop(FBBlocks.LIGHT_BLUE_JASMINE);
-            addDrop(FBBlocks.LIGHT_BLUE_JASMINE_PLANT, drops(FBBlocks.LIGHT_BLUE_JASMINE));
             addDrop(FBBlocks.PINK_JASMINE);
-            addDrop(FBBlocks.PINK_JASMINE_PLANT, drops(FBBlocks.PINK_JASMINE));
             addDrop(FBBlocks.BLACK_JASMINE);
-            addDrop(FBBlocks.BLACK_JASMINE_PLANT, drops(FBBlocks.BLACK_JASMINE));
             addDrop(FBBlocks.CYAN_JASMINE);
-            addDrop(FBBlocks.CYAN_JASMINE_PLANT, drops(FBBlocks.CYAN_JASMINE));
 
             addDrop(FBBlocks.MAGENTA_CYPRUS_VINE, dropsWithShears(FBBlocks.MAGENTA_CYPRUS_VINE));
             addDrop(FBBlocks.BLUE_CYPRUS_VINE, dropsWithShears(FBBlocks.BLUE_CYPRUS_VINE));

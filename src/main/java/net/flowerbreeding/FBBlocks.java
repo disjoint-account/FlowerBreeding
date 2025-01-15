@@ -1,6 +1,7 @@
 package net.flowerbreeding;
 
 import net.flowerbreeding.blockentities.flowerbed.FBFlowerbedBlock;
+import net.flowerbreeding.blockentities.planter.PlanterBlock;
 import net.flowerbreeding.blockentities.vase.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.flowerbreeding.eyeblossoms.*;
@@ -549,6 +550,9 @@ public class FBBlocks {
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
 
     //other stuff
+
+    public static final Block PLANTER = registerBlock("planter",
+            PlanterBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
 
     public static final Block GRASS_FLOWERBED = registerBlock("grass_flowerbed",
             FBFlowerbedBlock::new, AbstractBlock.Settings.copy(GRASS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());

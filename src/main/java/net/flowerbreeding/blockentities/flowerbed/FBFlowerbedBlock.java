@@ -1,15 +1,16 @@
 package net.flowerbreeding.blockentities.flowerbed;
 
 import com.mojang.serialization.MapCodec;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.eyeblossoms.*;
-import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
@@ -101,7 +102,7 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof FlowerbedBlockEntity entity) {
-            if (stack.isIn(FBTags.Items.VASE_FLOWERS) && !entity.isFull()) {
+            if ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !entity.isFull()) {
                 if (entity.isEmpty()) {
                     if (!player.isSneaking() && player.getHorizontalFacing() == Direction.NORTH) {
                         entity.setStack(0, stack);

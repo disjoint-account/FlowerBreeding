@@ -2,6 +2,7 @@ package net.flowerbreeding.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalBlockTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.Blocks;
@@ -86,6 +87,15 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.LUPINS)
                 .addOptionalTag(FBTags.Blocks.SMALL_ROSES)
                 .addOptionalTag(FBTags.Blocks.LOTUS_FLOWERS);
+
+        getOrCreateTagBuilder(FBTags.Blocks.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.LILACS)
+                .addOptionalTag(FBTags.Blocks.PEONIES)
+                .addOptionalTag(FBTags.Blocks.ROSE_BUSHES)
+                .addOptionalTag(FBTags.Blocks.PITCHER_PLANTS)
+                .addOptionalTag(FBTags.Blocks.SUNFLOWERS)
+                .addOptionalTag(FBTags.Blocks.LAVENDERS)
+                .addOptionalTag(FBTags.Blocks.HYDRANGEAS);
 
         getOrCreateTagBuilder(FBTags.Blocks.MAGENTA_FLOWERS)
                 .add(Blocks.ALLIUM,
@@ -765,5 +775,33 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.JASMINES)
                 .addOptionalTag(FBTags.Blocks.CYPRUS_VINES)
                 .add(FBBlocks.CLIMBING_IVY);
+
+        getOrCreateTagBuilder(ConventionalBlockTags.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.ALLIUMS)
+                .addOptionalTag(FBTags.Blocks.CORNFLOWERS)
+                .addOptionalTag(FBTags.Blocks.DAISIES)
+                .addOptionalTag(FBTags.Blocks.TORCHFLOWERS)
+                .addOptionalTag(FBTags.Blocks.TULIPS)
+                .addOptionalTag(FBTags.Blocks.AZURE_BLUETS)
+                .addOptionalTag(FBTags.Blocks.DANDELIONS)
+                .addOptionalTag(FBTags.Blocks.ORCHIDS)
+                .addOptionalTag(FBTags.Blocks.LILIES)
+                .addOptionalTag(FBTags.Blocks.POPPIES)
+                .addOptionalTag(FBTags.Blocks.WITHER_ROSES)
+                .addOptionalTag(FBTags.Blocks.OPEN_EYEBLOSSOMS)
+                .addOptionalTag(FBTags.Blocks.CLOSED_EYEBLOSSOMS)
+                .addOptionalTag(FBTags.Blocks.DAFFODILS)
+                .addOptionalTag(FBTags.Blocks.FOXGLOVES)
+                .addOptionalTag(FBTags.Blocks.HYACINTHS)
+                .addOptionalTag(FBTags.Blocks.PHLOXES)
+                .addOptionalTag(FBTags.Blocks.LUPINS)
+                .addOptionalTag(FBTags.Blocks.SMALL_ROSES)
+                .addOptionalTag(FBTags.Blocks.LOTUS_FLOWERS);
+
+        getOrCreateTagBuilder(ConventionalBlockTags.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Blocks.TALL_FLOWERS);
+
+        getOrCreateTagBuilder(ConventionalBlockTags.FLOWERS)
+                .addOptionalTag(FBTags.Blocks.FBFLOWERS);
     }
 }

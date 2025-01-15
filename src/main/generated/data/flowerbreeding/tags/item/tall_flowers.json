@@ -1,0 +1,44 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:tall_magenta_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_white_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_orange_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_red_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_yellow_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_light_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_pink_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_black_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_cyan_flowers",
+      "required": false
+    }
+  ]
+}

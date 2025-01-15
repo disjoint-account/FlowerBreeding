@@ -1,0 +1,84 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:alliums",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cornflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:daisies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:torchflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tulips",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:azure_bluets",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:dandelions",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:orchids",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lilies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:poppies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:wither_roses",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:open_eyeblossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:closed_eyeblossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:daffodils",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:foxgloves",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:hyacinths",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:phloxes",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lupins",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_roses",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lotus_flowers",
+      "required": false
+    }
+  ]
+}

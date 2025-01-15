@@ -4,6 +4,7 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.flowerbreeding.blockentities.flowerbed.FlowerbedBlockEntityRenderer;
+import net.flowerbreeding.blockentities.planter.PlanterBlockEntityRenderer;
 import net.flowerbreeding.blockentities.vase.VaseBlockEntityRenderer;
 import net.flowerbreeding.botanytable.BotanyTableScreen;
 import net.minecraft.client.color.world.BiomeColors;
@@ -18,6 +19,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         HandledScreens.register(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, BotanyTableScreen::new);
         BlockEntityRendererFactories.register(FBBlockEntities.VASE_BE, VaseBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FBBlockEntities.FLOWERBED_BE, FlowerbedBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FBBlockEntities.PLANTER_BE, PlanterBlockEntityRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_CORNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_CORNFLOWER, RenderLayer.getCutout());

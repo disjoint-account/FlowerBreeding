@@ -1,0 +1,48 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:small_magenta_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_white_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_orange_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_red_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_yellow_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_light_blue_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_pink_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_black_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_cyan_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:closed_eyeblossoms",
+      "required": false
+    }
+  ]
+}

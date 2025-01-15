@@ -32,7 +32,6 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
         return new RecipeGenerator(registries, exporter) {
             @Override
             public void generate() {
-
                 offerBotanyRecipe(exporter, FBItems.ALLIUM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(Blocks.ALLIUM), Identifier.of("magenta_allium"));
                 offerBotanyRecipe(exporter, FBItems.ALLIUM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_ALLIUM), Identifier.of("blue_allium"));
                 offerBotanyRecipe(exporter, FBItems.ALLIUM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_ALLIUM), Identifier.of("white_allium"));
@@ -450,6 +449,15 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(exporter, FBItems.DAISY_POLLEN_VIAL, FBItems.VINE_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.BLACK_CYPRUS_VINE), Identifier.of("black_cyprus_vine_2"));
                 offerBotanyRecipe(exporter, FBItems.VINE_POLLEN_VIAL, FBItems.DAISY_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_1"));
                 offerBotanyRecipe(exporter, FBItems.DAISY_POLLEN_VIAL, FBItems.VINE_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_2"));
+
+                createShaped(RecipeCategory.MISC, FBBlocks.PLANTER)
+                        .input('#', Items.BRICK)
+                        .input('X', Items.DIRT)
+                        .pattern("# #")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .criterion(hasItem(Items.BRICK), conditionsFromItem(Items.BRICK))
+                        .offerTo(exporter);
 
                 offerVaseRecipe(FBBlocks.WHITE_VASE, Items.WHITE_TERRACOTTA);
                 offerVaseRecipe(FBBlocks.LIGHT_GRAY_VASE, Items.LIGHT_GRAY_TERRACOTTA);

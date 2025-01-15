@@ -14,6 +14,7 @@ public class FBTags {
         public static final TagKey<Block> FBFLOWERS = createTag("fbflowers");
         public static final TagKey<Block> POLLEN_PLANTS = createTag("pollen_plants");
         public static final TagKey<Block> COLOUR_FLOWERS = createTag("colour_flowers");
+        public static final TagKey<Block> TALL_FLOWERS = createTag("tall_flowers");
         public static final TagKey<Block> MAGENTA_FLOWERS = createTag("magenta_flowers");
         public static final TagKey<Block> BLUE_FLOWERS = createTag("blue_flowers");
         public static final TagKey<Block> WHITE_FLOWERS = createTag("white_flowers");
@@ -61,6 +62,8 @@ public class FBTags {
         }
     }
     public static class Items {
+        public static final TagKey<Item> SMALL_FLOWERS = createTag("small_flowers");
+        public static final TagKey<Item> TALL_FLOWERS = createTag("tall_flowers");
         public static final TagKey<Item> MAGENTA_FLOWERS = createTag("magenta_flowers");
         public static final TagKey<Item> SMALL_MAGENTA_FLOWERS = createTag("small_magenta_flowers");
         public static final TagKey<Item> TALL_MAGENTA_FLOWERS = createTag("tall_magenta_flowers");

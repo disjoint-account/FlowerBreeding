@@ -2,6 +2,7 @@ package net.flowerbreeding.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.util.FBTags;
@@ -33,6 +34,31 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.BLACK_FLOWERS)
                 .addOptionalTag(FBTags.Items.CYAN_FLOWERS)
                 .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
+
+        getOrCreateTagBuilder(FBTags.Items.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_WHITE_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_ORANGE_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_RED_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_YELLOW_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_LIGHT_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_PINK_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_BLACK_FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_CYAN_FLOWERS)
+                .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
+
+        getOrCreateTagBuilder(FBTags.Items.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_MAGENTA_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_WHITE_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_ORANGE_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_RED_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_YELLOW_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_LIGHT_BLUE_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_PINK_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_BLACK_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_CYAN_FLOWERS);
 
         getOrCreateTagBuilder(FBTags.Items.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
@@ -713,5 +739,18 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.LUPINS)
                 .addOptionalTag(FBTags.Items.OPEN_EYEBLOSSOMS)
                 .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
+
+        getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.VASE_FLOWERS);
+
+        getOrCreateTagBuilder(ConventionalItemTags.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.VASE_FLOWERS);
+
+        getOrCreateTagBuilder(ConventionalItemTags.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_FLOWERS);
+
+        getOrCreateTagBuilder(ConventionalItemTags.FLOWERS)
+                .addOptionalTag(FBTags.Items.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_FLOWERS);
     }
 }

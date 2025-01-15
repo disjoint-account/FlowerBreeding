@@ -5,9 +5,8 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
-import net.minecraft.client.data.BlockStateModelGenerator;
-import net.minecraft.client.data.ItemModelGenerator;
-import net.minecraft.client.data.Models;
+import net.minecraft.client.data.*;
+import net.minecraft.client.render.item.tint.GrassTintSource;
 import net.minecraft.util.Identifier;
 
 public class FBModelProvider extends FabricModelProvider {
@@ -259,6 +258,8 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCross(FBBlocks.PINK_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(FBBlocks.BLACK_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerTintableCross(FBBlocks.CYAN_JASMINE, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
+        blockStateModelGenerator.registerTintedItemModel(FBBlocks.GRASS_FLOWERBED, Identifier.of(FlowerBreeding.MOD_ID, "block/grass_flowerbed"), new GrassTintSource());
     }
 
     @Override

@@ -2,8 +2,11 @@ package net.flowerbreeding;
 
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
+import net.flowerbreeding.blockentities.flowerbed.FlowerbedBlockEntityRenderer;
 import net.flowerbreeding.blockentities.vase.VaseBlockEntityRenderer;
 import net.flowerbreeding.botanytable.BotanyTableScreen;
+import net.minecraft.client.color.world.BiomeColors;
 import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactories;
@@ -14,6 +17,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
     public void onInitializeClient() {
         HandledScreens.register(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, BotanyTableScreen::new);
         BlockEntityRendererFactories.register(FBBlockEntities.VASE_BE, VaseBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FBBlockEntities.FLOWERBED_BE, FlowerbedBlockEntityRenderer::new);
 
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_CORNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_CORNFLOWER, RenderLayer.getCutout());
@@ -490,5 +494,16 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_CYPRUS_VINE, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CLIMBING_IVY, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.GRASS_FLOWERBED, RenderLayer.getTranslucent());
+    }
+
+    static {
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.GRASS_FLOWERBED);
+        }
     }
 }

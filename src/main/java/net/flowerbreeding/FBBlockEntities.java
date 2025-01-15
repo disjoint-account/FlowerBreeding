@@ -2,6 +2,7 @@ package net.flowerbreeding;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.flowerbreeding.blockentities.vase.VaseBlockEntity;
+import net.flowerbreeding.blockentities.flowerbed.FlowerbedBlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -28,6 +29,17 @@ public class FBBlockEntities {
                             FBBlocks.MAGENTA_VASE,
                             FBBlocks.PINK_VASE
                             ).build(null)
+            );
+
+
+    public static final BlockEntityType<FlowerbedBlockEntity> FLOWERBED_BE =
+            Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(FlowerBreeding.MOD_ID, "flowerbed_be"),
+                    FabricBlockEntityTypeBuilder.create(FlowerbedBlockEntity::new,
+                            FBBlocks.GRASS_FLOWERBED,
+                            FBBlocks.DIRT_FLOWERBED,
+                            FBBlocks.FARMLAND_FLOWERBED,
+                            FBBlocks.MOSS_FLOWERBED
+                    ).build(null)
             );
 
     public static void registerBlockEntities() {

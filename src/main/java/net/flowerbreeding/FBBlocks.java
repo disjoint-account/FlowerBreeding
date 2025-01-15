@@ -1,10 +1,12 @@
 package net.flowerbreeding;
 
+import net.flowerbreeding.blockentities.flowerbed.FBFlowerbedBlock;
 import net.flowerbreeding.blockentities.vase.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.flowerbreeding.eyeblossoms.*;
 import net.flowerbreeding.jasmine.*;
 import net.minecraft.block.*;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
@@ -547,6 +549,15 @@ public class FBBlocks {
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
 
     //other stuff
+
+    public static final Block GRASS_FLOWERBED = registerBlock("grass_flowerbed",
+            FBFlowerbedBlock::new, AbstractBlock.Settings.copy(GRASS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
+    public static final Block DIRT_FLOWERBED = registerBlock("dirt_flowerbed",
+            FBFlowerbedBlock::new, AbstractBlock.Settings.copy(DIRT).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
+    public static final Block FARMLAND_FLOWERBED = registerBlock("farmland_flowerbed",
+            FBFlowerbedBlock::new, AbstractBlock.Settings.copy(FARMLAND).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
+    public static final Block MOSS_FLOWERBED = registerBlock("moss_flowerbed",
+            FBFlowerbedBlock::new, AbstractBlock.Settings.copy(MOSS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
 
     public static final Block WHITE_VASE = registerBlock("white_vase",
             VaseBlock::new, AbstractBlock.Settings.copy(FLOWER_POT).sounds(BlockSoundGroup.DECORATED_POT));

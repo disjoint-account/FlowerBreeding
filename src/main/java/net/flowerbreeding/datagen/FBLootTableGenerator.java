@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -494,6 +495,10 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_CYPRUS_VINE, dropsWithShears(FBBlocks.CYAN_CYPRUS_VINE));
 
             addDrop(FBBlocks.CLIMBING_IVY);
+
+            addDrop(FBBlocks.DIRT_FLOWERBED, drops(Items.DIRT));
+            addDrop(FBBlocks.FARMLAND_FLOWERBED, drops(Items.DIRT));
+            addDrop(FBBlocks.MOSS_FLOWERBED, drops(Items.MOSS_BLOCK));
 
             addDrop(FBBlocks.WHITE_VASE);
             addDrop(FBBlocks.LIGHT_GRAY_VASE);

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "minecraft:block/moss_block",
+    "side": "minecraft:block/moss_block",
+    "top": "flowerbreeding:block/moss_flowerbed_top"
+  }
+}

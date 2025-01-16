@@ -4,7 +4,7 @@
       "model": "flowerbreeding:block/cyan_jasmine"
     },
     "jasmine_tip=true": {
-      "model": "flowerbreeding:block/cyan_jamsine_tip"
+      "model": "flowerbreeding:block/cyan_jasmine_tip"
     }
   }
 }

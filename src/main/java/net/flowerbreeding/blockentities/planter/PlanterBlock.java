@@ -12,14 +12,25 @@ import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
 public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider {
+    private static final VoxelShape SHAPE1 =
+            Block.createCuboidShape(2, 0, 2, 14, 7, 14);
+    private static final VoxelShape SHAPE2 =
+            Block.createCuboidShape(2, 7, 2, 4, 9, 14);
+    private static final VoxelShape SHAPE3 =
+            Block.createCuboidShape(12, 7, 2, 14, 9, 14);
+    private static final VoxelShape SHAPE4 =
+            Block.createCuboidShape(4, 7, 2, 12, 9, 4);
+    private static final VoxelShape SHAPE5 =
+            Block.createCuboidShape(4, 7, 12, 12, 9, 14);
     private static final VoxelShape SHAPE =
-            Block.createCuboidShape(2, 0, 2, 14, 9, 14);
+            VoxelShapes.union(SHAPE1, SHAPE2, SHAPE3, SHAPE4, SHAPE5);
     public static final MapCodec<PlanterBlock> CODEC = PlanterBlock.createCodec(PlanterBlock::new);
 
     public PlanterBlock(Settings settings) {

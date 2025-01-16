@@ -542,7 +542,7 @@ public class FBBlocks {
     //other stuff
 
     public static final Block PLANTER = registerBlock("planter",
-            PlanterBlock::new, AbstractBlock.Settings.copy(FLOWER_POT));
+            PlanterBlock::new, AbstractBlock.Settings.create().strength(1F, 3.5F).nonOpaque().pistonBehavior(PistonBehavior.DESTROY));
 
     public static final Block GRASS_FLOWERBED = registerBlock("grass_flowerbed",
             FBFlowerbedBlock::new, AbstractBlock.Settings.copy(GRASS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());

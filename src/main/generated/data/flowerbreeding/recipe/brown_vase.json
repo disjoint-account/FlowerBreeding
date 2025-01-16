@@ -3,12 +3,11 @@
   "category": "misc",
   "group": "vase",
   "key": {
-    "#": "minecraft:brown_terracotta",
-    "X": "minecraft:dirt"
+    "#": "minecraft:brown_terracotta"
   },
   "pattern": [
-    "#X#",
-    "###"
+    "# #",
+    " # "
   ],
   "result": {
     "count": 1,

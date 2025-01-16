@@ -47,4 +47,7 @@ b363d0c6bb14fad6bfa99b63fcc14203af98d135 data/flowerbreeding/tags/block/sunflowe
 f17f69a8f940683fc67af2b2bb3d7f71d988c644 data/flowerbreeding/tags/block/yellow_flowers.json
 fb3d415268800897e53150da733cedb04775af61 data/minecraft/tags/block/climbable.json
 7c569708d67391613561d09b7d9eff132c937bc2 data/minecraft/tags/block/flowers.json
+b71fff9cb112fe5ae93d23a668d195b0ef1b233e data/minecraft/tags/block/mineable/hoe.json
+7dfb170a594007cc7f79e91091b58c765dea14fe data/minecraft/tags/block/mineable/pickaxe.json
+2427c513fbee1e64e3b27627227a3cbcee3d6852 data/minecraft/tags/block/mineable/shovel.json
 1c195f9289be3c3b7f2b1883ab4035da1abcb3e1 data/minecraft/tags/block/small_flowers.json

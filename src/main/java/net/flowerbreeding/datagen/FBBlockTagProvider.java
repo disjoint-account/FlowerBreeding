@@ -18,6 +18,17 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+        getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
+                .add(FBBlocks.MOSS_FLOWERBED);
+
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(FBBlocks.PLANTER);
+
+        getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+                .add(FBBlocks.GRASS_FLOWERBED)
+                .add(FBBlocks.DIRT_FLOWERBED)
+                .add(FBBlocks.FARMLAND_FLOWERBED);
+
         getOrCreateTagBuilder(BlockTags.FLOWERS)
                 .addOptionalTag(FBTags.Blocks.FBFLOWERS);
 

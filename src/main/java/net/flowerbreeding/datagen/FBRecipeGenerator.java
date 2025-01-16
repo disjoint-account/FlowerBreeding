@@ -492,9 +492,8 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 createShaped(RecipeCategory.DECORATIONS, output, 1)
                         .group("vase")
                         .input('#', input)
-                        .input('X', Items.DIRT)
-                        .pattern("#X#")
-                        .pattern("###")
+                        .pattern("# #")
+                        .pattern(" # ")
                         .criterion(hasItem(input), conditionsFromItem(input))
                         .offerTo(exporter);
             }

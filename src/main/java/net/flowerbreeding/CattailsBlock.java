@@ -80,13 +80,6 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
         return i;
     }
 
-    protected int countCattailsBelow(BlockView world, BlockPos pos) {
-        int i;
-        for (i = 0; i < 383 && world.getBlockState(pos.down(i + 1)).isOf(FBBlocks.CATTAILS); ++i) {
-        }
-        return i;
-    }
-
     protected int countDryCattailsBelow(BlockView world, BlockPos pos) {
         int i;
         for (i = 0; i < 383 && world.getBlockState(pos.down(i + 1)).isOf(FBBlocks.CATTAILS) && !world.getBlockState(pos.down(i + 1)).get(WATERLOGGED); ++i) {
@@ -101,7 +94,7 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (random.nextDouble() < 0.1) {
             BlockPos blockPos = pos.offset(Direction.UP);
-            if (canPlaceAt(state, world, blockPos) && world.getBlockState(blockPos).isAir() && countDryCattailsBelow(world, pos) < 2) {
+            if (canPlaceAt(state, world, blockPos) && (world.getBlockState(blockPos).isAir() || (world.getFluidState(blockPos).isIn(FluidTags.WATER) && world.getFluidState(blockPos).getLevel() == 8)) && countDryCattailsBelow(world, pos) < 2 && !world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS)) {
                 FluidState state1 = world.getFluidState(pos.up());
                 if (state1.isIn(FluidTags.WATER) && state1.getLevel() == 8) {
                     world.setBlockState(blockPos, state.with(WATERLOGGED, true));
@@ -135,10 +128,10 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
         if (!validCheck(state, world, pos)) {
             world.breakBlock(pos, true);
         }
-        if (world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && cattailTip) {
+        if (world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && validCheck(state, world, pos) && cattailTip) {
             world.setBlockState(pos, state.with(CATTAIL_TIP, false));
         }
-        if (!world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && !cattailTip) {
+        if (!world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && validCheck(state, world, pos) && !cattailTip) {
             world.setBlockState(pos, state.with(CATTAIL_TIP, true));
         }
     }

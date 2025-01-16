@@ -28,7 +28,6 @@ import net.minecraft.world.tick.ScheduledTickView;
 public class JasmineBlock extends Block implements Fertilizable {
     public static final BooleanProperty JASMINE_FERTILE;
     public static final BooleanProperty JASMINE_TIP;
-    protected static final VoxelShape TIP_SHAPE = Block.createCuboidShape(4.0, 9.0, 4.0, 12.0, 16.0, 12.0);
     public static final VoxelShape SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
     public static final MapCodec<JasmineBlock> CODEC = createCodec(JasmineBlock::new);
 
@@ -41,15 +40,8 @@ public class JasmineBlock extends Block implements Fertilizable {
         this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(JASMINE_TIP, true).with(JASMINE_FERTILE, true));
     }
 
-    private static VoxelShape getShapeForState(BlockState state) {
-        if (state.get(JASMINE_TIP)) {
-            return TIP_SHAPE;
-        }
-        else return SHAPE;
-    }
-
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return getShapeForState(state);
+        return SHAPE;
     }
 
     protected boolean isTransparent(BlockState state) {

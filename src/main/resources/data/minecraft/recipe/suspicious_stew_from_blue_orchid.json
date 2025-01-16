@@ -6,7 +6,7 @@
     "minecraft:bowl",
     "minecraft:brown_mushroom",
     "minecraft:red_mushroom",
-    "#flowerbreeding:blue_orchids"
+    "#flowerbreeding:orchids"
   ],
   "result": {
     "components": {

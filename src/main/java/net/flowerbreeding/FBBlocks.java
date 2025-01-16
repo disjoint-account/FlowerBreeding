@@ -537,6 +537,7 @@ public class FBBlocks {
     //other plants
 
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
+    public static final Block CATTAILS = registerBlock("cattails", CattailsBlock::new, AbstractBlock.Settings.copy(SUGAR_CANE));
 
     //other stuff
 

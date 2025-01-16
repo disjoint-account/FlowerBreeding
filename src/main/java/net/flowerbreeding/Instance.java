@@ -296,5 +296,6 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_CYPRUS_VINE, 0.5f);
 
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLIMBING_IVY, 0.5f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CATTAILS, 0.5f);
         }
     }

@@ -485,6 +485,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_CYPRUS_VINE, dropsWithShears(FBBlocks.CYAN_CYPRUS_VINE));
 
             addDrop(FBBlocks.CLIMBING_IVY);
+            addDrop(FBBlocks.CATTAILS);
 
             addDrop(FBBlocks.PLANTER);
 

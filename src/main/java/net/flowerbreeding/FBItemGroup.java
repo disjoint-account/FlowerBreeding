@@ -363,6 +363,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CYAN_CYPRUS_VINE);
 
                         entries.add(FBBlocks.CLIMBING_IVY);
+                        entries.add(FBBlocks.CATTAILS);
 
                         entries.add(FBItems.TROWEL);
 

@@ -13,6 +13,7 @@ public class FBProperties {
     public static final BooleanProperty IVY_TIP_WEST;
     public static final BooleanProperty IVY_FERTILE;
     public static final EnumProperty<IvyConfiguration> IVY_CONFIGURATION;
+    public static final BooleanProperty CATTAIL_TIP;
 
     public FBProperties(){
     }
@@ -26,5 +27,6 @@ public class FBProperties {
         IVY_TIP_WEST = BooleanProperty.of("ivy_tip_west");
         IVY_FERTILE = BooleanProperty.of("ivy_fertile");
         IVY_CONFIGURATION = EnumProperty.of("ivy_configuration", IvyConfiguration.class);
+        CATTAIL_TIP = BooleanProperty.of("cattail_tip");
     }
 }

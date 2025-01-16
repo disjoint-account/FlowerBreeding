@@ -362,6 +362,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBBlocks.CYAN_CYPRUS_VINE.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(FBBlocks.CLIMBING_IVY.asItem(), Models.GENERATED);
+        itemModelGenerator.register(FBBlocks.CATTAILS.asItem(), Models.GENERATED);
 
         itemModelGenerator.register(FBItems.TROWEL, Models.GENERATED);
 

@@ -112,16 +112,6 @@ public class FBVillagerTrades {
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 3, factories -> {
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 2),
-                    new ItemStack(FBBlocks.CLIMBING_IVY, 1), 12, 5, 0.2f
-            ));
-            factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 5),
-                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
-            ));
-        });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {
-            factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBBlocks.YELLOW_DAFFODIL, 1), 16, 5, 0.05f
             ));
@@ -165,11 +155,33 @@ public class FBVillagerTrades {
                     new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBBlocks.ORANGE_CYPRUS_VINE, 1), 16, 5, 0.05f
             ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 1),
+                    new ItemStack(Items.STICK, 1), 16, 5, 0.05f
+            ));
+        });
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 2),
+                    new ItemStack(FBBlocks.CLIMBING_IVY, 1), 12, 5, 0.2f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 2),
+                    new ItemStack(FBBlocks.CATTAILS, 1), 12, 5, 0.2f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 2),
+                    new ItemStack(Items.STICK, 1), 12, 5, 0.2f
+            ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 5, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 10),
                     new ItemStack(FBBlocks.BOTANY_TABLE, 1), 3, 30, 0.2f
+            ));
+            factories.add((entity, random) -> new TradeOffer(
+                    new TradedItem(Items.EMERALD, 5),
+                    new ItemStack(FBItems.TROWEL, 1), 3, 30, 0.2f
             ));
         });
 

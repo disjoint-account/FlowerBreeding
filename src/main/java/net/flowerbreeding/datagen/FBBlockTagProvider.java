@@ -29,6 +29,15 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(FBBlocks.DIRT_FLOWERBED)
                 .add(FBBlocks.FARMLAND_FLOWERBED);
 
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE)
+                .add(FBBlocks.SAGE);
+
+        getOrCreateTagBuilder(BlockTags.REPLACEABLE_BY_TREES)
+                .add(FBBlocks.SAGE);
+
+        getOrCreateTagBuilder(BlockTags.ENCHANTMENT_POWER_TRANSMITTER)
+                .add(FBBlocks.SAGE);
+
         getOrCreateTagBuilder(BlockTags.FLOWERS)
                 .addOptionalTag(FBTags.Blocks.FBFLOWERS);
 

@@ -19,7 +19,7 @@ public class FBConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
 
-        register(context, SAGE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32, 4, 1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
+        register(context, SAGE_KEY, Feature.RANDOM_PATCH, new RandomPatchFeatureConfig(32, 3, 1, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK,
                 new SimpleBlockFeatureConfig(BlockStateProvider.of(FBBlocks.SAGE)), BlockPredicate.allOf(BlockPredicate.replaceable(), BlockPredicate.noFluid(), BlockPredicate.matchingBlocks(Direction.DOWN.getVector(),
                         Blocks.PODZOL,
                         Blocks.DIRT,

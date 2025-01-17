@@ -48,7 +48,9 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             FBItems.SWEET_BERRY_POLLEN_VIAL,
             FBItems.GLOW_VINE_POLLEN_VIAL,
             FBItems.VINE_POLLEN_VIAL,
-            FBItems.LILY_PAD_POLLEN_VIAL);
+            FBItems.LILY_PAD_POLLEN_VIAL,
+            FBItems.MUSHROOM_POLLEN_VIAL,
+            FBItems.FROGLIGHT_POLLEN_VIAL);
 
     public static final List<Item> jars = Arrays.asList(
             ItemStack.EMPTY.getItem(),

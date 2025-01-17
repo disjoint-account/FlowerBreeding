@@ -1,43 +1,107 @@
 {
   "values": [
     {
-      "id": "#flowerbreeding:magenta_flowers",
+      "id": "#flowerbreeding:alliums",
       "required": false
     },
     {
-      "id": "#flowerbreeding:blue_flowers",
+      "id": "#flowerbreeding:cornflowers",
       "required": false
     },
     {
-      "id": "#flowerbreeding:white_flowers",
+      "id": "#flowerbreeding:daisies",
       "required": false
     },
     {
-      "id": "#flowerbreeding:orange_flowers",
+      "id": "#flowerbreeding:azure_bluets",
       "required": false
     },
     {
-      "id": "#flowerbreeding:red_flowers",
+      "id": "#flowerbreeding:dandelions",
       "required": false
     },
     {
-      "id": "#flowerbreeding:yellow_flowers",
+      "id": "#flowerbreeding:orchids",
       "required": false
     },
     {
-      "id": "#flowerbreeding:light_blue_flowers",
+      "id": "#flowerbreeding:lilies",
       "required": false
     },
     {
-      "id": "#flowerbreeding:pink_flowers",
+      "id": "#flowerbreeding:poppies",
       "required": false
     },
     {
-      "id": "#flowerbreeding:black_flowers",
+      "id": "#flowerbreeding:wither_roses",
       "required": false
     },
     {
-      "id": "#flowerbreeding:cyan_flowers",
+      "id": "#flowerbreeding:open_eyeblossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:closed_eyeblossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lilacs",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:peonies",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:pitcher_plants",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:rose_bushes",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:sunflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:daffodils",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:foxgloves",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:hyacinths",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:phloxes",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:small_roses",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lupins",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lavenders",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:hydrangeas",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lotus_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:jasmines",
       "required": false
     }
   ]

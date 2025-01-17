@@ -112,6 +112,12 @@ public class EmptyPollenVialItem extends Item {
                 if (state.isOf(Blocks.LILY_PAD)) {
                     return FBItems.LILY_PAD_POLLEN_VIAL;
                 }
+                if (state.isIn(FBTags.Blocks.MUSHROOMS)) {
+                    return FBItems.MUSHROOM_POLLEN_VIAL;
+                }
+                if (state.isIn(FBTags.Blocks.FROGLIGHTS)) {
+                    return FBItems.FROGLIGHT_POLLEN_VIAL;
+                }
             return null;
         }
 }

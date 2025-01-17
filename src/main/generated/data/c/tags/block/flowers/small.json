@@ -75,10 +75,6 @@
     {
       "id": "#flowerbreeding:small_roses",
       "required": false
-    },
-    {
-      "id": "#flowerbreeding:lotus_flowers",
-      "required": false
     }
   ]
 }

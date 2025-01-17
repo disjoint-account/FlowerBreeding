@@ -50,6 +50,8 @@ public class FBItemGroup {
                         entries.add(FBItems.SWEET_BERRY_POLLEN_VIAL);
                         entries.add(FBItems.LILY_PAD_POLLEN_VIAL);
                         entries.add(FBItems.VINE_POLLEN_VIAL);
+                        entries.add(FBItems.MUSHROOM_POLLEN_VIAL);
+                        entries.add(FBItems.FROGLIGHT_POLLEN_VIAL);
 
                         entries.add(Blocks.ALLIUM);
                         entries.add(FBBlocks.MAGENTA_CORNFLOWER);
@@ -365,6 +367,27 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CLIMBING_IVY);
                         entries.add(FBBlocks.CATTAILS);
                         entries.add(FBBlocks.SAGE);
+
+                        entries.add(FBBlocks.MAGENTA_GLOWSHROOM);
+                        entries.add(FBBlocks.BLUE_GLOWSHROOM);
+                        entries.add(FBBlocks.WHITE_GLOWSHROOM);
+                        entries.add(FBBlocks.ORANGE_GLOWSHROOM);
+                        entries.add(FBBlocks.RED_GLOWSHROOM);
+                        entries.add(FBBlocks.YELLOW_GLOWSHROOM);
+                        entries.add(FBBlocks.LIGHT_BLUE_GLOWSHROOM);
+                        entries.add(FBBlocks.PINK_GLOWSHROOM);
+                        entries.add(FBBlocks.BLACK_GLOWSHROOM);
+                        entries.add(FBBlocks.CYAN_GLOWSHROOM);
+                        entries.add(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.BLUE_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.WHITE_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.ORANGE_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.RED_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.YELLOW_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.LIGHT_BLUE_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.PINK_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.BLACK_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.CYAN_GLOWSHROOM_BLOCK);
 
                         entries.add(FBItems.TROWEL);
 

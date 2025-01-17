@@ -295,6 +295,27 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_CYPRUS_VINE, 0.5f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_CYPRUS_VINE, 0.5f);
 
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.ORANGE_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.RED_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.YELLOW_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.LIGHT_BLUE_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_GLOWSHROOM_BLOCK, 0.85f);
+
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLIMBING_IVY, 0.5f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CATTAILS, 0.5f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.SAGE, 0.65f);

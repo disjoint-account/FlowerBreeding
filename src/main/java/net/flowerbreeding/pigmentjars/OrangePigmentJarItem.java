@@ -32,7 +32,7 @@ public class OrangePigmentJarItem extends Item {
         assert user != null;
         ItemStack itemStack = user.getStackInHand(hand);
         int qty = JarCounter.countJars(user);
-        if ((state.isIn(FBTags.Blocks.FBFLOWERS)) && FlowerBreeding.CONFIG.fastRecolouring()) {
+        if ((state.isIn(FBTags.Blocks.COLOUR_FLOWERS)) && FlowerBreeding.CONFIG.fastRecolouring()) {
             ItemStack itemStack1 = new ItemStack(getFlower(context));
             ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
             if ((qty > 1) && (!user.isInCreativeMode())) {
@@ -60,7 +60,7 @@ public class OrangePigmentJarItem extends Item {
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
         if (FlowerBreeding.CONFIG.fastRecolouring()) {
-            if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
+            if (pos.isIn(FBTags.Blocks.COLOUR_FLOWERS)) {
                 if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
                     return FBBlocks.ORANGE_ALLIUM;
                 }
@@ -144,6 +144,9 @@ public class OrangePigmentJarItem extends Item {
                 }
                 if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
                     return FBBlocks.ORANGE_CYPRUS_VINE;
+                }
+                if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
+                    return FBBlocks.ORANGE_GLOWSHROOM;
                 }
             }
         }

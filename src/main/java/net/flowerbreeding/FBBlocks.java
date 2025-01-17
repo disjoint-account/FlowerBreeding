@@ -535,6 +535,39 @@ public class FBBlocks {
     public static final Block BLACK_CYPRUS_VINE = registerBlock("black_cyprus_vine", VineBlock::new, AbstractBlock.Settings.copy(VINE));
     public static final Block CYAN_CYPRUS_VINE = registerBlock("cyan_cyprus_vine", VineBlock::new, AbstractBlock.Settings.copy(VINE));
 
+    //glowshrooms
+
+    public static final Block MAGENTA_GLOWSHROOM = registerGlowshroom("magenta_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_MAGENTA_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_MAGENTA_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_magenta_glowshroom", MAGENTA_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block MAGENTA_GLOWSHROOM_BLOCK = registerBlock("magenta_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.MAGENTA).luminance(state -> 15));
+    public static final Block BLUE_GLOWSHROOM = registerGlowshroom("blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_BLUE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_blue_glowshroom", BLUE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block BLUE_GLOWSHROOM_BLOCK = registerBlock("blue_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.BLUE).luminance(state -> 15));
+    public static final Block WHITE_GLOWSHROOM = registerGlowshroom("white_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_WHITE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_WHITE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_white_glowshroom", WHITE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block WHITE_GLOWSHROOM_BLOCK = registerBlock("white_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.WHITE).luminance(state -> 15));
+    public static final Block ORANGE_GLOWSHROOM = registerGlowshroom("orange_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_ORANGE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_ORANGE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_orange_glowshroom", ORANGE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block ORANGE_GLOWSHROOM_BLOCK = registerBlock("orange_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.ORANGE).luminance(state -> 15));
+    public static final Block RED_GLOWSHROOM = registerGlowshroom("red_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_RED_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_RED_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_red_glowshroom", RED_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block RED_GLOWSHROOM_BLOCK = registerBlock("red_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.RED).luminance(state -> 15));
+    public static final Block YELLOW_GLOWSHROOM = registerGlowshroom("yellow_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_YELLOW_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_YELLOW_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_yellow_glowshroom", YELLOW_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block YELLOW_GLOWSHROOM_BLOCK = registerBlock("yellow_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.YELLOW).luminance(state -> 15));
+    public static final Block LIGHT_BLUE_GLOWSHROOM = registerGlowshroom("light_blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_LIGHT_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_LIGHT_BLUE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_light_blue_glowshroom", LIGHT_BLUE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block LIGHT_BLUE_GLOWSHROOM_BLOCK = registerBlock("light_blue_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.LIGHT_BLUE).luminance(state -> 15));
+    public static final Block PINK_GLOWSHROOM = registerGlowshroom("pink_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_PINK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_PINK_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_pink_glowshroom", PINK_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block PINK_GLOWSHROOM_BLOCK = registerBlock("pink_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.PINK).luminance(state -> 15));
+    public static final Block BLACK_GLOWSHROOM = registerGlowshroom("black_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLACK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_BLACK_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_black_glowshroom", BLACK_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block BLACK_GLOWSHROOM_BLOCK = registerBlock("black_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.BLACK).luminance(state -> 15));
+    public static final Block CYAN_GLOWSHROOM = registerGlowshroom("cyan_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_CYAN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_CYAN_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_cyan_glowshroom", CYAN_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block CYAN_GLOWSHROOM_BLOCK = registerBlock("cyan_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.CYAN).luminance(state -> 15));
+
     //other plants
 
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
@@ -608,6 +641,11 @@ public class FBBlocks {
     private static Block registerWitherRoseBlock(String name) {
         return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 7, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
     }
+    private static Block registerGlowshroom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = Blocks.register(keyOf(name), factory, settings);
+        registerBlockItem(name, block);
+        return block;
+    }
     private static Block registerSage(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = Blocks.register(keyOf(name), factory, settings);
         registerBlockItem(name, block);
@@ -644,6 +682,9 @@ public class FBBlocks {
     }
     private static Block registerCyanEyeblossomFlowerPotBlock(String name, Block content, Block base) {
         return registerBlock(name, false, settings -> new CyanEyeblossomFlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base));
+    }
+    private static Block registerGlowshroomFlowerPotBlock(String name, Block content, Block base) {
+        return registerBlock(name, false, settings -> new FlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base).luminance(state -> 10));
     }
     private static Block registerFlowerPotBlock(String name, Block content, Block base) {
         return registerBlock(name, false, settings -> new FlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base));

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_single_face",
+  "textures": {
+    "texture": "flowerbreeding:block/white_glowshroom_block"
+  }
+}

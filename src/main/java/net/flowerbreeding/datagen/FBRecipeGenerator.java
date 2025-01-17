@@ -450,6 +450,27 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(exporter, FBItems.VINE_POLLEN_VIAL, FBItems.DAISY_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_1"));
                 offerBotanyRecipe(exporter, FBItems.DAISY_POLLEN_VIAL, FBItems.VINE_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_CYPRUS_VINE), Identifier.of("cyan_cyprus_vine_2"));
 
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.MAGENTA_GLOWSHROOM), Identifier.of("magenta_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.MAGENTA_GLOWSHROOM), Identifier.of("magenta_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_GLOWSHROOM), Identifier.of("blue_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_GLOWSHROOM), Identifier.of("blue_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_GLOWSHROOM), Identifier.of("white_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_GLOWSHROOM), Identifier.of("white_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.ORANGE_PIGMENT_JAR, new ItemStack(FBBlocks.ORANGE_GLOWSHROOM), Identifier.of("orange_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.ORANGE_PIGMENT_JAR, new ItemStack(FBBlocks.ORANGE_GLOWSHROOM), Identifier.of("orange_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.RED_PIGMENT_JAR, new ItemStack(FBBlocks.RED_GLOWSHROOM), Identifier.of("red_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.RED_PIGMENT_JAR, new ItemStack(FBBlocks.RED_GLOWSHROOM), Identifier.of("red_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.YELLOW_PIGMENT_JAR, new ItemStack(FBBlocks.YELLOW_GLOWSHROOM), Identifier.of("yellow_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.YELLOW_PIGMENT_JAR, new ItemStack(FBBlocks.YELLOW_GLOWSHROOM), Identifier.of("yellow_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.LIGHT_BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.LIGHT_BLUE_GLOWSHROOM), Identifier.of("light_blue_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.LIGHT_BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.LIGHT_BLUE_GLOWSHROOM), Identifier.of("light_blue_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStack(FBBlocks.PINK_GLOWSHROOM), Identifier.of("pink_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStack(FBBlocks.PINK_GLOWSHROOM), Identifier.of("pink_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.BLACK_GLOWSHROOM), Identifier.of("black_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.BLACK_GLOWSHROOM), Identifier.of("black_glowshroom_2"));
+                offerBotanyRecipe(exporter, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_GLOWSHROOM), Identifier.of("cyan_glowshroom_1"));
+                offerBotanyRecipe(exporter, FBItems.FROGLIGHT_POLLEN_VIAL, FBItems.MUSHROOM_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_GLOWSHROOM), Identifier.of("cyan_glowshroom_2"));
+
                 createShaped(RecipeCategory.MISC, FBBlocks.PLANTER)
                         .input('#', Items.BRICK)
                         .input('X', Items.DIRT)

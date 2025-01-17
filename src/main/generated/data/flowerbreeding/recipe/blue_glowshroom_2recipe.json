@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:blue_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:blue_glowshroom"
+  },
+  "vial1": "flowerbreeding:froglight_pollen_vial",
+  "vial2": "flowerbreeding:mushroom_pollen_vial"
+}

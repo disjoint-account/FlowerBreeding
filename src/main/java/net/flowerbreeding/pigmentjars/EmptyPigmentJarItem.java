@@ -54,7 +54,7 @@ public class EmptyPigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
-        if (pos.isIn(FBTags.Blocks.FBFLOWERS)) {
+        if (pos.isIn(FBTags.Blocks.COLOUR_FLOWERS)) {
             if (pos.isIn(FBTags.Blocks.MAGENTA_FLOWERS)) {
                 return FBItems.MAGENTA_PIGMENT_JAR;
             }

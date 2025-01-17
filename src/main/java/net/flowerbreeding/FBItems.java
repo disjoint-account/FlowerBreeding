@@ -51,6 +51,8 @@ public class FBItems {
     public static final Item GLOW_VINE_POLLEN_VIAL = registerItem("glow_vine_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item VINE_POLLEN_VIAL = registerItem("vine_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item LILY_PAD_POLLEN_VIAL = registerItem("lily_pad_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
+    public static final Item FROGLIGHT_POLLEN_VIAL = registerItem("froglight_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
+    public static final Item MUSHROOM_POLLEN_VIAL = registerItem("mushroom_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
 
     public static final Item MAGENTA_LOTUS_FLOWER = registerItem("magenta_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.MAGENTA_LOTUS_FLOWER, settings));
     public static final Item BLUE_LOTUS_FLOWER = registerItem("blue_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLUE_LOTUS_FLOWER, settings));

@@ -54,6 +54,9 @@ public class FBTags {
         public static final TagKey<Block> HYDRANGEAS = createTag("hydrangeas");
         public static final TagKey<Block> CYPRUS_VINES = createTag("cyprus_vines");
         public static final TagKey<Block> LOTUS_FLOWERS = createTag("lotus_flowers");
+        public static final TagKey<Block> GLOWSHROOMS = createTag("glowshrooms");
+        public static final TagKey<Block> MUSHROOMS = createTag("mushrooms");
+        public static final TagKey<Block> FROGLIGHTS = createTag("froglights");
 
         private static TagKey<Block> createTag(String name) {
             return TagKey.of(RegistryKeys.BLOCK, Identifier.of(FlowerBreeding.MOD_ID, name));
@@ -115,6 +118,7 @@ public class FBTags {
         public static final TagKey<Item> PHLOXES = createTag("phloxes");
         public static final TagKey<Item> LUPINS = createTag("lupins");
         public static final TagKey<Item> SMALL_ROSES = createTag("small_roses");
+        public static final TagKey<Item> GLOWSHROOMS = createTag("glowshrooms");
         public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));

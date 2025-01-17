@@ -297,5 +297,6 @@ public class Instance {
 
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLIMBING_IVY, 0.5f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CATTAILS, 0.5f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.SAGE, 0.65f);
         }
     }

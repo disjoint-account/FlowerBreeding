@@ -248,6 +248,8 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.SAGE, FBBlocks.POTTED_SAGE, BlockStateModelGenerator.CrossType.NOT_TINTED);
+
         blockStateModelGenerator.registerTintedItemModel(FBBlocks.GRASS_FLOWERBED, Identifier.of(FlowerBreeding.MOD_ID, "block/grass_flowerbed"), new GrassTintSource());
     }
 

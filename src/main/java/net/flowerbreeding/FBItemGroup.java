@@ -364,6 +364,7 @@ public class FBItemGroup {
 
                         entries.add(FBBlocks.CLIMBING_IVY);
                         entries.add(FBBlocks.CATTAILS);
+                        entries.add(FBBlocks.SAGE);
 
                         entries.add(FBItems.TROWEL);
 

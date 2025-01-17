@@ -486,6 +486,8 @@ public class FBLootTableGenerator extends
 
             addDrop(FBBlocks.CLIMBING_IVY);
             addDrop(FBBlocks.CATTAILS);
+            addDrop(FBBlocks.SAGE);
+            addDrop(FBBlocks.POTTED_SAGE, pottedPlantDrops(FBBlocks.SAGE));
 
             addDrop(FBBlocks.PLANTER);
 

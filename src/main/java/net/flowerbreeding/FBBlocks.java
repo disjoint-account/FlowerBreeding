@@ -5,6 +5,7 @@ import net.flowerbreeding.blockentities.planter.PlanterBlock;
 import net.flowerbreeding.blockentities.vase.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.flowerbreeding.eyeblossoms.*;
+import net.flowerbreeding.world.feature.FBConfiguredFeatures;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffect;
@@ -538,6 +539,8 @@ public class FBBlocks {
 
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
     public static final Block CATTAILS = registerBlock("cattails", CattailsBlock::new, AbstractBlock.Settings.copy(SUGAR_CANE));
+    public static final Block SAGE = registerSage("sage", settings -> new SageBlock(FBConfiguredFeatures.SAGE_KEY, settings), AbstractBlock.Settings.copy(FERN));
+    public static final Block POTTED_SAGE = registerFlowerPotBlock("potted_sage", SAGE, POTTED_FERN);
 
     //other stuff
 
@@ -604,6 +607,11 @@ public class FBBlocks {
     }
     private static Block registerWitherRoseBlock(String name) {
         return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 7, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
+    }
+    private static Block registerSage(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = Blocks.register(keyOf(name), factory, settings);
+        registerBlockItem(name, block);
+        return block;
     }
     private static Block registerEyeblossom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = Blocks.register(keyOf(name), factory, settings);

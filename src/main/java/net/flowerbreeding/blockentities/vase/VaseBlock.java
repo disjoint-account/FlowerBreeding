@@ -80,70 +80,75 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof VaseBlockEntity entity) {
-            if ((entity.isEmpty() && stack.isEmpty()) || (!entity.getStack(0).isEmpty() && !entity.getStack(1).isEmpty() && !entity.getStack(2).isEmpty() && !entity.getStack(3).isEmpty() && (stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)))) {
+            if ((entity.isEmpty() && player.getMainHandStack().isEmpty() && !(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) ||
+                    (!entity.getStack(0).isEmpty() && !entity.getStack(1).isEmpty() && !entity.getStack(2).isEmpty() && !entity.getStack(3).isEmpty() && (stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)))) {
                 return ActionResult.SUCCESS;
             }
-            else {
-                if ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !player.isSneaking()) {
-                    if (entity.isEmpty()) {
-                        entity.setStack(0, stack);
+            if ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !player.isSneaking()) {
+                if (entity.isEmpty()) {
+                    entity.setStack(0, stack);
+                } else {
+                    if (entity.getStack(1).isEmpty()) {
+                        entity.setStack(1, stack);
                     } else {
-                        if (entity.getStack(1).isEmpty()) {
-                            entity.setStack(1, stack);
+                        if (entity.getStack(2).isEmpty()) {
+                            entity.setStack(2, stack);
                         } else {
-                            if (entity.getStack(2).isEmpty()) {
-                                entity.setStack(2, stack);
-                            } else {
-                                if (entity.getStack(3).isEmpty()) {
-                                    entity.setStack(3, stack);
-                                }
+                            if (entity.getStack(3).isEmpty()) {
+                                entity.setStack(3, stack);
                             }
                         }
                     }
-                    world.playSound(player, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1f, 1f);
-                    if (!player.isInCreativeMode()) {
-                        stack.decrement(1);
-                    }
-                    entity.markDirty();
-                    world.updateListeners(pos, state, state, 0);
-                    return ActionResult.SUCCESS;
-                }  else {
-                    if (stack.isEmpty() & !player.isSneaking()) {
-                        if (stack.isEmpty() && !player.isSneaking() && !entity.getStack(3).isEmpty()) {
-                            ItemStack stackInVase = entity.getStack(3);
-                            if (!player.isInCreativeMode()) {
-                                player.setStackInHand(Hand.MAIN_HAND, stackInVase);
-                            }
-                            entity.removeStack(3);
-                        } else {
-                            if (stack.isEmpty() && !player.isSneaking() && !entity.getStack(2).isEmpty()) {
+                }
+                world.playSound(player, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1f, 1f);
+                if (!player.isInCreativeMode()) {
+                    stack.decrement(1);
+                }
+                entity.markDirty();
+                world.updateListeners(pos, state, state, 0);
+                return ActionResult.SUCCESS;
+            } else {
+                if (player.getMainHandStack().isEmpty() && !player.isSneaking()) {
+                    if (!entity.getStack(3).isEmpty()) {
+                        ItemStack stackInVase = entity.getStack(3);
+                        if (!player.isInCreativeMode()) {
+                            player.getInventory().offerOrDrop(stackInVase);
+                        }
+                        entity.removeStack(3);
+                        world.playSound(player, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1f, 2f);
+                        entity.markDirty();
+                        world.updateListeners(pos, state, state, 0);
+                        return ActionResult.SUCCESS;
+                    } else {
+                        if (!(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) {
+                            if (!entity.getStack(2).isEmpty()) {
                                 ItemStack stackInVase = entity.getStack(2);
                                 if (!player.isInCreativeMode()) {
-                                    player.setStackInHand(Hand.MAIN_HAND, stackInVase);
+                                    player.getInventory().offerOrDrop(stackInVase);
                                 }
                                 entity.removeStack(2);
                             } else {
-                                if (stack.isEmpty() && !player.isSneaking() && !entity.getStack(1).isEmpty()) {
+                                if (!entity.getStack(1).isEmpty()) {
                                     ItemStack stackInVase = entity.getStack(1);
                                     if (!player.isInCreativeMode()) {
-                                        player.setStackInHand(Hand.MAIN_HAND, stackInVase);
+                                        player.getInventory().offerOrDrop(stackInVase);
                                     }
                                     entity.removeStack(1);
                                 } else {
-                                    if (stack.isEmpty() && !player.isSneaking() && !entity.getStack(0).isEmpty()) {
+                                    if (!entity.getStack(0).isEmpty()) {
                                         ItemStack stackInVase = entity.getStack(0);
                                         if (!player.isInCreativeMode()) {
-                                            player.setStackInHand(Hand.MAIN_HAND, stackInVase);
+                                            player.getInventory().offerOrDrop(stackInVase);
                                         }
                                         entity.removeStack(0);
                                     }
                                 }
                             }
+                            world.playSound(player, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1f, 2f);
+                            entity.markDirty();
+                            world.updateListeners(pos, state, state, 0);
+                            return ActionResult.SUCCESS;
                         }
-                        world.playSound(player, pos, SoundEvents.BLOCK_BEEHIVE_EXIT, SoundCategory.BLOCKS, 1f, 2f);
-                        entity.markDirty();
-                        world.updateListeners(pos, state, state, 0);
-                        return ActionResult.SUCCESS;
                     }
                 }
             }

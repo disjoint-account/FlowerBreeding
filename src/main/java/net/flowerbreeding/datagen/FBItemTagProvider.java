@@ -759,7 +759,6 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.POPPIES)
                 .addOptionalTag(FBTags.Items.WITHER_ROSES)
                 .addOptionalTag(FBTags.Items.DAFFODILS)
-                .addOptionalTag(FBTags.Items.FOXGLOVES)
                 .addOptionalTag(FBTags.Items.HYACINTHS)
                 .addOptionalTag(FBTags.Items.PHLOXES)
                 .addOptionalTag(FBTags.Items.LUPINS)
@@ -767,10 +766,10 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
 
         getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
-                .addOptionalTag(FBTags.Items.VASE_FLOWERS);
+                .addOptionalTag(FBTags.Items.SMALL_FLOWERS);
 
         getOrCreateTagBuilder(ConventionalItemTags.SMALL_FLOWERS)
-                .addOptionalTag(FBTags.Items.VASE_FLOWERS);
+                .addOptionalTag(FBTags.Items.SMALL_FLOWERS);
 
         getOrCreateTagBuilder(ConventionalItemTags.TALL_FLOWERS)
                 .addOptionalTag(FBTags.Items.TALL_FLOWERS);

@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.eyeblossoms.*;
+import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -77,14 +78,21 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
         }
     }
 
+    private boolean isValidFlower(ItemStack stack) {
+        if (stack.isIn(FBTags.Items.SMALL_FLOWERS)) {
+            return stack.isIn(FBTags.Items.VASE_FLOWERS);
+        }
+        else return stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS);
+    }
+
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof VaseBlockEntity entity) {
-            if ((entity.isEmpty() && player.getMainHandStack().isEmpty() && !(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) ||
-                    (!entity.getStack(0).isEmpty() && !entity.getStack(1).isEmpty() && !entity.getStack(2).isEmpty() && !entity.getStack(3).isEmpty() && (stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)))) {
+            if ((entity.isEmpty() && player.getMainHandStack().isEmpty() && !isValidFlower(player.getOffHandStack())) ||
+                    (!entity.getStack(0).isEmpty() && !entity.getStack(1).isEmpty() && !entity.getStack(2).isEmpty() && !entity.getStack(3).isEmpty() && isValidFlower(stack))) {
                 return ActionResult.SUCCESS;
             }
-            if ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !player.isSneaking()) {
+            if (isValidFlower(stack) && !player.isSneaking()) {
                 if (entity.isEmpty()) {
                     entity.setStack(0, stack);
                 } else {
@@ -120,7 +128,7 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
                         world.updateListeners(pos, state, state, 0);
                         return ActionResult.SUCCESS;
                     } else {
-                        if (!(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) {
+                        if (!isValidFlower(player.getOffHandStack())) {
                             if (!entity.getStack(2).isEmpty()) {
                                 ItemStack stackInVase = entity.getStack(2);
                                 if (!player.isInCreativeMode()) {

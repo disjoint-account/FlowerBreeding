@@ -3,6 +3,8 @@ package net.flowerbreeding;
 import net.flowerbreeding.pigmentjars.*;
 import net.flowerbreeding.pollenvials.EmptyPollenVialItem;
 import net.flowerbreeding.pollenvials.FullPollenVialItem;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.ToolComponent;
 import net.minecraft.item.Item;
 import net.minecraft.item.PlaceableOnWaterItem;
 import net.minecraft.item.SmithingTemplateItem;
@@ -10,9 +12,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 
+import java.util.List;
 import java.util.function.Function;
 
 public class FBItems {
@@ -65,7 +69,16 @@ public class FBItems {
     public static final Item BLACK_LOTUS_FLOWER = registerItem("black_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.BLACK_LOTUS_FLOWER, settings));
     public static final Item CYAN_LOTUS_FLOWER = registerItem("cyan_lotus_flower", settings -> new PlaceableOnWaterItem(FBBlocks.CYAN_LOTUS_FLOWER, settings));
 
-    public static final Item TROWEL = registerItem("trowel", settings -> new TrowelItem(settings.maxDamage(238)));
+    public static final Item TROWEL = registerItem("trowel", settings -> new TrowelItem(settings.maxDamage(238).component(DataComponentTypes.TOOL,
+            new ToolComponent(
+                    List.of(
+                            ToolComponent.Rule.ofNeverDropping(Registries.createEntryLookup(Registries.BLOCK).getOrThrow(BlockTags.INCORRECT_FOR_IRON_TOOL)),
+                            ToolComponent.Rule.ofAlwaysDropping(Registries.createEntryLookup(Registries.BLOCK).getOrThrow(BlockTags.SHOVEL_MINEABLE), 2.0f)
+                    ),
+                    1.0F,
+                    1
+            )
+    )));
 
     public static final Item FLORAL_SMITHING_TEMPLATE = registerSmithingTemplate("floral_armor_trim_smithing_template", SmithingTemplateItem.of(new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, "floral_armor_trim_smithing_template"))).rarity(Rarity.UNCOMMON)));
 

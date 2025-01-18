@@ -4,6 +4,7 @@ import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.eyeblossoms.*;
+import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.ai.pathing.NavigationType;
@@ -99,40 +100,44 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
         }
     }
 
+    private boolean isValidFlower(ItemStack stack) {
+        return stack.isIn(FBTags.Items.VASE_FLOWERS) || ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !stack.isIn(FBTags.Items.VASE_FLOWERS));
+    }
+
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof FlowerbedBlockEntity entity) {
-            if ((entity.isEmpty() && player.getMainHandStack().isEmpty() && !(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) || (entity.isFull() && (stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)))) {
+            if ((entity.isEmpty() && player.getMainHandStack().isEmpty() && !isValidFlower(player.getOffHandStack())) || (entity.isFull() && isValidFlower(stack))) {
                 return ActionResult.SUCCESS;
             }
             else {
-                if ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !entity.isFull()) {
+                if (isValidFlower(stack) && !entity.isFull() && !player.isSneaking()) {
                     if (entity.isEmpty()) {
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.NORTH) {
+                        if (player.getHorizontalFacing() == Direction.NORTH) {
                         entity.setStack(0, stack);
                         }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.EAST) {
+                        if (player.getHorizontalFacing() == Direction.EAST) {
                         entity.setStack(1, stack);
                         }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.SOUTH) {
+                        if (player.getHorizontalFacing() == Direction.SOUTH) {
                         entity.setStack(2, stack);
                         }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.WEST) {
+                        if (player.getHorizontalFacing() == Direction.WEST) {
                         entity.setStack(3, stack);
                         }
                     }
                     else {
                         if (!entity.isEmpty() && !entity.isFull()) {
-                            if (!player.isSneaking() && entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
+                            if (entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
                                 entity.setStack(0, stack);
                             } else {
-                                if (!player.isSneaking() && entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
+                                if (entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
                                     entity.setStack(1, stack);
                                 } else {
-                                    if (!player.isSneaking() && entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
+                                    if (entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
                                         entity.setStack(2, stack);
                                     } else {
-                                        if (!player.isSneaking() && entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
+                                        if (entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
                                             entity.setStack(3, stack);
                                         }
                                     }
@@ -149,31 +154,31 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
                     return ActionResult.SUCCESS;
                 }
                 else {
-                    if (player.getMainHandStack().isEmpty()) {
+                    if (player.getMainHandStack().isEmpty() && !player.isSneaking()) {
                         if (!entity.isEmpty()) {
                             if (entity.isFull()) {
-                                if (!player.isSneaking() && player.getHorizontalFacing() == Direction.NORTH) {
+                                if (player.getHorizontalFacing() == Direction.NORTH) {
                                     ItemStack stackInBed = entity.getStack(3);
                                     if (!player.isInCreativeMode()) {
                                         player.getInventory().offerOrDrop(stackInBed);
                                     }
                                     entity.removeStack(3);
                                 }
-                                if (!player.isSneaking() && player.getHorizontalFacing() == Direction.EAST) {
+                                if (player.getHorizontalFacing() == Direction.EAST) {
                                     ItemStack stackInBed = entity.getStack(0);
                                     if (!player.isInCreativeMode()) {
                                     player.getInventory().offerOrDrop(stackInBed);
                                     }
                                     entity.removeStack(0);
                                 }
-                                if (!player.isSneaking() && player.getHorizontalFacing() == Direction.SOUTH) {
+                                if (player.getHorizontalFacing() == Direction.SOUTH) {
                                     ItemStack stackInBed = entity.getStack(1);
                                     if (!player.isInCreativeMode()) {
                                         player.getInventory().offerOrDrop(stackInBed);
                                     }
                                     entity.removeStack(1);
                                 }
-                                if (!player.isSneaking() && player.getHorizontalFacing() == Direction.WEST) {
+                                if (player.getHorizontalFacing() == Direction.WEST) {
                                     ItemStack stackInBed = entity.getStack(2);
                                     if (!player.isInCreativeMode()) {
                                         player.getInventory().offerOrDrop(stackInBed);
@@ -185,29 +190,29 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
                                 world.playSound(player, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1f, 1f);
                                 return ActionResult.SUCCESS;
                             } else {
-                                if (!entity.isFull() && !entity.isEmpty() && !(player.getOffHandStack().isIn(ItemTags.SMALL_FLOWERS) || player.getOffHandStack().isIn(ConventionalItemTags.SMALL_FLOWERS))) {
-                                    if (!player.isSneaking() && entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
+                                if (!entity.isFull() && !entity.isEmpty() && !isValidFlower(player.getOffHandStack())) {
+                                    if (entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
                                       ItemStack stackInBed = entity.getStack(3);
                                       if (!player.isInCreativeMode()) {
                                           player.getInventory().offerOrDrop(stackInBed);
                                         }
                                         entity.removeStack(3);
                                     } else {
-                                        if (!player.isSneaking() && entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
+                                        if (entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
                                             ItemStack stackInBed = entity.getStack(2);
                                             if (!player.isInCreativeMode()) {
                                                 player.getInventory().offerOrDrop(stackInBed);
                                             }
                                             entity.removeStack(2);
                                         } else {
-                                            if (!player.isSneaking() && entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
+                                            if (entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
                                                 ItemStack stackInBed = entity.getStack(1);
                                                 if (!player.isInCreativeMode()) {
                                                     player.getInventory().offerOrDrop(stackInBed);
                                                 }
                                                 entity.removeStack(1);
                                             } else {
-                                                if (!player.isSneaking() && entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
+                                                if (entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
                                                     ItemStack stackInBed = entity.getStack(0);
                                                     if (!player.isInCreativeMode()) {
                                                         player.getInventory().offerOrDrop(stackInBed);

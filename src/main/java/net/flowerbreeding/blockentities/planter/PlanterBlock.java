@@ -83,13 +83,13 @@ public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider
                 return ActionResult.SUCCESS;
             }
             else {
-            if (!entity.isEmpty() && !player.isSneaking()) {
-                if (!player.isInCreativeMode()) {
-                    player.getInventory().offerOrDrop(entity.getStack(0));
+                if (!entity.isEmpty() && !player.isSneaking()) {
+                    if (!player.isInCreativeMode()) {
+                        player.getInventory().offerOrDrop(entity.getStack(0));
+                    }
+                    entity.removeStack(0);
+                    return ActionResult.SUCCESS;
                 }
-                entity.removeStack(0);
-                return ActionResult.SUCCESS;
-            }
             }
         }
         return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;

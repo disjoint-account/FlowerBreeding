@@ -101,7 +101,10 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
     }
 
     private boolean isValidFlower(ItemStack stack) {
-        return stack.isIn(FBTags.Items.VASE_FLOWERS) || ((stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS)) && !stack.isIn(FBTags.Items.VASE_FLOWERS));
+        if (stack.isIn(FBTags.Items.SMALL_FLOWERS)) {
+            return stack.isIn(FBTags.Items.VASE_FLOWERS);
+        }
+        else return stack.isIn(ItemTags.SMALL_FLOWERS) || stack.isIn(ConventionalItemTags.SMALL_FLOWERS);
     }
 
     @Override

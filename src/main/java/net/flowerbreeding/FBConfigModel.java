@@ -8,4 +8,6 @@ import io.wispforest.owo.config.annotation.Modmenu;
 public class FBConfigModel {
     public boolean fastRecolouring = true;
     public boolean craftableBotanyTables = false;
+    public boolean craftableTrowels = false;
+    public boolean craftableJarsAndVials = false;
 }

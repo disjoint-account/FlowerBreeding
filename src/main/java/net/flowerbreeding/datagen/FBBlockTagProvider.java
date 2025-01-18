@@ -803,7 +803,8 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_GLOWSHROOM,
                         FBBlocks.PINK_GLOWSHROOM,
                         FBBlocks.BLACK_GLOWSHROOM,
-                        FBBlocks.CYAN_GLOWSHROOM);
+                        FBBlocks.CYAN_GLOWSHROOM,
+                        FBBlocks.GREEN_GLOWSHROOM);
 
         getOrCreateTagBuilder(BlockTags.CLIMBABLE)
                 .addOptionalTag(FBTags.Blocks.JASMINES)

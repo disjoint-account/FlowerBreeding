@@ -19,7 +19,6 @@ public class FBDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(FBPOITagProvider::new);
 		pack.addProvider(FBRecipeGenerator::new);
 		pack.addProvider(FBRegistryDataGenerator::new);
-		pack.addProvider(FBWorldGenerator::new);
 	}
 
 	@Override

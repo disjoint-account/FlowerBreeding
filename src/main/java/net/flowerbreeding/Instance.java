@@ -305,6 +305,7 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_GLOWSHROOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_GLOWSHROOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_GLOWSHROOM, 0.65f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.GREEN_GLOWSHROOM, 0.65f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLUE_GLOWSHROOM_BLOCK, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.WHITE_GLOWSHROOM_BLOCK, 0.85f);
@@ -315,6 +316,7 @@ public class Instance {
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.PINK_GLOWSHROOM_BLOCK, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.BLACK_GLOWSHROOM_BLOCK, 0.85f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CYAN_GLOWSHROOM_BLOCK, 0.85f);
+        CompostingChanceRegistry.INSTANCE.add(FBBlocks.GREEN_GLOWSHROOM_BLOCK, 0.85f);
 
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CLIMBING_IVY, 0.5f);
         CompostingChanceRegistry.INSTANCE.add(FBBlocks.CATTAILS, 0.5f);

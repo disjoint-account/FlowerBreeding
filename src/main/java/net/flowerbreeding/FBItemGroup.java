@@ -378,6 +378,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_GLOWSHROOM);
                         entries.add(FBBlocks.BLACK_GLOWSHROOM);
                         entries.add(FBBlocks.CYAN_GLOWSHROOM);
+                        entries.add(FBBlocks.GREEN_GLOWSHROOM);
                         entries.add(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK);
                         entries.add(FBBlocks.BLUE_GLOWSHROOM_BLOCK);
                         entries.add(FBBlocks.WHITE_GLOWSHROOM_BLOCK);
@@ -388,6 +389,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_GLOWSHROOM_BLOCK);
                         entries.add(FBBlocks.BLACK_GLOWSHROOM_BLOCK);
                         entries.add(FBBlocks.CYAN_GLOWSHROOM_BLOCK);
+                        entries.add(FBBlocks.GREEN_GLOWSHROOM_BLOCK);
 
                         entries.add(FBItems.TROWEL);
 

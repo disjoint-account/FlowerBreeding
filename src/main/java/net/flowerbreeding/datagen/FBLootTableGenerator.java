@@ -504,6 +504,8 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.POTTED_BLACK_GLOWSHROOM, pottedPlantDrops(FBBlocks.BLACK_GLOWSHROOM));
             addDrop(FBBlocks.CYAN_GLOWSHROOM);
             addDrop(FBBlocks.POTTED_CYAN_GLOWSHROOM, pottedPlantDrops(FBBlocks.CYAN_GLOWSHROOM));
+            addDrop(FBBlocks.GREEN_GLOWSHROOM);
+            addDrop(FBBlocks.POTTED_GREEN_GLOWSHROOM, pottedPlantDrops(FBBlocks.GREEN_GLOWSHROOM));
 
             addDrop(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.MAGENTA_GLOWSHROOM_BLOCK, FBBlocks.MAGENTA_GLOWSHROOM.asItem()));
             addDrop(FBBlocks.BLUE_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.BLUE_GLOWSHROOM_BLOCK, FBBlocks.BLUE_GLOWSHROOM.asItem()));
@@ -515,6 +517,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.PINK_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.PINK_GLOWSHROOM_BLOCK, FBBlocks.PINK_GLOWSHROOM.asItem()));
             addDrop(FBBlocks.BLACK_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.BLACK_GLOWSHROOM_BLOCK, FBBlocks.BLACK_GLOWSHROOM.asItem()));
             addDrop(FBBlocks.CYAN_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.CYAN_GLOWSHROOM_BLOCK, FBBlocks.CYAN_GLOWSHROOM.asItem()));
+            addDrop(FBBlocks.GREEN_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.GREEN_GLOWSHROOM_BLOCK, FBBlocks.GREEN_GLOWSHROOM.asItem()));
 
             addDrop(FBBlocks.CLIMBING_IVY);
             addDrop(FBBlocks.CATTAILS);

@@ -743,7 +743,8 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.LIGHT_BLUE_GLOWSHROOM.asItem())
                 .add(FBBlocks.PINK_GLOWSHROOM.asItem())
                 .add(FBBlocks.BLACK_GLOWSHROOM.asItem())
-                .add(FBBlocks.CYAN_GLOWSHROOM.asItem());
+                .add(FBBlocks.CYAN_GLOWSHROOM.asItem())
+                .add(FBBlocks.GREEN_GLOWSHROOM.asItem());
 
         getOrCreateTagBuilder(FBTags.Items.VASE_FLOWERS)
                 .addOptionalTag(FBTags.Items.ALLIUMS)

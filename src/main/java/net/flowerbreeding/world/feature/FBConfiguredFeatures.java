@@ -26,6 +26,7 @@ public class FBConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_PINK_GLOWSHROOM = registerKey("huge_pink_glowshroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_BLACK_GLOWSHROOM = registerKey("huge_black_glowshroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_CYAN_GLOWSHROOM = registerKey("huge_cyan_glowshroom");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_GREEN_GLOWSHROOM = registerKey("huge_green_glowshroom");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -105,6 +106,13 @@ public class FBConfiguredFeatures {
                 Feature.HUGE_RED_MUSHROOM,
                 new HugeMushroomFeatureConfig(
                         BlockStateProvider.of(FBBlocks.CYAN_GLOWSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, Boolean.FALSE)),
+                        BlockStateProvider.of(Blocks.MUSHROOM_STEM.getDefaultState().with(MushroomBlock.UP, Boolean.FALSE).with(MushroomBlock.DOWN, Boolean.FALSE)),
+                        2));
+
+        register(context, HUGE_GREEN_GLOWSHROOM,
+                Feature.HUGE_RED_MUSHROOM,
+                new HugeMushroomFeatureConfig(
+                        BlockStateProvider.of(FBBlocks.GREEN_GLOWSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, Boolean.FALSE)),
                         BlockStateProvider.of(Blocks.MUSHROOM_STEM.getDefaultState().with(MushroomBlock.UP, Boolean.FALSE).with(MushroomBlock.DOWN, Boolean.FALSE)),
                         2));
     }

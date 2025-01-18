@@ -258,6 +258,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.PINK_GLOWSHROOM, FBBlocks.POTTED_PINK_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLACK_GLOWSHROOM, FBBlocks.POTTED_BLACK_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.CYAN_GLOWSHROOM, FBBlocks.POTTED_CYAN_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.GREEN_GLOWSHROOM, FBBlocks.POTTED_GREEN_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.SAGE, FBBlocks.POTTED_SAGE, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
@@ -386,6 +387,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.register(FBBlocks.PINK_GLOWSHROOM_BLOCK.asItem());
         itemModelGenerator.register(FBBlocks.BLACK_GLOWSHROOM_BLOCK.asItem());
         itemModelGenerator.register(FBBlocks.CYAN_GLOWSHROOM_BLOCK.asItem());
+        itemModelGenerator.register(FBBlocks.GREEN_GLOWSHROOM_BLOCK.asItem());
 
         itemModelGenerator.register(FBBlocks.CLIMBING_IVY.asItem(), Models.GENERATED);
         itemModelGenerator.register(FBBlocks.CATTAILS.asItem(), Models.GENERATED);

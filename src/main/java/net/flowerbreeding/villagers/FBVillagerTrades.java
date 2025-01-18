@@ -156,8 +156,8 @@ public class FBVillagerTrades {
                     new ItemStack(FBBlocks.ORANGE_CYPRUS_VINE, 1), 16, 5, 0.05f
             ));
             factories.add((entity, random) -> new TradeOffer(
-                    new TradedItem(Items.EMERALD, 1),
-                    new ItemStack(Items.STICK, 1), 16, 5, 0.05f
+                    new TradedItem(Items.EMERALD, 2),
+                    new ItemStack(FBBlocks.GREEN_GLOWSHROOM, 1), 16, 5, 0.05f
             ));
         });
         TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {

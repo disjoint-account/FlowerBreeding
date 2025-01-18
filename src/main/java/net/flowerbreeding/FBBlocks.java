@@ -567,6 +567,9 @@ public class FBBlocks {
     public static final Block CYAN_GLOWSHROOM = registerGlowshroom("cyan_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_CYAN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_CYAN_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_cyan_glowshroom", CYAN_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block CYAN_GLOWSHROOM_BLOCK = registerBlock("cyan_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.CYAN).luminance(state -> 15));
+    public static final Block GREEN_GLOWSHROOM = registerGlowshroom("green_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_GREEN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block POTTED_GREEN_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_green_glowshroom", GREEN_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
+    public static final Block GREEN_GLOWSHROOM_BLOCK = registerBlock("green_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.LIME).luminance(state -> 15));
 
     //other plants
 

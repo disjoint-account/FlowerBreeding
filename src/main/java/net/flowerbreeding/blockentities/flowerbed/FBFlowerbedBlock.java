@@ -144,62 +144,76 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
                 world.playSound(player, pos, SoundEvents.BLOCK_GRASS_PLACE, SoundCategory.BLOCKS, 1f, 1f);
                 return ActionResult.SUCCESS;
             }
-            else {
-                if (stack.isEmpty() && !entity.isEmpty()) {
-                    if (entity.isFull()) {
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.NORTH) {
+            if (stack.isEmpty() && !entity.isEmpty()) {
+                if (entity.isFull()) {
+                    if (!player.isSneaking() && player.getHorizontalFacing() == Direction.NORTH) {
+                        ItemStack stackInBed = entity.getStack(3);
+                        if (!player.isInCreativeMode()) {
+                            player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                        }
+                        entity.removeStack(3);
+                    }
+                    if (!player.isSneaking() && player.getHorizontalFacing() == Direction.EAST) {
+                        ItemStack stackInBed = entity.getStack(0);
+                        if (!player.isInCreativeMode()) {
+                            player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                        }
+                        entity.removeStack(0);
+                    }
+                    if (!player.isSneaking() && player.getHorizontalFacing() == Direction.SOUTH) {
+                        ItemStack stackInBed = entity.getStack(1);
+                        if (!player.isInCreativeMode()) {
+                            player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                        }
+                        entity.removeStack(1);
+                    }
+                    if (!player.isSneaking() && player.getHorizontalFacing() == Direction.WEST) {
+                        ItemStack stackInBed = entity.getStack(2);
+                        if (!player.isInCreativeMode()) {
+                            player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                        }
+                        entity.removeStack(2);
+                    }
+                }
+                else {
+                    if (!entity.isFull() && !entity.isEmpty()) {
+                        if (!player.isSneaking() && entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
                             ItemStack stackInBed = entity.getStack(3);
                             if (!player.isInCreativeMode()) {
                                 player.setStackInHand(Hand.MAIN_HAND, stackInBed);
                             }
                             entity.removeStack(3);
-                        }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.EAST) {
-                            ItemStack stackInBed = entity.getStack(0);
-                            if (!player.isInCreativeMode()) {
-                                player.setStackInHand(Hand.MAIN_HAND, stackInBed);
-                            }
-                            entity.removeStack(0);
-                        }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.SOUTH) {
-                            ItemStack stackInBed = entity.getStack(1);
-                            if (!player.isInCreativeMode()) {
-                                player.setStackInHand(Hand.MAIN_HAND, stackInBed);
-                            }
-                            entity.removeStack(1);
-                        }
-                        if (!player.isSneaking() && player.getHorizontalFacing() == Direction.WEST) {
-                            ItemStack stackInBed = entity.getStack(2);
-                            if (!player.isInCreativeMode()) {
-                                player.setStackInHand(Hand.MAIN_HAND, stackInBed);
-                            }
-                            entity.removeStack(2);
-                        }
-                    }
-                    else {
-                        if (!entity.isFull() && !entity.isEmpty()) {
-                            if (!player.isSneaking() && entity.getStack(0).isEmpty() && !entity.getStack(3).isEmpty()) {
-                                entity.removeStack(3);
+                        } else {
+                            if (!player.isSneaking() && entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
+                                ItemStack stackInBed = entity.getStack(2);
+                                if (!player.isInCreativeMode()) {
+                                    player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                                }
+                                entity.removeStack(2);
                             } else {
-                                if (!player.isSneaking() && entity.getStack(3).isEmpty() && !entity.getStack(2).isEmpty()) {
-                                    entity.removeStack(2);
+                                if (!player.isSneaking() && entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
+                                    ItemStack stackInBed = entity.getStack(1);
+                                    if (!player.isInCreativeMode()) {
+                                        player.setStackInHand(Hand.MAIN_HAND, stackInBed);
+                                    }
+                                    entity.removeStack(1);
                                 } else {
-                                    if (!player.isSneaking() && entity.getStack(2).isEmpty() && !entity.getStack(1).isEmpty()) {
-                                        entity.removeStack(1);
-                                    } else {
-                                        if (!player.isSneaking() && entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
-                                            entity.removeStack(0);
+                                    if (!player.isSneaking() && entity.getStack(1).isEmpty() && !entity.getStack(0).isEmpty()) {
+                                        ItemStack stackInBed = entity.getStack(0);
+                                        if (!player.isInCreativeMode()) {
+                                            player.setStackInHand(Hand.MAIN_HAND, stackInBed);
                                         }
+                                        entity.removeStack(0);
                                     }
                                 }
                             }
                         }
                     }
-                    entity.markDirty();
-                    world.updateListeners(pos, state, state, 0);
-                    world.playSound(player, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1f, 1f);
-                    return ActionResult.SUCCESS;
                 }
+                entity.markDirty();
+                world.updateListeners(pos, state, state, 0);
+                world.playSound(player, pos, SoundEvents.BLOCK_GRASS_BREAK, SoundCategory.BLOCKS, 1f, 1f);
+                return ActionResult.SUCCESS;
             }
         }
         return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;

@@ -509,6 +509,8 @@
   "block.flowerbreeding.potted_black_glowshroom": "Potted Black Glowshroom",
   "block.flowerbreeding.cyan_glowshroom": "Cyan Glowshroom",
   "block.flowerbreeding.potted_cyan_glowshroom": "Potted Cyan Glowshroom",
+  "block.flowerbreeding.green_glowshroom": "Green Glowshroom",
+  "block.flowerbreeding.potted_green_glowshroom": "Potted Green Glowshroom",
   "block.flowerbreeding.magenta_glowshroom_block": "Magenta Glowshroom Block",
   "block.flowerbreeding.blue_glowshroom_block": "Blue Glowshroom Block",
   "block.flowerbreeding.white_glowshroom_block": "White Glowshroom Block",
@@ -519,6 +521,7 @@
   "block.flowerbreeding.pink_glowshroom_block": "Pink Glowshroom Block",
   "block.flowerbreeding.black_glowshroom_block": "Black Glowshroom Block",
   "block.flowerbreeding.cyan_glowshroom_block": "Cyan Glowshroom Block",
+  "block.flowerbreeding.green_glowshroom_block": "Green Glowshroom Block",
   "block.flowerbreeding.climbing_ivy": "Climbing Ivy",
   "block.flowerbreeding.cattails": "Cattails",
   "block.flowerbreeding.sage": "Sage",
@@ -553,7 +556,9 @@
   "text.config.flowerbreeding-config.option.fastRecolouring.tooltip": "Use the Pigment Jar directly on a flower to get a recolour",
   "text.config.flowerbreeding-config.option.craftableBotanyTables": "Craftable Botany Tables",
   "text.config.flowerbreeding-config.option.craftableBotanyTables.tooltip": "Makes the Botany Table craftable (Requires restart to take effect)",
-  "text.config.flowerbreeding-config.option.spawnGreenhouse": "Spawn Greenhouses",
-  "text.config.flowerbreeding-config.option.spawnGreenhouse.tooltip": "Enable spawning for the Greenhouse structure",
+  "text.config.flowerbreeding-config.option.craftableTrowels": "Craftable Trowels",
+  "text.config.flowerbreeding-config.option.craftableTrowels.tooltip": "Makes the Trowel craftable (Requires restart to take effect)",
+  "text.config.flowerbreeding-config.option.craftableJarsAndVials": "Craftable Jars and Vials",
+  "text.config.flowerbreeding-config.option.craftableJarsAndVials.tooltip": "Makes Pigment Jars and Pollen Vials craftable (Requires restart to take effect)",
   "entity.minecraft.villager.botanist": "Botanist"
 }

@@ -1,6 +1,5 @@
 package net.flowerbreeding;
 
-import com.google.common.collect.ImmutableMap;
 import com.mojang.serialization.MapCodec;
 import net.flowerbreeding.util.FBProperties;
 import net.flowerbreeding.util.properties.*;
@@ -29,8 +28,6 @@ import net.minecraft.world.WorldView;
 import net.minecraft.world.tick.ScheduledTickView;
 import org.jetbrains.annotations.Nullable;
 import java.util.Map;
-import java.util.function.Function;
-import java.util.stream.Collectors;
 import static net.minecraft.util.math.Direction.DOWN;
 
 public class IvyBlock extends Block implements Fertilizable {
@@ -60,7 +57,6 @@ public class IvyBlock extends Block implements Fertilizable {
     private static final VoxelShape SOUTH_WEST_NORTH_SHAPE;
     private static final VoxelShape WEST_NORTH_EAST_SHAPE;
     private static final VoxelShape ALL_SHAPE;
-    private final Map<BlockState, VoxelShape> shapesByState;
 
     public MapCodec<IvyBlock> getCodec() {
         return CODEC;
@@ -69,7 +65,6 @@ public class IvyBlock extends Block implements Fertilizable {
     public IvyBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(IVY_NORTH, IvyNorth.REGULAR).with(IVY_EAST, IvyEast.NONE).with(IVY_SOUTH, IvySouth.NONE).with(IVY_WEST, IvyWest.NONE).with(IVY_FERTILE, true));
-        this.shapesByState = ImmutableMap.copyOf((Map)this.stateManager.getStates().stream().collect(Collectors.toMap(Function.identity(), IvyBlock::getShapeForState)));
     }
 
     private static VoxelShape getShapeForState(BlockState state) {
@@ -127,7 +122,7 @@ public class IvyBlock extends Block implements Fertilizable {
     }
 
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return this.shapesByState.get(state);
+        return getShapeForState(state);
     }
 
     protected boolean isTransparent(BlockState state) {
@@ -701,7 +696,7 @@ public class IvyBlock extends Block implements Fertilizable {
         EAST = ConnectingBlock.EAST;
         SOUTH = ConnectingBlock.SOUTH;
         WEST = ConnectingBlock.WEST;
-        FACING_PROPERTIES = (Map)ConnectingBlock.FACING_PROPERTIES.entrySet().stream().filter((entry) -> entry.getKey() != Direction.DOWN).collect(Util.toMap());
+        FACING_PROPERTIES = ConnectingBlock.FACING_PROPERTIES.entrySet().stream().filter((entry) -> entry.getKey() != Direction.DOWN).collect(Util.toMap());
         EAST_SHAPE = Block.createCuboidShape(0.0F, 0.0F, 0.0F, 1.0F, 16.0F, 16.0F);
         WEST_SHAPE = Block.createCuboidShape(15.0F, 0.0F, 0.0F, 16.0F, 16.0F, 16.0F);
         SOUTH_SHAPE = Block.createCuboidShape(0.0F, 0.0F, 0.0F, 16.0F, 16.0F, 1.0F);

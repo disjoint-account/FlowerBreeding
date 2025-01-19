@@ -12,7 +12,6 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
@@ -37,7 +36,7 @@ public class JasmineBlock extends Block implements Fertilizable {
 
     public JasmineBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(JASMINE_TIP, true).with(JASMINE_FERTILE, true));
+        this.setDefaultState(this.stateManager.getDefaultState().with(JASMINE_TIP, true).with(JASMINE_FERTILE, true));
     }
 
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -92,23 +91,27 @@ public class JasmineBlock extends Block implements Fertilizable {
 
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
-        if ((state.get(JASMINE_FERTILE)) && (itemStack.isOf(Items.SHEARS)) && (countJasmineBelow(world, pos) == 0)) {
-            world.setBlockState(pos, state.with(JASMINE_FERTILE, false));
-            world.playSound(null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
-            itemStack.damage(1, player);
+        if (itemStack.isOf(Items.SHEARS)) {
+            if (state.get(JASMINE_FERTILE) && countJasmineBelow(world, pos) == 0) {
+                world.setBlockState(pos, state.with(JASMINE_FERTILE, false));
+                world.playSound(null, pos, SoundEvents.BLOCK_PUMPKIN_CARVE, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                itemStack.damage(1, player);
+            }
             return ActionResult.SUCCESS;
         }
-        if ((!state.get(JASMINE_FERTILE)) && (itemStack.isOf(Items.HONEY_BOTTLE)) && (countJasmineBelow(world, pos) == 0)) {
-            int qty = itemStack.getCount();
-            world.setBlockState(pos, state.with(JASMINE_FERTILE, true));
-            if ((qty > 1) && (!player.isInCreativeMode())) {
-                itemStack.decrement(1);
-                player.getInventory().offerOrDrop(new ItemStack(Items.GLASS_BOTTLE));
+        if (itemStack.isOf(Items.HONEY_BOTTLE)) {
+            if (!state.get(JASMINE_FERTILE) && countJasmineBelow(world, pos) == 0) {
+                int qty = itemStack.getCount();
+                world.setBlockState(pos, state.with(JASMINE_FERTILE, true));
+                if ((qty > 1) && (!player.isInCreativeMode())) {
+                    itemStack.decrement(1);
+                    player.getInventory().offerOrDrop(new ItemStack(Items.GLASS_BOTTLE));
+                }
+                if ((qty == 1) && (!player.isInCreativeMode())) {
+                    player.setStackInHand(hand, new ItemStack(Items.GLASS_BOTTLE));
+                }
+                world.playSound(null, pos, SoundEvents.BLOCK_BEEHIVE_DRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
-            if ((qty == 1) && (!player.isInCreativeMode())) {
-                player.setStackInHand(hand, new ItemStack(Items.GLASS_BOTTLE));
-            }
-            world.playSound(null, pos, SoundEvents.BLOCK_BEEHIVE_DRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
             return ActionResult.SUCCESS;
         }
         return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
@@ -165,7 +168,7 @@ public class JasmineBlock extends Block implements Fertilizable {
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{JASMINE_FERTILE, JASMINE_TIP});
+        builder.add(JASMINE_FERTILE, JASMINE_TIP);
     }
 
     static {

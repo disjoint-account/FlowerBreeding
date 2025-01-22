@@ -68,6 +68,10 @@
       "id": "#flowerbreeding:sunflowers",
       "required": false
     },
+    {
+      "id": "#flowerbreeding:petals",
+      "required": false
+    },
     "minecraft:sweet_berry_bush",
     "minecraft:lily_pad",
     {

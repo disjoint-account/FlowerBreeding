@@ -129,6 +129,13 @@ public class IvyBlock extends Block implements Fertilizable {
         return true;
     }
 
+    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
+        boolean validNeighbour = neighbourCheck(world, pos);
+        BlockPos pos1 = pos.offset(DOWN);
+        BlockState state1 = world.getBlockState(pos1);
+        return (((state1.isIn(BlockTags.DIRT)) || (state1.isOf(FBBlocks.CLIMBING_IVY))) && (validNeighbour));
+    }
+
     @Nullable
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         World world = ctx.getWorld();
@@ -188,17 +195,6 @@ public class IvyBlock extends Block implements Fertilizable {
                 (faceCheck(Direction.EAST, world, pos)) ||
                 (faceCheck(Direction.SOUTH, world, pos)) ||
                 (faceCheck(Direction.WEST, world, pos)));
-    }
-
-    protected boolean ivyBlockPlaceable(WorldView world, BlockPos pos) {
-        boolean validNeighbour = neighbourCheck(world, pos);
-        BlockPos pos1 = pos.offset(DOWN);
-        BlockState state1 = world.getBlockState(pos1);
-        return (((state1.isIn(BlockTags.DIRT)) || (state1.isOf(FBBlocks.CLIMBING_IVY))) && (validNeighbour));
-    }
-
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-            return ivyBlockPlaceable(world, pos);
     }
 
     protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
@@ -307,7 +303,7 @@ public class IvyBlock extends Block implements Fertilizable {
         if (random.nextDouble() < 0.1) {
             BlockPos blockPos = pos.offset(Direction.UP);
             if (world.getBlockState(blockPos).isAir()) {
-                    if ((ivyBlockPlaceable(world, blockPos)) && (state.get(IVY_FERTILE))) {
+                    if ((canPlaceAt(state, world, blockPos)) && (state.get(IVY_FERTILE))) {
                         world.setBlockState(blockPos, getUpdatedState(state, world, blockPos));
                 }
             }
@@ -326,7 +322,7 @@ public class IvyBlock extends Block implements Fertilizable {
 
     public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
         int i = (countIvyAbove(world, pos) + 1);
-        if ((ivyBlockPlaceable(world, pos.offset(Direction.UP, i))) && (state.get(IVY_FERTILE))) {
+        if ((canPlaceAt(state, world, pos.offset(Direction.UP, i))) && (state.get(IVY_FERTILE))) {
             return world.getBlockState(pos.offset(Direction.UP, i)).isAir();
         }
         return false;

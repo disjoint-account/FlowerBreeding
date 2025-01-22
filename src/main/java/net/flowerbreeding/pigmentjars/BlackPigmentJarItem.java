@@ -112,6 +112,9 @@ public class BlackPigmentJarItem extends Item {
                     if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
                         return FBBlocks.BLACK_SUNFLOWER;
                     }
+                    if (pos.isIn(FBTags.Blocks.PETALS)) {
+                        return FBBlocks.BLACK_PETALS;
+                    }
                     if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
                         return FBBlocks.BLACK_DAFFODIL;
                     }

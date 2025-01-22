@@ -45,6 +45,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             FBItems.PITCHER_PLANT_POLLEN_VIAL,
             FBItems.ROSE_BUSH_POLLEN_VIAL,
             FBItems.SUNFLOWER_POLLEN_VIAL,
+            FBItems.PETAL_POLLEN_VIAL,
             FBItems.SWEET_BERRY_POLLEN_VIAL,
             FBItems.GLOW_VINE_POLLEN_VIAL,
             FBItems.VINE_POLLEN_VIAL,
@@ -153,19 +154,18 @@ public class BotanyTableScreenHandler extends ScreenHandler {
 
     public void updateResult() {
         BotanyTableRecipeInput botanyRecipeInput = this.createRecipeInput();
-        World var4 = this.world;
         Optional<RecipeEntry<BotanyTableRecipe>> optional;
-        if (var4 instanceof ServerWorld serverWorld) {
+        if (this.world instanceof ServerWorld serverWorld) {
             optional = serverWorld.getRecipeManager().getFirstMatch(FBRecipes.BOTANY_TABLE_TYPE, botanyRecipeInput, serverWorld);
         } else {
             optional = Optional.empty();
         }
         optional.ifPresentOrElse((recipe) -> {
-            ItemStack itemStack = ((BotanyTableRecipe)recipe.value()).craft(botanyRecipeInput, this.world.getRegistryManager());
+            ItemStack itemStack = recipe.value().craft(botanyRecipeInput, this.world.getRegistryManager());
             this.output.setLastRecipe(recipe);
             this.output.setStack(0, itemStack);
         }, () -> {
-            this.output.setLastRecipe((RecipeEntry)null);
+            this.output.setLastRecipe(null);
             this.output.setStack(0, ItemStack.EMPTY);
         });
     }
@@ -190,7 +190,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
     @Override
     public ItemStack quickMove(PlayerEntity player, int index) {
         ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot = (Slot) this.slots.get(index);
+        Slot slot = this.slots.get(index);
         if (slot.hasStack()) {
             ItemStack itemStack2 = slot.getStack();
             itemStack = itemStack2.copy();

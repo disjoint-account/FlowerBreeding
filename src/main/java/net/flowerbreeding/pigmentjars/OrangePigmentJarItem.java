@@ -112,6 +112,9 @@ public class OrangePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.SUNFLOWERS)) {
                     return FBBlocks.ORANGE_SUNFLOWER;
                 }
+                if (pos.isIn(FBTags.Blocks.PETALS)) {
+                    return FBBlocks.ORANGE_PETALS;
+                }
                 if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
                     return FBBlocks.ORANGE_DAFFODIL;
                 }

@@ -32,6 +32,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.MAGENTA_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.MAGENTA_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.MAGENTA_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.MAGENTA_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLUE_ALLIUM, FBBlocks.POTTED_BLUE_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLUE_DAISY, FBBlocks.POTTED_BLUE_DAISY, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -47,6 +48,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLUE_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLUE_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLUE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.BLUE_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.WHITE_ALLIUM, FBBlocks.POTTED_WHITE_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.WHITE_CORNFLOWER, FBBlocks.POTTED_WHITE_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -59,6 +61,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.WHITE_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.WHITE_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.WHITE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.WHITE_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.ORANGE_ALLIUM, FBBlocks.POTTED_ORANGE_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.ORANGE_CORNFLOWER, FBBlocks.POTTED_ORANGE_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -72,6 +75,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.ORANGE_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.ORANGE_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.ORANGE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.ORANGE_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.RED_ALLIUM, FBBlocks.POTTED_RED_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.RED_CORNFLOWER, FBBlocks.POTTED_RED_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -85,6 +89,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.CLOSED_RED_EYEBLOSSOM, FBBlocks.POTTED_CLOSED_RED_EYEBLOSSOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.RED_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.RED_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.RED_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.YELLOW_ALLIUM, FBBlocks.POTTED_YELLOW_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.YELLOW_CORNFLOWER, FBBlocks.POTTED_YELLOW_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -100,6 +105,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.YELLOW_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.YELLOW_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.YELLOW_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.YELLOW_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.LIGHT_BLUE_ALLIUM, FBBlocks.POTTED_LIGHT_BLUE_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.LIGHT_BLUE_CORNFLOWER, FBBlocks.POTTED_LIGHT_BLUE_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -115,6 +121,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.LIGHT_BLUE_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.LIGHT_BLUE_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.LIGHT_BLUE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.LIGHT_BLUE_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.PINK_ALLIUM, FBBlocks.POTTED_PINK_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.PINK_CORNFLOWER, FBBlocks.POTTED_PINK_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -143,6 +150,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.BLACK_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.CYAN_ALLIUM, FBBlocks.POTTED_CYAN_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.CYAN_CORNFLOWER, FBBlocks.POTTED_CYAN_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -159,6 +167,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_LILAC, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_PEONY, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.CYAN_PETALS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.MAGENTA_DAFFODIL, FBBlocks.POTTED_MAGENTA_DAFFODIL, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLUE_DAFFODIL, FBBlocks.POTTED_BLUE_DAFFODIL, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -298,6 +307,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.registerWithTextureSource(FBItems.PITCHER_PLANT_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.ROSE_BUSH_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.SUNFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.registerWithTextureSource(FBItems.PETAL_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.LILY_PAD_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.SWEET_BERRY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.VINE_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);

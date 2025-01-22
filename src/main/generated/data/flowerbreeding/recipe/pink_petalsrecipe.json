@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:pink_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "minecraft:pink_petals"
+  },
+  "vial1": "flowerbreeding:petal_pollen_vial",
+  "vial2": "flowerbreeding:petal_pollen_vial"
+}

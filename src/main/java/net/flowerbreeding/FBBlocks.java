@@ -60,6 +60,7 @@ public class FBBlocks {
     public static final Block MAGENTA_TORCHFLOWER = registerFlowerBlock("magenta_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_MAGENTA_TORCHFLOWER = registerFlowerPotBlock("potted_magenta_torchflower", MAGENTA_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block MAGENTA_PITCHER_PLANT = registerBlock("magenta_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block MAGENTA_PETALS = registerBlock("magenta_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.MAGENTA));
 
     // blue flowers
 
@@ -92,6 +93,7 @@ public class FBBlocks {
     public static final Block BLUE_TORCHFLOWER = registerFlowerBlock("blue_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_blue_torchflower", BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block BLUE_PITCHER_PLANT = registerBlock("blue_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block BLUE_PETALS = registerBlock("blue_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.BLUE));
 
     // white flowers
 
@@ -118,6 +120,7 @@ public class FBBlocks {
     public static final Block WHITE_TORCHFLOWER = registerFlowerBlock("white_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_WHITE_TORCHFLOWER = registerFlowerPotBlock("potted_white_torchflower", WHITE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block WHITE_PITCHER_PLANT = registerBlock("white_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block WHITE_PETALS = registerBlock("white_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.WHITE));
 
     // orange flowers
 
@@ -144,6 +147,7 @@ public class FBBlocks {
     public static final Block ORANGE_AZURE_BLUET = registerFlowerBlock("orange_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
     public static final Block POTTED_ORANGE_AZURE_BLUET = registerFlowerPotBlock("potted_orange_azure_bluet", ORANGE_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block ORANGE_PITCHER_PLANT = registerBlock("orange_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block ORANGE_PETALS = registerBlock("orange_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.ORANGE));
 
     // red flowers
 
@@ -173,6 +177,7 @@ public class FBBlocks {
     public static final Block RED_TORCHFLOWER = registerFlowerBlock("red_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_RED_TORCHFLOWER = registerFlowerPotBlock("potted_red_torchflower", RED_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block RED_PITCHER_PLANT = registerBlock("red_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block RED_PETALS = registerBlock("red_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.RED));
 
     // yellow flowers
 
@@ -204,6 +209,7 @@ public class FBBlocks {
     public static final Block YELLOW_TORCHFLOWER = registerFlowerBlock("yellow_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_YELLOW_TORCHFLOWER = registerFlowerPotBlock("potted_yellow_torchflower", YELLOW_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block YELLOW_PITCHER_PLANT = registerBlock("yellow_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block YELLOW_PETALS = registerBlock("yellow_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.YELLOW));
 
     // light blue flowers
 
@@ -236,6 +242,7 @@ public class FBBlocks {
     public static final Block LIGHT_BLUE_TORCHFLOWER = registerFlowerBlock("light_blue_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_LIGHT_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_light_blue_torchflower", LIGHT_BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block LIGHT_BLUE_PITCHER_PLANT = registerBlock("light_blue_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block LIGHT_BLUE_PETALS = registerBlock("light_blue_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.LIGHT_BLUE));
 
     // pink flowers
 
@@ -298,6 +305,7 @@ public class FBBlocks {
     public static final Block BLACK_TORCHFLOWER = registerFlowerBlock("black_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_BLACK_TORCHFLOWER = registerFlowerPotBlock("potted_black_torchflower", BLACK_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block BLACK_PITCHER_PLANT = registerBlock("black_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
+    public static final Block BLACK_PETALS = registerBlock("black_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.BLACK));
 
     // cyan flowers
 
@@ -331,6 +339,7 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_AZURE_BLUET = registerFlowerPotBlock("potted_cyan_azure_bluet", CYAN_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block CYAN_TORCHFLOWER = registerFlowerBlock("cyan_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_CYAN_TORCHFLOWER = registerFlowerPotBlock("potted_cyan_torchflower", CYAN_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
+    public static final Block CYAN_PETALS = registerBlock("cyan_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.CYAN));
 
     //daffodils
 

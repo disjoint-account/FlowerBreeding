@@ -51,6 +51,7 @@ public class FBItems {
     public static final Item PITCHER_PLANT_POLLEN_VIAL = registerItem("pitcher_plant_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item ROSE_BUSH_POLLEN_VIAL = registerItem("rose_bush_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item SUNFLOWER_POLLEN_VIAL = registerItem("sunflower_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
+    public static final Item PETAL_POLLEN_VIAL = registerItem("petal_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item SWEET_BERRY_POLLEN_VIAL = registerItem("sweet_berry_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item GLOW_VINE_POLLEN_VIAL = registerItem("glow_vine_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));
     public static final Item VINE_POLLEN_VIAL = registerItem("vine_pollen_vial", settings -> new FullPollenVialItem(settings.maxCount(64)));

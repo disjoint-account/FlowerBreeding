@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
@@ -46,6 +47,7 @@ public class FBItemGroup {
                         entries.add(FBItems.PITCHER_PLANT_POLLEN_VIAL);
                         entries.add(FBItems.ROSE_BUSH_POLLEN_VIAL);
                         entries.add(FBItems.SUNFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.PETAL_POLLEN_VIAL);
                         entries.add(FBItems.GLOW_VINE_POLLEN_VIAL);
                         entries.add(FBItems.SWEET_BERRY_POLLEN_VIAL);
                         entries.add(FBItems.LILY_PAD_POLLEN_VIAL);
@@ -71,6 +73,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.MAGENTA_PITCHER_PLANT);
                         entries.add(FBBlocks.MAGENTA_ROSE_BUSH);
                         entries.add(FBBlocks.MAGENTA_SUNFLOWER);
+                        entries.add(FBBlocks.MAGENTA_PETALS);
 
                         entries.add(FBBlocks.BLUE_ALLIUM);
                         entries.add(Blocks.CORNFLOWER);
@@ -90,6 +93,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLUE_PITCHER_PLANT);
                         entries.add(FBBlocks.BLUE_ROSE_BUSH);
                         entries.add(FBBlocks.BLUE_SUNFLOWER);
+                        entries.add(FBBlocks.BLUE_PETALS);
 
                         entries.add(FBBlocks.WHITE_ALLIUM);
                         entries.add(FBBlocks.WHITE_CORNFLOWER);
@@ -109,6 +113,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.WHITE_PITCHER_PLANT);
                         entries.add(FBBlocks.WHITE_ROSE_BUSH);
                         entries.add(FBBlocks.WHITE_SUNFLOWER);
+                        entries.add(FBBlocks.WHITE_PETALS);
 
                         entries.add(FBBlocks.ORANGE_ALLIUM);
                         entries.add(FBBlocks.ORANGE_CORNFLOWER);
@@ -128,6 +133,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.ORANGE_PITCHER_PLANT);
                         entries.add(FBBlocks.ORANGE_ROSE_BUSH);
                         entries.add(FBBlocks.ORANGE_SUNFLOWER);
+                        entries.add(FBBlocks.ORANGE_PETALS);
 
                         entries.add(FBBlocks.RED_ALLIUM);
                         entries.add(FBBlocks.RED_CORNFLOWER);
@@ -147,6 +153,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.RED_PITCHER_PLANT);
                         entries.add(Blocks.ROSE_BUSH);
                         entries.add(FBBlocks.RED_SUNFLOWER);
+                        entries.add(FBBlocks.RED_PETALS);
 
                         entries.add(FBBlocks.YELLOW_ALLIUM);
                         entries.add(FBBlocks.YELLOW_CORNFLOWER);
@@ -166,6 +173,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.YELLOW_PITCHER_PLANT);
                         entries.add(FBBlocks.YELLOW_ROSE_BUSH);
                         entries.add(Blocks.SUNFLOWER);
+                        entries.add(FBBlocks.YELLOW_PETALS);
 
                         entries.add(FBBlocks.LIGHT_BLUE_ALLIUM);
                         entries.add(FBBlocks.LIGHT_BLUE_CORNFLOWER);
@@ -185,6 +193,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.LIGHT_BLUE_PITCHER_PLANT);
                         entries.add(FBBlocks.LIGHT_BLUE_ROSE_BUSH);
                         entries.add(FBBlocks.LIGHT_BLUE_SUNFLOWER);
+                        entries.add(FBBlocks.LIGHT_BLUE_PETALS);
 
                         entries.add(FBBlocks.PINK_ALLIUM);
                         entries.add(FBBlocks.PINK_CORNFLOWER);
@@ -204,6 +213,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_PITCHER_PLANT);
                         entries.add(FBBlocks.PINK_ROSE_BUSH);
                         entries.add(FBBlocks.PINK_SUNFLOWER);
+                        entries.add(Items.PINK_PETALS);
 
                         entries.add(FBBlocks.BLACK_ALLIUM);
                         entries.add(FBBlocks.BLACK_CORNFLOWER);
@@ -223,6 +233,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_PITCHER_PLANT);
                         entries.add(FBBlocks.BLACK_ROSE_BUSH);
                         entries.add(FBBlocks.BLACK_SUNFLOWER);
+                        entries.add(FBBlocks.BLACK_PETALS);
 
                         entries.add(FBBlocks.CYAN_ALLIUM);
                         entries.add(FBBlocks.CYAN_CORNFLOWER);
@@ -242,6 +253,7 @@ public class FBItemGroup {
                         entries.add(Blocks.PITCHER_PLANT);
                         entries.add(FBBlocks.CYAN_ROSE_BUSH);
                         entries.add(FBBlocks.CYAN_SUNFLOWER);
+                        entries.add(FBBlocks.CYAN_PETALS);
 
                         entries.add(FBBlocks.MAGENTA_DAFFODIL);
                         entries.add(FBBlocks.BLUE_DAFFODIL);

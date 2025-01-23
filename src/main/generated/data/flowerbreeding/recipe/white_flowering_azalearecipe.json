@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:white_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:white_flowering_azalea"
+  },
+  "vial1": "flowerbreeding:flowering_azalea_pollen_vial",
+  "vial2": "flowerbreeding:flowering_azalea_pollen_vial"
+}

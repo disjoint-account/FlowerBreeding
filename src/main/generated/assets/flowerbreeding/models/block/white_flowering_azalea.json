@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_azalea",
+  "textures": {
+    "side": "flowerbreeding:block/white_flowering_azalea_side",
+    "top": "flowerbreeding:block/white_flowering_azalea_top"
+  }
+}

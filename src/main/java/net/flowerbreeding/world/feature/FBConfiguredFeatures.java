@@ -2,16 +2,24 @@ package net.flowerbreeding.world.feature;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FlowerBreeding;
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.MushroomBlock;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
+import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
+import net.minecraft.world.gen.foliage.RandomSpreadFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
+import net.minecraft.world.gen.trunk.BendingTrunkPlacer;
 
 public class FBConfiguredFeatures {
 
@@ -27,6 +35,15 @@ public class FBConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_BLACK_GLOWSHROOM = registerKey("huge_black_glowshroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_CYAN_GLOWSHROOM = registerKey("huge_cyan_glowshroom");
     public static final RegistryKey<ConfiguredFeature<?, ?>> HUGE_GREEN_GLOWSHROOM = registerKey("huge_green_glowshroom");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MAGENTA_AZALEA_TREE = registerKey("magenta_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLUE_AZALEA_TREE = registerKey("blue_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> WHITE_AZALEA_TREE = registerKey("white_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_AZALEA_TREE = registerKey("orange_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> RED_AZALEA_TREE = registerKey("red_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> YELLOW_AZALEA_TREE = registerKey("yellow_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LIGHT_BLUE_AZALEA_TREE = registerKey("light_blue_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> BLACK_AZALEA_TREE = registerKey("black_azalea_tree");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> CYAN_AZALEA_TREE = registerKey("cyan_azalea_tree");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
@@ -115,6 +132,87 @@ public class FBConfiguredFeatures {
                         BlockStateProvider.of(FBBlocks.GREEN_GLOWSHROOM_BLOCK.getDefaultState().with(MushroomBlock.DOWN, Boolean.FALSE)),
                         BlockStateProvider.of(Blocks.MUSHROOM_STEM.getDefaultState().with(MushroomBlock.UP, Boolean.FALSE).with(MushroomBlock.DOWN, Boolean.FALSE)),
                         2));
+
+        register(context, MAGENTA_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, BLUE_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, WHITE_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, ORANGE_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, RED_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.RED_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, YELLOW_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, LIGHT_BLUE_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, BLACK_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
+
+        register(context, CYAN_AZALEA_TREE,
+                Feature.TREE,
+                new TreeFeatureConfig.Builder(
+                        BlockStateProvider.of(Blocks.OAK_LOG),
+                        new BendingTrunkPlacer(4, 2, 0, 3, UniformIntProvider.create(1, 2)),
+                        new WeightedBlockStateProvider(DataPool.<BlockState>builder().add(Blocks.AZALEA_LEAVES.getDefaultState(), 3).add(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES.getDefaultState(), 1)),
+                        new RandomSpreadFoliagePlacer(ConstantIntProvider.create(3), ConstantIntProvider.create(0), ConstantIntProvider.create(2), 50),
+                        new TwoLayersFeatureSize(1, 0, 1)).dirtProvider(BlockStateProvider.of(Blocks.ROOTED_DIRT)).forceDirt().build());
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

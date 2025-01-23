@@ -6,6 +6,7 @@ import net.flowerbreeding.blockentities.vase.VaseBlock;
 import net.flowerbreeding.botanytable.BotanyTableBlock;
 import net.flowerbreeding.eyeblossoms.*;
 import net.flowerbreeding.world.feature.FBConfiguredFeatures;
+import net.flowerbreeding.world.feature.tree.FBSaplingGenerators;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.entity.effect.StatusEffect;
@@ -61,6 +62,9 @@ public class FBBlocks {
     public static final Block POTTED_MAGENTA_TORCHFLOWER = registerFlowerPotBlock("potted_magenta_torchflower", MAGENTA_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block MAGENTA_PITCHER_PLANT = registerBlock("magenta_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block MAGENTA_PETALS = registerBlock("magenta_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.MAGENTA));
+    public static final Block MAGENTA_FLOWERING_AZALEA = registerBlock("magenta_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.MAGENTA_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_MAGENTA_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_magenta_flowering_azalea_bush", MAGENTA_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block MAGENTA_FLOWERING_AZALEA_LEAVES = registerBlock("magenta_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // blue flowers
 
@@ -94,6 +98,9 @@ public class FBBlocks {
     public static final Block POTTED_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_blue_torchflower", BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block BLUE_PITCHER_PLANT = registerBlock("blue_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block BLUE_PETALS = registerBlock("blue_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.BLUE));
+    public static final Block BLUE_FLOWERING_AZALEA = registerBlock("blue_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.BLUE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_BLUE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_blue_flowering_azalea_bush", BLUE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("blue_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // white flowers
 
@@ -121,6 +128,9 @@ public class FBBlocks {
     public static final Block POTTED_WHITE_TORCHFLOWER = registerFlowerPotBlock("potted_white_torchflower", WHITE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block WHITE_PITCHER_PLANT = registerBlock("white_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block WHITE_PETALS = registerBlock("white_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.WHITE));
+    public static final Block WHITE_FLOWERING_AZALEA = registerBlock("white_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.WHITE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_WHITE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_white_flowering_azalea_bush", WHITE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block WHITE_FLOWERING_AZALEA_LEAVES = registerBlock("white_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // orange flowers
 
@@ -148,6 +158,9 @@ public class FBBlocks {
     public static final Block POTTED_ORANGE_AZURE_BLUET = registerFlowerPotBlock("potted_orange_azure_bluet", ORANGE_AZURE_BLUET, Blocks.POTTED_AZURE_BLUET);
     public static final Block ORANGE_PITCHER_PLANT = registerBlock("orange_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block ORANGE_PETALS = registerBlock("orange_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.ORANGE));
+    public static final Block ORANGE_FLOWERING_AZALEA = registerBlock("orange_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.ORANGE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_ORANGE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_orange_flowering_azalea_bush", ORANGE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block ORANGE_FLOWERING_AZALEA_LEAVES = registerBlock("orange_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // red flowers
 
@@ -178,6 +191,9 @@ public class FBBlocks {
     public static final Block POTTED_RED_TORCHFLOWER = registerFlowerPotBlock("potted_red_torchflower", RED_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block RED_PITCHER_PLANT = registerBlock("red_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block RED_PETALS = registerBlock("red_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.RED));
+    public static final Block RED_FLOWERING_AZALEA = registerBlock("red_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.RED_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_RED_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_red_flowering_azalea_bush", RED_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block RED_FLOWERING_AZALEA_LEAVES = registerBlock("red_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // yellow flowers
 
@@ -210,6 +226,9 @@ public class FBBlocks {
     public static final Block POTTED_YELLOW_TORCHFLOWER = registerFlowerPotBlock("potted_yellow_torchflower", YELLOW_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block YELLOW_PITCHER_PLANT = registerBlock("yellow_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block YELLOW_PETALS = registerBlock("yellow_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.YELLOW));
+    public static final Block YELLOW_FLOWERING_AZALEA = registerBlock("yellow_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.YELLOW_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_YELLOW_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_yellow_flowering_azalea_bush", YELLOW_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block YELLOW_FLOWERING_AZALEA_LEAVES = registerBlock("yellow_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // light blue flowers
 
@@ -243,6 +262,9 @@ public class FBBlocks {
     public static final Block POTTED_LIGHT_BLUE_TORCHFLOWER = registerFlowerPotBlock("potted_light_blue_torchflower", LIGHT_BLUE_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block LIGHT_BLUE_PITCHER_PLANT = registerBlock("light_blue_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block LIGHT_BLUE_PETALS = registerBlock("light_blue_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.LIGHT_BLUE));
+    public static final Block LIGHT_BLUE_FLOWERING_AZALEA = registerBlock("light_blue_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.LIGHT_BLUE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_light_blue_flowering_azalea_bush", LIGHT_BLUE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block LIGHT_BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("light_blue_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // pink flowers
 
@@ -306,6 +328,9 @@ public class FBBlocks {
     public static final Block POTTED_BLACK_TORCHFLOWER = registerFlowerPotBlock("potted_black_torchflower", BLACK_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block BLACK_PITCHER_PLANT = registerBlock("black_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block BLACK_PETALS = registerBlock("black_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.BLACK));
+    public static final Block BLACK_FLOWERING_AZALEA = registerAzalea("black_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.BLACK_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_BLACK_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_black_flowering_azalea_bush", BLACK_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block BLACK_FLOWERING_AZALEA_LEAVES = registerBlock("black_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // cyan flowers
 
@@ -340,6 +365,9 @@ public class FBBlocks {
     public static final Block CYAN_TORCHFLOWER = registerFlowerBlock("cyan_torchflower", StatusEffects.NIGHT_VISION, 5, Blocks.TORCHFLOWER);
     public static final Block POTTED_CYAN_TORCHFLOWER = registerFlowerPotBlock("potted_cyan_torchflower", CYAN_TORCHFLOWER, Blocks.POTTED_TORCHFLOWER);
     public static final Block CYAN_PETALS = registerBlock("cyan_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.CYAN));
+    public static final Block CYAN_FLOWERING_AZALEA = registerBlock("cyan_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.CYAN_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block POTTED_CYAN_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_cyan_flowering_azalea_bush", CYAN_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
+    public static final Block CYAN_FLOWERING_AZALEA_LEAVES = registerBlock("cyan_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     //daffodils
 
@@ -652,6 +680,11 @@ public class FBBlocks {
     }
     private static Block registerWitherRoseBlock(String name) {
         return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 7, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
+    }
+    private static Block registerAzalea(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
+        Block block = Blocks.register(keyOf(name), factory, settings);
+        registerBlockItem(name, block);
+        return block;
     }
     private static Block registerGlowshroom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
         Block block = Blocks.register(keyOf(name), factory, settings);

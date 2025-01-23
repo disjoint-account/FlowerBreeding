@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "flowerbreeding:block/orange_flowering_azalea_leaves"
+  }
+}

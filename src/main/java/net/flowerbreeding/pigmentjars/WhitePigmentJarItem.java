@@ -115,6 +115,12 @@ public class WhitePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.WHITE_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
+                    return FBBlocks.WHITE_FLOWERING_AZALEA;
+                }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)) {
+                    return FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES;
+                }
                 if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
                     return FBBlocks.WHITE_DAFFODIL;
                 }

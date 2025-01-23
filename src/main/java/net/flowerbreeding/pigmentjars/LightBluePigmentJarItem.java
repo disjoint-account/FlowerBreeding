@@ -115,6 +115,12 @@ public class LightBluePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.LIGHT_BLUE_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
+                    return FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA;
+                }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)) {
+                    return FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES;
+                }
                 if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
                     return FBBlocks.LIGHT_BLUE_DAFFODIL;
                 }

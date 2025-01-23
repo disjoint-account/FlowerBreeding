@@ -69,6 +69,14 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:flowering_azaleas",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:flowering_azalea_leaves",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:daffodils",
       "required": false
     },

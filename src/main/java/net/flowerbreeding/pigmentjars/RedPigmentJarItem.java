@@ -115,6 +115,12 @@ public class RedPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.RED_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
+                    return FBBlocks.RED_FLOWERING_AZALEA;
+                }
+                if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)) {
+                    return FBBlocks.RED_FLOWERING_AZALEA_LEAVES;
+                }
                 if (pos.isIn(FBTags.Blocks.DAFFODILS)) {
                     return FBBlocks.RED_DAFFODIL;
                 }

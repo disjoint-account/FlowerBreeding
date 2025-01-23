@@ -35,7 +35,7 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
 
     public CattailsBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState) this.stateManager.getDefaultState().with(CATTAIL_TIP, true)).with(WATERLOGGED, true));
+        this.setDefaultState(this.stateManager.getDefaultState().with(CATTAIL_TIP, true).with(WATERLOGGED, true));
     }
 
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {

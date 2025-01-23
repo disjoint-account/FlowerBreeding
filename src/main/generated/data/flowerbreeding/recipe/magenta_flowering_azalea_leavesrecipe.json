@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:magenta_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:magenta_flowering_azalea_leaves"
+  },
+  "vial1": "flowerbreeding:flowering_azalea_leaves_pollen_vial",
+  "vial2": "flowerbreeding:flowering_azalea_leaves_pollen_vial"
+}

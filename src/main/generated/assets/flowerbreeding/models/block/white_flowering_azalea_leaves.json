@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "flowerbreeding:block/white_flowering_azalea_leaves"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:cyan_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:cyan_spore_blossom"
+  },
+  "vial1": "flowerbreeding:spore_blossom_pollen_vial",
+  "vial2": "flowerbreeding:spore_blossom_pollen_vial"
+}

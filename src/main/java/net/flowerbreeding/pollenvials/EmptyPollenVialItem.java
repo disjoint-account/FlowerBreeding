@@ -103,6 +103,9 @@ public class EmptyPollenVialItem extends Item {
                 if (state.isIn(FBTags.Blocks.PETALS)) {
                     return FBItems.PETAL_POLLEN_VIAL;
                 }
+                if (state.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
+                    return FBItems.SPORE_BLOSSOM_POLLEN_VIAL;
+                }
                 if (state.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
                     return FBItems.FLOWERING_AZALEA_POLLEN_VIAL;
                 }

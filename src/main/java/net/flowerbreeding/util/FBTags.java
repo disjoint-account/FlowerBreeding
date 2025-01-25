@@ -44,6 +44,7 @@ public class FBTags {
         public static final TagKey<Block> ROSE_BUSHES = createTag("rose_bushes");
         public static final TagKey<Block> SUNFLOWERS = createTag("sunflowers");
         public static final TagKey<Block> PETALS = createTag("petals");
+        public static final TagKey<Block> SPORE_BLOSSOMS = createTag("spore_blossoms");
         public static final TagKey<Block> FLOWERING_AZALEAS = createTag("flowering_azaleas");
         public static final TagKey<Block> FLOWERING_AZALEA_LEAVES = createTag("flowering_azalea_leaves");
         public static final TagKey<Block> DAFFODILS = createTag("daffodils");

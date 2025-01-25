@@ -73,6 +73,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:spore_blossoms",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:flowering_azaleas",
       "required": false
     },

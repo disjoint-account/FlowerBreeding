@@ -115,6 +115,9 @@ public class YellowPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.YELLOW_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
+                    return FBBlocks.YELLOW_SPORE_BLOSSOM;
+                }
                 if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
                     return FBBlocks.YELLOW_FLOWERING_AZALEA;
                 }

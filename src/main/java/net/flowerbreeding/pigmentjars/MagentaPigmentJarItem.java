@@ -115,6 +115,9 @@ public class MagentaPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.MAGENTA_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
+                    return FBBlocks.MAGENTA_SPORE_BLOSSOM;
+                }
                 if (pos.isIn(FBTags.Blocks.FLOWERING_AZALEAS)) {
                     return FBBlocks.MAGENTA_FLOWERING_AZALEA;
                 }

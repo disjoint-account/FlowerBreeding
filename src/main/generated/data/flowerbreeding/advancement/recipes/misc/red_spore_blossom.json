@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "flowerbreedingminecraft:red_spore_blossomrecipe"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_vial1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flowerbreeding:spore_blossom_pollen_vial"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_vial2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "flowerbreeding:spore_blossom_pollen_vial"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_vial1",
+      "has_vial2"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flowerbreedingminecraft:red_spore_blossomrecipe"
+    ]
+  }
+}

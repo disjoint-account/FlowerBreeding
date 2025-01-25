@@ -1,0 +1,7 @@
+{
+  "parent": "flowerbreeding:block/spore_blossom_master",
+  "textures": {
+    "particle": "flowerbreeding:block/red_spore_blossom",
+    "flower": "flowerbreeding:block/red_spore_blossom"
+  }
+}

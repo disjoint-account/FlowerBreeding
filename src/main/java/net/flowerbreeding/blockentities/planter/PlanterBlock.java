@@ -2,6 +2,7 @@ package net.flowerbreeding.blockentities.planter;
 
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
+import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -75,7 +76,7 @@ public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof PlanterBlockEntity entity) {
-            if (stack.isIn(ConventionalItemTags.TALL_FLOWERS) && entity.isEmpty() && !player.isSneaking()) {
+            if ((stack.isIn(ConventionalItemTags.TALL_FLOWERS) || stack.isIn(FBTags.Items.PLANTER_PLANTS)) && entity.isEmpty() && !player.isSneaking()) {
                 entity.setStack(0, stack);
                 if (!player.isInCreativeMode()) {
                     stack.decrement(1);

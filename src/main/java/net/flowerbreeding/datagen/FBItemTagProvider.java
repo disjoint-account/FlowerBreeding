@@ -825,6 +825,10 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.OPEN_EYEBLOSSOMS)
                 .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
 
+        getOrCreateTagBuilder(FBTags.Items.PLANTER_PLANTS)
+                .add(Items.LARGE_FERN)
+                .add(Items.SMALL_DRIPLEAF);
+
         getOrCreateTagBuilder(ItemTags.SMALL_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_FLOWERS);
 

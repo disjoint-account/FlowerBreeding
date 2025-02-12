@@ -124,6 +124,7 @@ public class FBTags {
         public static final TagKey<Item> SMALL_ROSES = createTag("small_roses");
         public static final TagKey<Item> GLOWSHROOMS = createTag("glowshrooms");
         public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
+        public static final TagKey<Item> PLANTER_PLANTS = createTag("planter_plants");
         private static TagKey<Item> createTag(String name) {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
         }

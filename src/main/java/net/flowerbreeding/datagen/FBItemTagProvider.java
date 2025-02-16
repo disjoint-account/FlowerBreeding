@@ -23,17 +23,13 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBItems.TROWEL);
 
         getOrCreateTagBuilder(ItemTags.BEE_FOOD)
-                .addOptionalTag(FBTags.Items.MAGENTA_FLOWERS)
-                .addOptionalTag(FBTags.Items.BLUE_FLOWERS)
-                .addOptionalTag(FBTags.Items.WHITE_FLOWERS)
-                .addOptionalTag(FBTags.Items.ORANGE_FLOWERS)
-                .addOptionalTag(FBTags.Items.RED_FLOWERS)
-                .addOptionalTag(FBTags.Items.YELLOW_FLOWERS)
-                .addOptionalTag(FBTags.Items.LIGHT_BLUE_FLOWERS)
-                .addOptionalTag(FBTags.Items.PINK_FLOWERS)
-                .addOptionalTag(FBTags.Items.BLACK_FLOWERS)
-                .addOptionalTag(FBTags.Items.CYAN_FLOWERS)
-                .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
+                .addOptionalTag(FBTags.Items.SMALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.TALL_FLOWERS)
+                .addOptionalTag(FBTags.Items.PETALS)
+                .addOptionalTag(FBTags.Items.SPORE_BLOSSOMS)
+                .addOptionalTag(FBTags.Items.LOTUS_FLOWERS)
+                .addOptionalTag(FBTags.Items.JASMINES)
+                .addOptionalTag(FBTags.Items.CYPRUS_VINES);
 
         getOrCreateTagBuilder(FBTags.Items.SMALL_FLOWERS)
                 .addOptionalTag(FBTags.Items.ALLIUMS)
@@ -721,6 +717,30 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.CLOSED_BLACK_EYEBLOSSOM.asItem())
                 .add(FBBlocks.CLOSED_CYAN_EYEBLOSSOM.asItem());
 
+        getOrCreateTagBuilder(FBTags.Items.SPORE_BLOSSOMS)
+                .add(FBBlocks.MAGENTA_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.BLUE_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.WHITE_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.ORANGE_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.RED_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.YELLOW_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM.asItem())
+                .add(Items.SPORE_BLOSSOM)
+                .add(FBBlocks.BLACK_SPORE_BLOSSOM.asItem())
+                .add(FBBlocks.CYAN_SPORE_BLOSSOM.asItem());
+
+        getOrCreateTagBuilder(FBTags.Items.PETALS)
+                .add(FBBlocks.MAGENTA_PETALS.asItem())
+                .add(FBBlocks.BLUE_PETALS.asItem())
+                .add(FBBlocks.WHITE_PETALS.asItem())
+                .add(FBBlocks.ORANGE_PETALS.asItem())
+                .add(FBBlocks.RED_PETALS.asItem())
+                .add(FBBlocks.YELLOW_PETALS.asItem())
+                .add(FBBlocks.LIGHT_BLUE_PETALS.asItem())
+                .add(Items.PINK_PETALS)
+                .add(FBBlocks.BLACK_PETALS.asItem())
+                .add(FBBlocks.CYAN_PETALS.asItem());
+
         getOrCreateTagBuilder(FBTags.Items.DAFFODILS)
                 .add(FBBlocks.MAGENTA_DAFFODIL.asItem())
                 .add(FBBlocks.BLUE_DAFFODIL.asItem())
@@ -805,6 +825,42 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.BLACK_GLOWSHROOM.asItem())
                 .add(FBBlocks.CYAN_GLOWSHROOM.asItem())
                 .add(FBBlocks.GREEN_GLOWSHROOM.asItem());
+
+        getOrCreateTagBuilder(FBTags.Items.JASMINES)
+                .add(FBBlocks.MAGENTA_JASMINE.asItem())
+                .add(FBBlocks.BLUE_JASMINE.asItem())
+                .add(FBBlocks.WHITE_JASMINE.asItem())
+                .add(FBBlocks.ORANGE_JASMINE.asItem())
+                .add(FBBlocks.RED_JASMINE.asItem())
+                .add(FBBlocks.YELLOW_JASMINE.asItem())
+                .add(FBBlocks.LIGHT_BLUE_JASMINE.asItem())
+                .add(FBBlocks.PINK_JASMINE.asItem())
+                .add(FBBlocks.BLACK_JASMINE.asItem())
+                .add(FBBlocks.CYAN_JASMINE.asItem());
+
+        getOrCreateTagBuilder(FBTags.Items.LOTUS_FLOWERS)
+                .add(FBItems.MAGENTA_LOTUS_FLOWER)
+                .add(FBItems.BLUE_LOTUS_FLOWER)
+                .add(FBItems.WHITE_LOTUS_FLOWER)
+                .add(FBItems.ORANGE_LOTUS_FLOWER)
+                .add(FBItems.RED_LOTUS_FLOWER)
+                .add(FBItems.YELLOW_LOTUS_FLOWER)
+                .add(FBItems.LIGHT_BLUE_LOTUS_FLOWER)
+                .add(FBItems.PINK_LOTUS_FLOWER)
+                .add(FBItems.BLACK_LOTUS_FLOWER)
+                .add(FBItems.CYAN_LOTUS_FLOWER);
+
+        getOrCreateTagBuilder(FBTags.Items.CYPRUS_VINES)
+                .add(FBBlocks.MAGENTA_CYPRUS_VINE.asItem())
+                .add(FBBlocks.BLUE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.WHITE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.ORANGE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.RED_CYPRUS_VINE.asItem())
+                .add(FBBlocks.YELLOW_CYPRUS_VINE.asItem())
+                .add(FBBlocks.LIGHT_BLUE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.PINK_CYPRUS_VINE.asItem())
+                .add(FBBlocks.BLACK_CYPRUS_VINE.asItem())
+                .add(FBBlocks.CYAN_CYPRUS_VINE.asItem());
 
         getOrCreateTagBuilder(FBTags.Items.VASE_FLOWERS)
                 .addOptionalTag(FBTags.Items.ALLIUMS)

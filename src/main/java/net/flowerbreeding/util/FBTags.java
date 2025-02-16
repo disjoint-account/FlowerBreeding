@@ -116,12 +116,17 @@ public class FBTags {
         public static final TagKey<Item> WITHER_ROSES = createTag("wither_roses");
         public static final TagKey<Item> OPEN_EYEBLOSSOMS = createTag("open_eyeblossoms");
         public static final TagKey<Item> CLOSED_EYEBLOSSOMS = createTag("closed_eyeblossoms");
+        public static final TagKey<Item> PETALS = createTag("petals");
+        public static final TagKey<Item> SPORE_BLOSSOMS = createTag("spore_blossoms");
         public static final TagKey<Item> DAFFODILS = createTag("daffodils");
         public static final TagKey<Item> FOXGLOVES = createTag("foxgloves");
         public static final TagKey<Item> HYACINTHS = createTag("hyacinths");
         public static final TagKey<Item> PHLOXES = createTag("phloxes");
         public static final TagKey<Item> LUPINS = createTag("lupins");
         public static final TagKey<Item> SMALL_ROSES = createTag("small_roses");
+        public static final TagKey<Item> LOTUS_FLOWERS = createTag("lotus_flowers");
+        public static final TagKey<Item> JASMINES = createTag("jasmines");
+        public static final TagKey<Item> CYPRUS_VINES = createTag("cyprus_vines");
         public static final TagKey<Item> GLOWSHROOMS = createTag("glowshrooms");
         public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
         public static final TagKey<Item> PLANTER_PLANTS = createTag("planter_plants");

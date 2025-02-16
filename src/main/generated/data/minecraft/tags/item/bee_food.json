@@ -1,47 +1,31 @@
 {
   "values": [
     {
-      "id": "#flowerbreeding:magenta_flowers",
+      "id": "#flowerbreeding:small_flowers",
       "required": false
     },
     {
-      "id": "#flowerbreeding:blue_flowers",
+      "id": "#flowerbreeding:tall_flowers",
       "required": false
     },
     {
-      "id": "#flowerbreeding:white_flowers",
+      "id": "#flowerbreeding:petals",
       "required": false
     },
     {
-      "id": "#flowerbreeding:orange_flowers",
+      "id": "#flowerbreeding:spore_blossoms",
       "required": false
     },
     {
-      "id": "#flowerbreeding:red_flowers",
+      "id": "#flowerbreeding:lotus_flowers",
       "required": false
     },
     {
-      "id": "#flowerbreeding:yellow_flowers",
+      "id": "#flowerbreeding:jasmines",
       "required": false
     },
     {
-      "id": "#flowerbreeding:light_blue_flowers",
-      "required": false
-    },
-    {
-      "id": "#flowerbreeding:pink_flowers",
-      "required": false
-    },
-    {
-      "id": "#flowerbreeding:black_flowers",
-      "required": false
-    },
-    {
-      "id": "#flowerbreeding:cyan_flowers",
-      "required": false
-    },
-    {
-      "id": "#flowerbreeding:closed_eyeblossoms",
+      "id": "#flowerbreeding:cyprus_vines",
       "required": false
     }
   ]

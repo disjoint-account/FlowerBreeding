@@ -1,10 +1,7 @@
 {
   "variants": {
-    "half=lower": {
-      "model": "flowerbreeding:block/orange_hydrangea_bottom"
-    },
-    "half=upper": {
-      "model": "flowerbreeding:block/orange_hydrangea_top"
+    "": {
+      "model": "flowerbreeding:block/orange_hydrangea"
     }
   }
 }

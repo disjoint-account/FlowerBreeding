@@ -27,6 +27,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(FBBlocks.GRASS_FLOWERBED)
                 .add(FBBlocks.DIRT_FLOWERBED)
+                .add(FBBlocks.PODZOL_FLOWERBED)
                 .add(FBBlocks.FARMLAND_FLOWERBED);
 
         getOrCreateTagBuilder(BlockTags.REPLACEABLE)
@@ -140,8 +141,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.ROSE_BUSHES)
                 .addOptionalTag(FBTags.Blocks.PITCHER_PLANTS)
                 .addOptionalTag(FBTags.Blocks.SUNFLOWERS)
-                .addOptionalTag(FBTags.Blocks.LAVENDERS)
-                .addOptionalTag(FBTags.Blocks.HYDRANGEAS);
+                .addOptionalTag(FBTags.Blocks.LAVENDERS);
 
         getOrCreateTagBuilder(FBTags.Blocks.MAGENTA_FLOWERS)
                 .add(Blocks.ALLIUM,

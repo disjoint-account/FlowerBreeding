@@ -1,6 +1,10 @@
 {
   "values": [
     "minecraft:large_fern",
-    "minecraft:small_dripleaf"
+    "minecraft:small_dripleaf",
+    {
+      "id": "#flowerbreeding:bushes",
+      "required": false
+    }
   ]
 }

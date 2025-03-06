@@ -442,6 +442,7 @@ public class FBItemGroup {
 
                         entries.add(FBBlocks.GRASS_FLOWERBED);
                         entries.add(FBBlocks.DIRT_FLOWERBED);
+                        entries.add(FBBlocks.PODZOL_FLOWERBED);
                         entries.add(FBBlocks.FARMLAND_FLOWERBED);
                         entries.add(FBBlocks.MOSS_FLOWERBED);
 

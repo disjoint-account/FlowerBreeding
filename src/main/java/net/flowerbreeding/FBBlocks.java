@@ -531,16 +531,16 @@ public class FBBlocks {
 
     //hydrangeas
 
-    public static final Block MAGENTA_HYDRANGEA = registerBlock("magenta_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block BLUE_HYDRANGEA = registerBlock("blue_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block WHITE_HYDRANGEA = registerBlock("white_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block ORANGE_HYDRANGEA = registerBlock("orange_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block RED_HYDRANGEA = registerBlock("red_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block YELLOW_HYDRANGEA = registerBlock("yellow_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block LIGHT_BLUE_HYDRANGEA = registerBlock("light_blue_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block PINK_HYDRANGEA = registerBlock("pink_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block BLACK_HYDRANGEA = registerBlock("black_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
-    public static final Block CYAN_HYDRANGEA = registerBlock("cyan_hydrangea", TallFlowerBlock::new, AbstractBlock.Settings.copy(LILAC));
+    public static final Block MAGENTA_HYDRANGEA = registerFlowerBlock("magenta_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block BLUE_HYDRANGEA = registerFlowerBlock("blue_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block WHITE_HYDRANGEA = registerFlowerBlock("white_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block ORANGE_HYDRANGEA = registerFlowerBlock("orange_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block RED_HYDRANGEA = registerFlowerBlock("red_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block YELLOW_HYDRANGEA = registerFlowerBlock("yellow_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block LIGHT_BLUE_HYDRANGEA = registerFlowerBlock("light_blue_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block PINK_HYDRANGEA = registerFlowerBlock("pink_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block BLACK_HYDRANGEA = registerFlowerBlock("black_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
+    public static final Block CYAN_HYDRANGEA = registerFlowerBlock("cyan_hydrangea", StatusEffects.JUMP_BOOST, 12, LILAC);
 
     //lotus flowers
 
@@ -636,6 +636,8 @@ public class FBBlocks {
     public static final Block FARMLAND_FLOWERBED = registerBlock("farmland_flowerbed",
             FBFlowerbedBlock::new, AbstractBlock.Settings.copy(FARMLAND).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
     public static final Block MOSS_FLOWERBED = registerBlock("moss_flowerbed",
+            FBFlowerbedBlock::new, AbstractBlock.Settings.copy(MOSS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
+    public static final Block PODZOL_FLOWERBED = registerBlock("podzol_flowerbed",
             FBFlowerbedBlock::new, AbstractBlock.Settings.copy(MOSS_BLOCK).pistonBehavior(PistonBehavior.DESTROY).nonOpaque());
 
     public static final Block WHITE_VASE = registerBlock("white_vase",

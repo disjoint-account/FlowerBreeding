@@ -273,16 +273,16 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_LAVENDER, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_LAVENDER, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.MAGENTA_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLUE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.WHITE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.ORANGE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.RED_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.YELLOW_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.LIGHT_BLUE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.PINK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
-        blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.MAGENTA_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLUE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.WHITE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.ORANGE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.RED_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.YELLOW_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.LIGHT_BLUE_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.PINK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.BLACK_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
+        blockStateModelGenerator.registerTintableCross(FBBlocks.CYAN_HYDRANGEA, BlockStateModelGenerator.CrossType.NOT_TINTED);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.MAGENTA_GLOWSHROOM, FBBlocks.POTTED_MAGENTA_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLUE_GLOWSHROOM, FBBlocks.POTTED_BLUE_GLOWSHROOM, BlockStateModelGenerator.CrossType.NOT_TINTED);

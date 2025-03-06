@@ -2,6 +2,7 @@
   "values": [
     "flowerbreeding:grass_flowerbed",
     "flowerbreeding:dirt_flowerbed",
+    "flowerbreeding:podzol_flowerbed",
     "flowerbreeding:farmland_flowerbed"
   ]
 }

@@ -23,10 +23,6 @@
     {
       "id": "#flowerbreeding:lavenders",
       "required": false
-    },
-    {
-      "id": "#flowerbreeding:hydrangeas",
-      "required": false
     }
   ]
 }

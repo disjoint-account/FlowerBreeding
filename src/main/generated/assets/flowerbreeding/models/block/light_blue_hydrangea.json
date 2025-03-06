@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "flowerbreeding:block/cyan_hydrangea_top"
+    "cross": "flowerbreeding:block/light_blue_hydrangea"
   }
 }

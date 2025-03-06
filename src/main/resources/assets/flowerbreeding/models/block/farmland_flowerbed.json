@@ -3,6 +3,6 @@
   "textures": {
     "bottom": "minecraft:block/dirt",
     "side": "minecraft:block/dirt",
-    "top": "minecraft:block/farmland_moist"
+    "top": "flowerbreeding:block/farmland_flowerbed_top"
   }
 }

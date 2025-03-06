@@ -126,8 +126,10 @@ public class FBTags {
         public static final TagKey<Item> SMALL_ROSES = createTag("small_roses");
         public static final TagKey<Item> LOTUS_FLOWERS = createTag("lotus_flowers");
         public static final TagKey<Item> JASMINES = createTag("jasmines");
+        public static final TagKey<Item> HYDRANGEAS = createTag("hydrangeas");
         public static final TagKey<Item> CYPRUS_VINES = createTag("cyprus_vines");
         public static final TagKey<Item> GLOWSHROOMS = createTag("glowshrooms");
+        public static final TagKey<Item> BUSHES = createTag("bushes");
         public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
         public static final TagKey<Item> PLANTER_PLANTS = createTag("planter_plants");
         private static TagKey<Item> createTag(String name) {

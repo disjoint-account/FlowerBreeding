@@ -70,6 +70,10 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
         if (!state.canPlaceAt(world, pos) && state.isOf(FBBlocks.MOSS_FLOWERBED)) {
             world.setBlockState(pos, Blocks.MOSS_BLOCK.getDefaultState());
         }
+        if (!state.canPlaceAt(world, pos) && state.isOf(FBBlocks.PODZOL_FLOWERBED)) {
+            world.setBlockState(pos, Blocks.PODZOL.getDefaultState());
+        }
+
     }
 
     @Override

@@ -35,6 +35,12 @@ public class TrowelItem extends Item {
                 world.playSound(context.getPlayer(), blockPos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1f, 2f);
                 return ActionResult.SUCCESS;
             }
+            if (blockState.isOf(Blocks.PODZOL)) {
+                world.setBlockState(blockPos, FBBlocks.PODZOL_FLOWERBED.getDefaultState());
+                context.getPlayer().getStackInHand(context.getHand()).damage(1, context.getPlayer());
+                world.playSound(context.getPlayer(), blockPos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1f, 2f);
+                return ActionResult.SUCCESS;
+            }
             if (blockState.isOf(Blocks.FARMLAND)) {
                 if (blockState.get(FarmlandBlock.MOISTURE) == 7) {
                     world.setBlockState(blockPos, FBBlocks.FARMLAND_FLOWERBED.getDefaultState());

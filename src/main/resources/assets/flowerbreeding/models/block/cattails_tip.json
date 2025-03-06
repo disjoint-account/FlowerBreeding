@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "flowerbreeding:block/ivy_tip"
+    "cross": "flowerbreeding:block/cattails_tip"
   }
 }

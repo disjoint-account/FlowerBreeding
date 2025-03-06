@@ -1,0 +1,13 @@
+{
+  "values": [
+    "minecraft:sweet_berries",
+    {
+      "id": "#flowerbreeding:small_roses",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:hydrangeas",
+      "required": false
+    }
+  ]
+}

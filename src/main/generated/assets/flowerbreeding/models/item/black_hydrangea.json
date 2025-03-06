@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "flowerbreeding:block/black_hydrangea_top"
+    "layer0": "flowerbreeding:block/black_hydrangea"
   }
 }

@@ -37,6 +37,7 @@ public class FBBlockEntities {
                     FabricBlockEntityTypeBuilder.create(FlowerbedBlockEntity::new,
                             FBBlocks.GRASS_FLOWERBED,
                             FBBlocks.DIRT_FLOWERBED,
+                            FBBlocks.PODZOL_FLOWERBED,
                             FBBlocks.FARMLAND_FLOWERBED,
                             FBBlocks.MOSS_FLOWERBED
                     ).build(null)

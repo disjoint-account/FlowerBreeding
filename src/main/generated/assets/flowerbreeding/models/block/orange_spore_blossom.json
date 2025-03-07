@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/spore_blossom",
+  "textures": {
+    "plant": "flowerbreeding:block/orange_spore_blossom"
+  }
+}

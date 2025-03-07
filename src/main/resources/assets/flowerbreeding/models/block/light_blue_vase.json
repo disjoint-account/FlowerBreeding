@@ -1,6 +1,0 @@
-{
-  "parent": "flowerbreeding:block/vase",
-  "textures": {
-    "side": "minecraft:block/light_blue_terracotta"
-  }
-}

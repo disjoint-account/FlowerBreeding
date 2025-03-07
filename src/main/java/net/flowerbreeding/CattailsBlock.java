@@ -12,7 +12,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
-import net.minecraft.state.property.Property;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
@@ -24,7 +23,7 @@ import net.minecraft.world.tick.ScheduledTickView;
 import org.jetbrains.annotations.Nullable;
 
 public class CattailsBlock extends Block implements Fertilizable, Waterloggable {
-    public static final BooleanProperty CATTAIL_TIP;
+    public static final BooleanProperty CATTAILS_TIP;
     public static final BooleanProperty WATERLOGGED;
     public static final VoxelShape SHAPE = Block.createCuboidShape(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
     public static final MapCodec<CattailsBlock> CODEC = createCodec(CattailsBlock::new);
@@ -35,7 +34,7 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
 
     public CattailsBlock(Settings settings) {
         super(settings);
-        this.setDefaultState(this.stateManager.getDefaultState().with(CATTAIL_TIP, true).with(WATERLOGGED, true));
+        this.setDefaultState(this.stateManager.getDefaultState().with(CATTAILS_TIP, true).with(WATERLOGGED, true));
     }
 
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -107,7 +106,7 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
     }
 
     protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
-        boolean cattailTip = state.get(CATTAIL_TIP);
+        boolean cattailTip = state.get(CATTAILS_TIP);
         if (!validCheck(state, world, pos)) {
             tickView.scheduleBlockTick(pos, this, 1);
         }
@@ -124,15 +123,15 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
     }
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        boolean cattailTip = state.get(CATTAIL_TIP);
+        boolean cattailTip = state.get(CATTAILS_TIP);
         if (!validCheck(state, world, pos)) {
             world.breakBlock(pos, true);
         }
         if (world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && validCheck(state, world, pos) && cattailTip) {
-            world.setBlockState(pos, state.with(CATTAIL_TIP, false));
+            world.setBlockState(pos, state.with(CATTAILS_TIP, false));
         }
         if (!world.getBlockState(pos.up()).isOf(FBBlocks.CATTAILS) && validCheck(state, world, pos) && !cattailTip) {
-            world.setBlockState(pos, state.with(CATTAIL_TIP, true));
+            world.setBlockState(pos, state.with(CATTAILS_TIP, true));
         }
     }
 
@@ -160,15 +159,15 @@ public class CattailsBlock extends Block implements Fertilizable, Waterloggable 
     }
 
     protected FluidState getFluidState(BlockState state) {
-        return (Boolean)state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
+        return state.get(WATERLOGGED) ? Fluids.WATER.getStill(false) : super.getFluidState(state);
     }
 
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(new Property[]{CATTAIL_TIP, WATERLOGGED});
+        builder.add(CATTAILS_TIP, WATERLOGGED);
     }
 
     static {
-        CATTAIL_TIP = FBProperties.CATTAIL_TIP;
+        CATTAILS_TIP = FBProperties.TIP;
         WATERLOGGED = Properties.WATERLOGGED;
     }
 }

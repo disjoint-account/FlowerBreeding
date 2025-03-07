@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "tip=false": {
+      "model": "flowerbreeding:block/white_jasmine"
+    },
+    "tip=true": {
+      "model": "flowerbreeding:block/white_jasmine_tip"
+    }
+  }
+}

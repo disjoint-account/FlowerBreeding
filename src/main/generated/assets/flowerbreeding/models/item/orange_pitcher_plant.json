@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "flowerbreeding:item/orange_pitcher_plant"
+    "layer0": "flowerbreeding:block/orange_pitcher_plant_top"
   }
 }

@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/sunflower_top",
+  "textures": {
+    "front": "flowerbreeding:block/light_blue_sunflower_front"
+  }
+}

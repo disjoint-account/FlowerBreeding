@@ -1,7 +1,0 @@
-{
-  "parent": "flowerbreeding:block/sunflower_top",
-  "textures": {
-    "particle": "flowerbreeding:block/white_sunflower_front",
-    "front": "flowerbreeding:block/white_sunflower_front"
-  }
-}

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "flowerbreeding:item/black_sunflower"
+    "layer0": "flowerbreeding:block/black_sunflower_front"
   }
 }

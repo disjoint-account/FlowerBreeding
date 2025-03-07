@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "tip=false": {
+      "model": "flowerbreeding:block/cattails"
+    },
+    "tip=true": {
+      "model": "flowerbreeding:block/cattails_tip"
+    }
+  }
+}

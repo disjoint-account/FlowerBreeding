@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/vase",
+  "textures": {
+    "side": "minecraft:block/magenta_terracotta"
+  }
+}

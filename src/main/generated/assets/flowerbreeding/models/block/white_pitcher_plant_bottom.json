@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/pitcher_plant_bottom",
+  "textures": {
+    "bottom": "flowerbreeding:block/white_pitcher_plant_bottom"
+  }
+}

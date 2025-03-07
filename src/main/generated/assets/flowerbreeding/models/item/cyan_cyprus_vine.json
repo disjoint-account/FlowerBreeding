@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "flowerbreeding:item/cyan_cyprus_vine"
+    "layer0": "flowerbreeding:block/cyan_cyprus_vine"
   }
 }

@@ -1,7 +1,0 @@
-{
-  "parent": "flowerbreeding:block/pitcher_plant_bottom",
-  "textures": {
-    "particle": "flowerbreeding:block/magenta_pitcher_plant_bottom",
-    "bottom": "flowerbreeding:block/magenta_pitcher_plant_bottom"
-  }
-}

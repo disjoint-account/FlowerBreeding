@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "flowerbreeding:item/white_glowshroom_block"
+    "model": "flowerbreeding:block/white_glowshroom_block_inventory"
   }
 }

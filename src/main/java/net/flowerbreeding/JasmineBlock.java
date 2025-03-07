@@ -173,6 +173,6 @@ public class JasmineBlock extends Block implements Fertilizable {
 
     static {
         JASMINE_FERTILE = FBProperties.JASMINE_FERTILE;
-        JASMINE_TIP = FBProperties.JASMINE_TIP;
+        JASMINE_TIP = FBProperties.TIP;
     }
 }

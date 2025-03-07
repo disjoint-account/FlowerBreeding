@@ -2,7 +2,8 @@
   "ambientocclusion": false,
   "textures": {
     "cross": "block/sunflower_top",
-    "back": "block/sunflower_back"
+    "back": "block/sunflower_back",
+    "particle": "#front"
   },
   "elements": [
     {   "from": [ 0.8, 0, 8 ],

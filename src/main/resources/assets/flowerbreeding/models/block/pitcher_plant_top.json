@@ -1,5 +1,8 @@
 {
   "ambientocclusion": false,
+  "textures": {
+    "particle": "#top"
+  },
   "elements": [
     {
       "name": "pitcher_plant_top",

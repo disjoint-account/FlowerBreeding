@@ -115,6 +115,9 @@ public class PinkPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return Blocks.PINK_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.WILDFLOWERS)) {
+                    return FBBlocks.PINK_WILDFLOWERS;
+                }
                 if (pos.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
                     return Blocks.SPORE_BLOSSOM;
                 }

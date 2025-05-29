@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:red_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:red_wildflowers"
+  },
+  "vial1": "flowerbreeding:wildflower_pollen_vial",
+  "vial2": "flowerbreeding:wildflower_pollen_vial"
+}

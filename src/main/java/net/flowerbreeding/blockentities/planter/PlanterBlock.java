@@ -7,15 +7,21 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.Heightmap;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
@@ -93,5 +99,20 @@ public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider
             }
         }
         return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
+    }
+
+    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+        if (world.getBlockEntity(pos) instanceof PlanterBlockEntity entity) {
+            if (random.nextInt(30) == 0 && world.isNightAndNatural() && world.getTopY(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, pos) <= pos.getY() && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
+                world.playSoundAtBlockCenterClient(pos, SoundEvents.BLOCK_FIREFLY_BUSH_IDLE, SoundCategory.AMBIENT, 1.0F, 1.0F, false);
+            }
+
+            if (world.getLightLevel(pos) <= 13 && random.nextDouble() <= 0.7 && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
+                double d = (double) pos.getX() + random.nextDouble() * (double) 10.0F - (double) 5.0F;
+                double e = (double) pos.getY() + random.nextDouble() * (double) 5.0F;
+                double f = (double) pos.getZ() + random.nextDouble() * (double) 10.0F - (double) 5.0F;
+                world.addParticleClient(ParticleTypes.FIREFLY, d, e, f, 0.0F, 0.0F, 0.0F);
+            }
+        }
     }
 }

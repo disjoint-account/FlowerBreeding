@@ -1,6 +1,10 @@
 {
   "values": [
     "minecraft:sweet_berries",
+    "minecraft:bush",
+    "minecraft:firefly_bush",
+    "minecraft:tall_dry_grass",
+    "minecraft:sweet_berries",
     {
       "id": "#flowerbreeding:small_roses",
       "required": false

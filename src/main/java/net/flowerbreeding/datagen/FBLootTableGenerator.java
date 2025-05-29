@@ -50,6 +50,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.MAGENTA_ROSE_BUSH, tallPlantDrops(FBBlocks.MAGENTA_ROSE_BUSH, FBBlocks.MAGENTA_ROSE_BUSH));
             addDrop(FBBlocks.MAGENTA_SUNFLOWER, tallPlantDrops(FBBlocks.MAGENTA_SUNFLOWER, FBBlocks.MAGENTA_SUNFLOWER));
             addDrop(FBBlocks.MAGENTA_PETALS, segmentedDrops(FBBlocks.MAGENTA_PETALS));
+            addDrop(FBBlocks.MAGENTA_WILDFLOWERS, segmentedDrops(FBBlocks.MAGENTA_WILDFLOWERS));
             addDrop(FBBlocks.MAGENTA_SPORE_BLOSSOM);
             addDrop(FBBlocks.MAGENTA_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_MAGENTA_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.MAGENTA_FLOWERING_AZALEA));
@@ -85,6 +86,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.BLUE_ROSE_BUSH, tallPlantDrops(FBBlocks.BLUE_ROSE_BUSH, FBBlocks.BLUE_ROSE_BUSH));
             addDrop(FBBlocks.BLUE_SUNFLOWER, tallPlantDrops(FBBlocks.BLUE_SUNFLOWER, FBBlocks.BLUE_SUNFLOWER));
             addDrop(FBBlocks.BLUE_PETALS, segmentedDrops(FBBlocks.BLUE_PETALS));
+            addDrop(FBBlocks.BLUE_WILDFLOWERS, segmentedDrops(FBBlocks.BLUE_WILDFLOWERS));
             addDrop(FBBlocks.BLUE_SPORE_BLOSSOM);
             addDrop(FBBlocks.BLUE_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_BLUE_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.BLUE_FLOWERING_AZALEA));
@@ -114,6 +116,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.WHITE_ROSE_BUSH, tallPlantDrops(FBBlocks.WHITE_ROSE_BUSH, FBBlocks.WHITE_ROSE_BUSH));
             addDrop(FBBlocks.WHITE_SUNFLOWER, tallPlantDrops(FBBlocks.WHITE_SUNFLOWER, FBBlocks.WHITE_SUNFLOWER));
             addDrop(FBBlocks.WHITE_PETALS, segmentedDrops(FBBlocks.WHITE_PETALS));
+            addDrop(FBBlocks.WHITE_WILDFLOWERS, segmentedDrops(FBBlocks.WHITE_WILDFLOWERS));
             addDrop(FBBlocks.WHITE_SPORE_BLOSSOM);
             addDrop(FBBlocks.WHITE_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_WHITE_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.WHITE_FLOWERING_AZALEA));
@@ -143,6 +146,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.ORANGE_ROSE_BUSH, tallPlantDrops(FBBlocks.ORANGE_ROSE_BUSH, FBBlocks.ORANGE_ROSE_BUSH));
             addDrop(FBBlocks.ORANGE_SUNFLOWER, tallPlantDrops(FBBlocks.ORANGE_SUNFLOWER, FBBlocks.ORANGE_SUNFLOWER));
             addDrop(FBBlocks.ORANGE_PETALS, segmentedDrops(FBBlocks.ORANGE_PETALS));
+            addDrop(FBBlocks.ORANGE_WILDFLOWERS, segmentedDrops(FBBlocks.ORANGE_WILDFLOWERS));
             addDrop(FBBlocks.ORANGE_SPORE_BLOSSOM);
             addDrop(FBBlocks.ORANGE_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_ORANGE_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.ORANGE_FLOWERING_AZALEA));
@@ -175,6 +179,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.RED_PITCHER_PLANT, tallPlantDrops(FBBlocks.RED_PITCHER_PLANT, FBBlocks.RED_PITCHER_PLANT));
             addDrop(FBBlocks.RED_SUNFLOWER, tallPlantDrops(FBBlocks.RED_SUNFLOWER, FBBlocks.RED_SUNFLOWER));
             addDrop(FBBlocks.RED_PETALS, segmentedDrops(FBBlocks.RED_PETALS));
+            addDrop(FBBlocks.RED_WILDFLOWERS, segmentedDrops(FBBlocks.RED_WILDFLOWERS));
             addDrop(FBBlocks.RED_SPORE_BLOSSOM);
             addDrop(FBBlocks.RED_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_RED_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.RED_FLOWERING_AZALEA));
@@ -244,6 +249,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.LIGHT_BLUE_ROSE_BUSH, tallPlantDrops(FBBlocks.LIGHT_BLUE_ROSE_BUSH, FBBlocks.LIGHT_BLUE_ROSE_BUSH));
             addDrop(FBBlocks.LIGHT_BLUE_SUNFLOWER, tallPlantDrops(FBBlocks.LIGHT_BLUE_SUNFLOWER, FBBlocks.LIGHT_BLUE_SUNFLOWER));
             addDrop(FBBlocks.LIGHT_BLUE_PETALS, segmentedDrops(FBBlocks.LIGHT_BLUE_PETALS));
+            addDrop(FBBlocks.LIGHT_BLUE_WILDFLOWERS, segmentedDrops(FBBlocks.LIGHT_BLUE_WILDFLOWERS));
             addDrop(FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM);
             addDrop(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA));
@@ -276,6 +282,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.PINK_PITCHER_PLANT, tallPlantDrops(FBBlocks.PINK_PITCHER_PLANT, FBBlocks.PINK_PITCHER_PLANT));
             addDrop(FBBlocks.PINK_ROSE_BUSH, tallPlantDrops(FBBlocks.PINK_ROSE_BUSH, FBBlocks.PINK_ROSE_BUSH));
             addDrop(FBBlocks.PINK_SUNFLOWER, tallPlantDrops(FBBlocks.PINK_SUNFLOWER, FBBlocks.PINK_SUNFLOWER));
+            addDrop(FBBlocks.PINK_WILDFLOWERS, segmentedDrops(FBBlocks.PINK_WILDFLOWERS));
 
             addDrop(FBBlocks.BLACK_ALLIUM);
             addDrop(FBBlocks.POTTED_BLACK_ALLIUM, pottedPlantDrops(FBBlocks.BLACK_ALLIUM));
@@ -307,6 +314,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.BLACK_ROSE_BUSH, tallPlantDrops(FBBlocks.BLACK_ROSE_BUSH, FBBlocks.BLACK_ROSE_BUSH));
             addDrop(FBBlocks.BLACK_SUNFLOWER, tallPlantDrops(FBBlocks.BLACK_SUNFLOWER, FBBlocks.BLACK_SUNFLOWER));
             addDrop(FBBlocks.BLACK_PETALS, segmentedDrops(FBBlocks.BLACK_PETALS));
+            addDrop(FBBlocks.BLACK_WILDFLOWERS, segmentedDrops(FBBlocks.BLACK_WILDFLOWERS));
             addDrop(FBBlocks.BLACK_SPORE_BLOSSOM);
             addDrop(FBBlocks.BLACK_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_BLACK_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.BLACK_FLOWERING_AZALEA));
@@ -343,6 +351,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_ROSE_BUSH, tallPlantDrops(FBBlocks.CYAN_ROSE_BUSH, FBBlocks.CYAN_ROSE_BUSH));
             addDrop(FBBlocks.CYAN_SUNFLOWER, tallPlantDrops(FBBlocks.CYAN_SUNFLOWER, FBBlocks.CYAN_SUNFLOWER));
             addDrop(FBBlocks.CYAN_PETALS, segmentedDrops(FBBlocks.CYAN_PETALS));
+            addDrop(FBBlocks.CYAN_WILDFLOWERS, segmentedDrops(FBBlocks.CYAN_WILDFLOWERS));
             addDrop(FBBlocks.CYAN_SPORE_BLOSSOM);
             addDrop(FBBlocks.CYAN_FLOWERING_AZALEA);
             addDrop(FBBlocks.POTTED_CYAN_FLOWERING_AZALEA_BUSH, pottedPlantDrops(FBBlocks.CYAN_FLOWERING_AZALEA));

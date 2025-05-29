@@ -231,6 +231,17 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(exporter, FBItems.PETAL_POLLEN_VIAL, FBItems.PETAL_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.BLACK_PETALS), Identifier.of("black_petals"));
                 offerBotanyRecipe(exporter, FBItems.PETAL_POLLEN_VIAL, FBItems.PETAL_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_PETALS), Identifier.of("cyan_petals"));
 
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.MAGENTA_WILDFLOWERS), Identifier.of("magenta_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_WILDFLOWERS), Identifier.of("blue_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_WILDFLOWERS), Identifier.of("white_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.ORANGE_PIGMENT_JAR, new ItemStack(FBBlocks.ORANGE_WILDFLOWERS), Identifier.of("orange_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.RED_PIGMENT_JAR, new ItemStack(FBBlocks.RED_WILDFLOWERS), Identifier.of("red_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.YELLOW_PIGMENT_JAR, new ItemStack(Blocks.WILDFLOWERS), Identifier.of("yellow_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.LIGHT_BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.LIGHT_BLUE_WILDFLOWERS), Identifier.of("light_blue_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStack(FBBlocks.PINK_WILDFLOWERS), Identifier.of("pink_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStack(FBBlocks.BLACK_WILDFLOWERS), Identifier.of("black_wildflowers"));
+                offerBotanyRecipe(exporter, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStack(FBBlocks.CYAN_WILDFLOWERS), Identifier.of("cyan_wildflowers"));
+
                 offerBotanyRecipe(exporter, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStack(FBBlocks.MAGENTA_SPORE_BLOSSOM), Identifier.of("magenta_spore_blossom"));
                 offerBotanyRecipe(exporter, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStack(FBBlocks.BLUE_SPORE_BLOSSOM), Identifier.of("blue_spore_blossom"));
                 offerBotanyRecipe(exporter, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStack(FBBlocks.WHITE_SPORE_BLOSSOM), Identifier.of("white_spore_blossom"));

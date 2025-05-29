@@ -115,6 +115,9 @@ public class CyanPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.PETALS)) {
                     return FBBlocks.CYAN_PETALS;
                 }
+                if (pos.isIn(FBTags.Blocks.WILDFLOWERS)) {
+                    return FBBlocks.CYAN_WILDFLOWERS;
+                }
                 if (pos.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
                     return FBBlocks.CYAN_SPORE_BLOSSOM;
                 }

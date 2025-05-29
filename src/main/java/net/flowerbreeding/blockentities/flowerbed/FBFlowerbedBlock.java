@@ -64,7 +64,7 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
 
     @Override
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!state.canPlaceAt(world, pos) && (state.isOf(FBBlocks.GRASS_FLOWERBED) || state.isOf(FBBlocks.DIRT_FLOWERBED))) {
+        if (!state.canPlaceAt(world, pos) && (state.isOf(FBBlocks.GRASS_FLOWERBED) || state.isOf(FBBlocks.DIRT_FLOWERBED) || state.isOf(FBBlocks.FARMLAND_FLOWERBED))) {
             setToDirt(null, state, world, pos);
         }
         if (!state.canPlaceAt(world, pos) && state.isOf(FBBlocks.MOSS_FLOWERBED)) {
@@ -73,7 +73,6 @@ public class FBFlowerbedBlock extends BlockWithEntity implements BlockEntityProv
         if (!state.canPlaceAt(world, pos) && state.isOf(FBBlocks.PODZOL_FLOWERBED)) {
             world.setBlockState(pos, Blocks.PODZOL.getDefaultState());
         }
-
     }
 
     @Override

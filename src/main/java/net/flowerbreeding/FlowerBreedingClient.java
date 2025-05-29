@@ -51,6 +51,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.MAGENTA_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_MAGENTA_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -86,6 +87,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLUE_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLUE_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -115,6 +117,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.WHITE_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_WHITE_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -144,6 +147,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.ORANGE_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_ORANGE_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -176,6 +180,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_PITCHER_PLANT, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.RED_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_RED_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -245,6 +250,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -275,6 +281,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_OPEN_PINK_EYEBLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CLOSED_PINK_EYEBLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_PITCHER_PLANT, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.PINK_SUNFLOWER, RenderLayer.getCutout());
 
@@ -308,6 +315,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.BLACK_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_BLACK_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -344,6 +352,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_ROSE_BUSH, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_SUNFLOWER, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_PETALS, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_WILDFLOWERS, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_SPORE_BLOSSOM, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.CYAN_FLOWERING_AZALEA, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(FBBlocks.POTTED_CYAN_FLOWERING_AZALEA_BUSH, RenderLayer.getCutout());
@@ -621,6 +630,60 @@ public class FlowerBreedingClient implements ClientModInitializer {
                 assert world != null;
                 return BiomeColors.getGrassColor(world, pos);
             }, FBBlocks.CYAN_PETALS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.MAGENTA_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.BLUE_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.WHITE_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.ORANGE_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.RED_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.LIGHT_BLUE_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.PINK_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.BLACK_WILDFLOWERS);
+        }
+        {
+            ColorProviderRegistry.BLOCK.register((state, world, pos, tintIndex) -> {
+                assert world != null;
+                return BiomeColors.getGrassColor(world, pos);
+            }, FBBlocks.CYAN_WILDFLOWERS);
         }
     }
 }

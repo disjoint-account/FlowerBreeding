@@ -69,6 +69,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:wildflowers",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:spore_blossoms",
       "required": false
     },

@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:white_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:white_wildflowers"
+  },
+  "vial1": "flowerbreeding:wildflower_pollen_vial",
+  "vial2": "flowerbreeding:wildflower_pollen_vial"
+}

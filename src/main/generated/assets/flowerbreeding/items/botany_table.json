@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "flowerbreeding:block/botany_table"
+    "model": "flowerbreeding:item/botany_table"
   }
 }

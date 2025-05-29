@@ -46,6 +46,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.MAGENTA_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.MAGENTA_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.MAGENTA_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.MAGENTA_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.MAGENTA_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_MAGENTA_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -69,6 +70,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLUE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.BLUE_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.BLUE_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.BLUE_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.BLUE_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_BLUE_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -89,6 +91,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.WHITE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.WHITE_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.WHITE_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.WHITE_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.WHITE_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_WHITE_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -109,6 +112,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.ORANGE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.ORANGE_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.ORANGE_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.ORANGE_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.ORANGE_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_ORANGE_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -130,6 +134,7 @@ public class FBModelProvider extends FabricModelProvider {
         registerPitcherPlant(blockStateModelGenerator, FBBlocks.RED_PITCHER_PLANT);
         registerSunflower(blockStateModelGenerator, FBBlocks.RED_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.RED_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.RED_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.RED_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_RED_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.RED_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -175,6 +180,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.LIGHT_BLUE_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.LIGHT_BLUE_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.LIGHT_BLUE_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.LIGHT_BLUE_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -195,6 +201,7 @@ public class FBModelProvider extends FabricModelProvider {
         registerPitcherPlant(blockStateModelGenerator, FBBlocks.PINK_PITCHER_PLANT);
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.PINK_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.PINK_SUNFLOWER);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.PINK_WILDFLOWERS);
 
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLACK_ALLIUM, FBBlocks.POTTED_BLACK_ALLIUM, BlockStateModelGenerator.CrossType.NOT_TINTED);
         blockStateModelGenerator.registerFlowerPotPlantAndItem(FBBlocks.BLACK_CORNFLOWER, FBBlocks.POTTED_BLACK_CORNFLOWER, BlockStateModelGenerator.CrossType.NOT_TINTED);
@@ -214,6 +221,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.BLACK_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.BLACK_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.BLACK_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.BLACK_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.BLACK_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_BLACK_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -237,6 +245,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerDoubleBlockAndItem(FBBlocks.CYAN_ROSE_BUSH, BlockStateModelGenerator.CrossType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.CYAN_SUNFLOWER);
         blockStateModelGenerator.registerFlowerbed(FBBlocks.CYAN_PETALS);
+        blockStateModelGenerator.registerFlowerbed(FBBlocks.CYAN_WILDFLOWERS);
         blockStateModelGenerator.registerAzalea(FBBlocks.CYAN_FLOWERING_AZALEA);
         blockStateModelGenerator.registerPottedAzaleaBush(FBBlocks.POTTED_CYAN_FLOWERING_AZALEA_BUSH);
         blockStateModelGenerator.registerSingleton(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
@@ -415,6 +424,7 @@ public class FBModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(FBBlocks.BOTANY_TABLE.asItem());
 
         itemModelGenerator.register(FBItems.EMPTY_PIGMENT_JAR, Models.GENERATED);
         itemModelGenerator.register(FBItems.MAGENTA_PIGMENT_JAR, Models.GENERATED);
@@ -447,6 +457,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.registerWithTextureSource(FBItems.ROSE_BUSH_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.SUNFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.PETAL_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
+        itemModelGenerator.registerWithTextureSource(FBItems.WILDFLOWER_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.FLOWERING_AZALEA_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);
         itemModelGenerator.registerWithTextureSource(FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, Models.GENERATED);

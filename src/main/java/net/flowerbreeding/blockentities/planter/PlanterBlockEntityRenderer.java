@@ -11,11 +11,15 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.BlockRenderManager;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
+import net.minecraft.client.render.model.BlockModelPart;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
+
+import java.util.List;
 
 public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBlockEntity> {
     private final BlockRenderManager blockRenderManager;
@@ -24,7 +28,7 @@ public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBl
         this.blockRenderManager = context.getRenderManager();
     }
 
-    public void render(PlanterBlockEntity entity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay) {
+    public void render(PlanterBlockEntity entity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay, Vec3d cameraPos) {
         matrixStack.push();
         this.renderBottomFlower(entity, matrixStack, vertexConsumerProvider);
         if (!entity.getStack(0).isIn(FBTags.Items.BUSHES)) {
@@ -36,6 +40,7 @@ public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBl
     private void renderBottomFlower(PlanterBlockEntity entity, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider) {
         ItemStack itemStack = entity.getStack(0);
         Block block = Block.getBlockFromItem(itemStack.getItem());
+        List<BlockModelPart> list = blockRenderManager.getModel(block.getDefaultState()).getParts(Random.create());
         matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
         matrixStack.translate(0, 0.4375, 0);
         BlockState state;
@@ -43,7 +48,7 @@ public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBl
             state = block.getDefaultState().with(SweetBerryBushBlock.AGE, 3);
         }
         else state = block.getDefaultState();
-        blockRenderManager.renderBlock(state, entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, Random.create());
+        blockRenderManager.renderBlock(state, entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, list);
     }
 
     private void renderTopFlower(PlanterBlockEntity entity, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider) {
@@ -52,7 +57,8 @@ public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBl
         matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
         matrixStack.translate(0, 1, 0);
         if (!block.getDefaultState().isOf(Blocks.AIR)) {
-            blockRenderManager.renderBlock(block.getDefaultState().with(Properties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, Random.create());
+            List<BlockModelPart> list = blockRenderManager.getModel(block.getDefaultState().with(Properties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER)).getParts(Random.create());
+            blockRenderManager.renderBlock(block.getDefaultState().with(Properties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, list);
         }
     }
 }

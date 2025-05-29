@@ -7,9 +7,13 @@ import net.minecraft.client.render.*;
 import net.minecraft.client.render.block.BlockRenderManager;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
+import net.minecraft.client.render.model.BlockModelPart;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
+
+import java.util.List;
 
 @Environment(EnvType.CLIENT)
 public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<FlowerbedBlockEntity> {
@@ -19,7 +23,7 @@ public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<Flowerb
         this.blockRenderManager = context.getRenderManager();
     }
 
-    public void render(FlowerbedBlockEntity entity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay) {
+    public void render(FlowerbedBlockEntity entity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay, Vec3d cameraPos) {
         matrixStack.push();
         matrixStack.translate(0, 1, 0);
         this.renderFlower(entity, matrixStack, vertexConsumerProvider, 0, 0.3f, 0.25f);
@@ -32,8 +36,9 @@ public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<Flowerb
     private void renderFlower(FlowerbedBlockEntity entity, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int slot, float x, float z) {
             ItemStack itemStack = entity.getStack(slot);
             Block block = Block.getBlockFromItem(itemStack.getItem());
+        List<BlockModelPart> list = blockRenderManager.getModel(block.getDefaultState()).getParts(Random.create());
             matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
             matrixStack.translate(x, 0, z);
-            blockRenderManager.renderBlock(block.getDefaultState(), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, Random.create());
+            blockRenderManager.renderBlock(block.getDefaultState(), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, list);
     }
 }

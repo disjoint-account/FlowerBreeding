@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
+import net.flowerbreeding.trim.FBArmourTrims;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.data.recipe.RecipeGenerator;
@@ -541,7 +542,7 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerVaseRecipe(FBBlocks.MAGENTA_VASE, Items.MAGENTA_TERRACOTTA);
                 offerVaseRecipe(FBBlocks.PINK_VASE, Items.PINK_TERRACOTTA);
 
-                offerSmithingTrimRecipe(FBItems.FLORAL_SMITHING_TEMPLATE, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID + "floral_smithing_trim")));
+                offerSmithingTrimRecipe(FBItems.FLORAL_SMITHING_TEMPLATE, FBArmourTrims.FLORAL, RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID + "floral_smithing_trim")));
 
                 offerSmithingTemplateCopyingRecipe(FBItems.FLORAL_SMITHING_TEMPLATE, Blocks.MOSS_BLOCK);
             }

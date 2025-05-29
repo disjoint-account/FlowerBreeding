@@ -7,95 +7,47 @@ import net.flowerbreeding.util.FBProperties;
 import net.minecraft.block.Block;
 import net.minecraft.block.enums.DoubleBlockHalf;
 import net.minecraft.client.data.*;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.MultipartModelConditionBuilder;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.Pool;
+
+import static net.minecraft.client.data.BlockStateModelGenerator.*;
 
 @Environment(EnvType.CLIENT)
 public class FBBlockStateSuppliers {
-    public static BlockStateSupplier createTipPlantState(Block block, Identifier regularId, Identifier tipId) {
-        return VariantsBlockStateSupplier.create(block)
-                .coordinate(
-                        BlockStateVariantMap.create(FBProperties.TIP)
-                                .register(false,
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, regularId))
-                                .register(true,
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, tipId))
-                );
+    public static VariantsBlockModelDefinitionCreator createTipPlantState(Block block, WeightedVariant regularId, WeightedVariant tipId) {
+        return VariantsBlockModelDefinitionCreator.of(block).with(BlockStateVariantMap.models(FBProperties.TIP)
+                                .register(false, regularId)
+                                .register(true, tipId));
     }
 
-    public static BlockStateSupplier createDoubleBlockState(Block block, Identifier lowerId, Identifier upperId) {
-        return VariantsBlockStateSupplier.create(block)
-                .coordinate(
-                        BlockStateVariantMap.create(Properties.DOUBLE_BLOCK_HALF)
-                                .register(DoubleBlockHalf.LOWER,
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, lowerId))
-                                .register(DoubleBlockHalf.UPPER,
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, upperId))
-                );
+    public static VariantsBlockModelDefinitionCreator createDoubleBlockState(Block block, WeightedVariant lowerId, WeightedVariant upperId) {
+        return VariantsBlockModelDefinitionCreator.of(block).with(BlockStateVariantMap.models(Properties.DOUBLE_BLOCK_HALF)
+                                .register(DoubleBlockHalf.LOWER, lowerId)
+                                .register(DoubleBlockHalf.UPPER, upperId));
     }
 
     public static void registerGlowshroomBlock(BlockStateModelGenerator blockStateModelGenerator, Block glowshroomBlock) {
-        Identifier identifier = Models.TEMPLATE_SINGLE_FACE.upload(glowshroomBlock, TextureMap.texture(glowshroomBlock), blockStateModelGenerator.modelCollector);
-        Identifier identifier1 = Identifier.of(FlowerBreeding.MOD_ID, "block/" + "glowshroom_block_inside");
-        blockStateModelGenerator.blockStateCollector.accept(MultipartBlockStateSupplier.create(glowshroomBlock)
-                                .with(When.create().set(Properties.NORTH, true), BlockStateVariant.create().put(VariantSettings.MODEL, identifier))
-                                .with(
-                                        When.create().set(Properties.EAST, true),
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true)
-                                )
-                                .with(
-                                        When.create().set(Properties.SOUTH, true),
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R180).put(VariantSettings.UVLOCK, true)
-                                )
-                                .with(
-                                        When.create().set(Properties.WEST, true),
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.Y, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true)
-                                )
-                                .with(
-                                        When.create().set(Properties.UP, true),
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.X, VariantSettings.Rotation.R270).put(VariantSettings.UVLOCK, true)
-                                )
-                                .with(
-                                        When.create().set(Properties.DOWN, true),
-                                        BlockStateVariant.create().put(VariantSettings.MODEL, identifier).put(VariantSettings.X, VariantSettings.Rotation.R90).put(VariantSettings.UVLOCK, true)
-                                )
-                                .with(When.create().set(Properties.NORTH, false), BlockStateVariant.create().put(VariantSettings.MODEL, identifier1))
-                                .with(
-                                        When.create().set(Properties.EAST, false),
-                                        BlockStateVariant.create()
-                                                .put(VariantSettings.MODEL, identifier1)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R90)
-                                                .put(VariantSettings.UVLOCK, false)
-                                )
-                                .with(
-                                        When.create().set(Properties.SOUTH, false),
-                                        BlockStateVariant.create()
-                                                .put(VariantSettings.MODEL, identifier1)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R180)
-                                                .put(VariantSettings.UVLOCK, false)
-                                )
-                                .with(
-                                        When.create().set(Properties.WEST, false),
-                                        BlockStateVariant.create()
-                                                .put(VariantSettings.MODEL, identifier1)
-                                                .put(VariantSettings.Y, VariantSettings.Rotation.R270)
-                                                .put(VariantSettings.UVLOCK, false)
-                                )
-                                .with(
-                                        When.create().set(Properties.UP, false),
-                                        BlockStateVariant.create()
-                                                .put(VariantSettings.MODEL, identifier1)
-                                                .put(VariantSettings.X, VariantSettings.Rotation.R270)
-                                                .put(VariantSettings.UVLOCK, false)
-                                )
-                                .with(
-                                        When.create().set(Properties.DOWN, false),
-                                        BlockStateVariant.create()
-                                                .put(VariantSettings.MODEL, identifier1)
-                                                .put(VariantSettings.X, VariantSettings.Rotation.R90)
-                                                .put(VariantSettings.UVLOCK, false)
-                                )
-                );
+        WeightedVariant weightedVariant = new WeightedVariant(Pool.of(new ModelVariant(Models.TEMPLATE_SINGLE_FACE.upload(glowshroomBlock, TextureMap.texture(glowshroomBlock), blockStateModelGenerator.modelCollector))));
+        WeightedVariant weightedVariant1 = new WeightedVariant(Pool.of(new ModelVariant(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "glowshroom_block_inside"))));
+        blockStateModelGenerator.blockStateCollector.accept(
+                MultipartBlockModelDefinitionCreator.create(glowshroomBlock)
+                        .with(new MultipartModelConditionBuilder().put(Properties.NORTH, true), weightedVariant)
+                        .with(new MultipartModelConditionBuilder().put(Properties.EAST, true), weightedVariant.apply(ROTATE_Y_90).apply(UV_LOCK))
+                        .with(new MultipartModelConditionBuilder().put(Properties.SOUTH, true), weightedVariant.apply(ROTATE_Y_180).apply(UV_LOCK))
+                        .with(new MultipartModelConditionBuilder().put(Properties.WEST, true), weightedVariant.apply(ROTATE_Y_270).apply(UV_LOCK))
+                        .with(new MultipartModelConditionBuilder().put(Properties.UP, true), weightedVariant.apply(ROTATE_X_270).apply(UV_LOCK))
+                        .with(new MultipartModelConditionBuilder().put(Properties.DOWN, true), weightedVariant.apply(ROTATE_X_90).apply(UV_LOCK))
+                        .with(new MultipartModelConditionBuilder().put(Properties.NORTH, false), weightedVariant1)
+                        .with(new MultipartModelConditionBuilder().put(Properties.EAST, false), weightedVariant1.apply(ROTATE_Y_90))
+                        .with(new MultipartModelConditionBuilder().put(Properties.SOUTH, false), weightedVariant1.apply(ROTATE_Y_180))
+                        .with(new MultipartModelConditionBuilder().put(Properties.WEST, false), weightedVariant1.apply(ROTATE_Y_270))
+                        .with(new MultipartModelConditionBuilder().put(Properties.UP, false), weightedVariant1.apply(ROTATE_X_270))
+                        .with(new MultipartModelConditionBuilder().put(Properties.DOWN, false), weightedVariant1.apply(ROTATE_X_90))
+        );
         blockStateModelGenerator.registerParentedItemModel(glowshroomBlock, TexturedModel.CUBE_ALL.upload(glowshroomBlock, "_inventory", blockStateModelGenerator.modelCollector));
     }
 }

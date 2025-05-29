@@ -80,7 +80,8 @@ public class FBItems {
                             ToolComponent.Rule.ofAlwaysDropping(Registries.createEntryLookup(Registries.BLOCK).getOrThrow(BlockTags.SHOVEL_MINEABLE), 2.0f)
                     ),
                     1.0F,
-                    1
+                    1,
+                    true
             )
     )));
 

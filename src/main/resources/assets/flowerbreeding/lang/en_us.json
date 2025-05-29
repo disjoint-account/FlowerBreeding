@@ -610,5 +610,5 @@
   "text.config.flowerbreeding-config.option.craftableTrowels.tooltip": "Makes the Trowel craftable (Requires restart to take effect)",
   "text.config.flowerbreeding-config.option.craftableJarsAndVials": "Craftable Jars and Vials",
   "text.config.flowerbreeding-config.option.craftableJarsAndVials.tooltip": "Makes Pigment Jars and Pollen Vials craftable (Requires restart to take effect)",
-  "entity.minecraft.villager.botanist": "Botanist"
+  "entity.flowerbreeding.villager.botanist": "Botanist"
 }

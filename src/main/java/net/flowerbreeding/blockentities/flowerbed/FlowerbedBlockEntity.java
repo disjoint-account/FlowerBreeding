@@ -4,6 +4,7 @@ import net.flowerbreeding.FBBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.component.ComponentMap;
+import net.minecraft.component.ComponentsAccess;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.ContainerComponent;
 import net.minecraft.entity.player.PlayerEntity;
@@ -107,7 +108,7 @@ public class FlowerbedBlockEntity extends BlockEntity implements Inventory {
     }
 
     @Override
-    protected void readComponents(BlockEntity.ComponentsAccess components) {
+    protected void readComponents(ComponentsAccess components) {
         super.readComponents(components);
         components.getOrDefault(DataComponentTypes.CONTAINER, ContainerComponent.DEFAULT).copyTo(this.getInventory());
     }

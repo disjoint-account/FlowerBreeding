@@ -2,7 +2,6 @@ package net.flowerbreeding.eyeblossoms;
 
 import net.flowerbreeding.FBBlocks;
 import net.minecraft.block.*;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -28,7 +27,7 @@ public class MagentaEyeblossomFlowerPotBlock extends FlowerPotBlock {
                 world.setBlockState(pos, this.getToggledState(state), 3);
                 MagentaEyeblossomBlock.MagentaEyeblossomState magentaEyeblossomState = MagentaEyeblossomBlock.MagentaEyeblossomState.of(bl).getOpposite();
                 magentaEyeblossomState.spawnTrailParticle(world, pos, random);
-                world.playSound((PlayerEntity)null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+                world.playSound(null, pos, magentaEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
         }
     }

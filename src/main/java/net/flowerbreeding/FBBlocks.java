@@ -13,6 +13,8 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.particle.EntityEffectParticleEffect;
+import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -52,8 +54,8 @@ public class FBBlocks {
     public static final Block POTTED_MAGENTA_DAISY = registerFlowerPotBlock("potted_magenta_daisy", MAGENTA_DAISY, POTTED_OXEYE_DAISY);
     public static final Block MAGENTA_CORNFLOWER = registerFlowerBlock("magenta_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_MAGENTA_CORNFLOWER = registerFlowerPotBlock("potted_magenta_cornflower", MAGENTA_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_MAGENTA_EYEBLOSSOM = registerEyeblossom("open_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.MAGENTA));
-    public static final Block CLOSED_MAGENTA_EYEBLOSSOM = registerEyeblossom("closed_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_MAGENTA_EYEBLOSSOM = registerBlock("open_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.MAGENTA));
+    public static final Block CLOSED_MAGENTA_EYEBLOSSOM = registerBlock("closed_magenta_eyeblossom", (settings) -> new MagentaEyeblossomBlock(settings, MagentaEyeblossomBlock.MagentaEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_MAGENTA_EYEBLOSSOM = registerMagentaEyeblossomFlowerPotBlock("potted_open_magenta_eyeblossom", OPEN_MAGENTA_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_MAGENTA_EYEBLOSSOM = registerMagentaEyeblossomFlowerPotBlock("potted_closed_magenta_eyeblossom", CLOSED_MAGENTA_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block MAGENTA_AZURE_BLUET = registerFlowerBlock("magenta_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -65,7 +67,7 @@ public class FBBlocks {
     public static final Block MAGENTA_SPORE_BLOSSOM = registerBlock("magenta_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.MAGENTA));
     public static final Block MAGENTA_FLOWERING_AZALEA = registerBlock("magenta_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.MAGENTA_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_MAGENTA_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_magenta_flowering_azalea_bush", MAGENTA_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block MAGENTA_FLOWERING_AZALEA_LEAVES = registerBlock("magenta_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block MAGENTA_FLOWERING_AZALEA_LEAVES = registerBlock("magenta_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // blue flowers
 
@@ -89,8 +91,8 @@ public class FBBlocks {
     public static final Block POTTED_BLUE_DANDELION = registerFlowerPotBlock("potted_blue_dandelion", BLUE_DANDELION, Blocks.POTTED_DANDELION);
     public static final Block BLUE_DAISY = registerFlowerBlock("blue_daisy", StatusEffects.REGENERATION, 7, OXEYE_DAISY);
     public static final Block POTTED_BLUE_DAISY = registerFlowerPotBlock("potted_blue_daisy", BLUE_DAISY, POTTED_OXEYE_DAISY);
-    public static final Block OPEN_BLUE_EYEBLOSSOM = registerEyeblossom("open_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLUE));
-    public static final Block CLOSED_BLUE_EYEBLOSSOM = registerEyeblossom("closed_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_BLUE_EYEBLOSSOM = registerBlock("open_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLUE));
+    public static final Block CLOSED_BLUE_EYEBLOSSOM = registerBlock("closed_blue_eyeblossom", (settings) -> new BlueEyeblossomBlock(settings, BlueEyeblossomBlock.BlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_BLUE_EYEBLOSSOM = registerBlueEyeblossomFlowerPotBlock("potted_open_blue_eyeblossom", OPEN_BLUE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_BLUE_EYEBLOSSOM = registerBlueEyeblossomFlowerPotBlock("potted_closed_blue_eyeblossom", CLOSED_BLUE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block BLUE_AZURE_BLUET = registerFlowerBlock("blue_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -102,7 +104,7 @@ public class FBBlocks {
     public static final Block BLUE_SPORE_BLOSSOM = registerBlock("blue_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.BLUE));
     public static final Block BLUE_FLOWERING_AZALEA = registerBlock("blue_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.BLUE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_BLUE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_blue_flowering_azalea_bush", BLUE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("blue_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("blue_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // white flowers
 
@@ -121,8 +123,8 @@ public class FBBlocks {
     public static final Block WHITE_DANDELION = registerFlowerBlock("white_dandelion", StatusEffects.WEAKNESS, 7, Blocks.DANDELION);
     public static final Block POTTED_WHITE_DANDELION = registerFlowerPotBlock("potted_white_dandelion", WHITE_DANDELION, Blocks.POTTED_DANDELION);
     public static final Block WHITE_CORNFLOWER = registerFlowerBlock("white_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
-    public static final Block OPEN_WHITE_EYEBLOSSOM = registerEyeblossom("open_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.WHITE));
-    public static final Block CLOSED_WHITE_EYEBLOSSOM = registerEyeblossom("closed_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_WHITE_EYEBLOSSOM = registerBlock("open_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.WHITE));
+    public static final Block CLOSED_WHITE_EYEBLOSSOM = registerBlock("closed_white_eyeblossom", (settings) -> new WhiteEyeblossomBlock(settings, WhiteEyeblossomBlock.WhiteEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_WHITE_EYEBLOSSOM = registerWhiteEyeblossomFlowerPotBlock("potted_open_white_eyeblossom", OPEN_WHITE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_WHITE_EYEBLOSSOM = registerWhiteEyeblossomFlowerPotBlock("potted_closed_white_eyeblossom", CLOSED_WHITE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block POTTED_WHITE_CORNFLOWER = registerFlowerPotBlock("potted_white_cornflower", WHITE_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
@@ -133,7 +135,7 @@ public class FBBlocks {
     public static final Block WHITE_SPORE_BLOSSOM = registerBlock("white_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.WHITE));
     public static final Block WHITE_FLOWERING_AZALEA = registerBlock("white_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.WHITE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_WHITE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_white_flowering_azalea_bush", WHITE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block WHITE_FLOWERING_AZALEA_LEAVES = registerBlock("white_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block WHITE_FLOWERING_AZALEA_LEAVES = registerBlock("white_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // orange flowers
 
@@ -164,7 +166,7 @@ public class FBBlocks {
     public static final Block ORANGE_SPORE_BLOSSOM = registerBlock("orange_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.ORANGE));
     public static final Block ORANGE_FLOWERING_AZALEA = registerBlock("orange_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.ORANGE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_ORANGE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_orange_flowering_azalea_bush", ORANGE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block ORANGE_FLOWERING_AZALEA_LEAVES = registerBlock("orange_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block ORANGE_FLOWERING_AZALEA_LEAVES = registerBlock("orange_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // red flowers
 
@@ -185,8 +187,8 @@ public class FBBlocks {
     public static final Block POTTED_RED_DAISY = registerFlowerPotBlock("potted_red_daisy", RED_DAISY, POTTED_OXEYE_DAISY);
     public static final Block RED_CORNFLOWER = registerFlowerBlock("red_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_RED_CORNFLOWER = registerFlowerPotBlock("potted_red_cornflower", RED_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_RED_EYEBLOSSOM = registerEyeblossom("open_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.RED));
-    public static final Block CLOSED_RED_EYEBLOSSOM = registerEyeblossom("closed_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_RED_EYEBLOSSOM = registerBlock("open_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.RED));
+    public static final Block CLOSED_RED_EYEBLOSSOM = registerBlock("closed_red_eyeblossom", (settings) -> new RedEyeblossomBlock(settings, RedEyeblossomBlock.RedEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_RED_EYEBLOSSOM = registerRedEyeblossomFlowerPotBlock("potted_open_red_eyeblossom", OPEN_RED_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_RED_EYEBLOSSOM = registerRedEyeblossomFlowerPotBlock("potted_closed_red_eyeblossom", CLOSED_RED_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block RED_AZURE_BLUET = registerFlowerBlock("red_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -198,7 +200,7 @@ public class FBBlocks {
     public static final Block RED_SPORE_BLOSSOM = registerBlock("red_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.RED));
     public static final Block RED_FLOWERING_AZALEA = registerBlock("red_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.RED_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_RED_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_red_flowering_azalea_bush", RED_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block RED_FLOWERING_AZALEA_LEAVES = registerBlock("red_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block RED_FLOWERING_AZALEA_LEAVES = registerBlock("red_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // yellow flowers
 
@@ -221,8 +223,8 @@ public class FBBlocks {
     public static final Block POTTED_YELLOW_DAISY = registerFlowerPotBlock("potted_yellow_daisy", YELLOW_DAISY, POTTED_OXEYE_DAISY);
     public static final Block YELLOW_CORNFLOWER = registerFlowerBlock("yellow_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_YELLOW_CORNFLOWER = registerFlowerPotBlock("potted_yellow_cornflower", YELLOW_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_YELLOW_EYEBLOSSOM = registerEyeblossom("open_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.YELLOW));
-    public static final Block CLOSED_YELLOW_EYEBLOSSOM = registerEyeblossom("closed_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_YELLOW_EYEBLOSSOM = registerBlock("open_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.YELLOW));
+    public static final Block CLOSED_YELLOW_EYEBLOSSOM = registerBlock("closed_yellow_eyeblossom", (settings) -> new YellowEyeblossomBlock(settings, YellowEyeblossomBlock.YellowEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_YELLOW_EYEBLOSSOM = registerYellowEyeblossomFlowerPotBlock("potted_open_yellow_eyeblossom", OPEN_YELLOW_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_YELLOW_EYEBLOSSOM = registerYellowEyeblossomFlowerPotBlock("potted_closed_yellow_eyeblossom", CLOSED_YELLOW_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block YELLOW_AZURE_BLUET = registerFlowerBlock("yellow_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -234,7 +236,7 @@ public class FBBlocks {
     public static final Block YELLOW_SPORE_BLOSSOM = registerBlock("yellow_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.YELLOW));
     public static final Block YELLOW_FLOWERING_AZALEA = registerBlock("yellow_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.YELLOW_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_YELLOW_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_yellow_flowering_azalea_bush", YELLOW_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block YELLOW_FLOWERING_AZALEA_LEAVES = registerBlock("yellow_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block YELLOW_FLOWERING_AZALEA_LEAVES = registerBlock("yellow_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // light blue flowers
 
@@ -258,8 +260,8 @@ public class FBBlocks {
     public static final Block POTTED_LIGHT_BLUE_DAISY = registerFlowerPotBlock("potted_light_blue_daisy", LIGHT_BLUE_DAISY, POTTED_OXEYE_DAISY);
     public static final Block LIGHT_BLUE_CORNFLOWER = registerFlowerBlock("light_blue_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_LIGHT_BLUE_CORNFLOWER = registerFlowerPotBlock("potted_light_blue_cornflower", LIGHT_BLUE_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossom("open_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.LIGHT_BLUE));
-    public static final Block CLOSED_LIGHT_BLUE_EYEBLOSSOM = registerEyeblossom("closed_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_LIGHT_BLUE_EYEBLOSSOM = registerBlock("open_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.LIGHT_BLUE));
+    public static final Block CLOSED_LIGHT_BLUE_EYEBLOSSOM = registerBlock("closed_light_blue_eyeblossom", (settings) -> new LightBlueEyeblossomBlock(settings, LightBlueEyeblossomBlock.LightBlueEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_LIGHT_BLUE_EYEBLOSSOM = registerLightBlueEyeblossomFlowerPotBlock("potted_open_light_blue_eyeblossom", OPEN_LIGHT_BLUE_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_LIGHT_BLUE_EYEBLOSSOM = registerLightBlueEyeblossomFlowerPotBlock("potted_closed_light_blue_eyeblossom", CLOSED_LIGHT_BLUE_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block LIGHT_BLUE_AZURE_BLUET = registerFlowerBlock("light_blue_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -271,7 +273,7 @@ public class FBBlocks {
     public static final Block LIGHT_BLUE_SPORE_BLOSSOM = registerBlock("light_blue_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.LIGHT_BLUE));
     public static final Block LIGHT_BLUE_FLOWERING_AZALEA = registerBlock("light_blue_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.LIGHT_BLUE_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_light_blue_flowering_azalea_bush", LIGHT_BLUE_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block LIGHT_BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("light_blue_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block LIGHT_BLUE_FLOWERING_AZALEA_LEAVES = registerBlock("light_blue_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // pink flowers
 
@@ -293,8 +295,8 @@ public class FBBlocks {
     public static final Block POTTED_PINK_DAISY = registerFlowerPotBlock("potted_pink_daisy", PINK_DAISY, POTTED_OXEYE_DAISY);
     public static final Block PINK_CORNFLOWER = registerFlowerBlock("pink_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_PINK_CORNFLOWER = registerFlowerPotBlock("potted_pink_cornflower", PINK_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_PINK_EYEBLOSSOM = registerEyeblossom("open_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.PINK));
-    public static final Block CLOSED_PINK_EYEBLOSSOM = registerEyeblossom("closed_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_PINK_EYEBLOSSOM = registerBlock("open_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.PINK));
+    public static final Block CLOSED_PINK_EYEBLOSSOM = registerBlock("closed_pink_eyeblossom", (settings) -> new PinkEyeblossomBlock(settings, PinkEyeblossomBlock.PinkEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_PINK_EYEBLOSSOM = registerPinkEyeblossomFlowerPotBlock("potted_open_pink_eyeblossom", OPEN_PINK_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_PINK_EYEBLOSSOM = registerPinkEyeblossomFlowerPotBlock("potted_closed_pink_eyeblossom", CLOSED_PINK_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block PINK_AZURE_BLUET = registerFlowerBlock("pink_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -325,8 +327,8 @@ public class FBBlocks {
     public static final Block POTTED_BLACK_DAISY = registerFlowerPotBlock("potted_black_daisy", BLACK_DAISY, POTTED_OXEYE_DAISY);
     public static final Block BLACK_CORNFLOWER = registerFlowerBlock("black_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_BLACK_CORNFLOWER = registerFlowerPotBlock("potted_black_cornflower", BLACK_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_BLACK_EYEBLOSSOM = registerEyeblossom("open_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLACK));
-    public static final Block CLOSED_BLACK_EYEBLOSSOM = registerEyeblossom("closed_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_BLACK_EYEBLOSSOM = registerBlock("open_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.BLACK));
+    public static final Block CLOSED_BLACK_EYEBLOSSOM = registerBlock("closed_black_eyeblossom", (settings) -> new BlackEyeblossomBlock(settings, BlackEyeblossomBlock.BlackEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_BLACK_EYEBLOSSOM = registerBlackEyeblossomFlowerPotBlock("potted_open_black_eyeblossom", OPEN_BLACK_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_BLACK_EYEBLOSSOM = registerBlackEyeblossomFlowerPotBlock("potted_closed_black_eyeblossom", CLOSED_BLACK_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block BLACK_AZURE_BLUET = registerFlowerBlock("black_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -336,9 +338,9 @@ public class FBBlocks {
     public static final Block BLACK_PITCHER_PLANT = registerBlock("black_pitcher_plant", TallFlowerBlock::new, AbstractBlock.Settings.copy(Blocks.PITCHER_PLANT));
     public static final Block BLACK_PETALS = registerBlock("black_petals", FlowerbedBlock::new, AbstractBlock.Settings.copy(Blocks.PINK_PETALS).mapColor(DyeColor.BLACK));
     public static final Block BLACK_SPORE_BLOSSOM = registerBlock("black_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.BLACK));
-    public static final Block BLACK_FLOWERING_AZALEA = registerAzalea("black_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.BLACK_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
+    public static final Block BLACK_FLOWERING_AZALEA = registerBlock("black_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.BLACK_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_BLACK_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_black_flowering_azalea_bush", BLACK_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block BLACK_FLOWERING_AZALEA_LEAVES = registerBlock("black_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block BLACK_FLOWERING_AZALEA_LEAVES = registerBlock("black_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     // cyan flowers
 
@@ -364,8 +366,8 @@ public class FBBlocks {
     public static final Block POTTED_CYAN_DAISY = registerFlowerPotBlock("potted_cyan_daisy", CYAN_DAISY, POTTED_OXEYE_DAISY);
     public static final Block CYAN_CORNFLOWER = registerFlowerBlock("cyan_cornflower", StatusEffects.JUMP_BOOST, 5, Blocks.CORNFLOWER);
     public static final Block POTTED_CYAN_CORNFLOWER = registerFlowerPotBlock("potted_cyan_cornflower", CYAN_CORNFLOWER, Blocks.POTTED_CORNFLOWER);
-    public static final Block OPEN_CYAN_EYEBLOSSOM = registerEyeblossom("open_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.CYAN));
-    public static final Block CLOSED_CYAN_EYEBLOSSOM = registerEyeblossom("closed_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
+    public static final Block OPEN_CYAN_EYEBLOSSOM = registerBlock("open_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.OPEN), AbstractBlock.Settings.copy(OPEN_EYEBLOSSOM).mapColor(DyeColor.CYAN));
+    public static final Block CLOSED_CYAN_EYEBLOSSOM = registerBlock("closed_cyan_eyeblossom", (settings) -> new CyanEyeblossomBlock(settings, CyanEyeblossomBlock.CyanEyeblossomState.CLOSED), AbstractBlock.Settings.copy(CLOSED_EYEBLOSSOM));
     public static final Block POTTED_OPEN_CYAN_EYEBLOSSOM = registerCyanEyeblossomFlowerPotBlock("potted_open_cyan_eyeblossom", OPEN_CYAN_EYEBLOSSOM, POTTED_OPEN_EYEBLOSSOM);
     public static final Block POTTED_CLOSED_CYAN_EYEBLOSSOM = registerCyanEyeblossomFlowerPotBlock("potted_closed_cyan_eyeblossom", CLOSED_CYAN_EYEBLOSSOM, POTTED_CLOSED_EYEBLOSSOM);
     public static final Block CYAN_AZURE_BLUET = registerFlowerBlock("cyan_azure_bluet", StatusEffects.BLINDNESS, 11, Blocks.AZURE_BLUET);
@@ -376,7 +378,7 @@ public class FBBlocks {
     public static final Block CYAN_SPORE_BLOSSOM = registerBlock("cyan_spore_blossom", SporeBlossomBlock::new, AbstractBlock.Settings.copy(SPORE_BLOSSOM).mapColor(DyeColor.CYAN));
     public static final Block CYAN_FLOWERING_AZALEA = registerBlock("cyan_flowering_azalea", (settings) -> new FBAzaleaBlock(FBSaplingGenerators.CYAN_AZALEA, settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA));
     public static final Block POTTED_CYAN_FLOWERING_AZALEA_BUSH = registerFlowerPotBlock("potted_cyan_flowering_azalea_bush", CYAN_FLOWERING_AZALEA, POTTED_FLOWERING_AZALEA_BUSH);
-    public static final Block CYAN_FLOWERING_AZALEA_LEAVES = registerBlock("cyan_flowering_azalea_leaves", LeavesBlock::new, AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
+    public static final Block CYAN_FLOWERING_AZALEA_LEAVES = registerBlock("cyan_flowering_azalea_leaves", settings -> new UntintedParticleLeavesBlock(0.01F, EntityEffectParticleEffect.create(ParticleTypes.TINTED_LEAVES, -9399763), settings), AbstractBlock.Settings.copy(FLOWERING_AZALEA_LEAVES));
 
     //daffodils
 
@@ -583,37 +585,37 @@ public class FBBlocks {
 
     //glowshrooms
 
-    public static final Block MAGENTA_GLOWSHROOM = registerGlowshroom("magenta_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_MAGENTA_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block MAGENTA_GLOWSHROOM = registerBlock("magenta_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_MAGENTA_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_MAGENTA_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_magenta_glowshroom", MAGENTA_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block MAGENTA_GLOWSHROOM_BLOCK = registerBlock("magenta_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.MAGENTA).luminance(state -> 15));
-    public static final Block BLUE_GLOWSHROOM = registerGlowshroom("blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block BLUE_GLOWSHROOM = registerBlock("blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_BLUE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_blue_glowshroom", BLUE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block BLUE_GLOWSHROOM_BLOCK = registerBlock("blue_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.BLUE).luminance(state -> 15));
-    public static final Block WHITE_GLOWSHROOM = registerGlowshroom("white_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_WHITE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block WHITE_GLOWSHROOM = registerBlock("white_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_WHITE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_WHITE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_white_glowshroom", WHITE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block WHITE_GLOWSHROOM_BLOCK = registerBlock("white_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.WHITE).luminance(state -> 15));
-    public static final Block ORANGE_GLOWSHROOM = registerGlowshroom("orange_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_ORANGE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block ORANGE_GLOWSHROOM = registerBlock("orange_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_ORANGE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_ORANGE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_orange_glowshroom", ORANGE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block ORANGE_GLOWSHROOM_BLOCK = registerBlock("orange_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.ORANGE).luminance(state -> 15));
-    public static final Block RED_GLOWSHROOM = registerGlowshroom("red_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_RED_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block RED_GLOWSHROOM = registerBlock("red_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_RED_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_RED_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_red_glowshroom", RED_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block RED_GLOWSHROOM_BLOCK = registerBlock("red_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.RED).luminance(state -> 15));
-    public static final Block YELLOW_GLOWSHROOM = registerGlowshroom("yellow_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_YELLOW_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block YELLOW_GLOWSHROOM = registerBlock("yellow_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_YELLOW_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_YELLOW_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_yellow_glowshroom", YELLOW_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block YELLOW_GLOWSHROOM_BLOCK = registerBlock("yellow_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.YELLOW).luminance(state -> 15));
-    public static final Block LIGHT_BLUE_GLOWSHROOM = registerGlowshroom("light_blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_LIGHT_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block LIGHT_BLUE_GLOWSHROOM = registerBlock("light_blue_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_LIGHT_BLUE_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_LIGHT_BLUE_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_light_blue_glowshroom", LIGHT_BLUE_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block LIGHT_BLUE_GLOWSHROOM_BLOCK = registerBlock("light_blue_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.LIGHT_BLUE).luminance(state -> 15));
-    public static final Block PINK_GLOWSHROOM = registerGlowshroom("pink_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_PINK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block PINK_GLOWSHROOM = registerBlock("pink_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_PINK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_PINK_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_pink_glowshroom", PINK_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block PINK_GLOWSHROOM_BLOCK = registerBlock("pink_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.PINK).luminance(state -> 15));
-    public static final Block BLACK_GLOWSHROOM = registerGlowshroom("black_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLACK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block BLACK_GLOWSHROOM = registerBlock("black_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_BLACK_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_BLACK_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_black_glowshroom", BLACK_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block BLACK_GLOWSHROOM_BLOCK = registerBlock("black_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.BLACK).luminance(state -> 15));
-    public static final Block CYAN_GLOWSHROOM = registerGlowshroom("cyan_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_CYAN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block CYAN_GLOWSHROOM = registerBlock("cyan_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_CYAN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_CYAN_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_cyan_glowshroom", CYAN_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block CYAN_GLOWSHROOM_BLOCK = registerBlock("cyan_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.CYAN).luminance(state -> 15));
-    public static final Block GREEN_GLOWSHROOM = registerGlowshroom("green_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_GREEN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
+    public static final Block GREEN_GLOWSHROOM = registerBlock("green_glowshroom", settings -> new GlowshroomPlantBlock(FBConfiguredFeatures.HUGE_GREEN_GLOWSHROOM, settings), AbstractBlock.Settings.copy(BROWN_MUSHROOM).luminance(state -> 10));
     public static final Block POTTED_GREEN_GLOWSHROOM = registerGlowshroomFlowerPotBlock("potted_green_glowshroom", GREEN_GLOWSHROOM, POTTED_BROWN_MUSHROOM);
     public static final Block GREEN_GLOWSHROOM_BLOCK = registerBlock("green_glowshroom_block", MushroomBlock::new, AbstractBlock.Settings.copy(BROWN_MUSHROOM_BLOCK).mapColor(DyeColor.LIME).luminance(state -> 15));
 
@@ -621,7 +623,7 @@ public class FBBlocks {
 
     public static final Block CLIMBING_IVY = registerBlock("climbing_ivy", IvyBlock::new, AbstractBlock.Settings.copy(VINE));
     public static final Block CATTAILS = registerBlock("cattails", CattailsBlock::new, AbstractBlock.Settings.copy(SUGAR_CANE));
-    public static final Block SAGE = registerSage("sage", settings -> new SageBlock(FBConfiguredFeatures.SAGE_KEY, settings), AbstractBlock.Settings.copy(FERN));
+    public static final Block SAGE = registerBlock("sage", settings -> new SageBlock(FBConfiguredFeatures.SAGE_KEY, settings), AbstractBlock.Settings.copy(FERN));
     public static final Block POTTED_SAGE = registerFlowerPotBlock("potted_sage", SAGE, POTTED_FERN);
 
     //other stuff
@@ -691,26 +693,6 @@ public class FBBlocks {
     }
     private static Block registerWitherRoseBlock(String name) {
         return registerBlock(name, true, settings -> new WitherRoseBlock(StatusEffects.WITHER, 7, settings), AbstractBlock.Settings.copy(Blocks.WITHER_ROSE));
-    }
-    private static Block registerAzalea(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = Blocks.register(keyOf(name), factory, settings);
-        registerBlockItem(name, block);
-        return block;
-    }
-    private static Block registerGlowshroom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = Blocks.register(keyOf(name), factory, settings);
-        registerBlockItem(name, block);
-        return block;
-    }
-    private static Block registerSage(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = Blocks.register(keyOf(name), factory, settings);
-        registerBlockItem(name, block);
-        return block;
-    }
-    private static Block registerEyeblossom(String name, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = Blocks.register(keyOf(name), factory, settings);
-        registerBlockItem(name, block);
-        return block;
     }
     private static Block registerMagentaEyeblossomFlowerPotBlock(String name, Block content, Block base) {
         return registerBlock(name, false, settings -> new MagentaEyeblossomFlowerPotBlock(content, settings), AbstractBlock.Settings.copy(base));

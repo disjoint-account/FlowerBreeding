@@ -51,7 +51,7 @@ public class PinkEyeblossomBlock extends FlowerBlock {
         if (this.state.isOpen() && random.nextInt(700) == 0) {
             BlockState blockState = world.getBlockState(pos.down());
             if (blockState.isOf(Blocks.PALE_MOSS_BLOCK)) {
-                world.playSound((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), SoundEvents.BLOCK_EYEBLOSSOM_IDLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                world.playSoundClient(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_EYEBLOSSOM_IDLE, SoundCategory.AMBIENT, 1.0F, 1.0F, false);
             }
         }
 
@@ -59,7 +59,7 @@ public class PinkEyeblossomBlock extends FlowerBlock {
 
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
-            world.playSound((PlayerEntity)null, pos, this.state.getOpposite().longSound, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, this.state.getOpposite().longSound, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
 
         super.randomTick(state, world, pos, random);
@@ -67,7 +67,7 @@ public class PinkEyeblossomBlock extends FlowerBlock {
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
-            world.playSound((PlayerEntity)null, pos, this.state.getOpposite().sound, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, this.state.getOpposite().sound, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
 
         super.scheduledTick(state, world, pos, random);
@@ -109,7 +109,7 @@ public class PinkEyeblossomBlock extends FlowerBlock {
         return new StatusEffectInstance(StatusEffects.POISON, 25);
     }
 
-    public static enum PinkEyeblossomState {
+    public enum PinkEyeblossomState {
         OPEN(true, StatusEffects.BLINDNESS, 11.0F, SoundEvents.BLOCK_EYEBLOSSOM_OPEN_LONG, SoundEvents.BLOCK_EYEBLOSSOM_OPEN, 14918135),
         CLOSED(false, StatusEffects.NAUSEA, 7.0F, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE_LONG, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE, 6250335);
 
@@ -120,7 +120,7 @@ public class PinkEyeblossomBlock extends FlowerBlock {
         final SoundEvent sound;
         private final int particleColor;
 
-        private PinkEyeblossomState(final boolean open, final RegistryEntry<StatusEffect> stewEffect, final float effectLengthInSeconds, final SoundEvent longSound, final SoundEvent sound, final int particleColor) {
+        PinkEyeblossomState(final boolean open, final RegistryEntry<StatusEffect> stewEffect, final float effectLengthInSeconds, final SoundEvent longSound, final SoundEvent sound, final int particleColor) {
             this.open = open;
             this.stewEffect = stewEffect;
             this.effectLengthInSeconds = effectLengthInSeconds;

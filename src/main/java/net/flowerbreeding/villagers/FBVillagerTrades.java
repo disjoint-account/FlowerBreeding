@@ -34,7 +34,7 @@ public class FBVillagerTrades {
     }
 
     public static void registerTrades() {
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 1, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST_KEY, 1, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.RED_TULIP, 1),
                     new ItemStack(Items.EMERALD, 1), 16, 1, 0.05f
@@ -100,7 +100,7 @@ public class FBVillagerTrades {
                     new ItemStack(Items.EMERALD, 1), 16, 1, 0.05f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 2, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST_KEY, 2, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 4),
                     new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), 12, 5, 0.2f
@@ -110,7 +110,7 @@ public class FBVillagerTrades {
                     new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 1), 12, 5, 0.2f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 3, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST_KEY, 3, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 1),
                     new ItemStack(FBBlocks.YELLOW_DAFFODIL, 1), 16, 5, 0.05f
@@ -160,7 +160,7 @@ public class FBVillagerTrades {
                     new ItemStack(FBBlocks.GREEN_GLOWSHROOM, 1), 16, 5, 0.05f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 4, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST_KEY, 4, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 2),
                     new ItemStack(FBBlocks.CLIMBING_IVY, 1), 12, 5, 0.2f
@@ -174,7 +174,7 @@ public class FBVillagerTrades {
                     new ItemStack(FBBlocks.SAGE, 1), 12, 5, 0.2f
             ));
         });
-        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST, 5, factories -> {
+        TradeOfferHelper.registerVillagerOffers(FBVillagers.BOTANIST_KEY, 5, factories -> {
             factories.add((entity, random) -> new TradeOffer(
                     new TradedItem(Items.EMERALD, 10),
                     new ItemStack(FBBlocks.BOTANY_TABLE, 1), 3, 30, 0.2f

@@ -1,5 +1,5 @@
-// 1.21.4	-999999999-01-01T00:00:00	Flower Breeding/flowerbreeding
-e35b2424f14be7ae1c41c5fd93b73cf42c897f21 data/flowerbreeding/trim_pattern/floral.json
+// 1.21.5 Release Candidate 2	-999999999-01-01T00:00:00	Flower Breeding/flowerbreeding
+6a2bb1f2b3c142aa96cfd6d915a2c9dcde6fd9c0 data/flowerbreeding/trim_pattern/floral.json
 ee1489e25859b5f54c4648868cc4b19c3024af54 data/flowerbreeding/worldgen/configured_feature/black_azalea_tree.json
 802b9908d58c84e0d8fe06302ce947dcdf617525 data/flowerbreeding/worldgen/configured_feature/blue_azalea_tree.json
 a04f08bac1a17030ac5994b03913d7d85a1783c6 data/flowerbreeding/worldgen/configured_feature/cyan_azalea_tree.json

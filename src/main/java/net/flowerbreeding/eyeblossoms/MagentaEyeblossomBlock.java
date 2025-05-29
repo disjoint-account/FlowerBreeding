@@ -48,7 +48,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
         if (this.state.isOpen() && random.nextInt(700) == 0) {
             BlockState blockState = world.getBlockState(pos.down());
             if (blockState.isOf(Blocks.PALE_MOSS_BLOCK)) {
-                world.playSound((double)pos.getX(), (double)pos.getY(), (double)pos.getZ(), SoundEvents.BLOCK_EYEBLOSSOM_IDLE, SoundCategory.BLOCKS, 1.0F, 1.0F, false);
+                world.playSoundClient(pos.getX(), pos.getY(), pos.getZ(), SoundEvents.BLOCK_EYEBLOSSOM_IDLE, SoundCategory.AMBIENT, 1.0F, 1.0F, false);
             }
         }
 
@@ -56,7 +56,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
 
     protected void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
-            world.playSound((PlayerEntity)null, pos, this.state.getOpposite().longSound, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, this.state.getOpposite().longSound, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
 
         super.randomTick(state, world, pos, random);
@@ -64,7 +64,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
 
     protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
         if (this.updateStateAndNotifyOthers(state, world, pos, random)) {
-            world.playSound((PlayerEntity)null, pos, this.state.getOpposite().sound, SoundCategory.BLOCKS, 1.0F, 1.0F);
+            world.playSound(null, pos, this.state.getOpposite().sound, SoundCategory.BLOCKS, 1.0F, 1.0F);
         }
 
         super.scheduledTick(state, world, pos, random);
@@ -106,7 +106,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
         return new StatusEffectInstance(StatusEffects.POISON, 25);
     }
 
-    public static enum MagentaEyeblossomState {
+    public enum MagentaEyeblossomState {
         OPEN(true, StatusEffects.BLINDNESS, 11.0F, SoundEvents.BLOCK_EYEBLOSSOM_OPEN_LONG, SoundEvents.BLOCK_EYEBLOSSOM_OPEN, 10903265),
         CLOSED(false, StatusEffects.NAUSEA, 7.0F, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE_LONG, SoundEvents.BLOCK_EYEBLOSSOM_CLOSE, 6250335);
 
@@ -117,7 +117,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
         final SoundEvent sound;
         private final int particleColor;
 
-        private MagentaEyeblossomState(final boolean open, final RegistryEntry<StatusEffect> stewEffect, final float effectLengthInSeconds, final SoundEvent longSound, final SoundEvent sound, final int particleColor) {
+        MagentaEyeblossomState(final boolean open, final RegistryEntry<StatusEffect> stewEffect, final float effectLengthInSeconds, final SoundEvent longSound, final SoundEvent sound, final int particleColor) {
             this.open = open;
             this.stewEffect = stewEffect;
             this.effectLengthInSeconds = effectLengthInSeconds;
@@ -152,7 +152,7 @@ public class MagentaEyeblossomBlock extends FlowerBlock {
             Vec3d vec3d2 = new Vec3d(random.nextDouble() - (double)0.5F, random.nextDouble() + (double)1.0F, random.nextDouble() - (double)0.5F);
             Vec3d vec3d3 = vec3d.add(vec3d2.multiply(d));
             TrailParticleEffect trailParticleEffect = new TrailParticleEffect(vec3d3, this.particleColor, (int)((double)20.0F * d));
-            world.spawnParticles(trailParticleEffect, vec3d.x, vec3d.y, vec3d.z, 1, (double)0.0F, (double)0.0F, (double)0.0F, (double)0.0F);
+            world.spawnParticles(trailParticleEffect, vec3d.x, vec3d.y, vec3d.z, 1, 0.0F, 0.0F, 0.0F, 0.0F);
         }
 
         public SoundEvent getLongSound() {

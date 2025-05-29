@@ -133,7 +133,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
     }
 
     private void onTakeOutput(PlayerEntity player, ItemStack stack) {
-        stack.onCraftByPlayer(world, player, stack.getCount());
+        stack.onCraftByPlayer(player, stack.getCount());
         world.playSound(player, player.getBlockPos(), SoundEvents.BLOCK_CAVE_VINES_PICK_BERRIES, SoundCategory.BLOCKS);
 
         this.output.unlockLastRecipe(player, List.of(this.input.getStack(0), this.input.getStack(1), this.input.getStack(2)));

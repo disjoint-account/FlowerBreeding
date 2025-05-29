@@ -5,7 +5,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.CreakingHeartBlock;
 import net.minecraft.block.FlowerPotBlock;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.math.BlockPos;
@@ -31,7 +30,7 @@ public class LightBlueEyeblossomFlowerPotBlock extends FlowerPotBlock {
                 world.setBlockState(pos, this.getToggledState(state), 3);
                 LightBlueEyeblossomBlock.LightBlueEyeblossomState lightBlueEyeblossomState = LightBlueEyeblossomBlock.LightBlueEyeblossomState.of(bl).getOpposite();
                 lightBlueEyeblossomState.spawnTrailParticle(world, pos, random);
-                world.playSound((PlayerEntity)null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
+                world.playSound(null, pos, lightBlueEyeblossomState.getLongSound(), SoundCategory.BLOCKS, 1.0F, 1.0F);
             }
         }
     }

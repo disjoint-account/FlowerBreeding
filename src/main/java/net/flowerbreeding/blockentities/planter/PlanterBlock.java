@@ -7,6 +7,7 @@ import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ItemScatterer;
@@ -62,15 +63,13 @@ public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider
     }
 
     @Override
-    protected void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
-        if (state.getBlock() != newState.getBlock()) {
+    protected void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof PlanterBlockEntity) {
                 ItemScatterer.spawn(world, pos, ((PlanterBlockEntity) blockEntity));
                 world.updateComparators(pos, this);
             }
-            super.onStateReplaced(state, world, pos, newState, moved);
-        }
+            super.onStateReplaced(state, world, pos, moved);
     }
 
     @Override

@@ -9,13 +9,15 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.client.data.*;
 import net.minecraft.client.render.item.tint.GrassTintSource;
+import net.minecraft.client.render.model.json.ModelVariant;
+import net.minecraft.client.render.model.json.WeightedVariant;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.Pool;
 
 import java.util.Optional;
 
-import static net.minecraft.client.data.BlockStateModelGenerator.createBlockStateWithRandomHorizontalRotations;
-import static net.minecraft.client.data.BlockStateModelGenerator.createSingletonBlockState;
+import static net.minecraft.client.data.BlockStateModelGenerator.*;
 
 public class FBModelProvider extends FabricModelProvider {
 
@@ -468,8 +470,8 @@ public class FBModelProvider extends FabricModelProvider {
         Identifier emissive = Identifier.of(getId(eyeblossomBlock) + "_emissive");
         Identifier eyeblossomId = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "open_eyeblossom")), Optional.empty(), TextureKey.CROSS_EMISSIVE).upload(eyeblossomBlock, new TextureMap().put(TextureKey.CROSS_EMISSIVE, emissive), blockStateModelGenerator.modelCollector);
         Identifier potId = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "potted_open_eyeblossom")), Optional.empty(), TextureKey.CROSS_EMISSIVE).upload(potBlock, new TextureMap().put(TextureKey.CROSS_EMISSIVE, emissive), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(eyeblossomBlock, eyeblossomId));
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(potBlock, potId));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(eyeblossomBlock, createWeightedVariant(eyeblossomId)));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(potBlock, createWeightedVariant(potId)));
         Identifier model = Models.GENERATED_TWO_LAYERS.upload(ModelIds.getItemModelId(eyeblossomBlock.asItem()), TextureMap.layered(Identifier.ofVanilla("block/" + "open_eyeblossom"), emissive), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(eyeblossomBlock.asItem(), model);
     }
@@ -478,7 +480,7 @@ public class FBModelProvider extends FabricModelProvider {
         Identifier front = Identifier.of(getId(block) + "_front");
         Identifier lowerId = Identifier.ofVanilla("block/" + "sunflower_bottom");
         Identifier upperId = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "sunflower_top")), Optional.empty(), TextureKey.FRONT).upload(block, "_front", new TextureMap().put(TextureKey.FRONT, front), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createDoubleBlockState(block, lowerId, upperId));
+        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createDoubleBlockState(block, createWeightedVariant(lowerId), createWeightedVariant(upperId)));
         registerItemModelFromTextureSource(blockStateModelGenerator, block, front);
     }
 
@@ -487,19 +489,19 @@ public class FBModelProvider extends FabricModelProvider {
         Identifier top = Identifier.of(getId(block) + "_top");
         Identifier lowerId = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "pitcher_plant_bottom")), Optional.empty(), TextureKey.BOTTOM).upload(block, "_bottom", new TextureMap().put(TextureKey.BOTTOM, bottom), blockStateModelGenerator.modelCollector);
         Identifier upperId = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "pitcher_plant_top")), Optional.empty(), TextureKey.TOP).upload(block, "_top", new TextureMap().put(TextureKey.TOP, top), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createDoubleBlockState(block, lowerId, upperId));
+        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createDoubleBlockState(block, createWeightedVariant(lowerId), createWeightedVariant(upperId)));
         registerItemModelFromTextureSource(blockStateModelGenerator, block, top);
     }
 
     private static void registerSporeBlossom(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "spore_blossom")), Optional.empty(), TextureKey.PLANT).upload(block, new TextureMap().put(TextureKey.PLANT, getId(block)), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
     private static void registerTipPlant(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier regular = new Model(Optional.of(Identifier.ofVanilla("block/" + "cross")), Optional.empty(), TextureKey.CROSS).upload(block, new TextureMap().put(TextureKey.CROSS, getId(block)), blockStateModelGenerator.modelCollector);
         Identifier tip = new Model(Optional.of(Identifier.ofVanilla("block/" + "cross")), Optional.empty(), TextureKey.CROSS).upload(block, "_tip", new TextureMap().put(TextureKey.CROSS, Identifier.of(getId(block) + "_tip")), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createTipPlantState(block, regular, tip));
+        blockStateModelGenerator.blockStateCollector.accept(FBBlockStateSuppliers.createTipPlantState(block, createWeightedVariant(regular), createWeightedVariant(tip)));
         registerItemModelFromTextureSource(blockStateModelGenerator, block, Identifier.of(getId(block) + "_tip"));
     }
 
@@ -511,24 +513,36 @@ public class FBModelProvider extends FabricModelProvider {
 
     private static void registerLotusFlower(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         Identifier identifier = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "lotus_flower")), Optional.empty(), TextureKey.FAN).upload(block, new TextureMap().put(TextureKey.FAN, getId(block)), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createBlockStateWithRandomHorizontalRotations(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(VariantsBlockModelDefinitionCreator.of(block, modelWithYRotation(createModelVariant(identifier))));
         registerItemModelFromTextureSource(blockStateModelGenerator, block, getItemId(block));
     }
 
     private static void registerFlowerbedBlock(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier side, Identifier bottom) {
         Identifier identifier = new Model(Optional.of(Identifier.ofVanilla("block/" + "cube_bottom_top")), Optional.empty(), TextureKey.TOP, TextureKey.BOTTOM, TextureKey.SIDE).upload(block,
                 new TextureMap().put(TextureKey.TOP, Identifier.of(getId(block) + "_top")).put(TextureKey.SIDE, side).put(TextureKey.BOTTOM, bottom), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
     private static void registerVase(BlockStateModelGenerator blockStateModelGenerator, Block block, Block textureSource) {
         Identifier identifier = new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "vase")), Optional.empty(), TextureKey.SIDE).upload(block, new TextureMap().put(TextureKey.SIDE, getId(textureSource)), blockStateModelGenerator.modelCollector);
-        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, identifier));
+        blockStateModelGenerator.blockStateCollector.accept(createSingletonBlockState(block, createWeightedVariant(identifier)));
     }
 
     private static void registerItemModelFromTextureSource(BlockStateModelGenerator blockStateModelGenerator, Block block, Identifier textureSource) {
         Identifier identifier = Models.GENERATED.upload(block.asItem(), new TextureMap().put(TextureKey.LAYER0, textureSource), blockStateModelGenerator.modelCollector);
         blockStateModelGenerator.registerItemModel(block.asItem(), identifier);
+    }
+
+    public static ModelVariant createModelVariant(Identifier id) {
+        return new ModelVariant(id);
+    }
+
+    public static WeightedVariant createWeightedVariant(ModelVariant variant) {
+        return new WeightedVariant(Pool.of(variant));
+    }
+
+    public static WeightedVariant createWeightedVariant(Identifier id) {
+        return createWeightedVariant(createModelVariant(id));
     }
 
     private static Identifier getId(Block block) {

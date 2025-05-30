@@ -77,6 +77,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:cactus_flowers",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:spore_blossoms",
       "required": false
     },
@@ -88,6 +92,7 @@
       "id": "#flowerbreeding:flowering_azalea_leaves",
       "required": false
     },
+    "minecraft:bush",
     "minecraft:sweet_berry_bush",
     "minecraft:lily_pad",
     {

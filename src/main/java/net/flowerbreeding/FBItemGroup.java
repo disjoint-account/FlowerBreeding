@@ -49,10 +49,12 @@ public class FBItemGroup {
                         entries.add(FBItems.SUNFLOWER_POLLEN_VIAL);
                         entries.add(FBItems.PETAL_POLLEN_VIAL);
                         entries.add(FBItems.WILDFLOWER_POLLEN_VIAL);
+                        entries.add(FBItems.CACTUS_FLOWER_POLLEN_VIAL);
                         entries.add(FBItems.SPORE_BLOSSOM_POLLEN_VIAL);
                         entries.add(FBItems.FLOWERING_AZALEA_POLLEN_VIAL);
                         entries.add(FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL);
                         entries.add(FBItems.GLOW_VINE_POLLEN_VIAL);
+                        entries.add(FBItems.BUSH_POLLEN_VIAL);
                         entries.add(FBItems.SWEET_BERRY_POLLEN_VIAL);
                         entries.add(FBItems.LILY_PAD_POLLEN_VIAL);
                         entries.add(FBItems.VINE_POLLEN_VIAL);
@@ -79,6 +81,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.MAGENTA_SUNFLOWER);
                         entries.add(FBBlocks.MAGENTA_PETALS);
                         entries.add(FBBlocks.MAGENTA_WILDFLOWERS);
+                        entries.add(FBBlocks.MAGENTA_CACTUS_FLOWER);
                         entries.add(FBBlocks.MAGENTA_SPORE_BLOSSOM);
                         entries.add(FBBlocks.MAGENTA_FLOWERING_AZALEA);
                         entries.add(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES);
@@ -103,6 +106,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLUE_SUNFLOWER);
                         entries.add(FBBlocks.BLUE_PETALS);
                         entries.add(FBBlocks.BLUE_WILDFLOWERS);
+                        entries.add(FBBlocks.BLUE_CACTUS_FLOWER);
                         entries.add(FBBlocks.BLUE_SPORE_BLOSSOM);
                         entries.add(FBBlocks.BLUE_FLOWERING_AZALEA);
                         entries.add(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES);
@@ -127,6 +131,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.WHITE_SUNFLOWER);
                         entries.add(FBBlocks.WHITE_PETALS);
                         entries.add(FBBlocks.WHITE_WILDFLOWERS);
+                        entries.add(FBBlocks.WHITE_CACTUS_FLOWER);
                         entries.add(FBBlocks.WHITE_SPORE_BLOSSOM);
                         entries.add(FBBlocks.WHITE_FLOWERING_AZALEA);
                         entries.add(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES);
@@ -151,6 +156,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.ORANGE_SUNFLOWER);
                         entries.add(FBBlocks.ORANGE_PETALS);
                         entries.add(FBBlocks.ORANGE_WILDFLOWERS);
+                        entries.add(FBBlocks.ORANGE_CACTUS_FLOWER);
                         entries.add(FBBlocks.ORANGE_SPORE_BLOSSOM);
                         entries.add(FBBlocks.ORANGE_FLOWERING_AZALEA);
                         entries.add(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES);
@@ -175,6 +181,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.RED_SUNFLOWER);
                         entries.add(FBBlocks.RED_PETALS);
                         entries.add(FBBlocks.RED_WILDFLOWERS);
+                        entries.add(FBBlocks.RED_CACTUS_FLOWER);
                         entries.add(FBBlocks.RED_SPORE_BLOSSOM);
                         entries.add(FBBlocks.RED_FLOWERING_AZALEA);
                         entries.add(FBBlocks.RED_FLOWERING_AZALEA_LEAVES);
@@ -199,6 +206,7 @@ public class FBItemGroup {
                         entries.add(Blocks.SUNFLOWER);
                         entries.add(FBBlocks.YELLOW_PETALS);
                         entries.add(Blocks.WILDFLOWERS);
+                        entries.add(FBBlocks.YELLOW_CACTUS_FLOWER);
                         entries.add(FBBlocks.YELLOW_SPORE_BLOSSOM);
                         entries.add(FBBlocks.YELLOW_FLOWERING_AZALEA);
                         entries.add(FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES);
@@ -223,6 +231,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.LIGHT_BLUE_SUNFLOWER);
                         entries.add(FBBlocks.LIGHT_BLUE_PETALS);
                         entries.add(FBBlocks.LIGHT_BLUE_WILDFLOWERS);
+                        entries.add(FBBlocks.LIGHT_BLUE_CACTUS_FLOWER);
                         entries.add(FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM);
                         entries.add(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA);
                         entries.add(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES);
@@ -247,6 +256,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.PINK_SUNFLOWER);
                         entries.add(Items.PINK_PETALS);
                         entries.add(FBBlocks.PINK_WILDFLOWERS);
+                        entries.add(Items.CACTUS_FLOWER);
                         entries.add(Items.SPORE_BLOSSOM);
                         entries.add(Items.FLOWERING_AZALEA);
                         entries.add(Items.FLOWERING_AZALEA_LEAVES);
@@ -271,6 +281,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_SUNFLOWER);
                         entries.add(FBBlocks.BLACK_PETALS);
                         entries.add(FBBlocks.BLACK_WILDFLOWERS);
+                        entries.add(FBBlocks.BLACK_CACTUS_FLOWER);
                         entries.add(FBBlocks.BLACK_SPORE_BLOSSOM);
                         entries.add(FBBlocks.BLACK_FLOWERING_AZALEA);
                         entries.add(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES);
@@ -295,6 +306,7 @@ public class FBItemGroup {
                         entries.add(FBBlocks.CYAN_SUNFLOWER);
                         entries.add(FBBlocks.CYAN_PETALS);
                         entries.add(FBBlocks.CYAN_WILDFLOWERS);
+                        entries.add(FBBlocks.CYAN_CACTUS_FLOWER);
                         entries.add(FBBlocks.CYAN_SPORE_BLOSSOM);
                         entries.add(FBBlocks.CYAN_FLOWERING_AZALEA);
                         entries.add(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES);

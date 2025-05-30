@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
     private static final VoxelShape SHAPE =
-            Block.createCuboidShape(6, 0, 6, 10, 8, 10);
+            Block.createCuboidShape(5, 0, 5, 11, 8, 11);
     public static final MapCodec<VaseBlock> CODEC = VaseBlock.createCodec(VaseBlock::new);
 
     public VaseBlock(Settings settings) {

@@ -118,6 +118,9 @@ public class BluePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.WILDFLOWERS)) {
                     return FBBlocks.BLUE_WILDFLOWERS;
                 }
+                if (pos.isIn(FBTags.Blocks.CACTUS_FLOWERS)) {
+                    return FBBlocks.BLUE_CACTUS_FLOWER;
+                }
                 if (pos.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
                     return FBBlocks.BLUE_SPORE_BLOSSOM;
                 }

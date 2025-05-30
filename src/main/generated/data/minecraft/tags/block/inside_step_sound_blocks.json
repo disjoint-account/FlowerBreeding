@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:petals",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:wildflowers",
+      "required": false
+    }
+  ]
+}

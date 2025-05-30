@@ -61,6 +61,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.SUNFLOWERS)
                 .addOptionalTag(FBTags.Blocks.PETALS)
                 .addOptionalTag(FBTags.Blocks.WILDFLOWERS)
+                .addOptionalTag(FBTags.Blocks.CACTUS_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.SPORE_BLOSSOMS)
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEAS)
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)
@@ -95,9 +96,11 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.SUNFLOWERS)
                 .addOptionalTag(FBTags.Blocks.PETALS)
                 .addOptionalTag(FBTags.Blocks.WILDFLOWERS)
+                .addOptionalTag(FBTags.Blocks.CACTUS_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.SPORE_BLOSSOMS)
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEAS)
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)
+                .add(Blocks.BUSH)
                 .add(Blocks.SWEET_BERRY_BUSH)
                 .add(Blocks.LILY_PAD)
                 .addOptionalTag(FBTags.Blocks.MUSHROOMS)
@@ -165,6 +168,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.MAGENTA_SUNFLOWER,
                         FBBlocks.MAGENTA_PETALS,
                         FBBlocks.MAGENTA_WILDFLOWERS,
+                        FBBlocks.MAGENTA_CACTUS_FLOWER,
                         FBBlocks.MAGENTA_SPORE_BLOSSOM,
                         FBBlocks.MAGENTA_FLOWERING_AZALEA,
                         FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES,
@@ -201,6 +205,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLUE_SUNFLOWER,
                         FBBlocks.BLUE_PETALS,
                         FBBlocks.BLUE_WILDFLOWERS,
+                        FBBlocks.BLUE_CACTUS_FLOWER,
                         FBBlocks.BLUE_SPORE_BLOSSOM,
                         FBBlocks.BLUE_FLOWERING_AZALEA,
                         FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES,
@@ -237,6 +242,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.WHITE_SUNFLOWER,
                         FBBlocks.WHITE_PETALS,
                         FBBlocks.WHITE_WILDFLOWERS,
+                        FBBlocks.WHITE_CACTUS_FLOWER,
                         FBBlocks.WHITE_SPORE_BLOSSOM,
                         FBBlocks.WHITE_FLOWERING_AZALEA,
                         FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES,
@@ -273,6 +279,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.ORANGE_SUNFLOWER,
                         FBBlocks.ORANGE_PETALS,
                         FBBlocks.ORANGE_WILDFLOWERS,
+                        FBBlocks.ORANGE_CACTUS_FLOWER,
                         FBBlocks.ORANGE_SPORE_BLOSSOM,
                         FBBlocks.ORANGE_FLOWERING_AZALEA,
                         FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES,
@@ -309,6 +316,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.RED_SUNFLOWER,
                         FBBlocks.RED_PETALS,
                         FBBlocks.RED_WILDFLOWERS,
+                        FBBlocks.RED_CACTUS_FLOWER,
                         FBBlocks.RED_SPORE_BLOSSOM,
                         FBBlocks.RED_FLOWERING_AZALEA,
                         FBBlocks.RED_FLOWERING_AZALEA_LEAVES,
@@ -345,6 +353,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         Blocks.SUNFLOWER,
                         FBBlocks.YELLOW_PETALS,
                         Blocks.WILDFLOWERS,
+                        FBBlocks.YELLOW_CACTUS_FLOWER,
                         FBBlocks.YELLOW_SPORE_BLOSSOM,
                         FBBlocks.YELLOW_FLOWERING_AZALEA,
                         FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES,
@@ -381,6 +390,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.LIGHT_BLUE_SUNFLOWER,
                         FBBlocks.LIGHT_BLUE_PETALS,
                         FBBlocks.LIGHT_BLUE_WILDFLOWERS,
+                        FBBlocks.LIGHT_BLUE_CACTUS_FLOWER,
                         FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM,
                         FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA,
                         FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES,
@@ -417,6 +427,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.PINK_SUNFLOWER,
                         Blocks.PINK_PETALS,
                         FBBlocks.PINK_WILDFLOWERS,
+                        Blocks.CACTUS_FLOWER,
                         Blocks.SPORE_BLOSSOM,
                         Blocks.FLOWERING_AZALEA,
                         Blocks.FLOWERING_AZALEA_LEAVES,
@@ -453,6 +464,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_SUNFLOWER,
                         FBBlocks.BLACK_PETALS,
                         FBBlocks.BLACK_WILDFLOWERS,
+                        FBBlocks.BLACK_CACTUS_FLOWER,
                         FBBlocks.BLACK_SPORE_BLOSSOM,
                         FBBlocks.BLACK_FLOWERING_AZALEA,
                         FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES,
@@ -489,6 +501,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.CYAN_SUNFLOWER,
                         FBBlocks.CYAN_PETALS,
                         FBBlocks.CYAN_WILDFLOWERS,
+                        FBBlocks.CYAN_CACTUS_FLOWER,
                         FBBlocks.CYAN_SPORE_BLOSSOM,
                         FBBlocks.CYAN_FLOWERING_AZALEA,
                         FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES,
@@ -745,6 +758,18 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                         FBBlocks.BLACK_WILDFLOWERS,
                         FBBlocks.CYAN_WILDFLOWERS);
 
+        getOrCreateTagBuilder(FBTags.Blocks.CACTUS_FLOWERS)
+                .add(FBBlocks.MAGENTA_CACTUS_FLOWER,
+                        FBBlocks.BLUE_CACTUS_FLOWER,
+                        FBBlocks.WHITE_CACTUS_FLOWER,
+                        FBBlocks.ORANGE_CACTUS_FLOWER,
+                        FBBlocks.RED_CACTUS_FLOWER,
+                        FBBlocks.YELLOW_CACTUS_FLOWER,
+                        FBBlocks.LIGHT_BLUE_CACTUS_FLOWER,
+                        Blocks.CACTUS_FLOWER,
+                        FBBlocks.BLACK_CACTUS_FLOWER,
+                        FBBlocks.CYAN_CACTUS_FLOWER);
+
         getOrCreateTagBuilder(FBTags.Blocks.SPORE_BLOSSOMS)
                 .add(FBBlocks.MAGENTA_SPORE_BLOSSOM,
                         FBBlocks.BLUE_SPORE_BLOSSOM,
@@ -962,6 +987,19 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.PHLOXES)
                 .addOptionalTag(FBTags.Blocks.LUPINS)
                 .addOptionalTag(FBTags.Blocks.SMALL_ROSES);
+
+        getOrCreateTagBuilder(BlockTags.BEE_ATTRACTIVE)
+                .addOptionalTag(FBTags.Blocks.FBFLOWERS);
+
+        getOrCreateTagBuilder(BlockTags.ENDERMAN_HOLDABLE)
+                .addOptionalTag(FBTags.Blocks.CACTUS_FLOWERS);
+
+        getOrCreateTagBuilder(BlockTags.INSIDE_STEP_SOUND_BLOCKS)
+                .addOptionalTag(FBTags.Blocks.PETALS)
+                .addOptionalTag(FBTags.Blocks.WILDFLOWERS);
+
+        getOrCreateTagBuilder(BlockTags.WALL_POST_OVERRIDE)
+                .addOptionalTag(FBTags.Blocks.CACTUS_FLOWERS);
 
         getOrCreateTagBuilder(ConventionalBlockTags.TALL_FLOWERS)
                 .addOptionalTag(FBTags.Blocks.TALL_FLOWERS);

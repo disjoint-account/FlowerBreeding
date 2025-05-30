@@ -46,9 +46,12 @@ public class BotanyTableScreenHandler extends ScreenHandler {
             FBItems.ROSE_BUSH_POLLEN_VIAL,
             FBItems.SUNFLOWER_POLLEN_VIAL,
             FBItems.PETAL_POLLEN_VIAL,
+            FBItems.WILDFLOWER_POLLEN_VIAL,
+            FBItems.CACTUS_FLOWER_POLLEN_VIAL,
             FBItems.SPORE_BLOSSOM_POLLEN_VIAL,
             FBItems.FLOWERING_AZALEA_POLLEN_VIAL,
             FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL,
+            FBItems.BUSH_POLLEN_VIAL,
             FBItems.SWEET_BERRY_POLLEN_VIAL,
             FBItems.GLOW_VINE_POLLEN_VIAL,
             FBItems.VINE_POLLEN_VIAL,
@@ -205,10 +208,10 @@ public class BotanyTableScreenHandler extends ScreenHandler {
                 slot.onQuickTransfer(itemStack2, itemStack);
             } else if (index == 0 || index == 1 || index == 2) {
                 // input slots
-                if (!this.insertItem(itemStack2, 4, 39, false)) {
+                if (!this.insertItem(itemStack2, 4, 40, false)) {
                     return ItemStack.EMPTY;
                 }
-            } else if (index >= 4 && index < 39) {
+            } else if (index >= 4 && index <= 39) {
                 // player inv slots
                 if (!this.insertItem(itemStack2, 0, 3, false)) {
                     return ItemStack.EMPTY;

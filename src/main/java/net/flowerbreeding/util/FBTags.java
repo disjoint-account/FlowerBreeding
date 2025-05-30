@@ -45,6 +45,7 @@ public class FBTags {
         public static final TagKey<Block> SUNFLOWERS = createTag("sunflowers");
         public static final TagKey<Block> PETALS = createTag("petals");
         public static final TagKey<Block> WILDFLOWERS = createTag("wildflowers");
+        public static final TagKey<Block> CACTUS_FLOWERS = createTag("cactus_flowers");
         public static final TagKey<Block> SPORE_BLOSSOMS = createTag("spore_blossoms");
         public static final TagKey<Block> FLOWERING_AZALEAS = createTag("flowering_azaleas");
         public static final TagKey<Block> FLOWERING_AZALEA_LEAVES = createTag("flowering_azalea_leaves");
@@ -119,6 +120,7 @@ public class FBTags {
         public static final TagKey<Item> CLOSED_EYEBLOSSOMS = createTag("closed_eyeblossoms");
         public static final TagKey<Item> PETALS = createTag("petals");
         public static final TagKey<Item> WILDFLOWERS = createTag("wildflowers");
+        public static final TagKey<Item> CACTUS_FLOWERS = createTag("cactus_flowers");
         public static final TagKey<Item> SPORE_BLOSSOMS = createTag("spore_blossoms");
         public static final TagKey<Item> DAFFODILS = createTag("daffodils");
         public static final TagKey<Item> FOXGLOVES = createTag("foxgloves");

@@ -1,0 +1,10 @@
+{
+  "type": "flowerbreeding:botany",
+  "jar": "flowerbreeding:cyan_pigment_jar",
+  "result": {
+    "count": 1,
+    "id": "flowerbreeding:cyan_cactus_flower"
+  },
+  "vial1": "flowerbreeding:cactus_flower_pollen_vial",
+  "vial2": "flowerbreeding:cactus_flower_pollen_vial"
+}

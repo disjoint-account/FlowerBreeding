@@ -1,0 +1,40 @@
+{
+  "values": [
+    {
+      "id": "#flowerbreeding:small_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:tall_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:petals",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:wildflowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cactus_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:spore_blossoms",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:lotus_flowers",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:jasmines",
+      "required": false
+    },
+    {
+      "id": "#flowerbreeding:cyprus_vines",
+      "required": false
+    }
+  ]
+}

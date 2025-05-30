@@ -106,6 +106,9 @@ public class EmptyPollenVialItem extends Item {
                 if (state.isIn(FBTags.Blocks.WILDFLOWERS)) {
                     return FBItems.WILDFLOWER_POLLEN_VIAL;
                 }
+                if (state.isIn(FBTags.Blocks.CACTUS_FLOWERS)) {
+                    return FBItems.CACTUS_FLOWER_POLLEN_VIAL;
+                }
                 if (state.isIn(FBTags.Blocks.SPORE_BLOSSOMS)) {
                     return FBItems.SPORE_BLOSSOM_POLLEN_VIAL;
                 }
@@ -114,6 +117,9 @@ public class EmptyPollenVialItem extends Item {
                 }
                 if (state.isIn(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)) {
                     return FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL;
+                }
+                if (state.isOf(Blocks.BUSH)) {
+                    return FBItems.BUSH_POLLEN_VIAL;
                 }
                 if (state.isOf(Blocks.SWEET_BERRY_BUSH)) {
                     return FBItems.SWEET_BERRY_POLLEN_VIAL;

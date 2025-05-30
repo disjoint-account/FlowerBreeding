@@ -17,6 +17,10 @@
       "required": false
     },
     {
+      "id": "#flowerbreeding:cactus_flowers",
+      "required": false
+    },
+    {
       "id": "#flowerbreeding:spore_blossoms",
       "required": false
     },

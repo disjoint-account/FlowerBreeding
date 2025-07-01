@@ -1,5 +1,7 @@
 package net.flowerbreeding.blockentities.vase;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.flowerbreeding.FBBlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
@@ -14,10 +16,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.storage.ReadView;
+import net.minecraft.storage.WriteView;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.BlockPos;
 
 public class VaseBlockEntity extends BlockEntity implements Inventory {
+    private int anInt;
+    private String aString;
+    private Extra extra;
     private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
 
     public VaseBlockEntity(BlockPos pos, BlockState state) {
@@ -79,15 +86,20 @@ public class VaseBlockEntity extends BlockEntity implements Inventory {
     }
 
     @Override
-    protected void writeNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.writeNbt(nbt, registryLookup);
-        Inventories.writeNbt(nbt, inventory, registryLookup);
+    protected void writeData(WriteView view) {
+        super.writeData(view);
+        view.putNullable("extra", Extra.CODEC, this.extra);
+        if (aString != null)
+            view.putString("aString", aString);
+        view.putInt("anInt", anInt);
     }
 
     @Override
-    protected void readNbt(NbtCompound nbt, RegistryWrapper.WrapperLookup registryLookup) {
-        super.readNbt(nbt, registryLookup);
-        Inventories.readNbt(nbt, inventory, registryLookup);
+    protected void readData(ReadView view) {
+        super.readData(view);
+        view.read("extra", Extra.CODEC).ifPresent(extra -> this.extra = extra);
+        view.getOptionalString("aString").ifPresent(aString -> this.aString = aString);
+        view.getOptionalInt("anInt").ifPresent(anInt -> this.anInt = anInt);
     }
 
     @Override
@@ -97,9 +109,7 @@ public class VaseBlockEntity extends BlockEntity implements Inventory {
 
     @Override
     public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registries) {
-        NbtCompound nbtCompound = new NbtCompound();
-        Inventories.writeNbt(nbtCompound, this.inventory, true, registries);
-        return nbtCompound;
+        return createNbt(registries);
     }
 
     @Override
@@ -114,8 +124,7 @@ public class VaseBlockEntity extends BlockEntity implements Inventory {
         builder.add(DataComponentTypes.CONTAINER, ContainerComponent.fromStacks(this.getInventory()));
     }
 
-    @Override
-    public void removeFromCopiedStackNbt(NbtCompound nbt) {
-        nbt.remove("Items");
+    record Extra(int i, int j) {
+        public static final Codec<Extra> CODEC = RecordCodecBuilder.create(instance -> instance.group(Codec.INT.fieldOf("i").forGetter(extra -> extra.i), Codec.INT.fieldOf("j").forGetter(extra -> extra.j)).apply(instance, Extra::new));
     }
 }

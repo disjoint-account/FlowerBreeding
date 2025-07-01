@@ -13,13 +13,5 @@
   "result": {
     "count": 1,
     "id": "flowerbreeding:botany_table"
-  },
-  "fabric:load_conditions": [
-    {
-      "condition": "flowerbreeding:craftable_tables",
-      "values": [
-        "true"
-      ]
-    }
-  ]
+  }
 }

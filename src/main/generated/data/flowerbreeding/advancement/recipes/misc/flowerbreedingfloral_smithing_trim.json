@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:flowerbreedingfloral_smithing_trim"
+        "recipe": "flowerbreeding:flowerbreedingfloral_smithing_trim"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:flowerbreedingfloral_smithing_trim"
+      "flowerbreeding:flowerbreedingfloral_smithing_trim"
     ]
   }
 }

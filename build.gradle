@@ -11,9 +11,6 @@ base {
 }
 
 repositories {
-	maven { url = 'https://maven.wispforest.io/releases/' }
-	maven { url = 'https://maven.blamejared.com' }
-	maven { url = "https://maven.shedaniel.me" }
 }
 
 dependencies {
@@ -24,10 +21,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
-
-	//owo-lib
-	annotationProcessor modImplementation("io.wispforest:owo-lib:${project.owo_version}")
-	include "io.wispforest:owo-sentinel:${project.owo_version}"
 }
 
 processResources {

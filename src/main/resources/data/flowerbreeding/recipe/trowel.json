@@ -12,13 +12,5 @@
   "result": {
     "count": 1,
     "id": "flowerbreeding:trowel"
-  },
-  "fabric:load_conditions": [
-    {
-      "condition": "flowerbreeding:craftable_trowels",
-      "values": [
-        "true"
-      ]
-    }
-  ]
+  }
 }

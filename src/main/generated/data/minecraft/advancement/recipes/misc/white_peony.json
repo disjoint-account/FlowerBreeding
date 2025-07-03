@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:white_peonyrecipe"
+        "recipe": "flowerbreeding:white_peony_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:white_peonyrecipe"
+      "flowerbreeding:white_peony_botany"
     ]
   }
 }

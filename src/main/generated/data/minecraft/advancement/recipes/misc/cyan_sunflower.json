@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:cyan_sunflowerrecipe"
+        "recipe": "flowerbreeding:cyan_sunflower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:cyan_sunflowerrecipe"
+      "flowerbreeding:cyan_sunflower_botany"
     ]
   }
 }

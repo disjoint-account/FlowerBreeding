@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:pink_glowshroom_1recipe"
+        "recipe": "flowerbreeding:pink_glowshroom_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:pink_glowshroom_1recipe"
+      "flowerbreeding:pink_glowshroom_1_botany"
     ]
   }
 }

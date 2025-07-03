@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:cyan_poppyrecipe"
+        "recipe": "flowerbreeding:cyan_poppy_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:cyan_poppyrecipe"
+      "flowerbreeding:cyan_poppy_botany"
     ]
   }
 }

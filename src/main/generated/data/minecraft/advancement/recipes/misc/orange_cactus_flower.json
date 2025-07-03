@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:orange_cactus_flowerrecipe"
+        "recipe": "flowerbreeding:orange_cactus_flower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:orange_cactus_flowerrecipe"
+      "flowerbreeding:orange_cactus_flower_botany"
     ]
   }
 }

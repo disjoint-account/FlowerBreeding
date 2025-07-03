@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:magenta_wither_roserecipe"
+        "recipe": "flowerbreeding:magenta_wither_rose_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:magenta_wither_roserecipe"
+      "flowerbreeding:magenta_wither_rose_botany"
     ]
   }
 }

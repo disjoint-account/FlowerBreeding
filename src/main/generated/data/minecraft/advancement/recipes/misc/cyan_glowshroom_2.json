@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:cyan_glowshroom_2recipe"
+        "recipe": "flowerbreeding:cyan_glowshroom_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:cyan_glowshroom_2recipe"
+      "flowerbreeding:cyan_glowshroom_2_botany"
     ]
   }
 }

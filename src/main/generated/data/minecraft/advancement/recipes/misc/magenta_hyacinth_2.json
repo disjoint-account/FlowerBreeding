@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:magenta_hyacinth_2recipe"
+        "recipe": "flowerbreeding:magenta_hyacinth_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:magenta_hyacinth_2recipe"
+      "flowerbreeding:magenta_hyacinth_2_botany"
     ]
   }
 }

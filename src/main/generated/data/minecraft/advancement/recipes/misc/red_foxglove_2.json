@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:red_foxglove_2recipe"
+        "recipe": "flowerbreeding:red_foxglove_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:red_foxglove_2recipe"
+      "flowerbreeding:red_foxglove_2_botany"
     ]
   }
 }

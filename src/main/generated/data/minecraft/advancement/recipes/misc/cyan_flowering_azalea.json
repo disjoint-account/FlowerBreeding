@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:cyan_flowering_azalearecipe"
+        "recipe": "flowerbreeding:cyan_flowering_azalea_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:cyan_flowering_azalearecipe"
+      "flowerbreeding:cyan_flowering_azalea_botany"
     ]
   }
 }

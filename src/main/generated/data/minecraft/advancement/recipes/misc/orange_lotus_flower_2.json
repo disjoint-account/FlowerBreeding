@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:orange_lotus_flower_2recipe"
+        "recipe": "flowerbreeding:orange_lotus_flower_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:orange_lotus_flower_2recipe"
+      "flowerbreeding:orange_lotus_flower_2_botany"
     ]
   }
 }

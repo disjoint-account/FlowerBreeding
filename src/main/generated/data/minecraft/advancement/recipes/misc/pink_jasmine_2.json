@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:pink_jasmine_2recipe"
+        "recipe": "flowerbreeding:pink_jasmine_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:pink_jasmine_2recipe"
+      "flowerbreeding:pink_jasmine_2_botany"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_lilacrecipe"
+        "recipe": "flowerbreeding:black_lilac_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_lilacrecipe"
+      "flowerbreeding:black_lilac_botany"
     ]
   }
 }

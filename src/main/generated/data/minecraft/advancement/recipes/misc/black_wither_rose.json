@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_wither_roserecipe"
+        "recipe": "flowerbreeding:black_wither_rose_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_wither_roserecipe"
+      "flowerbreeding:black_wither_rose_botany"
     ]
   }
 }

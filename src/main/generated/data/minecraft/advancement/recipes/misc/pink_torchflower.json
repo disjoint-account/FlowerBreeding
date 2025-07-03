@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:pink_torchflowerrecipe"
+        "recipe": "flowerbreeding:pink_torchflower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:pink_torchflowerrecipe"
+      "flowerbreeding:pink_torchflower_botany"
     ]
   }
 }

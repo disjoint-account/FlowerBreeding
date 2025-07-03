@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:red_spore_blossomrecipe"
+        "recipe": "flowerbreeding:red_spore_blossom_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:red_spore_blossomrecipe"
+      "flowerbreeding:red_spore_blossom_botany"
     ]
   }
 }

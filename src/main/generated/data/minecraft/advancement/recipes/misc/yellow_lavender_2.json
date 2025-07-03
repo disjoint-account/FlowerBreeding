@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:yellow_lavender_2recipe"
+        "recipe": "flowerbreeding:yellow_lavender_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:yellow_lavender_2recipe"
+      "flowerbreeding:yellow_lavender_2_botany"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_peonyrecipe"
+        "recipe": "flowerbreeding:black_peony_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_peonyrecipe"
+      "flowerbreeding:black_peony_botany"
     ]
   }
 }

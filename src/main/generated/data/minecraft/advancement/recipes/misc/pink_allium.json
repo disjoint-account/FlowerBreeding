@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:pink_alliumrecipe"
+        "recipe": "flowerbreeding:pink_allium_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:pink_alliumrecipe"
+      "flowerbreeding:pink_allium_botany"
     ]
   }
 }

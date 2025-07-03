@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:yellow_torchflowerrecipe"
+        "recipe": "flowerbreeding:yellow_torchflower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:yellow_torchflowerrecipe"
+      "flowerbreeding:yellow_torchflower_botany"
     ]
   }
 }

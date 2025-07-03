@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_azure_bluetrecipe"
+        "recipe": "flowerbreeding:black_azure_bluet_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_azure_bluetrecipe"
+      "flowerbreeding:black_azure_bluet_botany"
     ]
   }
 }

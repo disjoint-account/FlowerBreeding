@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:orange_flowering_azalearecipe"
+        "recipe": "flowerbreeding:orange_flowering_azalea_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:orange_flowering_azalearecipe"
+      "flowerbreeding:orange_flowering_azalea_botany"
     ]
   }
 }

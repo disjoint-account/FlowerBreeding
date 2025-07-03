@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_wildflowersrecipe"
+        "recipe": "flowerbreeding:black_wildflowers_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_wildflowersrecipe"
+      "flowerbreeding:black_wildflowers_botany"
     ]
   }
 }

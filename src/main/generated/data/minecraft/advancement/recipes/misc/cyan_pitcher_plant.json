@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:cyan_pitcher_plantrecipe"
+        "recipe": "flowerbreeding:cyan_pitcher_plant_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:cyan_pitcher_plantrecipe"
+      "flowerbreeding:cyan_pitcher_plant_botany"
     ]
   }
 }

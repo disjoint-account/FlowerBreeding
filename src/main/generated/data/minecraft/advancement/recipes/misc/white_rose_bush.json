@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:white_rose_bushrecipe"
+        "recipe": "flowerbreeding:white_rose_bush_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:white_rose_bushrecipe"
+      "flowerbreeding:white_rose_bush_botany"
     ]
   }
 }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:magenta_flowering_azalea_leavesrecipe"
+        "recipe": "flowerbreeding:magenta_flowering_azalea_leaves_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:magenta_flowering_azalea_leavesrecipe"
+      "flowerbreeding:magenta_flowering_azalea_leaves_botany"
     ]
   }
 }

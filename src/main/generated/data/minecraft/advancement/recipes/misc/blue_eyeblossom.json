@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:blue_eyeblossomrecipe"
+        "recipe": "flowerbreeding:blue_eyeblossom_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:blue_eyeblossomrecipe"
+      "flowerbreeding:blue_eyeblossom_botany"
     ]
   }
 }

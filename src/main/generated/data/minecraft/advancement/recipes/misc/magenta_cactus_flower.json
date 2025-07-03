@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:magenta_cactus_flowerrecipe"
+        "recipe": "flowerbreeding:magenta_cactus_flower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:magenta_cactus_flowerrecipe"
+      "flowerbreeding:magenta_cactus_flower_botany"
     ]
   }
 }

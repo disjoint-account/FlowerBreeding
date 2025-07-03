@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:black_jasmine_1recipe"
+        "recipe": "flowerbreeding:black_jasmine_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:black_jasmine_1recipe"
+      "flowerbreeding:black_jasmine_1_botany"
     ]
   }
 }

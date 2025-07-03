@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:orange_cyprus_vine_1recipe"
+        "recipe": "flowerbreeding:orange_cyprus_vine_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:orange_cyprus_vine_1recipe"
+      "flowerbreeding:orange_cyprus_vine_1_botany"
     ]
   }
 }

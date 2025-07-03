@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreedingminecraft:orange_dandelionrecipe"
+        "recipe": "flowerbreeding:orange_dandelion_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -37,7 +37,7 @@
   ],
   "rewards": {
     "recipes": [
-      "flowerbreedingminecraft:orange_dandelionrecipe"
+      "flowerbreeding:orange_dandelion_botany"
     ]
   }
 }

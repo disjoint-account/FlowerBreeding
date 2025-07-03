@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_glass": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:glass"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "flowerbreeding:empty_pollen_vial"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_glass"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flowerbreeding:empty_pollen_vial"
+    ]
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "flowerbreeding:craftable_jars_and_vials",
+      "values": [
+        "true"
+      ]
+    }
+  ]
+}

@@ -573,7 +573,7 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 BotanyTableRecipeJsonBuilder.create(Ingredient.ofItems(vial1), Ingredient.ofItems(vial2), Ingredient.ofItems(jar), result, MISC)
                         .criterion("has_vial1", conditionsFromItem(vial1))
                         .criterion("has_vial2", conditionsFromItem(vial2))
-                        .offerTo(exporter, Identifier.of(recipeId), RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID, recipeId + "_botany")));
+                        .offerTo(exporter, Identifier.of(FlowerBreeding.MOD_ID, recipeId), RegistryKey.of(RegistryKeys.RECIPE, Identifier.of(FlowerBreeding.MOD_ID, recipeId + "_botany")));
             }
 
             private void offerVaseRecipe(ItemConvertible output, ItemConvertible input) {

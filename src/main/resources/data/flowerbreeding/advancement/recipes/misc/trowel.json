@@ -1,0 +1,40 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "flowerbreeding:trowel"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "flowerbreeding:trowel"
+    ]
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "flowerbreeding:craftable_trowels",
+      "values": [
+        "true"
+      ]
+    }
+  ]
+}

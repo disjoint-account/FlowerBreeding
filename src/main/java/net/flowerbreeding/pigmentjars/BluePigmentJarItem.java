@@ -2,6 +2,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
+import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -31,7 +32,7 @@ public class BluePigmentJarItem extends Item {
         assert user != null;
         ItemStack itemStack = user.getStackInHand(hand);
         int qty = JarCounter.countJars(user);
-        if ((state.isIn(FBTags.Blocks.COLOUR_FLOWERS))) {
+        if ((state.isIn(FBTags.Blocks.COLOUR_FLOWERS)) && FlowerBreeding.CONFIG.fastRecolouring) {
             ItemStack itemStack1 = new ItemStack(getFlower(context));
             ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
             if ((qty > 1) && (!user.isInCreativeMode())) {
@@ -58,6 +59,7 @@ public class BluePigmentJarItem extends Item {
         BlockPos blockPos = context.getBlockPos();
         World world = context.getWorld();
         BlockState pos = world.getBlockState(blockPos);
+        if (FlowerBreeding.CONFIG.fastRecolouring) {
             if (pos.isIn(FBTags.Blocks.COLOUR_FLOWERS)) {
                 if (pos.isIn(FBTags.Blocks.ALLIUMS)) {
                     return FBBlocks.BLUE_ALLIUM;
@@ -164,6 +166,7 @@ public class BluePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
                     return FBBlocks.BLUE_GLOWSHROOM;
                 }
+            }
         }
         return null;
     }

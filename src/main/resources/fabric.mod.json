@@ -24,6 +24,9 @@
 		],
 		"fabric-datagen": [
 			"net.flowerbreeding.datagen.FBDataGenerator"
+		],
+		"modmenu": [
+			"net.flowerbreeding.config.ModMenuIntegration"
 		]
 	},
 	"mixins": [

@@ -17,8 +17,9 @@ public class FlowerBreedingClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         HandledScreens.register(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, BotanyTableScreen::new);
-        BlockEntityRendererFactories.register(FBBlockEntities.VASE_BE, VaseBlockEntityRenderer::new);
+
         BlockEntityRendererFactories.register(FBBlockEntities.FLOWERBED_BE, FlowerbedBlockEntityRenderer::new);
+        BlockEntityRendererFactories.register(FBBlockEntities.VASE_BE, VaseBlockEntityRenderer::new);
         BlockEntityRendererFactories.register(FBBlockEntities.PLANTER_BE, PlanterBlockEntityRenderer::new);
 
         BlockRenderLayerMap.putBlock(FBBlocks.MAGENTA_CORNFLOWER, BlockRenderLayer.CUTOUT);
@@ -537,16 +538,16 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(FBBlocks.BLACK_JASMINE, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(FBBlocks.CYAN_JASMINE, BlockRenderLayer.CUTOUT);
 
-        BlockRenderLayerMap.putBlock(FBBlocks.MAGENTA_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.BLUE_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.WHITE_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.ORANGE_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.RED_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.YELLOW_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.LIGHT_BLUE_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.PINK_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.BLACK_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
-        BlockRenderLayerMap.putBlock(FBBlocks.CYAN_CYPRUS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.MAGENTA_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.BLUE_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.WHITE_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.ORANGE_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.RED_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.YELLOW_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.LIGHT_BLUE_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.PINK_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.BLACK_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(FBBlocks.CYAN_CYPRESS_VINE, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(FBBlocks.MAGENTA_GLOWSHROOM, BlockRenderLayer.CUTOUT);
         BlockRenderLayerMap.putBlock(FBBlocks.POTTED_MAGENTA_GLOWSHROOM, BlockRenderLayer.CUTOUT);
@@ -577,6 +578,7 @@ public class FlowerBreedingClient implements ClientModInitializer {
         BlockRenderLayerMap.putBlock(FBBlocks.POTTED_SAGE, BlockRenderLayer.CUTOUT);
 
         BlockRenderLayerMap.putBlock(FBBlocks.GRASS_FLOWERBED, BlockRenderLayer.TRANSLUCENT);
+        BlockRenderLayerMap.putBlock(FBBlocks.GRASS_FLOWERBED, BlockRenderLayer.CUTOUT);
     }
 
     static {

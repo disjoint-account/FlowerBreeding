@@ -84,21 +84,17 @@ public class PlanterBlockEntity extends BlockEntity implements Inventory {
         inventory.clear();
     }
 
+
     @Override
     protected void writeData(WriteView view) {
         super.writeData(view);
-        view.putNullable("extra", Extra.CODEC, this.extra);
-        if (aString != null)
-            view.putString("aString", aString);
-        view.putInt("anInt", anInt);
+        Inventories.writeData(view, inventory);
     }
 
     @Override
     protected void readData(ReadView view) {
         super.readData(view);
-        view.read("extra", Extra.CODEC).ifPresent(extra -> this.extra = extra);
-        view.getOptionalString("aString").ifPresent(aString -> this.aString = aString);
-        view.getOptionalInt("anInt").ifPresent(anInt -> this.anInt = anInt);
+        Inventories.readData(view, inventory);
     }
 
     @Nullable

@@ -359,16 +359,16 @@ public class FBModelProvider extends FabricModelProvider {
         registerTipPlant(blockStateModelGenerator, FBBlocks.BLACK_JASMINE);
         registerTipPlant(blockStateModelGenerator, FBBlocks.CYAN_JASMINE);
 
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.MAGENTA_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.BLUE_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.WHITE_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.ORANGE_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.RED_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.YELLOW_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.LIGHT_BLUE_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.PINK_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.BLACK_CYPRUS_VINE);
-        registerCyprusVine(blockStateModelGenerator, FBBlocks.CYAN_CYPRUS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.MAGENTA_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.BLUE_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.WHITE_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.ORANGE_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.RED_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.YELLOW_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.LIGHT_BLUE_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.PINK_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.BLACK_CYPRESS_VINE);
+        registerCypressVine(blockStateModelGenerator, FBBlocks.CYAN_CYPRESS_VINE);
 
         registerLotusFlower(blockStateModelGenerator, FBBlocks.MAGENTA_LOTUS_FLOWER);
         registerLotusFlower(blockStateModelGenerator, FBBlocks.BLUE_LOTUS_FLOWER);
@@ -527,9 +527,9 @@ public class FBModelProvider extends FabricModelProvider {
         registerItemModelFromTextureSource(blockStateModelGenerator, block, Identifier.of(getId(block) + "_tip"));
     }
 
-    private static void registerCyprusVine(BlockStateModelGenerator blockStateModelGenerator, Block block) {
+    private static void registerCypressVine(BlockStateModelGenerator blockStateModelGenerator, Block block) {
         blockStateModelGenerator.registerMultifaceBlockModel(block);
-        new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "cyprus_vine")), Optional.empty(), TextureKey.PLANT).upload(block, new TextureMap().put(TextureKey.PLANT, getId(block)), blockStateModelGenerator.modelCollector);
+        new Model(Optional.of(Identifier.of(FlowerBreeding.MOD_ID, "block/" + "cypress_vine")), Optional.empty(), TextureKey.PLANT).upload(block, new TextureMap().put(TextureKey.PLANT, getId(block)), blockStateModelGenerator.modelCollector);
         registerItemModelFromTextureSource(blockStateModelGenerator, block, getId(block));
     }
 

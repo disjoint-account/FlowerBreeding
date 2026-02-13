@@ -24,6 +24,7 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import org.jetbrains.annotations.Nullable;
 
 public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -103,7 +104,7 @@ public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider
 
     public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
         if (world.getBlockEntity(pos) instanceof PlanterBlockEntity entity) {
-            if (random.nextInt(30) == 0 && world.isNightAndNatural() && world.getTopY(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, pos) <= pos.getY() && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
+            if (random.nextInt(30) == 0 && world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.FIREFLY_BUSH_SOUNDS_AUDIO, pos) && world.getTopY(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, pos) <= pos.getY() && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
                 world.playSoundAtBlockCenterClient(pos, SoundEvents.BLOCK_FIREFLY_BUSH_IDLE, SoundCategory.AMBIENT, 1.0F, 1.0F, false);
             }
 

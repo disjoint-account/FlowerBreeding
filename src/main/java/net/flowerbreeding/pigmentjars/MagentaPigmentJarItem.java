@@ -160,8 +160,8 @@ public class MagentaPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.JASMINES)) {
                     return FBBlocks.MAGENTA_JASMINE;
                 }
-                if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
-                    return FBBlocks.MAGENTA_CYPRUS_VINE;
+                if (pos.isIn(FBTags.Blocks.CYPRESS_VINES)) {
+                    return FBBlocks.MAGENTA_CYPRESS_VINE;
                 }
                 if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
                     return FBBlocks.MAGENTA_GLOWSHROOM;

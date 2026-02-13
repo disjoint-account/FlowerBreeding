@@ -160,8 +160,8 @@ public class CyanPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.JASMINES)) {
                     return FBBlocks.CYAN_JASMINE;
                 }
-                if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
-                    return FBBlocks.CYAN_CYPRUS_VINE;
+                if (pos.isIn(FBTags.Blocks.CYPRESS_VINES)) {
+                    return FBBlocks.CYAN_CYPRESS_VINE;
                 }
                 if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
                     return FBBlocks.CYAN_GLOWSHROOM;

@@ -43,8 +43,8 @@ public class SellCustomMapTradeFactory implements TradeOffers.Factory {
 
     @Nullable
     @Override
-    public TradeOffer create(Entity entity, Random random) {
-        if (!(entity.getWorld() instanceof ServerWorld serverWorld)) {
+    public TradeOffer create(ServerWorld serverWorld, Entity entity, Random random) {
+        if (!(entity.getEntityWorld() instanceof ServerWorld)) {
             return null;
         } else {
             BlockPos blockPos = serverWorld.locateStructure(this.structure, entity.getBlockPos(), 100, true);

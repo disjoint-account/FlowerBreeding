@@ -24,6 +24,7 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import org.jetbrains.annotations.Nullable;
 
 public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
@@ -164,7 +165,7 @@ public class VaseBlock extends BlockWithEntity implements BlockEntityProvider {
 
     private void eyeBlossomToggle (int slot, VaseBlockEntity entity, ServerWorld world, BlockPos pos, Random random) {
         ItemStack stack = entity.getStack(slot);
-        boolean isDay = !CreakingHeartBlock.isNightAndNatural(world);
+        boolean isDay = !world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.EYEBLOSSOM_OPEN_GAMEPLAY, pos).asBoolean(true);
         if (stack.isOf(FBBlocks.OPEN_MAGENTA_EYEBLOSSOM.asItem()) && isDay) {
             entity.setStack(slot, new ItemStack(FBBlocks.CLOSED_MAGENTA_EYEBLOSSOM.asItem()));
             world.updateListeners(pos, entity.getCachedState(), entity.getCachedState(), Block.NOTIFY_ALL);

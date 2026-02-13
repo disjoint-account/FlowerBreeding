@@ -2,43 +2,96 @@ package net.flowerbreeding.blockentities.flowerbed;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.block.Block;
-import net.minecraft.client.render.*;
-import net.minecraft.client.render.block.BlockRenderManager;
+import net.minecraft.block.BlockState;
+import net.minecraft.client.render.block.MovingBlockRenderState;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
-import net.minecraft.client.render.model.BlockModelPart;
+import net.minecraft.client.render.command.ModelCommandRenderer;
+import net.minecraft.client.render.command.OrderedRenderCommandQueue;
+import net.minecraft.client.render.state.CameraRenderState;
 import net.minecraft.client.util.math.MatrixStack;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
-import net.minecraft.util.math.random.Random;
-
-import java.util.List;
+import net.minecraft.world.World;
+import net.minecraft.world.biome.Biome;
 
 @Environment(EnvType.CLIENT)
-public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<FlowerbedBlockEntity> {
-    private final BlockRenderManager blockRenderManager;
+public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<FlowerbedBlockEntity, FlowerbedBlockEntityRenderState> {
 
-    public FlowerbedBlockEntityRenderer(BlockEntityRendererFactory.Context context) {
-        this.blockRenderManager = context.getRenderManager();
+    public FlowerbedBlockEntityRenderer(BlockEntityRendererFactory.Context ctx) {
+        super();
     }
 
-    public void render(FlowerbedBlockEntity entity, float tickDelta, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int light, int overlay, Vec3d cameraPos) {
-        matrixStack.push();
+    public FlowerbedBlockEntityRenderState createRenderState() {
+        return new FlowerbedBlockEntityRenderState();
+    }
+
+    public void updateRenderState(FlowerbedBlockEntity flowerbedBlockEntity, FlowerbedBlockEntityRenderState flowerbedBlockEntityRenderState, float f, Vec3d vec3d, ModelCommandRenderer.CrumblingOverlayCommand crumblingOverlayCommand) {
+        flowerbedBlockEntityRenderState.flower1 = flowerbedBlockEntity.getStack(0);
+        flowerbedBlockEntityRenderState.flower2 = flowerbedBlockEntity.getStack(1);
+        flowerbedBlockEntityRenderState.flower3 = flowerbedBlockEntity.getStack(2);
+        flowerbedBlockEntityRenderState.flower4 = flowerbedBlockEntity.getStack(3);
+
+        if (flowerbedBlockEntityRenderState.flower1.getItem() instanceof BlockItem) {
+            assert flowerbedBlockEntity.getWorld() != null;
+            flowerbedBlockEntityRenderState.flower1State = renderModel(flowerbedBlockEntity.getPos(), ((BlockItem) flowerbedBlockEntity.getStack(0).getItem()).getBlock().getDefaultState(),
+                    flowerbedBlockEntity.getWorld().getBiome(flowerbedBlockEntity.getPos()), flowerbedBlockEntity.getWorld());
+        }
+        if (flowerbedBlockEntityRenderState.flower2.getItem() instanceof BlockItem) {
+            assert flowerbedBlockEntity.getWorld() != null;
+            flowerbedBlockEntityRenderState.flower2State = renderModel(flowerbedBlockEntity.getPos(), ((BlockItem) flowerbedBlockEntity.getStack(1).getItem()).getBlock().getDefaultState(),
+                    flowerbedBlockEntity.getWorld().getBiome(flowerbedBlockEntity.getPos()), flowerbedBlockEntity.getWorld());
+        }
+        if (flowerbedBlockEntityRenderState.flower3.getItem() instanceof BlockItem) {
+            assert flowerbedBlockEntity.getWorld() != null;
+            flowerbedBlockEntityRenderState.flower3State = renderModel(flowerbedBlockEntity.getPos(), ((BlockItem) flowerbedBlockEntity.getStack(2).getItem()).getBlock().getDefaultState(),
+                    flowerbedBlockEntity.getWorld().getBiome(flowerbedBlockEntity.getPos()), flowerbedBlockEntity.getWorld());
+        }
+        if (flowerbedBlockEntityRenderState.flower4.getItem() instanceof BlockItem) {
+            assert flowerbedBlockEntity.getWorld() != null;
+            flowerbedBlockEntityRenderState.flower4State = renderModel(flowerbedBlockEntity.getPos(), ((BlockItem) flowerbedBlockEntity.getStack(3).getItem()).getBlock().getDefaultState(),
+                    flowerbedBlockEntity.getWorld().getBiome(flowerbedBlockEntity.getPos()), flowerbedBlockEntity.getWorld());
+        }
+
+        flowerbedBlockEntityRenderState.pos = flowerbedBlockEntity.getPos();
+
+        BlockEntityRenderer.super.updateRenderState(flowerbedBlockEntity, flowerbedBlockEntityRenderState, f, vec3d, crumblingOverlayCommand);
+    }
+
+    public void render(FlowerbedBlockEntityRenderState flowerbedBlockEntityRenderState, MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, CameraRenderState cameraRenderState) {
         matrixStack.translate(0, 1, 0);
-        this.renderFlower(entity, matrixStack, vertexConsumerProvider, 0, 0.3f, 0.25f);
-        this.renderFlower(entity, matrixStack, vertexConsumerProvider, 1, -0.5f, 0.05f);
-        this.renderFlower(entity, matrixStack, vertexConsumerProvider, 2, -0.05f, -0.5f);
-        this.renderFlower(entity, matrixStack, vertexConsumerProvider, 3, 0.5f, -0.1f);
+        if (flowerbedBlockEntityRenderState.flower1 != ItemStack.EMPTY) {
+            this.renderFlower(flowerbedBlockEntityRenderState.flower1State, flowerbedBlockEntityRenderState.flower1, flowerbedBlockEntityRenderState.pos, matrixStack, orderedRenderCommandQueue, 0.23f, 0.27f);
+        }
+        if (flowerbedBlockEntityRenderState.flower2 != ItemStack.EMPTY) {
+            this.renderFlower(flowerbedBlockEntityRenderState.flower2State, flowerbedBlockEntityRenderState.flower2, flowerbedBlockEntityRenderState.pos, matrixStack, orderedRenderCommandQueue, -0.27f, 0.23f);
+        }
+        if (flowerbedBlockEntityRenderState.flower3 != ItemStack.EMPTY) {
+            this.renderFlower(flowerbedBlockEntityRenderState.flower3State, flowerbedBlockEntityRenderState.flower3, flowerbedBlockEntityRenderState.pos, matrixStack, orderedRenderCommandQueue, -0.23f, -0.27f);
+        }
+        if (flowerbedBlockEntityRenderState.flower4 != ItemStack.EMPTY) {
+            this.renderFlower(flowerbedBlockEntityRenderState.flower4State, flowerbedBlockEntityRenderState.flower4, flowerbedBlockEntityRenderState.pos, matrixStack, orderedRenderCommandQueue, 0.27f, -0.23f);
+        }
+    }
+
+    private void renderFlower(MovingBlockRenderState movingBlockRenderState, ItemStack itemStack, BlockPos pos, MatrixStack matrixStack, OrderedRenderCommandQueue orderedRenderCommandQueue, float x, float z) {
+        matrixStack.push();
+        matrixStack.translate(x, 0, z);
+        matrixStack.translate(((BlockItem) itemStack.getItem()).getBlock().getDefaultState().getModelOffset(pos).negate());
+        orderedRenderCommandQueue.submitMovingBlock(matrixStack, movingBlockRenderState);
         matrixStack.pop();
     }
 
-    private void renderFlower(FlowerbedBlockEntity entity, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int slot, float x, float z) {
-            ItemStack itemStack = entity.getStack(slot);
-            Block block = Block.getBlockFromItem(itemStack.getItem());
-        List<BlockModelPart> list = blockRenderManager.getModel(block.getDefaultState()).getParts(Random.create());
-            matrixStack.translate(block.getDefaultState().getModelOffset(entity.getPos()).negate());
-            matrixStack.translate(x, 0, z);
-            blockRenderManager.renderBlock(block.getDefaultState(), entity.getPos(), entity.getWorld(), matrixStack, vertexConsumerProvider.getBuffer(RenderLayer.getCutout()), false, list);
+    private static MovingBlockRenderState renderModel(BlockPos pos, BlockState state, RegistryEntry<Biome> biome, World world) {
+        MovingBlockRenderState movingBlockRenderState = new MovingBlockRenderState();
+        movingBlockRenderState.fallingBlockPos = pos;
+        movingBlockRenderState.entityBlockPos = pos;
+        movingBlockRenderState.blockState = state;
+        movingBlockRenderState.biome = biome;
+        movingBlockRenderState.world = world;
+        return movingBlockRenderState;
     }
 }

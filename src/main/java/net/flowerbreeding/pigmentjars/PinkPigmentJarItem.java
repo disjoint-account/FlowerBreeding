@@ -160,8 +160,8 @@ public class PinkPigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.JASMINES)) {
                     return FBBlocks.PINK_JASMINE;
                 }
-                if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
-                    return FBBlocks.PINK_CYPRUS_VINE;
+                if (pos.isIn(FBTags.Blocks.CYPRESS_VINES)) {
+                    return FBBlocks.PINK_CYPRESS_VINE;
                 }
                 if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
                     return FBBlocks.PINK_GLOWSHROOM;

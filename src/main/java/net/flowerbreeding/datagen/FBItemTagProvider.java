@@ -31,7 +31,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.SPORE_BLOSSOMS)
                 .addOptionalTag(FBTags.Items.LOTUS_FLOWERS)
                 .addOptionalTag(FBTags.Items.JASMINES)
-                .addOptionalTag(FBTags.Items.CYPRUS_VINES);
+                .addOptionalTag(FBTags.Items.CYPRESS_VINES);
 
         valueLookupBuilder(ItemTags.BEE_FOOD)
                 .addOptionalTag(FBTags.Items.SMALL_FLOWERS)
@@ -42,7 +42,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .addOptionalTag(FBTags.Items.SPORE_BLOSSOMS)
                 .addOptionalTag(FBTags.Items.LOTUS_FLOWERS)
                 .addOptionalTag(FBTags.Items.JASMINES)
-                .addOptionalTag(FBTags.Items.CYPRUS_VINES);
+                .addOptionalTag(FBTags.Items.CYPRESS_VINES);
 
         valueLookupBuilder(FBTags.Items.SMALL_FLOWERS)
                 .addOptionalTag(FBTags.Items.ALLIUMS)
@@ -107,7 +107,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.MAGENTA_LUPIN.asItem())
                 .add(FBBlocks.MAGENTA_SMALL_ROSE.asItem())
                 .add(FBBlocks.MAGENTA_JASMINE.asItem())
-                .add(FBBlocks.MAGENTA_CYPRUS_VINE.asItem())
+                .add(FBBlocks.MAGENTA_CYPRESS_VINE.asItem())
                 .add(FBBlocks.MAGENTA_GLOWSHROOM.asItem())
                 .add(FBItems.MAGENTA_LOTUS_FLOWER);
 
@@ -149,7 +149,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.BLUE_LUPIN.asItem())
                 .add(FBBlocks.BLUE_SMALL_ROSE.asItem())
                 .add(FBBlocks.BLUE_JASMINE.asItem())
-                .add(FBBlocks.BLUE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.BLUE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.BLUE_GLOWSHROOM.asItem())
                 .add(FBItems.BLUE_LOTUS_FLOWER);
 
@@ -191,7 +191,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.WHITE_LUPIN.asItem())
                 .add(FBBlocks.WHITE_SMALL_ROSE.asItem())
                 .add(FBBlocks.WHITE_JASMINE.asItem())
-                .add(FBBlocks.WHITE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.WHITE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.WHITE_GLOWSHROOM.asItem())
                 .add(FBItems.WHITE_LOTUS_FLOWER);
 
@@ -233,7 +233,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.ORANGE_LUPIN.asItem())
                 .add(FBBlocks.ORANGE_SMALL_ROSE.asItem())
                 .add(FBBlocks.ORANGE_JASMINE.asItem())
-                .add(FBBlocks.ORANGE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.ORANGE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.ORANGE_GLOWSHROOM.asItem())
                 .add(FBItems.ORANGE_LOTUS_FLOWER);
 
@@ -275,7 +275,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.RED_LUPIN.asItem())
                 .add(FBBlocks.RED_SMALL_ROSE.asItem())
                 .add(FBBlocks.RED_JASMINE.asItem())
-                .add(FBBlocks.RED_CYPRUS_VINE.asItem())
+                .add(FBBlocks.RED_CYPRESS_VINE.asItem())
                 .add(FBBlocks.RED_GLOWSHROOM.asItem())
                 .add(FBItems.RED_LOTUS_FLOWER);
 
@@ -317,7 +317,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.YELLOW_LUPIN.asItem())
                 .add(FBBlocks.YELLOW_SMALL_ROSE.asItem())
                 .add(FBBlocks.YELLOW_JASMINE.asItem())
-                .add(FBBlocks.YELLOW_CYPRUS_VINE.asItem())
+                .add(FBBlocks.YELLOW_CYPRESS_VINE.asItem())
                 .add(FBBlocks.YELLOW_GLOWSHROOM.asItem())
                 .add(FBItems.YELLOW_LOTUS_FLOWER);
 
@@ -359,7 +359,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.LIGHT_BLUE_LUPIN.asItem())
                 .add(FBBlocks.LIGHT_BLUE_SMALL_ROSE.asItem())
                 .add(FBBlocks.LIGHT_BLUE_JASMINE.asItem())
-                .add(FBBlocks.LIGHT_BLUE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.LIGHT_BLUE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.LIGHT_BLUE_GLOWSHROOM.asItem())
                 .add(FBItems.LIGHT_BLUE_LOTUS_FLOWER);
 
@@ -401,7 +401,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.PINK_LUPIN.asItem())
                 .add(FBBlocks.PINK_SMALL_ROSE.asItem())
                 .add(FBBlocks.PINK_JASMINE.asItem())
-                .add(FBBlocks.PINK_CYPRUS_VINE.asItem())
+                .add(FBBlocks.PINK_CYPRESS_VINE.asItem())
                 .add(FBBlocks.PINK_GLOWSHROOM.asItem())
                 .add(FBItems.PINK_LOTUS_FLOWER);
 
@@ -443,7 +443,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.BLACK_LUPIN.asItem())
                 .add(FBBlocks.BLACK_SMALL_ROSE.asItem())
                 .add(FBBlocks.BLACK_JASMINE.asItem())
-                .add(FBBlocks.BLACK_CYPRUS_VINE.asItem())
+                .add(FBBlocks.BLACK_CYPRESS_VINE.asItem())
                 .add(FBBlocks.BLACK_GLOWSHROOM.asItem())
                 .add(FBItems.BLACK_LOTUS_FLOWER);
 
@@ -485,7 +485,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.CYAN_LUPIN.asItem())
                 .add(FBBlocks.CYAN_SMALL_ROSE.asItem())
                 .add(FBBlocks.CYAN_JASMINE.asItem())
-                .add(FBBlocks.CYAN_CYPRUS_VINE.asItem())
+                .add(FBBlocks.CYAN_CYPRESS_VINE.asItem())
                 .add(FBBlocks.CYAN_GLOWSHROOM.asItem())
                 .add(FBItems.CYAN_LOTUS_FLOWER);
 
@@ -520,7 +520,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.WHITE_LUPIN.asItem())
                 .add(FBBlocks.WHITE_SMALL_ROSE.asItem())
                 .add(FBBlocks.WHITE_JASMINE.asItem())
-                .add(FBBlocks.WHITE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.WHITE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.WHITE_GLOWSHROOM.asItem())
                 .add(FBItems.WHITE_LOTUS_FLOWER);
 
@@ -548,7 +548,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.ORANGE_LUPIN.asItem())
                 .add(FBBlocks.ORANGE_SMALL_ROSE.asItem())
                 .add(FBBlocks.ORANGE_JASMINE.asItem())
-                .add(FBBlocks.ORANGE_CYPRUS_VINE.asItem())
+                .add(FBBlocks.ORANGE_CYPRESS_VINE.asItem())
                 .add(FBBlocks.ORANGE_GLOWSHROOM.asItem())
                 .add(FBItems.ORANGE_LOTUS_FLOWER);
 
@@ -577,7 +577,7 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBBlocks.RED_LUPIN.asItem())
                 .add(FBBlocks.RED_SMALL_ROSE.asItem())
                 .add(FBBlocks.RED_JASMINE.asItem())
-                .add(FBBlocks.RED_CYPRUS_VINE.asItem())
+                .add(FBBlocks.RED_CYPRESS_VINE.asItem())
                 .add(FBBlocks.RED_GLOWSHROOM.asItem())
                 .add(FBItems.RED_LOTUS_FLOWER);
 
@@ -915,17 +915,17 @@ public class FBItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(FBItems.BLACK_LOTUS_FLOWER)
                 .add(FBItems.CYAN_LOTUS_FLOWER);
 
-        valueLookupBuilder(FBTags.Items.CYPRUS_VINES)
-                .add(FBBlocks.MAGENTA_CYPRUS_VINE.asItem())
-                .add(FBBlocks.BLUE_CYPRUS_VINE.asItem())
-                .add(FBBlocks.WHITE_CYPRUS_VINE.asItem())
-                .add(FBBlocks.ORANGE_CYPRUS_VINE.asItem())
-                .add(FBBlocks.RED_CYPRUS_VINE.asItem())
-                .add(FBBlocks.YELLOW_CYPRUS_VINE.asItem())
-                .add(FBBlocks.LIGHT_BLUE_CYPRUS_VINE.asItem())
-                .add(FBBlocks.PINK_CYPRUS_VINE.asItem())
-                .add(FBBlocks.BLACK_CYPRUS_VINE.asItem())
-                .add(FBBlocks.CYAN_CYPRUS_VINE.asItem());
+        valueLookupBuilder(FBTags.Items.CYPRESS_VINES)
+                .add(FBBlocks.MAGENTA_CYPRESS_VINE.asItem())
+                .add(FBBlocks.BLUE_CYPRESS_VINE.asItem())
+                .add(FBBlocks.WHITE_CYPRESS_VINE.asItem())
+                .add(FBBlocks.ORANGE_CYPRESS_VINE.asItem())
+                .add(FBBlocks.RED_CYPRESS_VINE.asItem())
+                .add(FBBlocks.YELLOW_CYPRESS_VINE.asItem())
+                .add(FBBlocks.LIGHT_BLUE_CYPRESS_VINE.asItem())
+                .add(FBBlocks.PINK_CYPRESS_VINE.asItem())
+                .add(FBBlocks.BLACK_CYPRESS_VINE.asItem())
+                .add(FBBlocks.CYAN_CYPRESS_VINE.asItem());
 
         valueLookupBuilder(FBTags.Items.VASE_FLOWERS)
                 .addOptionalTag(FBTags.Items.ALLIUMS)

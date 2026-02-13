@@ -160,8 +160,8 @@ public class LightBluePigmentJarItem extends Item {
                 if (pos.isIn(FBTags.Blocks.JASMINES)) {
                     return FBBlocks.LIGHT_BLUE_JASMINE;
                 }
-                if (pos.isIn(FBTags.Blocks.CYPRUS_VINES)) {
-                    return FBBlocks.LIGHT_BLUE_CYPRUS_VINE;
+                if (pos.isIn(FBTags.Blocks.CYPRESS_VINES)) {
+                    return FBBlocks.LIGHT_BLUE_CYPRESS_VINE;
                 }
                 if (pos.isIn(FBTags.Blocks.GLOWSHROOMS)) {
                     return FBBlocks.LIGHT_BLUE_GLOWSHROOM;

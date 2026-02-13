@@ -421,16 +421,16 @@ public class FBItemGroup {
                         entries.add(FBBlocks.BLACK_JASMINE);
                         entries.add(FBBlocks.CYAN_JASMINE);
 
-                        entries.add(FBBlocks.MAGENTA_CYPRUS_VINE);
-                        entries.add(FBBlocks.BLUE_CYPRUS_VINE);
-                        entries.add(FBBlocks.WHITE_CYPRUS_VINE);
-                        entries.add(FBBlocks.ORANGE_CYPRUS_VINE);
-                        entries.add(FBBlocks.RED_CYPRUS_VINE);
-                        entries.add(FBBlocks.YELLOW_CYPRUS_VINE);
-                        entries.add(FBBlocks.LIGHT_BLUE_CYPRUS_VINE);
-                        entries.add(FBBlocks.PINK_CYPRUS_VINE);
-                        entries.add(FBBlocks.BLACK_CYPRUS_VINE);
-                        entries.add(FBBlocks.CYAN_CYPRUS_VINE);
+                        entries.add(FBBlocks.MAGENTA_CYPRESS_VINE);
+                        entries.add(FBBlocks.BLUE_CYPRESS_VINE);
+                        entries.add(FBBlocks.WHITE_CYPRESS_VINE);
+                        entries.add(FBBlocks.ORANGE_CYPRESS_VINE);
+                        entries.add(FBBlocks.RED_CYPRESS_VINE);
+                        entries.add(FBBlocks.YELLOW_CYPRESS_VINE);
+                        entries.add(FBBlocks.LIGHT_BLUE_CYPRESS_VINE);
+                        entries.add(FBBlocks.PINK_CYPRESS_VINE);
+                        entries.add(FBBlocks.BLACK_CYPRESS_VINE);
+                        entries.add(FBBlocks.CYAN_CYPRESS_VINE);
 
                         entries.add(FBBlocks.CLIMBING_IVY);
                         entries.add(FBBlocks.CATTAILS);

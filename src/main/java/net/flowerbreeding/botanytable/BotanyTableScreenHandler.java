@@ -97,7 +97,7 @@ public class BotanyTableScreenHandler extends ScreenHandler {
     public BotanyTableScreenHandler(int syncId, PlayerInventory playerInventory, ScreenHandlerContext context) {
         super(FBScreenHandlers.BOTANY_TABLE_SCREEN_HANDLER, syncId);
 
-        this.world = playerInventory.player.getWorld();
+        this.world = playerInventory.player.getEntityWorld();
         //this.recipes = this.world.getRecipeManager().listAllOfType(FBRecipes.BOTANY_TABLE_TYPE);
 
         int i;

@@ -13,7 +13,6 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.passive.BeeEntity;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.particle.TrailParticleEffect;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
@@ -25,6 +24,7 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.event.GameEvent;
 
 public class YellowEyeblossomBlock extends FlowerBlock {
@@ -74,9 +74,8 @@ public class YellowEyeblossomBlock extends FlowerBlock {
     }
 
     private boolean updateStateAndNotifyOthers(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!world.getDimension().natural()) {
-            return false;
-        } else if (world.isDay() != this.state.open) {
+        boolean bl = world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.EYEBLOSSOM_OPEN_GAMEPLAY, pos).asBoolean(this.state.open);
+        if (bl == this.state.open) {
             return false;
         } else {
             YellowEyeblossomBlock.YellowEyeblossomState yellowEyeblossomState = this.state.getOpposite();

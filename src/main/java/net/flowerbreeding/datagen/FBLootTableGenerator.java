@@ -536,16 +536,16 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.BLACK_JASMINE);
             addDrop(FBBlocks.CYAN_JASMINE);
 
-            addDrop(FBBlocks.MAGENTA_CYPRUS_VINE, dropsWithShears(FBBlocks.MAGENTA_CYPRUS_VINE));
-            addDrop(FBBlocks.BLUE_CYPRUS_VINE, dropsWithShears(FBBlocks.BLUE_CYPRUS_VINE));
-            addDrop(FBBlocks.WHITE_CYPRUS_VINE, dropsWithShears(FBBlocks.WHITE_CYPRUS_VINE));
-            addDrop(FBBlocks.ORANGE_CYPRUS_VINE, dropsWithShears(FBBlocks.ORANGE_CYPRUS_VINE));
-            addDrop(FBBlocks.RED_CYPRUS_VINE, dropsWithShears(FBBlocks.RED_CYPRUS_VINE));
-            addDrop(FBBlocks.YELLOW_CYPRUS_VINE, dropsWithShears(FBBlocks.YELLOW_CYPRUS_VINE));
-            addDrop(FBBlocks.LIGHT_BLUE_CYPRUS_VINE, dropsWithShears(FBBlocks.LIGHT_BLUE_CYPRUS_VINE));
-            addDrop(FBBlocks.PINK_CYPRUS_VINE, dropsWithShears(FBBlocks.PINK_CYPRUS_VINE));
-            addDrop(FBBlocks.BLACK_CYPRUS_VINE, dropsWithShears(FBBlocks.BLACK_CYPRUS_VINE));
-            addDrop(FBBlocks.CYAN_CYPRUS_VINE, dropsWithShears(FBBlocks.CYAN_CYPRUS_VINE));
+            addDrop(FBBlocks.MAGENTA_CYPRESS_VINE, dropsWithShears(FBBlocks.MAGENTA_CYPRESS_VINE));
+            addDrop(FBBlocks.BLUE_CYPRESS_VINE, dropsWithShears(FBBlocks.BLUE_CYPRESS_VINE));
+            addDrop(FBBlocks.WHITE_CYPRESS_VINE, dropsWithShears(FBBlocks.WHITE_CYPRESS_VINE));
+            addDrop(FBBlocks.ORANGE_CYPRESS_VINE, dropsWithShears(FBBlocks.ORANGE_CYPRESS_VINE));
+            addDrop(FBBlocks.RED_CYPRESS_VINE, dropsWithShears(FBBlocks.RED_CYPRESS_VINE));
+            addDrop(FBBlocks.YELLOW_CYPRESS_VINE, dropsWithShears(FBBlocks.YELLOW_CYPRESS_VINE));
+            addDrop(FBBlocks.LIGHT_BLUE_CYPRESS_VINE, dropsWithShears(FBBlocks.LIGHT_BLUE_CYPRESS_VINE));
+            addDrop(FBBlocks.PINK_CYPRESS_VINE, dropsWithShears(FBBlocks.PINK_CYPRESS_VINE));
+            addDrop(FBBlocks.BLACK_CYPRESS_VINE, dropsWithShears(FBBlocks.BLACK_CYPRESS_VINE));
+            addDrop(FBBlocks.CYAN_CYPRESS_VINE, dropsWithShears(FBBlocks.CYAN_CYPRESS_VINE));
 
             addDrop(FBBlocks.MAGENTA_GLOWSHROOM);
             addDrop(FBBlocks.POTTED_MAGENTA_GLOWSHROOM, pottedPlantDrops(FBBlocks.MAGENTA_GLOWSHROOM));

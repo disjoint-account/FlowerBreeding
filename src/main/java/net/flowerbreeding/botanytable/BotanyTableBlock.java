@@ -28,7 +28,7 @@ public class BotanyTableBlock extends CraftingTableBlock {
 
     @Override
     protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
-        if (!world.isClient) {
+        if (!world.isClient()) {
             player.openHandledScreen(state.createScreenHandlerFactory(world, pos));
         }
         return ActionResult.SUCCESS;

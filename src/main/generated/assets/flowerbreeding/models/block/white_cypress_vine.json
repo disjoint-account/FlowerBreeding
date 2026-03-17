@@ -1,0 +1,6 @@
+{
+  "parent": "flowerbreeding:block/cypress_vine",
+  "textures": {
+    "plant": "flowerbreeding:block/white_cypress_vine"
+  }
+}

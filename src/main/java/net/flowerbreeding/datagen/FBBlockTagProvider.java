@@ -24,6 +24,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(FBBlocks.PLANTER);
 
+        valueLookupBuilder(BlockTags.AXE_MINEABLE)
+                .add(FBBlocks.BOTANY_TABLE);
+
         valueLookupBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(FBBlocks.GRASS_FLOWERBED)
                 .add(FBBlocks.DIRT_FLOWERBED)

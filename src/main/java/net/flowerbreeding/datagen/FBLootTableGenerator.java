@@ -582,6 +582,7 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.CYAN_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.CYAN_GLOWSHROOM_BLOCK, FBBlocks.CYAN_GLOWSHROOM.asItem()));
             addDrop(FBBlocks.GREEN_GLOWSHROOM_BLOCK, mushroomBlockDrops(FBBlocks.GREEN_GLOWSHROOM_BLOCK, FBBlocks.GREEN_GLOWSHROOM.asItem()));
 
+
             addDrop(FBBlocks.CLIMBING_IVY);
             addDrop(FBBlocks.CATTAILS);
             addDrop(FBBlocks.SAGE);
@@ -592,6 +593,8 @@ public class FBLootTableGenerator extends
             addDrop(FBBlocks.DIRT_FLOWERBED, drops(Items.DIRT));
             addDrop(FBBlocks.FARMLAND_FLOWERBED, drops(Items.DIRT));
             addDrop(FBBlocks.MOSS_FLOWERBED, drops(Items.MOSS_BLOCK));
+
+            addDrop(FBBlocks.BOTANY_TABLE);
 
             addDrop(FBBlocks.WHITE_VASE);
             addDrop(FBBlocks.LIGHT_GRAY_VASE);

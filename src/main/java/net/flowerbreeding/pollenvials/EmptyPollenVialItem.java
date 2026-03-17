@@ -127,6 +127,9 @@ public class EmptyPollenVialItem extends Item {
                 if (state.isOf(Blocks.CAVE_VINES)) {
                     return FBItems.GLOW_VINE_POLLEN_VIAL;
                 }
+                if (state.isOf(Blocks.CAVE_VINES_PLANT)) {
+                    return FBItems.GLOW_VINE_POLLEN_VIAL;
+                }
                 if (state.isOf(Blocks.VINE)) {
                     return FBItems.VINE_POLLEN_VIAL;
                 }

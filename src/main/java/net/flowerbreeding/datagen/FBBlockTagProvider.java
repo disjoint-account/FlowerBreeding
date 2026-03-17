@@ -8,6 +8,7 @@ import net.flowerbreeding.util.FBTags;
 import net.minecraft.block.Blocks;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -17,7 +18,7 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
     }
 
     @Override
-    protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
+    protected void configure(RegistryWrapper.@NonNull WrapperLookup wrapperLookup) {
         valueLookupBuilder(BlockTags.HOE_MINEABLE)
                 .add(FBBlocks.MOSS_FLOWERBED);
 
@@ -104,6 +105,9 @@ public class FBBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEAS)
                 .addOptionalTag(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)
                 .add(Blocks.BUSH)
+                .add(Blocks.CAVE_VINES)
+                .add(Blocks.CAVE_VINES_PLANT)
+                .add(Blocks.VINE)
                 .add(Blocks.SWEET_BERRY_BUSH)
                 .add(Blocks.LILY_PAD)
                 .addOptionalTag(FBTags.Blocks.MUSHROOMS)

@@ -93,6 +93,9 @@
       "required": false
     },
     "minecraft:bush",
+    "minecraft:cave_vines",
+    "minecraft:cave_vines_plant",
+    "minecraft:vine",
     "minecraft:sweet_berry_bush",
     "minecraft:lily_pad",
     {

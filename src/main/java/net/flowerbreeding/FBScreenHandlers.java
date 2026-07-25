@@ -1,16 +1,16 @@
 package net.flowerbreeding;
 
 import net.flowerbreeding.botanytable.BotanyTableScreenHandler;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.resource.featuretoggle.FeatureFlags;
-import net.minecraft.screen.ScreenHandlerType;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.Registry;
+import net.minecraft.world.flag.FeatureFlags;
+import net.minecraft.world.inventory.MenuType;
+import net.minecraft.resources.Identifier;
 
 public class FBScreenHandlers {
-    public static final ScreenHandlerType<BotanyTableScreenHandler> BOTANY_TABLE_SCREEN_HANDLER =
-            Registry.register(Registries.SCREEN_HANDLER, Identifier.of(FlowerBreeding.MOD_ID, "botany_table_screen_handler"),
-                    new ScreenHandlerType<>(BotanyTableScreenHandler::new, FeatureFlags.VANILLA_FEATURES));
+    public static final MenuType<BotanyTableScreenHandler> BOTANY_TABLE_SCREEN_HANDLER =
+            Registry.register(BuiltInRegistries.MENU, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, "botany_table_screen_handler"),
+                    new MenuType<>(BotanyTableScreenHandler::new, FeatureFlags.VANILLA_SET));
 
     public static void registerScreenHandlers() {
         FlowerBreeding.LOGGER.info("Registering Screen Handlers for " + FlowerBreeding.MOD_ID);

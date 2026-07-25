@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:white_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:lily_pollen_vial",
+    "flowerbreeding:tulip_pollen_vial",
+    "flowerbreeding:white_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:white_hyacinth"
-  },
-  "vial1": "flowerbreeding:lily_pollen_vial",
-  "vial2": "flowerbreeding:tulip_pollen_vial"
+  }
 }

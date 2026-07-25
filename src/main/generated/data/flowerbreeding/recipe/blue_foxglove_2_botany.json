@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:blue_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:tulip_pollen_vial",
+    "flowerbreeding:rose_bush_pollen_vial",
+    "flowerbreeding:blue_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:blue_foxglove"
-  },
-  "vial1": "flowerbreeding:tulip_pollen_vial",
-  "vial2": "flowerbreeding:rose_bush_pollen_vial"
+  }
 }

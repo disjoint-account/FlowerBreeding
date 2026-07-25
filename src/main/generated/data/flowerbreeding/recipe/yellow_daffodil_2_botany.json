@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:yellow_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:lily_pollen_vial",
+    "flowerbreeding:dandelion_pollen_vial",
+    "flowerbreeding:yellow_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:yellow_daffodil"
-  },
-  "vial1": "flowerbreeding:lily_pollen_vial",
-  "vial2": "flowerbreeding:dandelion_pollen_vial"
+  }
 }

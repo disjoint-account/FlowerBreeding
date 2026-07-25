@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:orange_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:torchflower_pollen_vial",
+    "flowerbreeding:torchflower_pollen_vial",
+    "flowerbreeding:orange_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "minecraft:torchflower"
-  },
-  "vial1": "flowerbreeding:torchflower_pollen_vial",
-  "vial2": "flowerbreeding:torchflower_pollen_vial"
+  }
 }

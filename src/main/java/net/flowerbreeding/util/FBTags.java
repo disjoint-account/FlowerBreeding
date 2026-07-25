@@ -1,12 +1,13 @@
 package net.flowerbreeding.util;
 
 import net.flowerbreeding.FlowerBreeding;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.gen.structure.Structure;
+import net.minecraft.world.item.trading.VillagerTrade;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.item.Item;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.TagKey;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.level.levelgen.structure.Structure;
 
 public class FBTags {
 
@@ -65,7 +66,7 @@ public class FBTags {
         public static final TagKey<Block> FROGLIGHTS = createTag("froglights");
 
         private static TagKey<Block> createTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, Identifier.of(FlowerBreeding.MOD_ID, name));
+            return TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, name));
         }
     }
     public static class Items {
@@ -137,13 +138,26 @@ public class FBTags {
         public static final TagKey<Item> VASE_FLOWERS = createTag("vase_flowers");
         public static final TagKey<Item> PLANTER_PLANTS = createTag("planter_plants");
         private static TagKey<Item> createTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, Identifier.of(FlowerBreeding.MOD_ID, name));
+            return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, name));
         }
     }
     public static class Structures {
         public static final TagKey<Structure> ON_FLORA_EXPLORER_MAPS = createTag("on_flora_explorer_maps");
         private static TagKey<Structure> createTag(String name) {
-            return TagKey.of(RegistryKeys.STRUCTURE, Identifier.of(FlowerBreeding.MOD_ID, name));
+            return TagKey.create(Registries.STRUCTURE, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, name));
+        }
+    }
+
+    public static class Trades {
+        public static final TagKey<VillagerTrade> BOTANIST_LEVEL_1 = createTag("botanist/level_1");
+        public static final TagKey<VillagerTrade> BOTANIST_LEVEL_2 = createTag("botanist/level_2");
+        public static final TagKey<VillagerTrade> BOTANIST_LEVEL_3 = createTag("botanist/level_3");
+        public static final TagKey<VillagerTrade> BOTANIST_LEVEL_4 = createTag("botanist/level_4");
+        public static final TagKey<VillagerTrade> BOTANIST_LEVEL_5 = createTag("botanist/level_5");
+
+
+        private static TagKey<VillagerTrade> createTag(String name) {
+            return TagKey.create(Registries.VILLAGER_TRADE, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, name));
         }
     }
 }

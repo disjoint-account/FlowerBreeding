@@ -4,7 +4,7 @@
       "model": "minecraft:block/sunflower_bottom"
     },
     "half=upper": {
-      "model": "flowerbreeding:block/white_sunflower_front"
+      "model": "flowerbreeding:block/white_sunflower"
     }
   }
 }

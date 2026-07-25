@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:light_blue_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:vine_pollen_vial",
+    "flowerbreeding:daisy_pollen_vial",
+    "flowerbreeding:light_blue_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:light_blue_cypress_vine"
-  },
-  "vial1": "flowerbreeding:vine_pollen_vial",
-  "vial2": "flowerbreeding:daisy_pollen_vial"
+  }
 }

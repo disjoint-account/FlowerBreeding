@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:blue_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:allium_pollen_vial",
+    "flowerbreeding:allium_pollen_vial",
+    "flowerbreeding:blue_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:blue_allium"
-  },
-  "vial1": "flowerbreeding:allium_pollen_vial",
-  "vial2": "flowerbreeding:allium_pollen_vial"
+  }
 }

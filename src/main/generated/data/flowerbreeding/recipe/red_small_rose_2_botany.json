@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:red_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:sweet_berry_pollen_vial",
+    "flowerbreeding:rose_bush_pollen_vial",
+    "flowerbreeding:red_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:red_small_rose"
-  },
-  "vial1": "flowerbreeding:sweet_berry_pollen_vial",
-  "vial2": "flowerbreeding:rose_bush_pollen_vial"
+  }
 }

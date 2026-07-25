@@ -1,45 +1,40 @@
 package net.flowerbreeding.botanytable;
 
 import net.flowerbreeding.FlowerBreeding;
-import net.minecraft.client.gl.RenderPipelines;
-import net.minecraft.client.gui.DrawContext;
-import net.minecraft.client.gui.screen.ingame.HandledScreen;
-import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import org.jspecify.annotations.NonNull;
 
-public class BotanyTableScreen extends HandledScreen<BotanyTableScreenHandler> {
+public class BotanyTableScreen extends AbstractContainerScreen<BotanyTableScreenHandler> {
     private static final Identifier GUI_TEXTURE =
-            Identifier.of(FlowerBreeding.MOD_ID, "textures/gui/botany_table/botany_table_gui.png");
+            Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, "textures/gui/botany_table/botany_table_gui.png");
 
-    public BotanyTableScreen(BotanyTableScreenHandler handler, PlayerInventory inventory, Text title) {
+    public BotanyTableScreen(BotanyTableScreenHandler handler, Inventory inventory, Component title) {
         super(handler, inventory, title);
     }
 
     @Override
     protected void init() {
         super.init();
-        titleX = 56;
-        titleY = 6;
-        playerInventoryTitleY = 72;
+        titleLabelX = 56;
+        titleLabelY = 6;
+        inventoryLabelY = 72;
     }
 
     @Override
-    public void handledScreenTick() {
-        super.handledScreenTick();
+    public void containerTick() {
+        super.containerTick();
     }
 
     @Override
-    protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
-        int x = (width - backgroundWidth) / 2;
-        int y = (height - backgroundHeight) / 2;
-        context.drawTexture(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, x, y, 0f, 0f, backgroundWidth, backgroundHeight, 256, 256);
-    }
-
-    @Override
-    public void render(DrawContext context, int mouseX, int mouseY, float delta) {
-        renderBackground(context, mouseX, mouseY, delta);
-        super.render(context, mouseX, mouseY, delta);
-        drawMouseoverTooltip(context, mouseX, mouseY);
+    public void extractBackground(final @NonNull GuiGraphicsExtractor graphics, final int mouseX, final int mouseY, final float a) {
+        super.extractBackground(graphics, mouseX, mouseY, a);
+        int xo = (this.width - this.imageWidth) / 2;
+        int yo = (this.height - this.imageHeight) / 2;
+        graphics.blit(RenderPipelines.GUI_TEXTURED, GUI_TEXTURE, xo, yo, 0.0F, 0.0F, this.imageWidth, this.imageHeight, 256, 256);
     }
 }

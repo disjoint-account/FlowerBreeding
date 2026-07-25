@@ -3,116 +3,122 @@ package net.flowerbreeding.blockentities.planter;
 import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.util.FBTags;
-import net.minecraft.block.*;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
-import net.minecraft.particle.ParticleTypes;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.sound.SoundCategory;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
-import net.minecraft.util.Hand;
-import net.minecraft.util.ItemScatterer;
-import net.minecraft.util.hit.BlockHitResult;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.util.shape.VoxelShapes;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.Heightmap;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.BaseEntityBlock;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.EntityBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.Shapes;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
+import org.jspecify.annotations.NullMarked;
 
-public class PlanterBlock extends BlockWithEntity implements BlockEntityProvider {
+@NullMarked
+public class PlanterBlock extends BaseEntityBlock implements EntityBlock {
     private static final VoxelShape SHAPE1 =
-            Block.createCuboidShape(2, 0, 2, 14, 7, 14);
+            Block.box(2, 0, 2, 14, 7, 14);
     private static final VoxelShape SHAPE2 =
-            Block.createCuboidShape(2, 7, 2, 4, 9, 14);
+            Block.box(2, 7, 2, 4, 9, 14);
     private static final VoxelShape SHAPE3 =
-            Block.createCuboidShape(12, 7, 2, 14, 9, 14);
+            Block.box(12, 7, 2, 14, 9, 14);
     private static final VoxelShape SHAPE4 =
-            Block.createCuboidShape(4, 7, 2, 12, 9, 4);
+            Block.box(4, 7, 2, 12, 9, 4);
     private static final VoxelShape SHAPE5 =
-            Block.createCuboidShape(4, 7, 12, 12, 9, 14);
+            Block.box(4, 7, 12, 12, 9, 14);
     private static final VoxelShape SHAPE =
-            VoxelShapes.union(SHAPE1, SHAPE2, SHAPE3, SHAPE4, SHAPE5);
-    public static final MapCodec<PlanterBlock> CODEC = PlanterBlock.createCodec(PlanterBlock::new);
+            Shapes.or(SHAPE1, SHAPE2, SHAPE3, SHAPE4, SHAPE5);
+    public static final MapCodec<PlanterBlock> CODEC = PlanterBlock.simpleCodec(PlanterBlock::new);
 
-    public PlanterBlock(Settings settings) {
+    public PlanterBlock(Properties settings) {
         super(settings);
     }
 
     @Override
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
     @Override
-    protected MapCodec<? extends BlockWithEntity> getCodec() {
+    protected MapCodec<? extends BaseEntityBlock> codec() {
         return CODEC;
     }
 
     @Override
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        BlockState blockState = world.getBlockState(pos.up());
-        BlockState blockState1 = world.getBlockState(pos.up(2));
-        return !blockState.isSolidBlock(world, pos) && !blockState1.isSolidBlock(world, pos);
+    protected boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+        BlockState blockState = world.getBlockState(pos.above());
+        BlockState blockState1 = world.getBlockState(pos.above(2));
+        return !blockState.isRedstoneConductor(world, pos) && !blockState1.isRedstoneConductor(world, pos);
     }
 
     @Nullable
     @Override
-    public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {
+    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
         return new PlanterBlockEntity(pos, state);
     }
 
     @Override
-    protected void onStateReplaced(BlockState state, ServerWorld world, BlockPos pos, boolean moved) {
+    protected void affectNeighborsAfterRemoval(BlockState state, ServerLevel world, BlockPos pos, boolean moved) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof PlanterBlockEntity) {
-                ItemScatterer.spawn(world, pos, ((PlanterBlockEntity) blockEntity));
-                world.updateComparators(pos, this);
+                Containers.dropContents(world, pos, ((PlanterBlockEntity) blockEntity));
+                world.updateNeighbourForOutputSignal(pos, this);
             }
-            super.onStateReplaced(state, world, pos, moved);
+            super.affectNeighborsAfterRemoval(state, world, pos, moved);
     }
 
     @Override
-    protected ActionResult onUseWithItem(ItemStack stack, BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level world, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (world.getBlockEntity(pos) instanceof PlanterBlockEntity entity) {
-            if ((stack.isIn(ConventionalItemTags.TALL_FLOWERS) || stack.isIn(FBTags.Items.PLANTER_PLANTS)) && entity.isEmpty() && !player.isSneaking()) {
-                entity.setStack(0, stack);
-                if (!player.isInCreativeMode()) {
-                    stack.decrement(1);
+            if ((stack.is(ConventionalItemTags.TALL_FLOWERS) || stack.is(FBTags.Items.PLANTER_PLANTS)) && entity.isEmpty() && !player.isShiftKeyDown()) {
+                entity.setItem(0, stack);
+                if (!player.hasInfiniteMaterials()) {
+                    stack.shrink(1);
                 }
-                return ActionResult.SUCCESS;
+                return InteractionResult.SUCCESS;
             }
             else {
-                if (!entity.isEmpty() && !player.isSneaking()) {
-                    if (!player.isInCreativeMode()) {
-                        player.getInventory().offerOrDrop(entity.getStack(0));
+                if (!entity.isEmpty() && !player.isShiftKeyDown()) {
+                    if (!player.hasInfiniteMaterials()) {
+                        player.getInventory().placeItemBackInInventory(entity.getItem(0));
                     }
-                    entity.removeStack(0);
-                    return ActionResult.SUCCESS;
+                    entity.removeItemNoUpdate(0);
+                    return InteractionResult.SUCCESS;
                 }
             }
         }
-        return ActionResult.PASS_TO_DEFAULT_BLOCK_ACTION;
+        return InteractionResult.TRY_WITH_EMPTY_HAND;
     }
 
-    public void randomDisplayTick(BlockState state, World world, BlockPos pos, Random random) {
+    public void animateTick(BlockState state, Level world, BlockPos pos, RandomSource random) {
         if (world.getBlockEntity(pos) instanceof PlanterBlockEntity entity) {
-            if (random.nextInt(30) == 0 && world.getEnvironmentAttributes().getAttributeValue(EnvironmentAttributes.FIREFLY_BUSH_SOUNDS_AUDIO, pos) && world.getTopY(Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, pos) <= pos.getY() && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
-                world.playSoundAtBlockCenterClient(pos, SoundEvents.BLOCK_FIREFLY_BUSH_IDLE, SoundCategory.AMBIENT, 1.0F, 1.0F, false);
+            if (random.nextInt(30) == 0 && world.environmentAttributes().getValue(EnvironmentAttributes.FIREFLY_BUSH_SOUNDS, pos) && world.getHeight(Heightmap.Types.MOTION_BLOCKING_NO_LEAVES, pos) <= pos.getY() && entity.getItem(0).is(Items.FIREFLY_BUSH)) {
+                world.playLocalSound(pos, SoundEvents.FIREFLY_BUSH_IDLE, SoundSource.AMBIENT, 1.0F, 1.0F, false);
             }
 
-            if (world.getLightLevel(pos) <= 13 && random.nextDouble() <= 0.7 && entity.getStack(0).isOf(Items.FIREFLY_BUSH)) {
+            if (world.getMaxLocalRawBrightness(pos) <= 13 && random.nextDouble() <= 0.7 && entity.getItem(0).is(Items.FIREFLY_BUSH)) {
                 double d = (double) pos.getX() + random.nextDouble() * (double) 10.0F - (double) 5.0F;
                 double e = (double) pos.getY() + random.nextDouble() * (double) 5.0F;
                 double f = (double) pos.getZ() + random.nextDouble() * (double) 10.0F - (double) 5.0F;
-                world.addParticleClient(ParticleTypes.FIREFLY, d, e, f, 0.0F, 0.0F, 0.0F);
+                world.addParticle(ParticleTypes.FIREFLY, d, e, f, 0.0F, 0.0F, 0.0F);
             }
         }
     }

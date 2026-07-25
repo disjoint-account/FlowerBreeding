@@ -1,14 +1,14 @@
 package net.flowerbreeding.config;
 
 import net.flowerbreeding.FlowerBreeding;
-import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.client.gui.tooltip.Tooltip;
-import net.minecraft.client.gui.widget.ButtonWidget;
-import net.minecraft.client.gui.widget.GridWidget;
-import net.minecraft.client.gui.widget.TextWidget;
-import net.minecraft.client.gui.widget.ThreePartsLayoutWidget;
-import net.minecraft.screen.ScreenTexts;
-import net.minecraft.text.Text;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.gui.components.Tooltip;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.layouts.GridLayout;
+import net.minecraft.client.gui.components.StringWidget;
+import net.minecraft.client.gui.layouts.HeaderAndFooterLayout;
+import net.minecraft.network.chat.CommonComponents;
+import net.minecraft.network.chat.Component;
 
 public class FBConfigScreen extends Screen {
 
@@ -20,52 +20,43 @@ public class FBConfigScreen extends Screen {
     private boolean modified = false;
 
     protected FBConfigScreen(Screen parent) {
-        super(Text.literal("flowerbreeding.options"));
+        super(Component.literal("flowerbreeding.options"));
         this.parent = parent;
     }
 
     @Override
     protected void init() {
-        ThreePartsLayoutWidget layout = new ThreePartsLayoutWidget(this);
-        layout.addHeader(new TextWidget(Text.translatable("flowerbreeding.text.optionsTitle"), this.textRenderer));
-        GridWidget grid = new GridWidget();
-        grid.setRowSpacing(5);
-        GridWidget.Adder adder = grid.createAdder(1);
-        adder.add(createToggleButton("fastRecolouring", FlowerBreeding.CONFIG.fastRecolouring, b -> {
-            setToggleButtonMessage(b, "fastRecolouring", FlowerBreeding.CONFIG.fastRecolouring ^= true);
-        }));
-        adder.add(createToggleButton("craftableBotanyTables", FlowerBreeding.CONFIG.craftableBotanyTables, b -> {
-            setToggleButtonMessage(b, "craftableBotanyTables", FlowerBreeding.CONFIG.craftableBotanyTables ^= true);
-        }));
-        adder.add(createToggleButton("craftableVialsAndJars", FlowerBreeding.CONFIG.craftableVialsAndJars, b -> {
-            setToggleButtonMessage(b, "craftableVialsAndJars", FlowerBreeding.CONFIG.craftableVialsAndJars ^= true);
-        }));
-        adder.add(createToggleButton("craftableTrowels", FlowerBreeding.CONFIG.craftableTrowels, b -> {
+        HeaderAndFooterLayout layout = new HeaderAndFooterLayout(this);
+        layout.addToHeader(new StringWidget(Component.translatable("flowerbreeding.text.optionsTitle"), this.font));
+        GridLayout grid = new GridLayout();
+        grid.rowSpacing(5);
+        GridLayout.RowHelper adder = grid.createRowHelper(1);
+        adder.addChild(createToggleButton("fastRecolouring", FlowerBreeding.CONFIG.fastRecolouring, b -> setToggleButtonMessage(b, "fastRecolouring", FlowerBreeding.CONFIG.fastRecolouring ^= true)));
+        adder.addChild(createToggleButton("craftableBotanyTables", FlowerBreeding.CONFIG.craftableBotanyTables, b -> setToggleButtonMessage(b, "craftableBotanyTables", FlowerBreeding.CONFIG.craftableBotanyTables ^= true)));
+        adder.addChild(createToggleButton("craftableVialsAndJars", FlowerBreeding.CONFIG.craftableVialsAndJars, b -> setToggleButtonMessage(b, "craftableVialsAndJars", FlowerBreeding.CONFIG.craftableVialsAndJars ^= true)));
+        adder.addChild(createToggleButton("craftableTrowels", FlowerBreeding.CONFIG.craftableTrowels, b -> {
             setToggleButtonMessage(b, "craftableTrowels", FlowerBreeding.CONFIG.craftableTrowels ^= true);
         }));
-        layout.addBody(grid);
-        layout.addFooter(ButtonWidget.builder(ScreenTexts.DONE, b -> {
-            close();
-        }).build());
-        layout.forEachChild(this::addDrawableChild);
-        layout.refreshPositions();
+        layout.addToContents(grid);
+        layout.addToFooter(Button.builder(CommonComponents.GUI_DONE, b -> onClose()).build());
+        layout.visitWidgets(this::addRenderableWidget);
+        layout.arrangeElements();
     }
 
     @Override
-    public void close() {
+    public void onClose() {
         if (modified) {
             FlowerBreeding.CONFIG.write();
         }
-        assert this.client != null;
-        this.client.setScreen(this.parent);
+        this.minecraft.setScreenAndShow(this.parent);
     }
 
-    private ButtonWidget createToggleButton(String key, boolean value, ButtonWidget.PressAction action) {
-        return ButtonWidget.builder(ScreenTexts.composeToggleText(Text.translatable("flowerbreeding.option." + key), value), action).tooltip(Tooltip.of(Text.translatable("flowerbreeding.tooltip." + key))).size(BUTTON_WIDTH, BUTTON_HEIGHT).build();
+    private Button createToggleButton(String key, boolean value, Button.OnPress action) {
+        return Button.builder(CommonComponents.optionStatus(Component.translatable("flowerbreeding.option." + key), value), action).tooltip(Tooltip.create(Component.translatable("flowerbreeding.tooltip." + key))).size(BUTTON_WIDTH, BUTTON_HEIGHT).build();
     }
 
-    private void setToggleButtonMessage(ButtonWidget button, String key, boolean value) {
-        button.setMessage(ScreenTexts.composeToggleText(Text.translatable("flowerbreeding.option." + key), value));
+    private void setToggleButtonMessage(Button button, String key, boolean value) {
+        button.setMessage(CommonComponents.optionStatus(Component.translatable("flowerbreeding.option." + key), value));
         modified = true;
     }
 

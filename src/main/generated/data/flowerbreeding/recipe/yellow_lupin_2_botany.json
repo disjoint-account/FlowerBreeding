@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:yellow_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:orchid_pollen_vial",
+    "flowerbreeding:poppy_pollen_vial",
+    "flowerbreeding:yellow_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:yellow_lupin"
-  },
-  "vial1": "flowerbreeding:orchid_pollen_vial",
-  "vial2": "flowerbreeding:poppy_pollen_vial"
+  }
 }

@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:orange_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:glow_vine_pollen_vial",
+    "flowerbreeding:lily_pollen_vial",
+    "flowerbreeding:orange_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:orange_jasmine"
-  },
-  "vial1": "flowerbreeding:glow_vine_pollen_vial",
-  "vial2": "flowerbreeding:lily_pollen_vial"
+  }
 }

@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:orange_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:peony_pollen_vial",
+    "flowerbreeding:peony_pollen_vial",
+    "flowerbreeding:orange_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:orange_peony"
-  },
-  "vial1": "flowerbreeding:peony_pollen_vial",
-  "vial2": "flowerbreeding:peony_pollen_vial"
+  }
 }

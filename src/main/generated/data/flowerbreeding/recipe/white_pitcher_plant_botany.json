@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:white_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:pitcher_plant_pollen_vial",
+    "flowerbreeding:pitcher_plant_pollen_vial",
+    "flowerbreeding:white_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:white_pitcher_plant"
-  },
-  "vial1": "flowerbreeding:pitcher_plant_pollen_vial",
-  "vial2": "flowerbreeding:pitcher_plant_pollen_vial"
+  }
 }

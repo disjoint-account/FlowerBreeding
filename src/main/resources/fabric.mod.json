@@ -27,6 +27,12 @@
 		],
 		"modmenu": [
 			"net.flowerbreeding.config.ModMenuIntegration"
+		],
+		"rei_common": [
+			"net.flowerbreeding.compat.FBREICommon"
+		],
+		"rei_client": [
+			"net.flowerbreeding.compat.FBREIClient"
 		]
 	},
 	"mixins": [

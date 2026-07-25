@@ -1,12 +1,13 @@
 package net.flowerbreeding.botanytable;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.recipe.input.RecipeInput;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.crafting.RecipeInput;
+import org.jspecify.annotations.NonNull;
 
 public record BotanyTableRecipeInput(ItemStack vial1, ItemStack vial2, ItemStack jar) implements RecipeInput {
 
     @Override
-    public ItemStack getStackInSlot(int slot) {
+    public @NonNull ItemStack getItem(int slot) {
         return switch (slot) {
             case 0 -> this.vial1;
             case 1 -> this.vial2;

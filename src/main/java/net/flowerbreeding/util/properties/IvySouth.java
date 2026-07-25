@@ -1,8 +1,9 @@
 package net.flowerbreeding.util.properties;
 
-import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.StringRepresentable;
+import org.jspecify.annotations.NonNull;
 
-public enum IvySouth implements StringIdentifiable {
+public enum IvySouth implements StringRepresentable {
     NONE("none"),
     REGULAR("regular"),
     TIP("tip");
@@ -21,7 +22,7 @@ public enum IvySouth implements StringIdentifiable {
         return this.name;
     }
 
-    public String asString() {
+    public @NonNull String getSerializedName() {
         return this.name;
     }
 }

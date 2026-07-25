@@ -2,88 +2,93 @@ package net.flowerbreeding;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.block.*;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BlockTags;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.random.Random;
-import net.minecraft.util.shape.VoxelShape;
-import net.minecraft.world.BlockView;
-import net.minecraft.world.World;
-import net.minecraft.world.WorldView;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.tick.ScheduledTickView;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.BonemealableBlock;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.ScheduledTickAccess;
+import org.jspecify.annotations.NullMarked;
 
-public class SageBlock extends Block implements Fertilizable {
+@NullMarked
+public class SageBlock extends Block implements BonemealableBlock {
     public static final MapCodec<SageBlock> CODEC = RecordCodecBuilder.mapCodec(
             instance -> instance.group(
-                            RegistryKey.createCodec(RegistryKeys.CONFIGURED_FEATURE).fieldOf("feature").forGetter(block -> block.feature), createSettingsCodec()
+                            ResourceKey.codec(Registries.CONFIGURED_FEATURE).fieldOf("feature").forGetter(block -> block.feature), propertiesCodec()
                     )
                     .apply(instance, SageBlock::new));
-    private final RegistryKey<ConfiguredFeature<?, ?>> feature;
-    public static final VoxelShape SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
+    private final ResourceKey<ConfiguredFeature<?, ?>> feature;
+    public static final VoxelShape SHAPE = Block.box(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
 
     @Override
-    public MapCodec<SageBlock> getCodec() {
+    public MapCodec<SageBlock> codec() {
         return CODEC;
     }
 
-    public SageBlock(RegistryKey<ConfiguredFeature<?, ?>> feature, Settings settings) {
+    public SageBlock(ResourceKey<ConfiguredFeature<?, ?>> feature, Properties settings) {
         super(settings);
         this.feature = feature;
     }
 
-    protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+    protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
     }
 
-    protected boolean isTransparent(BlockState state) {
+    protected boolean propagatesSkylightDown(BlockState state) {
         return true;
     }
 
-    protected boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
-        BlockPos pos1 = pos.offset(Direction.DOWN);
+    protected boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
+        BlockPos pos1 = pos.relative(Direction.DOWN);
         BlockState state1 = world.getBlockState(pos1);
-        return state1.isIn(BlockTags.DIRT);
+        return state1.is(BlockTags.SUBSTRATE_OVERWORLD);
     }
 
-    protected BlockState getStateForNeighborUpdate(BlockState state, WorldView world, ScheduledTickView tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, Random random) {
-        if (!canPlaceAt(state, world, pos)) {
-            tickView.scheduleBlockTick(pos, this, 1);
+    protected BlockState updateShape(BlockState state, LevelReader world, ScheduledTickAccess tickView, BlockPos pos, Direction direction, BlockPos neighborPos, BlockState neighborState, RandomSource random) {
+        if (!canSurvive(state, world, pos)) {
+            tickView.scheduleTick(pos, this, 1);
         }
-        return super.getStateForNeighborUpdate(state, world, tickView, pos, direction, neighborPos, neighborState, random);
+        return super.updateShape(state, world, tickView, pos, direction, neighborPos, neighborState, random);
     }
 
-    protected void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
-        if (!canPlaceAt(state, world, pos)) {
-            world.breakBlock(pos, true);
+    protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
+        if (!canSurvive(state, world, pos)) {
+            world.destroyBlock(pos, true);
         }
     }
 
     @Override
-    public boolean isFertilizable(WorldView world, BlockPos pos, BlockState state) {
+    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state) {
         return true;
     }
 
     @Override
-    public boolean canGrow(World world, Random random, BlockPos pos, BlockState state) {
-        return isFertilizable(world, pos, state);
+    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state) {
+        return isValidBonemealTarget(world, pos, state);
     }
 
     @Override
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        world.getRegistryManager()
-                .getOptional(RegistryKeys.CONFIGURED_FEATURE)
-                .flatMap(registry -> registry.getOptional(this.feature))
-                .ifPresent(entry -> entry.value().generate(world, world.getChunkManager().getChunkGenerator(), random, pos.up()));
+    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state) {
+        world.registryAccess()
+                .lookup(Registries.CONFIGURED_FEATURE)
+                .flatMap(registry -> registry.get(this.feature))
+                .ifPresent(entry -> entry.value().place(world, world.getChunkSource().getGenerator(), random, pos.above()));
     }
 
     @Override
-    public Fertilizable.FertilizableType getFertilizableType() {
-        return FertilizableType.NEIGHBOR_SPREADER;
+    public BonemealableBlock.Type getType() {
+        return Type.NEIGHBOR_SPREADER;
     }
 }
 

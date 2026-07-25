@@ -2,10 +2,10 @@ package net.flowerbreeding.blockentities.flowerbed;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.render.block.MovingBlockRenderState;
-import net.minecraft.client.render.block.entity.state.BlockEntityRenderState;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.client.renderer.block.MovingBlockRenderState;
+import net.minecraft.client.renderer.blockentity.state.BlockEntityRenderState;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.core.BlockPos;
 
 @Environment(EnvType.CLIENT)
 public class FlowerbedBlockEntityRenderState extends BlockEntityRenderState {

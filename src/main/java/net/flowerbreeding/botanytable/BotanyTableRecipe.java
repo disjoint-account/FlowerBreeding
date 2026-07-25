@@ -2,128 +2,100 @@ package net.flowerbreeding.botanytable;
 
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBRecipes;
-import net.minecraft.item.ItemStack;
-import net.minecraft.network.RegistryByteBuf;
-import net.minecraft.network.codec.PacketCodec;
-import net.minecraft.recipe.*;
-import net.minecraft.recipe.book.RecipeBookCategory;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.world.World;
+import net.minecraft.core.NonNullList;
+import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.codec.ByteBufCodecs;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
+import net.minecraft.world.item.crafting.*;
+import net.minecraft.world.level.Level;
+import org.jspecify.annotations.NonNull;
 
-import java.util.stream.Stream;
+import java.util.List;
+public record BotanyTableRecipe(List<Ingredient> inputItems, ItemStackTemplate output) implements Recipe<BotanyTableRecipeInput> {
 
-public class BotanyTableRecipe implements Recipe<BotanyTableRecipeInput> {
+    public static MapCodec<BotanyTableRecipe> CODEC = RecordCodecBuilder.mapCodec(inst -> inst.group(
+            Ingredient.CODEC.listOf().fieldOf("ingredients").forGetter(BotanyTableRecipe::inputItems),
+            ItemStackTemplate.CODEC.fieldOf("result").forGetter(BotanyTableRecipe::output)
+    ).apply(inst, BotanyTableRecipe::new));
 
-    private final Ingredient vial1;
-    private final Ingredient vial2;
-    private final Ingredient jar;
-    public final ItemStack result;
+    public static StreamCodec<RegistryFriendlyByteBuf, BotanyTableRecipe> STREAM_CODEC =
+            StreamCodec.composite(
+                    Ingredient.CONTENTS_STREAM_CODEC.apply(ByteBufCodecs.list()),
+                    BotanyTableRecipe::inputItems,
 
-    public BotanyTableRecipe(Ingredient vial1, Ingredient vial2, Ingredient jar, ItemStack result) {
-        this.vial1 = vial1;
-        this.vial2 = vial2;
-        this.jar = jar;
-        this.result = result;
-    }
+                    ItemStackTemplate.STREAM_CODEC,
+                    BotanyTableRecipe::output,
 
-    public boolean fits(int width, int height) {
-        return width * height >= 2;
-    }
+                    BotanyTableRecipe::new);
 
-    public DefaultedList<Ingredient> getIngredients() {
-        DefaultedList<Ingredient> ingredients = DefaultedList.ofSize(4);
-        ingredients.add(vial1);
-        ingredients.add(vial2);
-        ingredients.add(jar);
-        return ingredients;
-    }
-
-    public ItemStack getResult(RegistryWrapper.WrapperLookup wrapperLookup) {
-        return this.result;
-    }
-
-    public ItemStack createIcon() {
-        return new ItemStack(FBBlocks.BOTANY_TABLE);
+    public NonNullList<Ingredient> getIngredients() {
+        NonNullList<Ingredient> list = NonNullList.create();
+        list.addAll(inputItems);
+        return list;
     }
 
     @Override
-    public boolean isIgnoredInRecipeBook() {
+    public boolean matches(BotanyTableRecipeInput pInput, Level pLevel) {
+        if(pLevel.isClientSide()) {
+            return false;
+        }
+
+        for (int i = 0; i < inputItems.size(); i++) {
+            if(!inputItems.get(i).test(pInput.getItem(i))) {
+                return false;
+            }
+        }
+
         return true;
     }
 
     @Override
-    public RecipeSerializer<? extends Recipe<BotanyTableRecipeInput>> getSerializer() {
-        return FBRecipes.BOTANY_TABLE_SERIALIZER;
-    }
-
-    @Override
-    public RecipeType<? extends Recipe<BotanyTableRecipeInput>> getType() {
-        return FBRecipes.BOTANY_TABLE_TYPE;
-    }
-
-    @Override
-    public IngredientPlacement getIngredientPlacement() {
-        return null;
-    }
-
-    @Override
-    public RecipeBookCategory getRecipeBookCategory() {
-        return null;
+    public boolean isSpecial() {
+        return true;
     }
 
     // Used by ClientRecipeBook
     public boolean isEmpty() {
-        return Stream.of(this.vial1, this.vial2, this.jar).noneMatch(Ingredient::isEmpty);
-    }
-
-    public static class Serializer implements RecipeSerializer<BotanyTableRecipe> {
-
-        public static final MapCodec<BotanyTableRecipe> CODEC = RecordCodecBuilder
-                .mapCodec(instance -> instance.group((Ingredient.CODEC.fieldOf("vial1")).forGetter(recipe -> recipe.vial1),
-                                (Ingredient.CODEC.fieldOf("vial2")).forGetter(recipe -> recipe.vial2),
-                                (Ingredient.CODEC.fieldOf("jar")).forGetter(recipe -> recipe.jar),
-                                (ItemStack.VALIDATED_CODEC.fieldOf("result")).forGetter(recipe -> recipe.result))
-                                .apply(instance, BotanyTableRecipe::new));
-
-        public static final PacketCodec<RegistryByteBuf, BotanyTableRecipe> PACKET_CODEC = PacketCodec.ofStatic(Serializer::write, Serializer::read);
-
-        @Override
-        public MapCodec<BotanyTableRecipe> codec() {
-            return CODEC;
-        }
-
-        @Override
-        public PacketCodec<RegistryByteBuf, BotanyTableRecipe> packetCodec() {
-            return PACKET_CODEC;
-        }
-
-        private static BotanyTableRecipe read(RegistryByteBuf buf) {
-            Ingredient vial1Ingredient = Ingredient.PACKET_CODEC.decode(buf);
-            Ingredient vial2Ingredient = Ingredient.PACKET_CODEC.decode(buf);
-            Ingredient jarIngredient = Ingredient.PACKET_CODEC.decode(buf);
-            ItemStack itemStack = ItemStack.PACKET_CODEC.decode(buf);
-            return new BotanyTableRecipe(vial1Ingredient, vial2Ingredient, jarIngredient, itemStack);
-        }
-
-        private static void write(RegistryByteBuf buf, BotanyTableRecipe botanyTableRecipe) {
-            Ingredient.PACKET_CODEC.encode(buf, botanyTableRecipe.vial1);
-            Ingredient.PACKET_CODEC.encode(buf, botanyTableRecipe.vial2);
-            Ingredient.PACKET_CODEC.encode(buf, botanyTableRecipe.jar);
-            ItemStack.PACKET_CODEC.encode(buf, botanyTableRecipe.result);
-        }
+        return inputItems.stream().noneMatch(Ingredient::isEmpty);
     }
 
     @Override
-    public boolean matches(BotanyTableRecipeInput botanyTableRecipeInput, World world) {
-        return this.vial1.test(botanyTableRecipeInput.vial1()) && this.vial2.test(botanyTableRecipeInput.vial2()) && this.jar.test(botanyTableRecipeInput.jar());
+    public @NonNull ItemStack assemble(BotanyTableRecipeInput pInput) {
+        return output.create().copy();
     }
 
     @Override
-    public ItemStack craft(BotanyTableRecipeInput botanyTableRecipeInput, RegistryWrapper.WrapperLookup wrapperLookup) {
-        return this.result.copy();
+    public boolean showNotification() {
+        return true;
+    }
+
+    @Override
+    public @NonNull String group() {
+        return "Growing";
+    }
+
+
+    @Override
+    public @NonNull RecipeSerializer<BotanyTableRecipe> getSerializer() {
+        return FBRecipes.BOTANY_TABLE_SERIALIZER;
+    }
+
+    @Override
+    public @NonNull RecipeType<? extends Recipe<BotanyTableRecipeInput>> getType() {
+        return FBRecipes.BOTANY_TABLE_TYPE;
+    }
+
+    @Override
+    public @NonNull PlacementInfo placementInfo() {
+        return PlacementInfo.NOT_PLACEABLE;
+    }
+
+    @Override
+    public @NonNull RecipeBookCategory recipeBookCategory() {
+        return RecipeBookCategories.CRAFTING_MISC;
     }
 
 }

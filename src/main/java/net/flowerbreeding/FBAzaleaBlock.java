@@ -1,21 +1,23 @@
 package net.flowerbreeding;
 
-import net.minecraft.block.AzaleaBlock;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.SaplingGenerator;
-import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.math.random.Random;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.level.block.AzaleaBlock;
+import net.minecraft.world.level.block.grower.TreeGrower;
+import net.minecraft.world.level.block.state.BlockState;
+import org.jspecify.annotations.NullMarked;
 
+@NullMarked
 public class FBAzaleaBlock extends AzaleaBlock {
-    private final SaplingGenerator saplingGenerator;
-    public FBAzaleaBlock(SaplingGenerator saplingGenerator, Settings settings) {
+    private final TreeGrower saplingGenerator;
+    public FBAzaleaBlock(TreeGrower saplingGenerator, Properties settings) {
         super(settings);
         this.saplingGenerator = saplingGenerator;
     }
 
     @Override
-    public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        saplingGenerator.generate(world, world.getChunkManager().getChunkGenerator(), pos, state, random);
+    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state) {
+        saplingGenerator.growTree(world, world.getChunkSource().getGenerator(), pos, state, random);
     }
 }

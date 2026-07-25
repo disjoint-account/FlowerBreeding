@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:black_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:cactus_flower_pollen_vial",
+    "flowerbreeding:cactus_flower_pollen_vial",
+    "flowerbreeding:black_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:black_cactus_flower"
-  },
-  "vial1": "flowerbreeding:cactus_flower_pollen_vial",
-  "vial2": "flowerbreeding:cactus_flower_pollen_vial"
+  }
 }

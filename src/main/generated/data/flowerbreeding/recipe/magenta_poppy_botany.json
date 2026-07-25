@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:magenta_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:poppy_pollen_vial",
+    "flowerbreeding:poppy_pollen_vial",
+    "flowerbreeding:magenta_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:magenta_poppy"
-  },
-  "vial1": "flowerbreeding:poppy_pollen_vial",
-  "vial2": "flowerbreeding:poppy_pollen_vial"
+  }
 }

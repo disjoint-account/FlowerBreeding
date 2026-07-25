@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:cyan_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:wildflower_pollen_vial",
+    "flowerbreeding:wildflower_pollen_vial",
+    "flowerbreeding:cyan_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:cyan_wildflowers"
-  },
-  "vial1": "flowerbreeding:wildflower_pollen_vial",
-  "vial2": "flowerbreeding:wildflower_pollen_vial"
+  }
 }

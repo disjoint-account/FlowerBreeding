@@ -1,31 +1,28 @@
 package net.flowerbreeding.blockentities.flowerbed;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.flowerbreeding.FBBlockEntities;
-import net.minecraft.block.BlockState;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.component.ComponentMap;
-import net.minecraft.component.ComponentsAccess;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.ContainerComponent;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.inventory.Inventories;
-import net.minecraft.inventory.Inventory;
-import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NbtCompound;
-import net.minecraft.network.packet.s2c.play.BlockEntityUpdateS2CPacket;
-import net.minecraft.registry.RegistryWrapper;
-import net.minecraft.storage.ReadView;
-import net.minecraft.storage.WriteView;
-import net.minecraft.util.collection.DefaultedList;
-import net.minecraft.util.math.BlockPos;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.core.NonNullList;
+import net.minecraft.core.component.DataComponentGetter;
+import net.minecraft.core.component.DataComponentMap;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
+import net.minecraft.world.Container;
+import net.minecraft.world.ContainerHelper;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.ItemContainerContents;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
+import org.jspecify.annotations.NullMarked;
 
-public class FlowerbedBlockEntity extends BlockEntity implements Inventory {
-    private int anInt;
-    private String aString;
-    private Extra extra;
-    private final DefaultedList<ItemStack> inventory = DefaultedList.ofSize(4, ItemStack.EMPTY);
+@NullMarked
+public class FlowerbedBlockEntity extends BlockEntity implements Container {
+    private final NonNullList<ItemStack> inventory = NonNullList.withSize(4, ItemStack.EMPTY);
 
     public FlowerbedBlockEntity(BlockPos pos, BlockState state) {
         super(FBBlockEntities.FLOWERBED_BE, pos, state);
@@ -33,14 +30,14 @@ public class FlowerbedBlockEntity extends BlockEntity implements Inventory {
 
 
     @Override
-    public int size() {
+    public int getContainerSize() {
         return inventory.size();
     }
 
     @Override
     public boolean isEmpty() {
-        for(int i = 0; i < size(); i++) {
-            ItemStack stack = getStack(i);
+        for(int i = 0; i < getContainerSize(); i++) {
+            ItemStack stack = getItem(i);
             if(!stack.isEmpty()) {
                 return false;
             }
@@ -50,82 +47,78 @@ public class FlowerbedBlockEntity extends BlockEntity implements Inventory {
     }
 
     public boolean isFull() {
-        return !this.getStack(0).isEmpty() && !this.getStack(1).isEmpty() && !this.getStack(2).isEmpty() && !this.getStack(3).isEmpty();
+        return !this.getItem(0).isEmpty() && !this.getItem(1).isEmpty() && !this.getItem(2).isEmpty() && !this.getItem(3).isEmpty();
     }
 
-    public DefaultedList<ItemStack> getInventory() {
+    public NonNullList<ItemStack> getInventory() {
         return this.inventory;
     }
 
     @Override
-    public ItemStack getStack(int slot) {
-        markDirty();
+    public ItemStack getItem(int slot) {
+        setChanged();
         return inventory.get(slot);
     }
 
     @Override
-    public ItemStack removeStack(int slot, int amount) {
-        markDirty();
-        return Inventories.removeStack(inventory, slot);
+    public ItemStack removeItem(int slot, int amount) {
+        setChanged();
+        return ContainerHelper.takeItem(inventory, slot);
     }
 
     @Override
-    public ItemStack removeStack(int slot) {
-        markDirty();
-        return Inventories.removeStack(inventory, slot);
+    public ItemStack removeItemNoUpdate(int slot) {
+        setChanged();
+        return ContainerHelper.takeItem(inventory, slot);
     }
 
     @Override
-    public void setStack(int slot, ItemStack stack) {
-        markDirty();
+    public void setItem(int slot, ItemStack stack) {
+        setChanged();
         inventory.set(slot, stack.copyWithCount(1));
     }
 
     @Override
-    public boolean canPlayerUse(PlayerEntity player) {
-        return Inventory.canPlayerUse(this, player);
+    public boolean stillValid(Player player) {
+        return Container.stillValidBlockEntity(this, player);
     }
 
     @Override
-    public void clear() {
+    public void clearContent() {
         inventory.clear();
     }
 
     @Override
-    protected void writeData(WriteView view) {
-        super.writeData(view);
-        Inventories.writeData(view, inventory);
+    protected void saveAdditional(ValueOutput view) {
+        super.saveAdditional(view);
+        ContainerHelper.saveAllItems(view, inventory);
     }
 
     @Override
-    protected void readData(ReadView view) {
-        super.readData(view);
-        Inventories.readData(view, inventory);
+    protected void loadAdditional(ValueInput view) {
+        super.loadAdditional(view);
+        ContainerHelper.loadAllItems(view, inventory);
     }
 
     @Override
-    public BlockEntityUpdateS2CPacket toUpdatePacket() {
-        return BlockEntityUpdateS2CPacket.create(this);
+    public ClientboundBlockEntityDataPacket getUpdatePacket() {
+        return ClientboundBlockEntityDataPacket.create(this);
     }
 
     @Override
-    public NbtCompound toInitialChunkDataNbt(RegistryWrapper.WrapperLookup registries) {
-        return createNbt(registries);
+    public CompoundTag getUpdateTag(HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
     }
 
     @Override
-    protected void readComponents(ComponentsAccess components) {
-        super.readComponents(components);
-        components.getOrDefault(DataComponentTypes.CONTAINER, ContainerComponent.DEFAULT).copyTo(this.getInventory());
+    protected void applyImplicitComponents(DataComponentGetter components) {
+        super.applyImplicitComponents(components);
+        components.getOrDefault(DataComponents.CONTAINER, ItemContainerContents.EMPTY).copyInto(this.getInventory());
     }
 
     @Override
-    protected void addComponents(ComponentMap.Builder builder) {
-        super.addComponents(builder);
-        builder.add(DataComponentTypes.CONTAINER, ContainerComponent.fromStacks(this.getInventory()));
-    }
-
-    record Extra(int i, int j) {
-        public static final Codec<Extra> CODEC = RecordCodecBuilder.create(instance -> instance.group(Codec.INT.fieldOf("i").forGetter(extra -> extra.i), Codec.INT.fieldOf("j").forGetter(extra -> extra.j)).apply(instance, Extra::new));
+    protected void collectImplicitComponents(DataComponentMap.Builder builder) {
+        super.collectImplicitComponents(builder);
+        builder.set(DataComponents.CONTAINER, ItemContainerContents.fromItems(this.getInventory()));
     }
 }

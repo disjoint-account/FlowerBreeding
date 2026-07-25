@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:magenta_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:lilac_pollen_vial",
+    "flowerbreeding:lilac_pollen_vial",
+    "flowerbreeding:magenta_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:magenta_lilac"
-  },
-  "vial1": "flowerbreeding:lilac_pollen_vial",
-  "vial2": "flowerbreeding:lilac_pollen_vial"
+  }
 }

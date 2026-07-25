@@ -3,8 +3,8 @@ package net.flowerbreeding;
 import net.fabricmc.api.ModInitializer;
 import net.flowerbreeding.config.FBConfig;
 import net.flowerbreeding.config.FBResourceConditions;
+import net.flowerbreeding.util.FBMapDecorators;
 import net.flowerbreeding.villagers.FBVillagers;
-import net.flowerbreeding.villagers.FBVillagerTrades;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +25,7 @@ public class FlowerBreeding implements ModInitializer {
 		FBRecipes.registerRecipes();
 		FBResourceConditions.init();
 		FBVillagers.registerVillagers();
-		FBVillagerTrades.registerTrades();
+		FBMapDecorators.registerMapDecorators();
 		Instance.init();
 	}
 }

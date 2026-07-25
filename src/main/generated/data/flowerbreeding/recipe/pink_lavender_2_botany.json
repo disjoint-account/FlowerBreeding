@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:pink_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:cornflower_pollen_vial",
+    "flowerbreeding:lilac_pollen_vial",
+    "flowerbreeding:pink_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:pink_lavender"
-  },
-  "vial1": "flowerbreeding:cornflower_pollen_vial",
-  "vial2": "flowerbreeding:lilac_pollen_vial"
+  }
 }

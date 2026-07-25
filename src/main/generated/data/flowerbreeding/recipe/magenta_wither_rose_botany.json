@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:magenta_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:wither_rose_pollen_vial",
+    "flowerbreeding:wither_rose_pollen_vial",
+    "flowerbreeding:magenta_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:magenta_wither_rose"
-  },
-  "vial1": "flowerbreeding:wither_rose_pollen_vial",
-  "vial2": "flowerbreeding:wither_rose_pollen_vial"
+  }
 }

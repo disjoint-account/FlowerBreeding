@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:orange_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:azure_bluet_pollen_vial",
+    "flowerbreeding:azure_bluet_pollen_vial",
+    "flowerbreeding:orange_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:orange_azure_bluet"
-  },
-  "vial1": "flowerbreeding:azure_bluet_pollen_vial",
-  "vial2": "flowerbreeding:azure_bluet_pollen_vial"
+  }
 }

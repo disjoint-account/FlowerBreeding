@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:light_blue_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:orchid_pollen_vial",
+    "flowerbreeding:orchid_pollen_vial",
+    "flowerbreeding:light_blue_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "minecraft:blue_orchid"
-  },
-  "vial1": "flowerbreeding:orchid_pollen_vial",
-  "vial2": "flowerbreeding:orchid_pollen_vial"
+  }
 }

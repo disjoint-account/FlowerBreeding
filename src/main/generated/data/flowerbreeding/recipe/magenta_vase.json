@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "group": "vase",
   "key": {
     "#": "minecraft:magenta_terracotta"
@@ -10,7 +9,6 @@
     " # "
   ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:magenta_vase"
   }
 }

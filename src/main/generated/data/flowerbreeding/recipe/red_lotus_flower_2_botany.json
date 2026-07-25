@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:red_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:tulip_pollen_vial",
+    "flowerbreeding:lily_pad_pollen_vial",
+    "flowerbreeding:red_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:red_lotus_flower"
-  },
-  "vial1": "flowerbreeding:tulip_pollen_vial",
-  "vial2": "flowerbreeding:lily_pad_pollen_vial"
+  }
 }

@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:red_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:cornflower_pollen_vial",
+    "flowerbreeding:cornflower_pollen_vial",
+    "flowerbreeding:red_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:red_cornflower"
-  },
-  "vial1": "flowerbreeding:cornflower_pollen_vial",
-  "vial2": "flowerbreeding:cornflower_pollen_vial"
+  }
 }

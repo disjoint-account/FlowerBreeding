@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:black_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:eyeblossom_pollen_vial",
+    "flowerbreeding:eyeblossom_pollen_vial",
+    "flowerbreeding:black_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:open_black_eyeblossom"
-  },
-  "vial1": "flowerbreeding:eyeblossom_pollen_vial",
-  "vial2": "flowerbreeding:eyeblossom_pollen_vial"
+  }
 }

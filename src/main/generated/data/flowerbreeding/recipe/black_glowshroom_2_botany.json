@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:black_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:froglight_pollen_vial",
+    "flowerbreeding:mushroom_pollen_vial",
+    "flowerbreeding:black_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:black_glowshroom"
-  },
-  "vial1": "flowerbreeding:froglight_pollen_vial",
-  "vial2": "flowerbreeding:mushroom_pollen_vial"
+  }
 }

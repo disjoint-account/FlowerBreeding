@@ -1,10 +1,11 @@
 {
   "type": "flowerbreeding:botany",
-  "jar": "flowerbreeding:cyan_pigment_jar",
+  "ingredients": [
+    "flowerbreeding:bush_pollen_vial",
+    "flowerbreeding:lilac_pollen_vial",
+    "flowerbreeding:cyan_pigment_jar"
+  ],
   "result": {
-    "count": 1,
     "id": "flowerbreeding:cyan_hydrangea"
-  },
-  "vial1": "flowerbreeding:bush_pollen_vial",
-  "vial2": "flowerbreeding:lilac_pollen_vial"
+  }
 }

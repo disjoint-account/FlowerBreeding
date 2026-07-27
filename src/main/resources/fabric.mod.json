@@ -9,8 +9,9 @@
 		"steelpandas"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/project/flowerbreeding",
+		"sources": "https://github.com/disjoint-account/FlowerBreeding",
+		"issues": "https://github.com/disjoint-account/FlowerBreeding/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/flowerbreeding/icon.png",

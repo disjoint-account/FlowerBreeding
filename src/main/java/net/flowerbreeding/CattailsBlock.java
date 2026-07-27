@@ -65,7 +65,7 @@ public class CattailsBlock extends Block implements BonemealableBlock, SimpleWat
     protected boolean canSurvive(BlockState state, LevelReader world, BlockPos pos) {
         BlockPos pos1 = pos.relative(Direction.DOWN);
         BlockState state1 = world.getBlockState(pos1);
-        if (state1.is(BlockTags.DIRT) || state1.is(Blocks.SAND)) {
+        if (state1.is(BlockTags.SUBSTRATE_OVERWORLD) || state1.is(Blocks.SAND) || state1.is(Blocks.GRAVEL)) {
             return world.getFluidState(pos).is(FluidTags.WATER) && world.getFluidState(pos).getAmount() == 8;
         }
         return state1.is(FBBlocks.CATTAILS);

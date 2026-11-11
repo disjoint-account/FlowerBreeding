@@ -1,0 +1,11 @@
+{
+  "type": "flowerbreeding:botany",
+  "ingredients": [
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:light_blue_pigment_jar"
+  ],
+  "result": {
+    "id": "flowerbreeding:light_blue_shrub"
+  }
+}

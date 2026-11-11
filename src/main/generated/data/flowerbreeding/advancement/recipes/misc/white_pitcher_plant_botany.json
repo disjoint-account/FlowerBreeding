@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:white_pitcher_plant_botany"
+        "recipes": "flowerbreeding:white_pitcher_plant_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

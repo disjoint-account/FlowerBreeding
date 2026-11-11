@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:pink_phlox_1_botany"
+        "recipes": "flowerbreeding:pink_phlox_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:magenta_lily_botany"
+        "recipes": "flowerbreeding:magenta_lily_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

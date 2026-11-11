@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:planter"
+        "recipes": "flowerbreeding:planter"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

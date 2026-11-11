@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:blue_cactus_flower_botany"
+        "recipes": "flowerbreeding:blue_cactus_flower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

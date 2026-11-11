@@ -6,6 +6,7 @@ import net.flowerbreeding.FBScreenHandlers;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.Container;
 import net.minecraft.world.SimpleContainer;
 import net.minecraft.world.entity.player.Inventory;
@@ -140,8 +141,8 @@ public class BotanyTableScreenHandler extends AbstractContainerMenu {
         for (int i = 0; i < 3; i++) {
             this.decrementStack(i);
         }
-        player.getInventory().placeItemBackInInventory(new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 2));
-        player.getInventory().placeItemBackInInventory(new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1));
+        player.getInventory().placeItemBackInInventory(new ItemStack(FBItems.EMPTY_POLLEN_VIAL, 2), Prediction.SERVER_ONLY);
+        player.getInventory().placeItemBackInInventory(new ItemStack(FBItems.EMPTY_PIGMENT_JAR, 1), Prediction.SERVER_ONLY);
         // this.context.run((world, pos) -> world.syncWorldEvent(WorldEvents.SMITHING_TABLE_USED, (BlockPos)pos, 0));
     }
 

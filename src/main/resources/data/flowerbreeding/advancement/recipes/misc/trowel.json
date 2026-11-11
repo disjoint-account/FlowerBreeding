@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:trowel"
+        "recipes": "flowerbreeding:trowel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

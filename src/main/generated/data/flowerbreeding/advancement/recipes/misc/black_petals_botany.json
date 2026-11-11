@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:black_petals_botany"
+        "recipes": "flowerbreeding:black_petals_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

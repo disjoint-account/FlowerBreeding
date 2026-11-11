@@ -1,8 +1,5 @@
 package net.flowerbreeding.eyeblossoms;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.flowerbreeding.FBBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -30,7 +27,6 @@ import org.jspecify.annotations.NullMarked;
 
 @NullMarked
 public class YellowEyeblossomBlock extends FlowerBlock {
-    public static final MapCodec<YellowEyeblossomBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.BOOL.fieldOf("open").forGetter((block) -> block.state.open), propertiesCodec()).apply(instance, YellowEyeblossomBlock::new));
     private static final int NOTIFY_RANGE_XZ = 3;
     private static final int NOTIFY_RANGE_Y = 2;
     private final YellowEyeblossomBlock.YellowEyeblossomState state;
@@ -38,10 +34,6 @@ public class YellowEyeblossomBlock extends FlowerBlock {
     public YellowEyeblossomBlock(Properties settings, YellowEyeblossomState state) {
         super(state.stewEffect, state.effectLengthInSeconds, settings);
         this.state = state;
-    }
-
-    public MapCodec<? extends YellowEyeblossomBlock> codec() {
-        return CODEC;
     }
 
     public YellowEyeblossomBlock(boolean open, Properties settings) {

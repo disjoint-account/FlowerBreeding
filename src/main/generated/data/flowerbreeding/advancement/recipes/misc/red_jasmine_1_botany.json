@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:red_jasmine_1_botany"
+        "recipes": "flowerbreeding:red_jasmine_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

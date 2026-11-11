@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:yellow_pitcher_plant_botany"
+        "recipes": "flowerbreeding:yellow_pitcher_plant_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

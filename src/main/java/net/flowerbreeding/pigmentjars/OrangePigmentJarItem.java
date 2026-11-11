@@ -4,6 +4,7 @@ import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.player.Player;
@@ -42,16 +43,16 @@ public class OrangePigmentJarItem extends Item {
             ItemStack itemStack2 = new ItemStack(FBItems.EMPTY_PIGMENT_JAR);
             if ((qty > 1) && (!user.hasInfiniteMaterials())) {
                 itemStack.shrink(1);
-                user.getInventory().placeItemBackInInventory(itemStack1);
-                user.getInventory().placeItemBackInInventory(itemStack2);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
+                user.getInventory().placeItemBackInInventory(itemStack2, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else if (user.hasInfiniteMaterials()) {
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else if (qty == 1) {
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 user.setItemInHand(hand, itemStack2);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
@@ -135,6 +136,9 @@ public class OrangePigmentJarItem extends Item {
                 if (pos.is(FBTags.Blocks.FLOWERING_AZALEA_LEAVES)) {
                     return FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES;
                 }
+                if (pos.is(FBTags.Blocks.SHRUBS)) {
+                    return FBBlocks.ORANGE_SHRUB;
+                }
                 if (pos.is(FBTags.Blocks.DAFFODILS)) {
                     return FBBlocks.ORANGE_DAFFODIL;
                 }
@@ -183,12 +187,12 @@ public class OrangePigmentJarItem extends Item {
         int qty = itemStack.getCount();
         if ((qty > 1) && (!user.hasInfiniteMaterials())) {
             itemStack.shrink(1);
-            user.getInventory().placeItemBackInInventory(itemStack1);
+            user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
             world.playSound(user, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
             return InteractionResult.SUCCESS;
         }
         else if (user.hasInfiniteMaterials()) {
-            user.getInventory().placeItemBackInInventory(itemStack1);
+            user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
             world.playSound(user, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
             return InteractionResult.SUCCESS;
         }

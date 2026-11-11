@@ -1,37 +1,34 @@
 package net.flowerbreeding.eyeblossoms;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.flowerbreeding.FBBlocks;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.entity.Entity;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.core.particles.TrailParticleOption;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Difficulty;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.animal.bee.Bee;
-import net.minecraft.core.particles.TrailParticleOption;
-import net.minecraft.core.Holder;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.util.RandomSource;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.FlowerBlock;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.minecraft.world.phys.Vec3;
 import org.jspecify.annotations.NullMarked;
 
 import java.util.Objects;
+
 @NullMarked
 public class LightBlueEyeblossomBlock extends FlowerBlock {
-    public static final MapCodec<LightBlueEyeblossomBlock> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(Codec.BOOL.fieldOf("open").forGetter((block) -> block.state.open), propertiesCodec()).apply(instance, LightBlueEyeblossomBlock::new));
     private static final int NOTIFY_RANGE_XZ = 3;
     private static final int NOTIFY_RANGE_Y = 2;
     private final LightBlueEyeblossomBlock.LightBlueEyeblossomState state;
@@ -39,10 +36,6 @@ public class LightBlueEyeblossomBlock extends FlowerBlock {
     public LightBlueEyeblossomBlock(Properties settings, LightBlueEyeblossomState state) {
         super(state.stewEffect, state.effectLengthInSeconds, settings);
         this.state = state;
-    }
-
-    public MapCodec<? extends LightBlueEyeblossomBlock> codec() {
-        return CODEC;
     }
 
     public LightBlueEyeblossomBlock(boolean open, Properties settings) {

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:orange_phlox_1_botany"
+        "recipes": "flowerbreeding:orange_phlox_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

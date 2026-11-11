@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:blue_lotus_flower_1_botany"
+        "recipes": "flowerbreeding:blue_lotus_flower_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

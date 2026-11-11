@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:empty_pigment_jar"
+        "recipes": "flowerbreeding:empty_pigment_jar"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -54,6 +54,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.MAGENTA_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_MAGENTA_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.MAGENTA_FLOWERING_AZALEA));
             add(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES, FBBlocks.MAGENTA_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.MAGENTA_SHRUB);
 
             dropSelf(FBBlocks.BLUE_ALLIUM);
             add(FBBlocks.POTTED_BLUE_ALLIUM, createPotFlowerItemTable(FBBlocks.BLUE_ALLIUM));
@@ -91,6 +92,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.BLUE_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_BLUE_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.BLUE_FLOWERING_AZALEA));
             add(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES, FBBlocks.BLUE_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.BLUE_SHRUB);
 
             dropSelf(FBBlocks.WHITE_ALLIUM);
             add(FBBlocks.POTTED_WHITE_ALLIUM, createPotFlowerItemTable(FBBlocks.WHITE_ALLIUM));
@@ -122,6 +124,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.WHITE_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_WHITE_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.WHITE_FLOWERING_AZALEA));
             add(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES, FBBlocks.WHITE_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.WHITE_SHRUB);
 
             dropSelf(FBBlocks.ORANGE_ALLIUM);
             add(FBBlocks.POTTED_ORANGE_ALLIUM, createPotFlowerItemTable(FBBlocks.ORANGE_ALLIUM));
@@ -153,6 +156,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.ORANGE_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_ORANGE_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.ORANGE_FLOWERING_AZALEA));
             add(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES, FBBlocks.ORANGE_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.ORANGE_SHRUB);
 
             dropSelf(FBBlocks.RED_ALLIUM);
             add(FBBlocks.POTTED_RED_ALLIUM, createPotFlowerItemTable(FBBlocks.RED_ALLIUM));
@@ -222,6 +226,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.YELLOW_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_YELLOW_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.YELLOW_FLOWERING_AZALEA));
             add(FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES, FBBlocks.YELLOW_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.YELLOW_SHRUB);
 
             dropSelf(FBBlocks.LIGHT_BLUE_ALLIUM);
             add(FBBlocks.POTTED_LIGHT_BLUE_ALLIUM, createPotFlowerItemTable(FBBlocks.LIGHT_BLUE_ALLIUM));
@@ -259,6 +264,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_LIGHT_BLUE_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA));
             add(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES, FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.LIGHT_BLUE_SHRUB);
 
             dropSelf(FBBlocks.PINK_ALLIUM);
             add(FBBlocks.POTTED_PINK_ALLIUM, createPotFlowerItemTable(FBBlocks.PINK_ALLIUM));
@@ -288,6 +294,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             add(FBBlocks.PINK_ROSE_BUSH, createDoublePlantWithSeedDrops(FBBlocks.PINK_ROSE_BUSH, FBBlocks.PINK_ROSE_BUSH));
             add(FBBlocks.PINK_SUNFLOWER, createDoublePlantWithSeedDrops(FBBlocks.PINK_SUNFLOWER, FBBlocks.PINK_SUNFLOWER));
             add(FBBlocks.PINK_WILDFLOWERS, createSegmentedBlockDrops(FBBlocks.PINK_WILDFLOWERS));
+            dropSelf(FBBlocks.PINK_SHRUB);
 
             dropSelf(FBBlocks.BLACK_ALLIUM);
             add(FBBlocks.POTTED_BLACK_ALLIUM, createPotFlowerItemTable(FBBlocks.BLACK_ALLIUM));
@@ -325,6 +332,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.BLACK_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_BLACK_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.BLACK_FLOWERING_AZALEA));
             add(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES, FBBlocks.BLACK_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.BLACK_SHRUB);
 
             dropSelf(FBBlocks.CYAN_ALLIUM);
             add(FBBlocks.POTTED_CYAN_ALLIUM, createPotFlowerItemTable(FBBlocks.CYAN_ALLIUM));
@@ -363,6 +371,7 @@ public class FBLootTableGenerator extends FabricBlockLootSubProvider {
             dropSelf(FBBlocks.CYAN_FLOWERING_AZALEA);
             add(FBBlocks.POTTED_CYAN_FLOWERING_AZALEA_BUSH, createPotFlowerItemTable(FBBlocks.CYAN_FLOWERING_AZALEA));
             add(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES, createLeavesDrops(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES, FBBlocks.CYAN_FLOWERING_AZALEA, 0.05f));
+            dropSelf(FBBlocks.CYAN_SHRUB);
 
             dropSelf(FBBlocks.MAGENTA_DAFFODIL);
             add(FBBlocks.POTTED_MAGENTA_DAFFODIL, createPotFlowerItemTable(FBBlocks.MAGENTA_DAFFODIL));

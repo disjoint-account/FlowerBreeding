@@ -62,6 +62,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.MAGENTA_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.MAGENTA_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.MAGENTA_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.MAGENTA_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.BLUE_ALLIUM, FBBlocks.POTTED_BLUE_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.BLUE_DAISY, FBBlocks.POTTED_BLUE_DAISY, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -87,6 +88,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.BLUE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.BLUE_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.BLUE_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.BLUE_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.WHITE_ALLIUM, FBBlocks.POTTED_WHITE_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.WHITE_CORNFLOWER, FBBlocks.POTTED_WHITE_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -109,6 +111,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.WHITE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.WHITE_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.WHITE_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.WHITE_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.ORANGE_ALLIUM, FBBlocks.POTTED_ORANGE_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.ORANGE_CORNFLOWER, FBBlocks.POTTED_ORANGE_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -131,6 +134,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.ORANGE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.ORANGE_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.ORANGE_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.ORANGE_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.RED_ALLIUM, FBBlocks.POTTED_RED_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.RED_CORNFLOWER, FBBlocks.POTTED_RED_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -177,6 +181,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.YELLOW_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.YELLOW_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.YELLOW_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.YELLOW_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.LIGHT_BLUE_ALLIUM, FBBlocks.POTTED_LIGHT_BLUE_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.LIGHT_BLUE_CORNFLOWER, FBBlocks.POTTED_LIGHT_BLUE_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -202,6 +207,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.LIGHT_BLUE_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.LIGHT_BLUE_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.LIGHT_BLUE_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.LIGHT_BLUE_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.PINK_ALLIUM, FBBlocks.POTTED_PINK_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.PINK_CORNFLOWER, FBBlocks.POTTED_PINK_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -219,6 +225,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createDoublePlantWithDefaultItem(FBBlocks.PINK_ROSE_BUSH, BlockModelGenerators.PlantType.NOT_TINTED);
         registerSunflower(blockStateModelGenerator, FBBlocks.PINK_SUNFLOWER);
         blockStateModelGenerator.createFlowerBed(FBBlocks.PINK_WILDFLOWERS);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.PINK_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.BLACK_ALLIUM, FBBlocks.POTTED_BLACK_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.BLACK_CORNFLOWER, FBBlocks.POTTED_BLACK_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -244,6 +251,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.BLACK_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.BLACK_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.BLACK_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.CYAN_ALLIUM, FBBlocks.POTTED_CYAN_ALLIUM, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.CYAN_CORNFLOWER, FBBlocks.POTTED_CYAN_CORNFLOWER, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -269,6 +277,7 @@ public class FBModelProvider extends FabricModelProvider {
         blockStateModelGenerator.createTrivialBlock(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES, TexturedModel.LEAVES);
         blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.CYAN_CACTUS_FLOWER, PlantType.NOT_TINTED);
         registerSporeBlossom(blockStateModelGenerator, FBBlocks.CYAN_SPORE_BLOSSOM);
+        blockStateModelGenerator.createCrossBlockWithDefaultItem(FBBlocks.CYAN_SHRUB, PlantType.NOT_TINTED);
 
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.MAGENTA_DAFFODIL, FBBlocks.POTTED_MAGENTA_DAFFODIL, BlockModelGenerators.PlantType.NOT_TINTED);
         blockStateModelGenerator.createPlantWithDefaultItem(FBBlocks.BLUE_DAFFODIL, FBBlocks.POTTED_BLUE_DAFFODIL, BlockModelGenerators.PlantType.NOT_TINTED);
@@ -481,6 +490,7 @@ public class FBModelProvider extends FabricModelProvider {
         itemModelGenerator.generateFlatItem(FBItems.SPORE_BLOSSOM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.FLOWERING_AZALEA_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
+        itemModelGenerator.generateFlatItem(FBItems.SHRUB_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.LILY_PAD_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.BUSH_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.SWEET_BERRY_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, ModelTemplates.FLAT_ITEM);
@@ -493,7 +503,9 @@ public class FBModelProvider extends FabricModelProvider {
 
         itemModelGenerator.generateFlatItem(FBBlocks.PLANTER.asItem(), ModelTemplates.FLAT_ITEM);
 
+        itemModelGenerator.generateFlatItem(FBItems.FLORA_EXPLORER_MAP, ModelTemplates.FLAT_ITEM);
         itemModelGenerator.generateFlatItem(FBItems.TROWEL, ModelTemplates.FLAT_ITEM);
+
 
         itemModelGenerator.generateFlatItem(FBItems.FLORAL_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
     }

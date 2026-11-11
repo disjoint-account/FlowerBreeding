@@ -1,5 +1,5 @@
 {
-  "amount": 2.0,
+  "amount": 2,
   "random_sequence": "flowerbreeding:trade_set/botanist/level_3",
   "trades": "#flowerbreeding:botanist/level_3"
 }

@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:magenta_rose_bush_botany"
+        "recipes": "flowerbreeding:magenta_rose_bush_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

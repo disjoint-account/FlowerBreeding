@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:light_blue_lupin_2_botany"
+        "recipes": "flowerbreeding:light_blue_lupin_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

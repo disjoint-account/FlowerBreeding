@@ -29,33 +29,33 @@ public class TrowelItem extends Item {
             if (blockState.is(Blocks.GRASS_BLOCK)) {
                 world.setBlockAndUpdate(blockPos, FBBlocks.GRASS_FLOWERBED.defaultBlockState());
                 context.getPlayer().getItemInHand(context.getHand()).hurtWithoutBreaking(1, context.getPlayer());
-                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1f, 2f);
+                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN.value(), SoundSource.BLOCKS, 1.0f, 2.0f);
                 return InteractionResult.SUCCESS;
             }
             if (blockState.is(Blocks.DIRT)) {
                 world.setBlockAndUpdate(blockPos, FBBlocks.DIRT_FLOWERBED.defaultBlockState());
                 context.getPlayer().getItemInHand(context.getHand()).hurtWithoutBreaking(1, context.getPlayer());
-                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1f, 2f);
+                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN.value(), SoundSource.BLOCKS, 1f, 2f);
                 return InteractionResult.SUCCESS;
             }
             if (blockState.is(Blocks.PODZOL)) {
                 world.setBlockAndUpdate(blockPos, FBBlocks.PODZOL_FLOWERBED.defaultBlockState());
                 context.getPlayer().getItemInHand(context.getHand()).hurtWithoutBreaking(1, context.getPlayer());
-                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1f, 2f);
+                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN.value(), SoundSource.BLOCKS, 1f, 2f);
                 return InteractionResult.SUCCESS;
             }
             if (blockState.is(Blocks.FARMLAND)) {
                 if (blockState.getValue(FarmlandBlock.MOISTURE) == 7) {
                     world.setBlockAndUpdate(blockPos, FBBlocks.FARMLAND_FLOWERBED.defaultBlockState());
                     context.getPlayer().getItemInHand(context.getHand()).hurtWithoutBreaking(1, context.getPlayer());
-                    world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1f, 2f);
+                    world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN.value(), SoundSource.BLOCKS, 1f, 2f);
                     return InteractionResult.SUCCESS;
                 }
             }
             if (blockState.is(Blocks.MOSS_BLOCK)) {
                 world.setBlockAndUpdate(blockPos, FBBlocks.MOSS_FLOWERBED.defaultBlockState());
                 context.getPlayer().getItemInHand(context.getHand()).hurtWithoutBreaking(1, context.getPlayer());
-                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1f, 2f);
+                world.playSound(context.getPlayer(), blockPos, SoundEvents.SHOVEL_FLATTEN.value(), SoundSource.BLOCKS, 1f, 2f);
                 return InteractionResult.SUCCESS;
             }
         }

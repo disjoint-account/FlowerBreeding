@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:light_gray_vase"
+        "recipes": "flowerbreeding:light_gray_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

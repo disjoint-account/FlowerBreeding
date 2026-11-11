@@ -4,25 +4,25 @@ import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.util.FBTags;
-import net.minecraft.advancements.predicates.DataComponentMatchers;
-import net.minecraft.advancements.predicates.ItemPredicate;
-import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.Holder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.entity.npc.villager.VillagerType;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.trading.TradeCost;
 import net.minecraft.world.item.trading.VillagerTrade;
-import net.minecraft.world.level.storage.loot.functions.DiscardItem;
+import net.minecraft.world.item.trading.VillagerTrades;
+import net.minecraft.world.level.levelgen.structure.Structure;
+import net.minecraft.world.level.saveddata.maps.MapDecorationType;
 import net.minecraft.world.level.storage.loot.functions.ExplorationMapFunction;
-import net.minecraft.world.level.storage.loot.functions.FilteredFunction;
-import net.minecraft.world.level.storage.loot.functions.SetNameFunction;
 
 import java.util.List;
-import java.util.Optional;
 
 import static net.flowerbreeding.util.FBMapDecorators.GREENHOUSE_DECORATION;
 
@@ -74,249 +74,217 @@ public class FBVillagerTrades {
         register(
                 context,
                 CARTOGRAPHER_3_EMERALD_FLORA_MAP,
-                new VillagerTrade(
-                        new TradeCost(Items.EMERALD, 14),
-                        Optional.of(new TradeCost(Items.COMPASS, 1)),
-                        new ItemStackTemplate(Items.MAP),
-                        12,
-                        10,
-                        0.2F,
-                        Optional.empty(),
-                        List.of(
-                                ExplorationMapFunction.makeExplorationMap()
-                                        .setDestination(FBTags.Structures.ON_FLORA_EXPLORER_MAPS)
-                                        .setMapDecoration(GREENHOUSE_DECORATION)
-                                        .setSearchRadius(100)
-                                        .setSkipKnownStructures(true)
-                                        .build(),
-                                SetNameFunction.setName(Component.translatable("filled_map.greenhouse"), SetNameFunction.Target.ITEM_NAME).build(),
-                                FilteredFunction.filtered(
-                                                new ItemPredicate.Builder()
-                                                        .of(context.lookup(Registries.ITEM), Items.FILLED_MAP)
-                                                        .withComponents(DataComponentMatchers.Builder.components().any(DataComponents.MAP_ID).build())
-                                                        .build()
-                                        )
-                                        .onFail(Optional.of(DiscardItem.discardItem().build()))
-                                        .build()
-                        )
+                createBasicExplorerMapTrades(
+                        context.lookup(Registries.VILLAGER_TYPE),
+                        context.lookup(Registries.STRUCTURE),
+                        FBTags.Structures.ON_FLORA_EXPLORER_MAPS,
+                        GREENHOUSE_DECORATION,
+                        FBItems.FLORA_EXPLORER_MAP,
+                        List.of(VillagerType.SWAMP, VillagerType.SAVANNA, VillagerType.DESERT, VillagerType.PLAINS, VillagerType.JUNGLE, VillagerType.SNOW, VillagerType.TAIGA)
                 )
         );
 
+        context.register(BOTANIST_1_RED_TULIP_EMERALD, VillagerTrade.builder(
+                        new TradeCost(Items.RED_TULIP, 1),
+                        new ItemStackTemplate(Items.EMERALD),
+                        16, 1, 0.05F).build());
 
-
-        register(context, BOTANIST_1_RED_TULIP_EMERALD, new VillagerTrade(
-                new TradeCost(Items.RED_TULIP, 1),
-                new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
-
-        register(context, BOTANIST_1_ALLIUM_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_ALLIUM_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.ALLIUM, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_CORNFLOWER_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_CORNFLOWER_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.CORNFLOWER, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_DAISY_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_DAISY_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.OXEYE_DAISY, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_TORCHFLOWER_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_TORCHFLOWER_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.TORCHFLOWER, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_BLUET_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_BLUET_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.AZURE_BLUET, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_DANDELION_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_DANDELION_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.DANDELION, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_ORANGE_TULIP_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_ORANGE_TULIP_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.ORANGE_TULIP, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_WHITE_TULIP_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_WHITE_TULIP_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.WHITE_TULIP, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_ORCHID_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_ORCHID_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.BLUE_ORCHID, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_LILY_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_LILY_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.LILY_OF_THE_VALLEY, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_POPPY_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_POPPY_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.POPPY, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_PINK_TULIP_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_PINK_TULIP_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.PINK_TULIP, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_WITHER_ROSE_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_WITHER_ROSE_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.WITHER_ROSE, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
-        register(context, BOTANIST_1_EYEBLOSSOM_EMERALD, new VillagerTrade(
+        context.register(BOTANIST_1_EYEBLOSSOM_EMERALD, VillagerTrade.builder(
                 new TradeCost(Items.OPEN_EYEBLOSSOM, 1),
                 new ItemStackTemplate(Items.EMERALD),
-                16, 1, 0.05f,
-                Optional.empty(), List.of()));
+                16, 1, 0.05f).build());
 
 
 
-        register(context, BOTANIST_2_EMERALD_JAR, new VillagerTrade(
+        context.register(BOTANIST_2_EMERALD_JAR, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 4),
                 new ItemStackTemplate(FBItems.EMPTY_PIGMENT_JAR),
-                12, 10, 0.2f,
-                Optional.empty(), List.of()));
+                12, 10, 0.2f).build());
 
-        register(context, BOTANIST_2_EMERALD_VIAL, new VillagerTrade(
+        context.register(BOTANIST_2_EMERALD_VIAL, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 4),
                 new ItemStackTemplate(FBItems.EMPTY_POLLEN_VIAL),
-                12, 10, 0.2f,
-                Optional.empty(), List.of()));
+                12, 10, 0.2f).build());
 
 
 
-        register(context, BOTANIST_3_EMERALD_DAFFODIL, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_DAFFODIL, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.YELLOW_DAFFODIL.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_FOXGLOVE, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_FOXGLOVE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.RED_FOXGLOVE.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_HYACINTH, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_HYACINTH, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.PINK_HYACINTH.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_PHLOX, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_PHLOX, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.MAGENTA_PHLOX.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_LUPIN, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_LUPIN, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.BLUE_LUPIN.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_SMALL_ROSE, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_SMALL_ROSE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.RED_SMALL_ROSE.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_LAVENDER, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_LAVENDER, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.MAGENTA_LAVENDER.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_HYDRANGEA, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_HYDRANGEA, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.BLUE_HYDRANGEA.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_LOTUS, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_LOTUS, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBItems.PINK_LOTUS_FLOWER),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_JASMINE, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_JASMINE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.WHITE_JASMINE.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_CYPRESS_VINE, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_CYPRESS_VINE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.ORANGE_CYPRESS_VINE.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
-        register(context, BOTANIST_3_EMERALD_GLOWSHROOM, new VillagerTrade(
+        context.register(BOTANIST_3_EMERALD_GLOWSHROOM, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 1),
                 new ItemStackTemplate(FBBlocks.GREEN_GLOWSHROOM.asItem()),
-                16, 8, 0.05f,
-                Optional.empty(), List.of()));
+                16, 8, 0.05f).build());
 
 
 
-        register(context, BOTANIST_4_EMERALD_IVY, new VillagerTrade(
+        context.register(BOTANIST_4_EMERALD_IVY, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 2),
                 new ItemStackTemplate(FBBlocks.CLIMBING_IVY.asItem()),
-                12, 10, 0.2f,
-                Optional.empty(), List.of()));
+                12, 10, 0.2f).build());
 
-        register(context, BOTANIST_4_EMERALD_CATTAILS, new VillagerTrade(
+        context.register(BOTANIST_4_EMERALD_CATTAILS, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 2),
                 new ItemStackTemplate(FBBlocks.CATTAILS.asItem()),
-                12, 10, 0.2f,
-                Optional.empty(), List.of()));
+                12, 10, 0.2f).build());
 
-        register(context, BOTANIST_4_EMERALD_SAGE, new VillagerTrade(
+        context.register(BOTANIST_4_EMERALD_SAGE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 2),
                 new ItemStackTemplate(FBBlocks.SAGE.asItem()),
-                12, 10, 0.2f,
-                Optional.empty(), List.of()));
+                12, 10, 0.2f).build());
 
 
 
-        register(context, BOTANIST_5_EMERALD_BOTANY_TABLE, new VillagerTrade(
+        context.register(BOTANIST_5_EMERALD_BOTANY_TABLE, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 10),
                 new ItemStackTemplate(FBBlocks.BOTANY_TABLE.asItem()),
-                3, 30, 0.2f,
-                Optional.empty(), List.of()));
+                3, 30, 0.2f).build());
 
-        register(context, BOTANIST_5_EMERALD_TROWEL, new VillagerTrade(
+        context.register(BOTANIST_5_EMERALD_TROWEL, VillagerTrade.builder(
                 new TradeCost(Items.EMERALD, 10),
                 new ItemStackTemplate(FBItems.TROWEL),
-                3, 30, 0.2f,
-                Optional.empty(), List.of()));
+                3, 30, 0.2f).build());
     }
 
+    private static VillagerTrade createBasicExplorerMapTrades(
+            final HolderGetter<VillagerType> villagerVariants,
+            final HolderGetter<Structure> structures,
+            final TagKey<Structure> structureTagKey,
+            final Holder<MapDecorationType> mapDecorationType,
+            final Item mapItem,
+            final List<ResourceKey<VillagerType>> villagerTypes
+    ) {
+        return VillagerTrade.builder(new TradeCost(Items.EMERALD, 8), new TradeCost(Items.COMPASS, 1), new ItemStackTemplate(mapItem), 12, 5, 0.2F)
+                .merchantPredicate(VillagerTrades.villagerTypeRestriction(VillagerTrades.villagerTypeHolderSet(villagerVariants, villagerTypes)))
+                .addModifiers(
+                        Holder.direct(
+                                ExplorationMapFunction.makeExplorationMap(structures.getOrThrow(structureTagKey))
+                                        .setMapDecoration(mapDecorationType)
+                                        .setSearchRadius(100)
+                                        .setSkipKnownStructures(true)
+                                        .build()
+                        ),
+                        VillagerTrades.discardItemIfItsNot(VillagerTrades.anyValidMap())
+                )
+                .build();
+    }
 
     private static ResourceKey<VillagerTrade> createKey(String name) {
         return ResourceKey.create(Registries.VILLAGER_TRADE, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, name));

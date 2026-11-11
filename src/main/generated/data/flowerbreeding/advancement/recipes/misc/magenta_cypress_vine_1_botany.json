@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:magenta_cypress_vine_1_botany"
+        "recipes": "flowerbreeding:magenta_cypress_vine_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

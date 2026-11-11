@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:white_wildflowers_botany"
+        "recipes": "flowerbreeding:white_wildflowers_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

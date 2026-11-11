@@ -7,12 +7,12 @@ import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.MushroomBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import org.jspecify.annotations.NonNull;
 
 public class GlowshroomPlantBlock extends MushroomBlock {
 
-    public GlowshroomPlantBlock(ResourceKey<ConfiguredFeature<?, ?>> featureKey, BlockBehaviour.Properties settings) {
+    public GlowshroomPlantBlock(ResourceKey<Feature> featureKey, BlockBehaviour.Properties settings) {
         super(featureKey, settings);
     }
 

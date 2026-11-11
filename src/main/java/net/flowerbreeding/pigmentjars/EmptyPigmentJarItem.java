@@ -3,6 +3,7 @@ package net.flowerbreeding.pigmentjars;
 
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -35,11 +36,11 @@ public class EmptyPigmentJarItem extends Item {
             ItemStack itemStack1 = new ItemStack(getColour(context));
             if ((qty > 1) && (!user.hasInfiniteMaterials())) {
                 itemStack.shrink(1);
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else if (user.hasInfiniteMaterials()) {
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else if (qty == 1) {

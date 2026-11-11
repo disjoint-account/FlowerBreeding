@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:cyan_vase"
+        "recipes": "flowerbreeding:cyan_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

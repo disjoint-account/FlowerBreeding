@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:magenta_cornflower_botany"
+        "recipes": "flowerbreeding:magenta_cornflower_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

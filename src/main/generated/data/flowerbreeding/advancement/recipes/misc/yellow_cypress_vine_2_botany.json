@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:yellow_cypress_vine_2_botany"
+        "recipes": "flowerbreeding:yellow_cypress_vine_2_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

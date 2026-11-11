@@ -6,32 +6,43 @@ import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.FlowerBreeding;
 import net.flowerbreeding.trim.FBArmourTrims;
+import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentPatch;
+import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.util.Mth;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.SuspiciousStewEffects;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Blocks;
 import org.jspecify.annotations.NullMarked;
 
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.data.recipes.RecipeCategory.MISC;
+
 @NullMarked
 public class FBRecipeGenerator extends FabricRecipeProvider {
     public FBRecipeGenerator(FabricPackOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
         super(output, registriesFuture);
     }
 
-    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, RecipeOutput exporter) {
-        return new RecipeProvider(registries, exporter) {
+    protected RecipeProvider createRecipeProvider(HolderLookup.Provider registries, BootstrapContext<Recipe<?>> recipes, BootstrapContext<Advancement> advancements) {
+        return new RecipeProvider(recipes, advancements) {
             @Override
             public void buildRecipes() {
                 offerBotanyRecipe(output, FBItems.ALLIUM_POLLEN_VIAL, FBItems.ALLIUM_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStackTemplate(Blocks.ALLIUM.asItem()), "magenta_allium");
@@ -286,6 +297,17 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 offerBotanyRecipe(output, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStackTemplate(Blocks.FLOWERING_AZALEA_LEAVES.asItem()), "pink_flowering_azalea_leaves");
                 offerBotanyRecipe(output, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.BLACK_FLOWERING_AZALEA_LEAVES.asItem()), "black_flowering_azalea_leaves");
                 offerBotanyRecipe(output, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.FLOWERING_AZALEA_LEAVES_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.CYAN_FLOWERING_AZALEA_LEAVES.asItem()), "cyan_flowering_azalea_leaves");
+
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.MAGENTA_SHRUB.asItem()), "magenta_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.BLUE_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.BLUE_SHRUB.asItem()), "blue_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.WHITE_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.WHITE_SHRUB.asItem()), "white_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.ORANGE_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.ORANGE_SHRUB.asItem()), "orange_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.RED_PIGMENT_JAR, new ItemStackTemplate(Blocks.RED_SHRUB.asItem()), "red_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.YELLOW_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.YELLOW_SHRUB.asItem()), "yellow_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.LIGHT_BLUE_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.LIGHT_BLUE_SHRUB.asItem()), "light_blue_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.PINK_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.PINK_SHRUB.asItem()), "pink_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.BLACK_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.BLACK_SHRUB.asItem()), "black_shrub");
+                offerBotanyRecipe(output, FBItems.SHRUB_POLLEN_VIAL, FBItems.SHRUB_POLLEN_VIAL, FBItems.CYAN_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.CYAN_SHRUB.asItem()), "cyan_shrub");
 
                 offerBotanyRecipe(output, FBItems.DANDELION_POLLEN_VIAL, FBItems.LILY_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.MAGENTA_DAFFODIL.asItem()), "magenta_daffodil_1");
                 offerBotanyRecipe(output, FBItems.LILY_POLLEN_VIAL, FBItems.DANDELION_POLLEN_VIAL, FBItems.MAGENTA_PIGMENT_JAR, new ItemStackTemplate(FBBlocks.MAGENTA_DAFFODIL.asItem()), "magenta_daffodil_2");
@@ -568,6 +590,18 @@ public class FBRecipeGenerator extends FabricRecipeProvider {
                 trimSmithing(FBItems.FLORAL_SMITHING_TEMPLATE, FBArmourTrims.FLORAL, ResourceKey.create(Registries.RECIPE, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, "floral_smithing_trim")));
 
                 copySmithingTemplate(FBItems.FLORAL_SMITHING_TEMPLATE, Blocks.MOSS_BLOCK);
+
+                ItemStackTemplate stew = new ItemStackTemplate(
+                        Items.SUSPICIOUS_STEW, DataComponentPatch.builder().set(DataComponents.SUSPICIOUS_STEW_EFFECTS, new SuspiciousStewEffects(List.of(new SuspiciousStewEffects.Entry(MobEffects.SATURATION, Mth.floor(0.35f * 20.0F))))).build()
+                );
+                this.shapeless(RecipeCategory.FOOD, stew)
+                        .requires(Items.BOWL)
+                        .requires(ItemTags.MUSHROOMS)
+                        .requires(ItemTags.MUSHROOMS)
+                        .requires(FBBlocks.BLUE_ORCHID.asItem())
+                        .group("suspicious_stew")
+                        .unlockedBy(getHasName(FBBlocks.BLUE_ORCHID.asItem()), this.has(FBBlocks.BLUE_ORCHID.asItem()))
+                        .save(this.output, getItemName(stew.item().value()) + "_from_" + getItemName(FBBlocks.BLUE_ORCHID.asItem()) + "_flowerbreeding");
             }
 
             public void offerBotanyRecipe(RecipeOutput exporter, Item vial1, Item vial2, Item jar, ItemStackTemplate result, String recipeId) {

@@ -3,18 +3,16 @@ package net.flowerbreeding;
 import net.flowerbreeding.pigmentjars.*;
 import net.flowerbreeding.pollenvials.EmptyPollenVialItem;
 import net.flowerbreeding.pollenvials.FullPollenVialItem;
-import net.minecraft.core.component.DataComponents;
-import net.minecraft.world.item.component.Tool;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.PlaceOnWaterBlockItem;
-import net.minecraft.world.item.SmithingTemplateItem;
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
-import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.world.item.*;
+import net.minecraft.world.item.component.MapDecorations;
+import net.minecraft.world.item.component.Tool;
 
 import java.util.List;
 import java.util.function.Function;
@@ -57,6 +55,7 @@ public class FBItems {
     public static final Item SPORE_BLOSSOM_POLLEN_VIAL = registerItem("spore_blossom_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
     public static final Item FLOWERING_AZALEA_POLLEN_VIAL = registerItem("flowering_azalea_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
     public static final Item FLOWERING_AZALEA_LEAVES_POLLEN_VIAL = registerItem("flowering_azalea_leaves_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
+    public static final Item SHRUB_POLLEN_VIAL = registerItem("shrub_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
     public static final Item BUSH_POLLEN_VIAL = registerItem("bush_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
     public static final Item SWEET_BERRY_POLLEN_VIAL = registerItem("sweet_berry_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
     public static final Item GLOW_VINE_POLLEN_VIAL = registerItem("glow_vine_pollen_vial", settings -> new FullPollenVialItem(settings.stacksTo(64)));
@@ -87,6 +86,8 @@ public class FBItems {
                     true
             )
     )));
+
+    public static final Item FLORA_EXPLORER_MAP = registerItem("flora_explorer_map", settings -> new MapItem(settings.component(DataComponents.MAP_DECORATIONS, MapDecorations.EMPTY)));
 
     public static final Item FLORAL_SMITHING_TEMPLATE = registerSmithingTemplate("floral_armor_trim_smithing_template", SmithingTemplateItem.createArmorTrimTemplate(new Item.Properties().setId(ResourceKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(FlowerBreeding.MOD_ID, "floral_armor_trim_smithing_template"))).rarity(Rarity.UNCOMMON)));
 

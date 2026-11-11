@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:botany_table"
+        "recipes": "flowerbreeding:botany_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

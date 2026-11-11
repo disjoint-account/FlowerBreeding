@@ -4,6 +4,7 @@ import net.flowerbreeding.FBItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -24,12 +25,12 @@ public class FullPollenVialItem extends Item {
         ItemStack itemStack1 = new ItemStack(FBItems.EMPTY_POLLEN_VIAL);
         if (!user.hasInfiniteMaterials()) {
             itemStack.shrink(1);
-            user.getInventory().placeItemBackInInventory(itemStack1);
+            user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
             world.playSound(user, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
             return InteractionResult.SUCCESS;
         }
         else if (user.hasInfiniteMaterials()) {
-            user.getInventory().placeItemBackInInventory(itemStack1);
+            user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
             world.playSound(user, blockPos, SoundEvents.BOTTLE_FILL, SoundSource.BLOCKS, 1f, 1f);
             return InteractionResult.SUCCESS;
         }

@@ -2,6 +2,7 @@ package net.flowerbreeding.pollenvials;
 
 import net.flowerbreeding.FBItems;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.entity.player.Player;
@@ -34,11 +35,11 @@ public class EmptyPollenVialItem extends Item {
             ItemStack itemStack1 = new ItemStack(getFlower(context));
             if (!user.hasInfiniteMaterials()) {
                 itemStack.shrink(1);
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             } else if (user.hasInfiniteMaterials()) {
-                user.getInventory().placeItemBackInInventory(itemStack1);
+                user.getInventory().placeItemBackInInventory(itemStack1, Prediction.SERVER_ONLY);
                 world.playSound(user, pos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1f, 1f);
                 return InteractionResult.SUCCESS;
             }
@@ -142,6 +143,9 @@ public class EmptyPollenVialItem extends Item {
                 }
                 if (state.is(FBTags.Blocks.FROGLIGHTS)) {
                     return FBItems.FROGLIGHT_POLLEN_VIAL;
+                }
+                if (state.is(FBTags.Blocks.SHRUBS)) {
+                    return FBItems.SHRUB_POLLEN_VIAL;
                 }
             return null;
         }

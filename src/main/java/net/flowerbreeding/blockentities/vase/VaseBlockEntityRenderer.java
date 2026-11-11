@@ -27,7 +27,7 @@ public class VaseBlockEntityRenderer implements BlockEntityRenderer<VaseBlockEnt
         super();
     }
 
-    public VaseBlockEntityRenderState createRenderState() {
+    public @NonNull VaseBlockEntityRenderState createRenderState() {
         return new VaseBlockEntityRenderState();
     }
 
@@ -83,8 +83,8 @@ public class VaseBlockEntityRenderer implements BlockEntityRenderer<VaseBlockEnt
     private void renderFlower(MovingBlockRenderState movingBlockRenderState, ItemStack itemStack, BlockPos pos, PoseStack matrixStack, SubmitNodeCollector orderedRenderCommandQueue, float x, float y, float z, float degX, float degZ) {
         matrixStack.pushPose();
         matrixStack.translate(x, y, z);
-        matrixStack.mulPose(Axis.XP.rotationDegrees(degX));
-        matrixStack.mulPose(Axis.ZP.rotationDegrees(degZ));
+        matrixStack.rotate(Axis.XP.rotationDegrees(degX));
+        matrixStack.rotate(Axis.ZP.rotationDegrees(degZ));
         matrixStack.translate(((BlockItem) itemStack.getItem()).getBlock().defaultBlockState().getOffset(pos).reverse());
         orderedRenderCommandQueue.submitMovingBlock(matrixStack, movingBlockRenderState, 0);
         matrixStack.popPose();

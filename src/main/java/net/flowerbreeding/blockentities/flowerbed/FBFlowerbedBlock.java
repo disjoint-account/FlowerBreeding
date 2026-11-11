@@ -1,51 +1,40 @@
 package net.flowerbreeding.blockentities.flowerbed;
 
-import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.eyeblossoms.*;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockItemTags;
-import net.minecraft.world.level.block.BaseEntityBlock;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.block.EyeblossomBlock;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.util.Prediction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Containers;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.attribute.EnvironmentAttributes;
 import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.Nullable;
 import org.jspecify.annotations.NullMarked;
 
-import static net.minecraft.world.level.block.FarmlandBlock.turnToDirt;
 @NullMarked
 public class FBFlowerbedBlock extends BaseEntityBlock implements EntityBlock {
-    public static final MapCodec<FBFlowerbedBlock> CODEC = FBFlowerbedBlock.simpleCodec(FBFlowerbedBlock::new);
 
     public FBFlowerbedBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override
@@ -72,7 +61,7 @@ public class FBFlowerbedBlock extends BaseEntityBlock implements EntityBlock {
     @Override
     protected void tick(BlockState state, ServerLevel world, BlockPos pos, RandomSource random) {
         if (!state.canSurvive(world, pos) && (state.is(FBBlocks.GRASS_FLOWERBED) || state.is(FBBlocks.DIRT_FLOWERBED) || state.is(FBBlocks.FARMLAND_FLOWERBED))) {
-            turnToDirt(null, state, world, pos);
+            world.setBlockAndUpdate(pos, Blocks.DIRT.defaultBlockState());
         }
         if (!state.canSurvive(world, pos) && state.is(FBBlocks.MOSS_FLOWERBED)) {
             world.setBlockAndUpdate(pos, Blocks.MOSS_BLOCK.defaultBlockState());
@@ -171,28 +160,28 @@ public class FBFlowerbedBlock extends BaseEntityBlock implements EntityBlock {
                                 if (player.getDirection() == Direction.NORTH) {
                                     ItemStack stackInBed = entity.getItem(3);
                                     if (!player.hasInfiniteMaterials()) {
-                                        player.getInventory().placeItemBackInInventory(stackInBed);
+                                        player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                     }
                                     entity.removeItemNoUpdate(3);
                                 }
                                 if (player.getDirection() == Direction.EAST) {
                                     ItemStack stackInBed = entity.getItem(0);
                                     if (!player.hasInfiniteMaterials()) {
-                                    player.getInventory().placeItemBackInInventory(stackInBed);
+                                    player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                     }
                                     entity.removeItemNoUpdate(0);
                                 }
                                 if (player.getDirection() == Direction.SOUTH) {
                                     ItemStack stackInBed = entity.getItem(1);
                                     if (!player.hasInfiniteMaterials()) {
-                                        player.getInventory().placeItemBackInInventory(stackInBed);
+                                        player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                     }
                                     entity.removeItemNoUpdate(1);
                                 }
                                 if (player.getDirection() == Direction.WEST) {
                                     ItemStack stackInBed = entity.getItem(2);
                                     if (!player.hasInfiniteMaterials()) {
-                                        player.getInventory().placeItemBackInInventory(stackInBed);
+                                        player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                     }
                                     entity.removeItemNoUpdate(2);
                                 }
@@ -205,28 +194,28 @@ public class FBFlowerbedBlock extends BaseEntityBlock implements EntityBlock {
                                     if (entity.getItem(0).isEmpty() && !entity.getItem(3).isEmpty()) {
                                       ItemStack stackInBed = entity.getItem(3);
                                       if (!player.hasInfiniteMaterials()) {
-                                          player.getInventory().placeItemBackInInventory(stackInBed);
+                                          player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                         }
                                         entity.removeItemNoUpdate(3);
                                     } else {
                                         if (entity.getItem(3).isEmpty() && !entity.getItem(2).isEmpty()) {
                                             ItemStack stackInBed = entity.getItem(2);
                                             if (!player.hasInfiniteMaterials()) {
-                                                player.getInventory().placeItemBackInInventory(stackInBed);
+                                                player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                             }
                                             entity.removeItemNoUpdate(2);
                                         } else {
                                             if (entity.getItem(2).isEmpty() && !entity.getItem(1).isEmpty()) {
                                                 ItemStack stackInBed = entity.getItem(1);
                                                 if (!player.hasInfiniteMaterials()) {
-                                                    player.getInventory().placeItemBackInInventory(stackInBed);
+                                                    player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                                 }
                                                 entity.removeItemNoUpdate(1);
                                             } else {
                                                 if (entity.getItem(1).isEmpty() && !entity.getItem(0).isEmpty()) {
                                                     ItemStack stackInBed = entity.getItem(0);
                                                     if (!player.hasInfiniteMaterials()) {
-                                                        player.getInventory().placeItemBackInInventory(stackInBed);
+                                                        player.getInventory().placeItemBackInInventory(stackInBed, Prediction.SERVER_ONLY);
                                                     }
                                                     entity.removeItemNoUpdate(0);
                                                 }

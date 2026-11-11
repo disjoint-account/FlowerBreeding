@@ -1,0 +1,11 @@
+{
+  "type": "flowerbreeding:botany",
+  "ingredients": [
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:cyan_pigment_jar"
+  ],
+  "result": {
+    "id": "flowerbreeding:cyan_shrub"
+  }
+}

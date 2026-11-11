@@ -8,6 +8,7 @@ import net.flowerbreeding.datagen.villager.FBVillagerTradeTags;
 import net.flowerbreeding.datagen.villager.FBVillagerTrades;
 import net.flowerbreeding.trim.FBArmourTrims;
 import net.flowerbreeding.world.feature.FBConfiguredFeatures;
+import net.flowerbreeding.world.feature.FBPlacedFeatures;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 
@@ -29,7 +30,8 @@ public class FBDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.TRIM_PATTERN, FBArmourTrims::bootstrap);
-		registryBuilder.add(Registries.CONFIGURED_FEATURE, FBConfiguredFeatures::bootstrap);
+		registryBuilder.add(Registries.FEATURE, FBConfiguredFeatures::bootstrap);
+		registryBuilder.add(Registries.PLACED_FEATURE, FBPlacedFeatures::bootstrap);
 		registryBuilder.add(Registries.VILLAGER_TRADE, FBVillagerTrades::bootstrap);
 		registryBuilder.add(Registries.TRADE_SET, FBTradeSets::bootstrap);
 	}

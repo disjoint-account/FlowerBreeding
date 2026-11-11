@@ -34,14 +34,7 @@ public class PlanterBlockEntity extends BlockEntity implements Container {
 
     @Override
     public boolean isEmpty() {
-        for(int i = 0; i < getContainerSize(); i++) {
-            ItemStack stack = getItem(i);
-            if(!stack.isEmpty()) {
-                return false;
-            }
-        }
-
-        return true;
+        return getItem(0).isEmpty();
     }
     public NonNullList<ItemStack> getInventory() {
         return this.inventory;
@@ -49,7 +42,6 @@ public class PlanterBlockEntity extends BlockEntity implements Container {
 
     @Override
     public ItemStack getItem(int slot) {
-        setChanged();
         return inventory.get(slot);
     }
 
@@ -61,19 +53,14 @@ public class PlanterBlockEntity extends BlockEntity implements Container {
 
     @Override
     public ItemStack removeItemNoUpdate(int slot) {
-        setChanged();
         return ContainerHelper.takeItem(inventory, slot);
     }
 
     @Override
     public void setItem(int slot, ItemStack stack) {
         setChanged();
+        assert this.level != null;
         inventory.set(slot, stack.copyWithCount(1));
-    }
-
-    @Override
-    public boolean stillValid(Player player) {
-        return Container.stillValidBlockEntity(this, player);
     }
 
     @Override
@@ -81,17 +68,31 @@ public class PlanterBlockEntity extends BlockEntity implements Container {
         inventory.clear();
     }
 
-
     @Override
     protected void saveAdditional(ValueOutput view) {
         super.saveAdditional(view);
-        ContainerHelper.saveAllItems(view, inventory);
+        ContainerHelper.saveAllItems(view, inventory, true);
     }
 
     @Override
     protected void loadAdditional(ValueInput view) {
         super.loadAdditional(view);
+        this.inventory.clear();
         ContainerHelper.loadAllItems(view, inventory);
+    }
+
+    @Override
+    public void setChanged() {
+        super.setChanged();
+        assert level != null;
+        if (!level.isClientSide()) {
+            level.sendBlockUpdated(getBlockPos(), getBlockState(), getBlockState(), 3);
+        }
+    }
+
+    @Override
+    public boolean stillValid(Player player) {
+        return Container.stillValidBlockEntity(this, player);
     }
 
     @Nullable
@@ -101,7 +102,7 @@ public class PlanterBlockEntity extends BlockEntity implements Container {
     }
 
     @Override
-    public CompoundTag getUpdateTag(HolderLookup.Provider registryLookup) {
-        return saveWithoutMetadata(registryLookup);
+    public CompoundTag getUpdateTag(final HolderLookup.Provider registries) {
+        return saveWithoutMetadata(registries);
     }
 }

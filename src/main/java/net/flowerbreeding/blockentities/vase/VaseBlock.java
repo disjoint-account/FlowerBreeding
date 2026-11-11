@@ -1,11 +1,25 @@
 package net.flowerbreeding.blockentities.vase;
 
-import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.FBBlocks;
 import net.flowerbreeding.eyeblossoms.*;
 import net.flowerbreeding.util.FBTags;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockItemTags;
+import net.minecraft.util.Prediction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.Containers;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.attribute.EnvironmentAttributes;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.EntityBlock;
@@ -13,23 +27,9 @@ import net.minecraft.world.level.block.EyeblossomBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.pathfinder.PathComputationType;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Containers;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.core.BlockPos;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.attribute.EnvironmentAttributes;
 import org.jetbrains.annotations.Nullable;
 import org.jspecify.annotations.NullMarked;
 
@@ -37,15 +37,9 @@ import org.jspecify.annotations.NullMarked;
 public class VaseBlock extends BaseEntityBlock implements EntityBlock {
     private static final VoxelShape SHAPE =
             Block.box(5, 0, 5, 11, 8, 11);
-    public static final MapCodec<VaseBlock> CODEC = VaseBlock.simpleCodec(VaseBlock::new);
 
     public VaseBlock(Properties settings) {
         super(settings);
-    }
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override
@@ -126,7 +120,7 @@ public class VaseBlock extends BaseEntityBlock implements EntityBlock {
                     if (!entity.getItem(3).isEmpty()) {
                         ItemStack stackInVase = entity.getItem(3);
                         if (!player.hasInfiniteMaterials()) {
-                            player.getInventory().placeItemBackInInventory(stackInVase);
+                            player.getInventory().placeItemBackInInventory(stackInVase, Prediction.SERVER_ONLY);
                         }
                         entity.removeItemNoUpdate(3);
                         world.playSound(player, pos, SoundEvents.BEEHIVE_EXIT, SoundSource.BLOCKS, 1f, 2f);
@@ -138,21 +132,21 @@ public class VaseBlock extends BaseEntityBlock implements EntityBlock {
                             if (!entity.getItem(2).isEmpty()) {
                                 ItemStack stackInVase = entity.getItem(2);
                                 if (!player.hasInfiniteMaterials()) {
-                                    player.getInventory().placeItemBackInInventory(stackInVase);
+                                    player.getInventory().placeItemBackInInventory(stackInVase, Prediction.SERVER_ONLY);
                                 }
                                 entity.removeItemNoUpdate(2);
                             } else {
                                 if (!entity.getItem(1).isEmpty()) {
                                     ItemStack stackInVase = entity.getItem(1);
                                     if (!player.hasInfiniteMaterials()) {
-                                        player.getInventory().placeItemBackInInventory(stackInVase);
+                                        player.getInventory().placeItemBackInInventory(stackInVase, Prediction.SERVER_ONLY);
                                     }
                                     entity.removeItemNoUpdate(1);
                                 } else {
                                     if (!entity.getItem(0).isEmpty()) {
                                         ItemStack stackInVase = entity.getItem(0);
                                         if (!player.hasInfiniteMaterials()) {
-                                            player.getInventory().placeItemBackInInventory(stackInVase);
+                                            player.getInventory().placeItemBackInInventory(stackInVase, Prediction.SERVER_ONLY);
                                         }
                                         entity.removeItemNoUpdate(0);
                                     }

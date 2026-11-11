@@ -81,7 +81,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.MAGENTA_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_MAGENTA_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_MAGENTA_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.MAGENTA_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_MAGENTA_FLOWERS)
                 .add(BlockItemIds.ALLIUM.item())
@@ -123,7 +124,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.BLUE_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_BLUE_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_BLUE_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_BLUE_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.BLUE_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_BLUE_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.BLUE_ALLIUM.asItem()))
@@ -165,7 +167,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.WHITE_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_WHITE_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_WHITE_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_WHITE_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.WHITE_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_WHITE_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.WHITE_ALLIUM.asItem()))
@@ -207,7 +210,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.ORANGE_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_ORANGE_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_ORANGE_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_ORANGE_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.WHITE_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_ORANGE_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.ORANGE_ALLIUM.asItem()))
@@ -249,7 +253,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.RED_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_RED_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_RED_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_RED_FLOWERS)
+                .add(BlockItemIds.RED_SHRUB.item());
 
         tag(FBTags.Items.SMALL_RED_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.RED_ALLIUM.asItem()))
@@ -291,7 +296,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.YELLOW_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_YELLOW_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_YELLOW_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_YELLOW_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.YELLOW_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_YELLOW_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.YELLOW_ALLIUM.asItem()))
@@ -333,7 +339,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.LIGHT_BLUE_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_LIGHT_BLUE_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_LIGHT_BLUE_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_LIGHT_BLUE_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.LIGHT_BLUE_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_LIGHT_BLUE_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.LIGHT_BLUE_ALLIUM.asItem()))
@@ -375,7 +382,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.PINK_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_PINK_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_PINK_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_PINK_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.PINK_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_PINK_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.PINK_ALLIUM.asItem()))
@@ -417,7 +425,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.BLACK_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_BLACK_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_BLACK_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_BLACK_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.BLACK_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_BLACK_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.BLACK_ALLIUM.asItem()))
@@ -459,7 +468,8 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
 
         tag(FBTags.Items.CYAN_FLOWERS)
                 .addOptionalTag(FBTags.Items.SMALL_CYAN_FLOWERS)
-                .addOptionalTag(FBTags.Items.TALL_CYAN_FLOWERS);
+                .addOptionalTag(FBTags.Items.TALL_CYAN_FLOWERS)
+                .add(FBItems.getResourceKey(FBBlocks.CYAN_SHRUB.asItem()));
 
         tag(FBTags.Items.SMALL_CYAN_FLOWERS)
                 .add(FBItems.getResourceKey(FBBlocks.CYAN_ALLIUM.asItem()))
@@ -796,6 +806,18 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .add(FBItems.getResourceKey(FBBlocks.BLACK_WILDFLOWERS.asItem()))
                 .add(FBItems.getResourceKey(FBBlocks.CYAN_WILDFLOWERS.asItem()));
 
+        tag(FBTags.Items.SHRUBS)
+                .add(FBItems.getResourceKey(FBBlocks.MAGENTA_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.BLUE_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.WHITE_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.ORANGE_SHRUB.asItem()))
+                .add(BlockItemIds.RED_SHRUB.item())
+                .add(FBItems.getResourceKey(FBBlocks.YELLOW_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.LIGHT_BLUE_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.PINK_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.BLACK_SHRUB.asItem()))
+                .add(FBItems.getResourceKey(FBBlocks.CYAN_SHRUB.asItem()));
+
         tag(FBTags.Items.DAFFODILS)
                 .add(FBItems.getResourceKey(FBBlocks.MAGENTA_DAFFODIL.asItem()))
                 .add(FBItems.getResourceKey(FBBlocks.BLUE_DAFFODIL.asItem()))
@@ -949,6 +971,7 @@ public class FBItemTagProvider extends FabricTagsProvider.ItemTagsProvider {
                 .addOptionalTag(FBTags.Items.CLOSED_EYEBLOSSOMS);
 
         tag(FBTags.Items.BUSHES)
+                .addTag(FBTags.Items.SHRUBS)
                 .add(BlockItemIds.SWEET_BERRY_CROP.item())
                 .add(BlockItemIds.BUSH.item())
                 .add(BlockItemIds.FIREFLY_BUSH.item())

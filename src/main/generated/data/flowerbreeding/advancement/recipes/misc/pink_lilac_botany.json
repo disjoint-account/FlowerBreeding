@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:pink_lilac_botany"
+        "recipes": "flowerbreeding:pink_lilac_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

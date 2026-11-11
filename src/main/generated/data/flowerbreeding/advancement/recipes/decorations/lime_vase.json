@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:lime_vase"
+        "recipes": "flowerbreeding:lime_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

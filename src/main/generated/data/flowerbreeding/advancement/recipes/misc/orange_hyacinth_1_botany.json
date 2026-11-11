@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:orange_hyacinth_1_botany"
+        "recipes": "flowerbreeding:orange_hyacinth_1_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

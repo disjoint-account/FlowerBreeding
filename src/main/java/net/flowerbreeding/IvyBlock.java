@@ -1,46 +1,46 @@
 package net.flowerbreeding;
 
-import com.mojang.serialization.MapCodec;
 import net.flowerbreeding.util.FBProperties;
-import net.flowerbreeding.util.properties.*;
+import net.flowerbreeding.util.properties.IvyEast;
+import net.flowerbreeding.util.properties.IvyNorth;
+import net.flowerbreeding.util.properties.IvySouth;
+import net.flowerbreeding.util.properties.IvyWest;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.util.Prediction;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Util;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.Mirror;
-import net.minecraft.world.level.block.PipeBlock;
-import net.minecraft.world.level.block.Rotation;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.level.block.state.properties.EnumProperty;
-import net.minecraft.util.*;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.Direction;
-import net.minecraft.util.RandomSource;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.ScheduledTickAccess;
+import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 import org.jspecify.annotations.NullMarked;
 
 import java.util.Map;
+
 import static net.minecraft.core.Direction.DOWN;
+
 @NullMarked
 public class IvyBlock extends Block implements BonemealableBlock {
     public static final EnumProperty<IvyNorth> IVY_NORTH;
@@ -52,7 +52,6 @@ public class IvyBlock extends Block implements BonemealableBlock {
     private static final BooleanProperty EAST;
     private static final BooleanProperty SOUTH;
     private static final BooleanProperty WEST;
-    public static final MapCodec<IvyBlock> CODEC = simpleCodec(IvyBlock::new);
     public static final Map<Direction, BooleanProperty> FACING_PROPERTIES;
     private static final VoxelShape EAST_SHAPE;
     private static final VoxelShape WEST_SHAPE;
@@ -69,10 +68,6 @@ public class IvyBlock extends Block implements BonemealableBlock {
     private static final VoxelShape SOUTH_WEST_NORTH_SHAPE;
     private static final VoxelShape WEST_NORTH_EAST_SHAPE;
     private static final VoxelShape ALL_SHAPE;
-
-    public MapCodec<IvyBlock> codec() {
-        return CODEC;
-    }
 
     public IvyBlock(BlockBehaviour.Properties settings) {
         super(settings);
@@ -332,7 +327,7 @@ public class IvyBlock extends Block implements BonemealableBlock {
         }
     }
 
-    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state) {
+    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, BonemealSource source) {
         int i = (countIvyAbove(world, pos) + 1);
         if ((canSurvive(state, world, pos.relative(Direction.UP, i))) && (state.getValue(IVY_FERTILE))) {
             return world.getBlockState(pos.relative(Direction.UP, i)).isAir();
@@ -340,11 +335,11 @@ public class IvyBlock extends Block implements BonemealableBlock {
         return false;
     }
 
-    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state) {
+    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state, BonemealSource source) {
         return state.getValue(IVY_FERTILE);
     }
 
-    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state) {
+    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state, BonemealSource source) {
         int i = (countIvyAbove(world, pos) + 1);
         BlockPos blockPos = pos.relative(Direction.UP, i);
         world.setBlockAndUpdate(blockPos, getUpdatedState(state, world, blockPos));
@@ -376,7 +371,7 @@ public class IvyBlock extends Block implements BonemealableBlock {
                 world.setBlockAndUpdate(pos, state.setValue(IVY_FERTILE, true));
                 if ((qty > 1) && (!player.hasInfiniteMaterials())) {
                     stack.shrink(1);
-                    player.getInventory().placeItemBackInInventory(new ItemStack(Items.GLASS_BOTTLE));
+                    player.getInventory().placeItemBackInInventory(new ItemStack(Items.GLASS_BOTTLE), Prediction.SERVER_ONLY);
                 }
                 if ((qty == 1) && (!player.hasInfiniteMaterials())) {
                     player.setItemInHand(hand, new ItemStack(Items.GLASS_BOTTLE));

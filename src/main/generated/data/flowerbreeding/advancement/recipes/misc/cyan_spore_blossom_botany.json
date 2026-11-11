@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:cyan_spore_blossom_botany"
+        "recipes": "flowerbreeding:cyan_spore_blossom_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

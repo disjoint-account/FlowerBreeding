@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:blue_flowering_azalea_botany"
+        "recipes": "flowerbreeding:blue_flowering_azalea_botany"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

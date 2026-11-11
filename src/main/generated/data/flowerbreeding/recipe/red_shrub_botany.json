@@ -1,0 +1,11 @@
+{
+  "type": "flowerbreeding:botany",
+  "ingredients": [
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:shrub_pollen_vial",
+    "flowerbreeding:red_pigment_jar"
+  ],
+  "result": {
+    "id": "minecraft:red_shrub"
+  }
+}

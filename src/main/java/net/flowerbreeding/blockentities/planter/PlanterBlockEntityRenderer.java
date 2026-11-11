@@ -26,29 +26,30 @@ public class PlanterBlockEntityRenderer implements BlockEntityRenderer<PlanterBl
         super();
     }
 
-    public PlanterBlockEntityRenderState createRenderState() {
+    public @NonNull PlanterBlockEntityRenderState createRenderState() {
         return new PlanterBlockEntityRenderState();
     }
 
     public void extractRenderState(PlanterBlockEntity planterBlockEntity, PlanterBlockEntityRenderState planterBlockEntityRenderState, float f, @NonNull Vec3 vec3d, ModelFeatureRenderer.CrumblingOverlay crumblingOverlayCommand) {
         planterBlockEntityRenderState.flower = planterBlockEntity.getItem(0);
 
-        if (planterBlockEntityRenderState.flower.getItem() instanceof BlockItem  && planterBlockEntity.getLevel() instanceof ClientLevel level) {
-            assert planterBlockEntity.getLevel() != null;
+        if (planterBlockEntity.getLevel() instanceof ClientLevel level) {
+            if (!planterBlockEntityRenderState.flower.isEmpty()) {
+                assert planterBlockEntity.getLevel() != null;
 
-            if (!planterBlockEntityRenderState.flower.is(FBTags.Items.BUSHES)) {
-                planterBlockEntityRenderState.bottomFlowerState = renderModel(planterBlockEntity.getBlockPos(),
-                        ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER),
-                        planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
+                if (!planterBlockEntityRenderState.flower.is(FBTags.Items.BUSHES)) {
+                    planterBlockEntityRenderState.bottomFlowerState = renderModel(planterBlockEntity.getBlockPos(),
+                            ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.LOWER),
+                            planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
 
-                planterBlockEntityRenderState.topFlowerState = renderModel(planterBlockEntity.getBlockPos(),
-                        ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER),
-                        planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
-            }
-            else {
-                planterBlockEntityRenderState.bottomFlowerState = renderModel(planterBlockEntity.getBlockPos(),
-                        ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState(),
-                        planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
+                    planterBlockEntityRenderState.topFlowerState = renderModel(planterBlockEntity.getBlockPos(),
+                            ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState().setValue(BlockStateProperties.DOUBLE_BLOCK_HALF, DoubleBlockHalf.UPPER),
+                            planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
+                } else {
+                    planterBlockEntityRenderState.bottomFlowerState = renderModel(planterBlockEntity.getBlockPos(),
+                            ((BlockItem) planterBlockEntity.getItem(0).getItem()).getBlock().defaultBlockState(),
+                            planterBlockEntity.getLevel().getBiome(planterBlockEntity.getBlockPos()), level);
+                }
             }
         }
 

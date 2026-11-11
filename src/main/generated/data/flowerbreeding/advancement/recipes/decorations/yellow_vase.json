@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "flowerbreeding:yellow_vase"
+        "recipes": "flowerbreeding:yellow_vase"
       },
       "trigger": "minecraft:recipe_unlocked"
     },

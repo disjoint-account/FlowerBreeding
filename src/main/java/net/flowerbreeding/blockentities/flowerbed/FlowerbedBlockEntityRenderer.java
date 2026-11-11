@@ -26,7 +26,7 @@ public class FlowerbedBlockEntityRenderer implements BlockEntityRenderer<Flowerb
         super();
     }
 
-    public FlowerbedBlockEntityRenderState createRenderState() {
+    public @NonNull FlowerbedBlockEntityRenderState createRenderState() {
         return new FlowerbedBlockEntityRenderState();
     }
 

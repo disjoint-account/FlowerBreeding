@@ -1,6 +1,5 @@
 package net.flowerbreeding.blockentities.planter;
 
-import com.mojang.serialization.MapCodec;
 import net.fabricmc.fabric.api.tag.convention.v2.ConventionalItemTags;
 import net.flowerbreeding.util.FBTags;
 import net.minecraft.core.BlockPos;
@@ -8,6 +7,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Containers;
 import net.minecraft.world.InteractionHand;
@@ -46,7 +46,6 @@ public class PlanterBlock extends BaseEntityBlock implements EntityBlock {
             Block.box(4, 7, 12, 12, 9, 14);
     private static final VoxelShape SHAPE =
             Shapes.or(SHAPE1, SHAPE2, SHAPE3, SHAPE4, SHAPE5);
-    public static final MapCodec<PlanterBlock> CODEC = PlanterBlock.simpleCodec(PlanterBlock::new);
 
     public PlanterBlock(Properties settings) {
         super(settings);
@@ -55,11 +54,6 @@ public class PlanterBlock extends BaseEntityBlock implements EntityBlock {
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
         return SHAPE;
-    }
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override
@@ -98,9 +92,9 @@ public class PlanterBlock extends BaseEntityBlock implements EntityBlock {
             else {
                 if (!entity.isEmpty() && !player.isShiftKeyDown()) {
                     if (!player.hasInfiniteMaterials()) {
-                        player.getInventory().placeItemBackInInventory(entity.getItem(0));
+                        player.getInventory().placeItemBackInInventory(entity.getItem(0), Prediction.SERVER_ONLY);
                     }
-                    entity.removeItemNoUpdate(0);
+                    entity.removeItem(0, 1);
                     return InteractionResult.SUCCESS;
                 }
             }

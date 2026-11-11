@@ -50,6 +50,7 @@ public class FBTags {
         public static final TagKey<Block> SPORE_BLOSSOMS = createTag("spore_blossoms");
         public static final TagKey<Block> FLOWERING_AZALEAS = createTag("flowering_azaleas");
         public static final TagKey<Block> FLOWERING_AZALEA_LEAVES = createTag("flowering_azalea_leaves");
+        public static final TagKey<Block> SHRUBS = createTag("shrubs");
         public static final TagKey<Block> DAFFODILS = createTag("daffodils");
         public static final TagKey<Block> FOXGLOVES = createTag("foxgloves");
         public static final TagKey<Block> HYACINTHS = createTag("hyacinths");
@@ -123,6 +124,7 @@ public class FBTags {
         public static final TagKey<Item> WILDFLOWERS = createTag("wildflowers");
         public static final TagKey<Item> CACTUS_FLOWERS = createTag("cactus_flowers");
         public static final TagKey<Item> SPORE_BLOSSOMS = createTag("spore_blossoms");
+        public static final TagKey<Item> SHRUBS = createTag("shrubs");
         public static final TagKey<Item> DAFFODILS = createTag("daffodils");
         public static final TagKey<Item> FOXGLOVES = createTag("foxgloves");
         public static final TagKey<Item> HYACINTHS = createTag("hyacinths");

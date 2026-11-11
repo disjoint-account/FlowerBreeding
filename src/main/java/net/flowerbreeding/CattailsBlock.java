@@ -1,6 +1,5 @@
 package net.flowerbreeding;
 
-import com.mojang.serialization.MapCodec;
 import net.flowerbreeding.util.FBProperties;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -13,10 +12,7 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.ScheduledTickAccess;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.SimpleWaterloggedBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -33,11 +29,6 @@ public class CattailsBlock extends Block implements BonemealableBlock, SimpleWat
     public static final BooleanProperty CATTAILS_TIP;
     public static final BooleanProperty WATERLOGGED;
     public static final VoxelShape SHAPE = Block.box(0.0, 0.0, 0.0, 16.0, 16.0, 16.0);
-    public static final MapCodec<CattailsBlock> CODEC = simpleCodec(CattailsBlock::new);
-
-    public MapCodec<CattailsBlock> codec() {
-        return CODEC;
-    }
 
     public CattailsBlock(Properties settings) {
         super(settings);
@@ -142,18 +133,18 @@ public class CattailsBlock extends Block implements BonemealableBlock, SimpleWat
         }
     }
 
-    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state) {
+    public boolean isValidBonemealTarget(LevelReader world, BlockPos pos, BlockState state, BonemealSource source) {
         int iAbove = (countCattailsAbove(world, pos) + 1);
         BlockState state1 = world.getBlockState(pos.above(iAbove));
         FluidState state2 = world.getFluidState(pos.above(iAbove));
         return canSurvive(state, world, pos.relative(Direction.UP, iAbove)) && (state1.isAir() || (state2.is(FluidTags.WATER) && state2.getAmount() == 8));
     }
 
-    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state) {
-        return isValidBonemealTarget(world, pos, state);
+    public boolean isBonemealSuccess(Level world, RandomSource random, BlockPos pos, BlockState state, BonemealSource source) {
+        return isValidBonemealTarget(world, pos, state, source);
     }
 
-    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state) {
+    public void performBonemeal(ServerLevel world, RandomSource random, BlockPos pos, BlockState state, BonemealSource source) {
         int i = (countCattailsAbove(world, pos) + 1);
         BlockPos blockPos = pos.relative(Direction.UP, i);
         FluidState state1 = world.getFluidState(pos.above(i));
